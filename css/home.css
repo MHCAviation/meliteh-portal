@@ -41,6 +41,11 @@
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1.00px;
+  display: block;
+}
+.navbar-link:hover,
+.link:hover {
+  color: rgb(22, 73, 121);
 }
 
 .home .group-336 {
@@ -875,6 +880,7 @@
   position: relative;
   white-space: nowrap;
   width: fit-content;
+  display: block;
 }
 
 .home .group-39227 {
