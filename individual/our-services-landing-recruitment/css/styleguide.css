@@ -1,0 +1,38 @@
+:root { 
+  --black: #000000;
+  --meliteh-black-type: #141414;
+  --meliteh-grey: #dddddd;
+  --meliteh-red: #d20027;
+  --neutral100: #ffffff;
+  --white: #ffffff;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-s: 12px;
+  --font-size-xl: 70px;
+ 
+  --font-family-montserrat: "Montserrat", Helvetica;
+}
+.montserrat-normal-licorice-20px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-normal-licorice-16px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-bold-licorice-16px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
