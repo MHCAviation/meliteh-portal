@@ -321,12 +321,12 @@
   background-size: 100% 100%;
   display: flex;
   gap: 24px;
-  height: auto;
+  height: 402px;
+  width: 1308px;
   left: 66px;
   opacity: 1;
   position: absolute;
   top: 947px;
-  width: fit-content;
 }
 
 .about-us .container-C61RwL {
@@ -3654,7 +3654,6 @@
 }
 
 .home .group-402-C61RwL {
-  --z-index: 19;
   background-color: transparent;
   height: 80px;
   left: 0px;
