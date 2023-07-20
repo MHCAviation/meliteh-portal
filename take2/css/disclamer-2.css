@@ -1,0 +1,214 @@
+/* screen - disclamer-2 */
+
+.disclamer-2 {
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1021px;
+  overflow: hidden;
+  width: 1440px;
+}
+
+.disclamer-2 .group-402 {
+  background-color: var(--neutral100);
+  height: 80px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 1440px;
+  padding: 0 62px;
+  position: fixed;
+  top: 0;
+  z-index: 6;
+}
+
+.disclamer-2 .microsoft-teams-image-1 {
+  width: 145px;
+}
+
+.disclamer-2 .navbar {
+  align-items: flex-start;
+  display: flex;
+  gap: 50px;
+  margin-left: 103px;
+  position: relative;
+  width: fit-content;
+}
+
+.disclamer-2 .navbar-link {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.disclamer-2 .group-336 {
+  gap: 32px;
+  height: 44px;
+  margin-left: 373px;
+  min-width: 245px;
+}
+
+.disclamer-2 .frame-335 {
+  align-items: center;
+  background-color: var(--meliteh-red);
+  border-radius: 4px;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+.disclamer-2 .overlap-group17 {
+  height: 940px;
+  margin-left: -505px;
+  margin-top: 81px;
+  position: relative;
+  width: 1945px;
+  z-index: 1;
+}
+
+.disclamer-2 .blob {
+  align-items: flex-start;
+  display: flex;
+  height: 788px;
+  left: 18px;
+  min-width: 788px;
+  position: absolute;
+  top: 47px;
+}
+
+.disclamer-2 .overlap-group {
+  border-radius: 393.82px;
+  height: 788px;
+  position: relative;
+  width: 788px;
+}
+
+.disclamer-2 .ellipse-5 {
+  -webkit-backdrop-filter: blur(140.13px) brightness(100%);
+  backdrop-filter: blur(140.13px) brightness(100%);
+  background-color: var(--white-2);
+  border-radius: 393.82px;
+  height: 788px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 788px;
+}
+
+.disclamer-2 .blob-3 {
+  align-items: flex-start;
+  display: flex;
+  height: 788px;
+  left: 0;
+  min-width: 788px;
+  position: absolute;
+  top: 81px;
+}
+
+.disclamer-2 .this-website-uses-c {
+  height: 270px;
+  left: 585px;
+  letter-spacing: 0;
+  line-height: 28.8px;
+  position: absolute;
+  text-align: justify;
+  top: 327px;
+  width: 1280px;
+}
+
+.disclamer-2 .group-39236 {
+  background-color: var(--alabaster);
+  flex-direction: column;
+  gap: 24px;
+  left: 505px;
+  min-height: 262px;
+  padding: 23px 78px;
+  position: absolute;
+  top: 678px;
+  width: 1440px;
+}
+
+.disclamer-2 .frame-39247 {
+  align-items: flex-start;
+  gap: 100px;
+  margin-right: 1.0px;
+}
+
+.disclamer-2 .group-39227 {
+  align-self: flex-end;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 31px;
+  width: 1282px;
+}
+
+.disclamer-2 .pexels-photo-by-edmond-dants {
+  height: 248px;
+  left: 505px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.disclamer-2 .rectangle-166 {
+  background: linear-gradient(180deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
+}
+
+.disclamer-2 .title {
+  left: 959px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 81px;
+}
+
+.disclamer-2 .blob-container {
+  align-self: flex-end;
+  height: 788px;
+  margin-right: -387.64px;
+  margin-top: 331px;
+  position: relative;
+  width: 788px;
+  z-index: 2;
+}
+
+.disclamer-2 .blob-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 788px;
+  left: 0;
+  min-width: 788px;
+  position: absolute;
+  top: 0;
+  transform: rotate(-180.00deg);
+}
+
+.disclamer-2 .blob-2 {
+  align-items: flex-start;
+  display: flex;
+  height: 788px;
+  left: 0;
+  min-width: 788px;
+  position: absolute;
+  top: 0;
+}
+
+.disclamer-2 .frame {
+  display: flex;
+  position: relative;
+  width: fit-content;
+}
+
+.disclamer-2 .rectangle {
+  height: 248px;
+  left: 505px;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
