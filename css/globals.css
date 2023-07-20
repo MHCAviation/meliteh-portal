@@ -1,8 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,400,700|Roboto:400|DM+Sans:500,400,700|Inter:500,400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700,400|DM+Sans:500,700,400|Roboto:400|Inter:500,400,700");
 /* The following line is used to measure usage of this code. You can remove it if you want. */
-@import url("https://px.animaapp.com/64b7db2dea546c8fcbffe2a4.64b7db2eea546c8fcbffe2a7.B87eRj4.hcp.png");
+@import url("https://px.animaapp.com/64b7db2dea546c8fcbffe2a4.64b7db2eea546c8fcbffe2a7.bDPRVDz.hcp.png");
 
+@font-face {
+  font-family: "Font Awesome 6 Free-Solid";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Font Awesome 6 Free-Solid-900.otf") format("opentype");
+}
 
 
 .screen a {
@@ -23,12 +29,987 @@
   pointer-events: auto;
 }
 
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
 .valign-text-middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.navbar-link-our-services {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.navbar-link-find-jobs {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.log-in {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 2.0px;
+  min-height: 20px;
+  min-width: 50px;
+}
+
+.register-now {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.span0 {
+  color: var(--meliteh-black-type);
+}
+
+.available-vacancies {
+  color: #000000b2;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 27px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-405 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.frame-9 {
+  align-items: center;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--licorice);
+  border-radius: 4px 0px 0px 4px;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  overflow: hidden;
+  padding: 18px;
+  position: relative;
+}
+
+.magnifying-glass {
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.what-position-are-you-looking-for {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-2 {
+  background-color: var(--meliteh-red);
+  border-radius: 0px 4px 4px 0px;
+  gap: 8px;
+  margin-left: -1px;
+  padding: 18px 40px;
+  width: fit-content;
+}
+
+.search-job {
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.single-element {
+  align-items: center;
+  display: flex;
+  margin-left: 80px;
+  margin-top: 24px;
+  position: relative;
+  width: fit-content;
+  z-index: 3;
+}
+
+.place {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.featured {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.how-to-spend-the-per {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.content {
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  left: 0;
+  padding: 48px 64px 64px;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.frame-15 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  gap: 32px;
+  position: relative;
+}
+
+.filter {
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--neutral300);
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+  padding: 24px;
+  position: relative;
+  width: 250px;
+}
+
+.frame-36 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.filters {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-3-2 {
+  align-items: center;
+  gap: 8px;
+}
+
+.group-1 {
+  background-color: var(--meliteh-red);
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px #00000014;
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.ellipse-7 {
+  background-color: var(--neutral100);
+  border-radius: 4px;
+  height: 8px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 8px;
+}
+
+.salary-yearly {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.group-39232 {
+  height: 96px;
+  min-width: 202px;
+  position: relative;
+}
+
+.frame-39240 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+}
+
+.group-39233 {
+  height: 28px;
+  min-width: 64px;
+  position: relative;
+}
+
+.frame-8396 {
+  align-items: center;
+  background-color: var(--meliteh-red);
+  border-radius: 64px;
+  display: flex;
+  gap: 20px;
+  height: 24px;
+  justify-content: center;
+  left: 0;
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  width: 64px;
+}
+
+.group-39234 {
+  height: 24px;
+  min-width: 202px;
+  position: relative;
+}
+
+.rectangle-4379 {
+  background-color: var(--meliteh-red);
+  border-radius: 10px;
+  height: 8px;
+  left: 12px;
+  opacity: 0.2;
+  position: absolute;
+  top: 8px;
+  width: 190px;
+}
+
+.rectangle-4380 {
+  background-color: var(--meliteh-red);
+  border-radius: 10px;
+  height: 8px;
+  left: 12px;
+  position: absolute;
+  top: 8px;
+  width: 94px;
+}
+
+.ellipse-71 {
+  background-color: var(--neutral100);
+  border: 4px solid;
+  border-color: var(--meliteh-red);
+  border-radius: 12px;
+  height: 24px;
+  left: 94px;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.ellipse-70 {
+  background-color: var(--meliteh-red);
+  border: 4px solid;
+  border-color: #f6ccd4;
+  border-radius: 12px;
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.frame-39239 {
+  align-items: flex-start;
+  display: flex;
+  gap: 24px;
+  position: relative;
+  width: 202px;
+}
+
+.date-of-posting {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.all-time {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.last-7-days {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.last-2-weeks {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.last-month {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.type-of-employment {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.group-4 {
+  height: 18.01px;
+  margin-left: -1.00px;
+  min-width: 18px;
+  position: relative;
+}
+
+.full-time {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.temporary {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.part-time {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.cards {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.frame-46 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 748px;
+}
+
+.address {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 48px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-45 {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  position: relative;
+  width: fit-content;
+}
+
+.funnel-simple {
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.sort-by {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.caret-down {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.frame-23 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.frame-28 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.frame-29 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+}
+
+.frame-27 {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  position: relative;
+  width: fit-content;
+}
+
+.linear-company {
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-30 {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+}
+
+.ellipse {
+  background-color: var(--licorice-2);
+  border-radius: 1px;
+  height: 2px;
+  min-width: 2px;
+  position: relative;
+}
+
+.clock {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.currency-dollar {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.calendar-blank {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.mollit-in-laborum-te {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+}
+
+.x30-32k {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+}
+
+.button-3 {
+  background-color: var(--meliteh-red);
+  border-radius: 2px;
+  gap: 4px;
+  height: 40px;
+  padding: 8px 16px;
+  width: 40px;
+}
+
+.number-1 {
+  color: var(--neutral100);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-1 {
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--licorice-4);
+  border-radius: 2px;
+  gap: 4px;
+  height: 40px;
+  padding: 8px 16px;
+  width: 40px;
+}
+
+.number {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-left: -1.00px;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.more-option {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: fit-content;
+}
+
+.frame-1-1 {
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--neutral300);
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  padding: 24px;
+  position: relative;
+  width: 250px;
+}
+
+.frame-3-3 {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.email-me-for-jobs {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.x-eiusmod {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.namemailcom {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-4 {
+  background-color: var(--meliteh-red);
+  border-radius: 4px;
+  gap: 8px;
+  padding: 8px 20px 8px 16px;
+  width: 202px;
+}
+
+.subcribe {
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.get-noticed-faster {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.button-5 {
+  align-self: stretch;
+  background-color: var(--meliteh-red);
+  border-radius: 4px;
+  gap: 8px;
+  padding: 8px 20px 8px 16px;
+}
+
+.upload-your-resume {
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.ellipse-container {
+  height: 469px;
+  left: 208px;
+  position: absolute;
+  top: 216px;
+  width: 442px;
+}
+
+.ellipse-2 {
+  background-color: var(--meliteh-red);
+  border-radius: 156.38px;
+  height: 313px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 313px;
+}
+
+.ellipse-4 {
+  background-color: var(--crimson);
+  border-radius: 156.38px;
+  height: 313px;
+  left: 75px;
+  position: absolute;
+  top: 156px;
+  width: 313px;
+}
+
+.ellipse-3 {
+  background-color: var(--froly);
+  border-radius: 156.38px;
+  height: 313px;
+  left: 129px;
+  position: absolute;
+  top: 0;
+  width: 313px;
+}
+
+.ellipse-5-1 {
+  -webkit-backdrop-filter: blur(140.13px) brightness(100%);
+  backdrop-filter: blur(140.13px) brightness(100%);
+  background-color: var(--white-2);
+  border-radius: 393.82px;
+  height: 788px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 788px;
+}
+
+.microsoft-teams-image-4 {
+  margin-top: 33px;
+  width: 144px;
+}
+
+.link {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.vector-41 {
+  height: 2px;
+  margin-right: 2.0px;
+  margin-top: -1px;
+  width: 1280px;
+}
+
+.meliteh-all-right-reserved {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 2.0px;
+  min-height: 15px;
+  min-width: 154px;
+}
+
+.address-7 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-6 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.calendar-blank-6 {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.clock-6 {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.currency-dollar-6 {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.frame-3-4 {
+  align-self: stretch;
+  display: flex;
+  position: relative;
+}
+
+.full-time-7 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.microsoft-teams-image {
+  height: 80px;
+  object-fit: cover;
+}
+
+.x50 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.group {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-1 {
+  position: relative;
+  width: fit-content;
+}
+
+.blob-container-1 {
+  margin-left: -394px;
+  margin-top: 536px;
+  z-index: 3;
+}
+
+.blob-container-2 {
+  align-self: flex-end;
+  margin-right: -418.64px;
+  margin-top: 1075px;
+  z-index: 5;
+}
+
+.blob-container-3 {
+  margin-left: -376px;
+  margin-top: 623px;
+  z-index: 4;
+}
+
+.blob-container-4 {
+  height: 788px;
+  position: relative;
+  width: 788px;
+}
+
+.group-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-height: 344px;
+  width: 1440px;
+}
+
+.navbar-link-about-us {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.recruitment {
+  height: 48px;
+  left: 19px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 218px;
+  width: 262px;
+}
+
+.background-check-complience {
+  left: 19px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 218px;
+  width: 262px;
+}
+
+.hr-payroll-services {
+  height: 48px;
+  left: 19px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 218px;
+  width: 262px;
+}
+
+.vector-45 {
+  height: 1px;
+  margin-top: 24px;
+  object-fit: cover;
+  width: 1280px;
 }

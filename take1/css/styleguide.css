@@ -1,0 +1,88 @@
+:root { 
+  --black: #000000;
+  --chicago: #585858;
+  --fair-pink: #ffe7eb;
+  --licorice: #1414141a;
+  --meliteh-black-type: #141414;
+  --meliteh-red: #d20027;
+  --neutral100: #ffffff;
+  --neutral300: #eff0f6;
+  --neutral700: #514f6e;
+  --submarine: #c2c6c91a;
+  --white: #ffffff;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 18px;
+  --font-size-s: 16px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 40px;
+  --font-size-xxxxl: 70px;
+ 
+  --font-family-dm_sans: "DM Sans", Helvetica;
+  --font-family-montserrat: "Montserrat", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.montserrat-normal-licorice-20px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-bold-monza-18px {
+  color: var(--meliteh-red);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.montserrat-normal-licorice-16px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-bold-licorice-25px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-normal-chicago-16px {
+  color: var(--chicago);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-bold-licorice-24px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.dmsans-normal-black-coral-pearl-18px {
+  color: var(--neutral700);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-medium-licorice-40px {
+  color: var(--meliteh-black-type);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+}
