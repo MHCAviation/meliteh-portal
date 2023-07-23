@@ -176,10 +176,10 @@
   width: 1440px;
 }
 
-.home .frame-400-C61RwL {
+.home .our-services-home-summary {
   align-items: flex-start;
   background-color: transparent;
-  background-image: url(../img/frame-400.png);
+  background-image: url(../img/our-services-home-summary.png);
   background-size: 100% 100%;
   display: flex;
   gap: 16px;
@@ -384,12 +384,12 @@
   width: 270px;
 }
 
-.home .frame-406-C61RwL::-webkit-scrollbar {
+.home .testimonials-list::-webkit-scrollbar {
   display: none;
   width: 0;
 }
 
-.home .frame-406-C61RwL {
+.home .testimonials-list {
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -2004,7 +2004,7 @@
   width: 144px;
 }
 
-.home .rectangle-169-C61RwL {
+.home .home-job-search-background {
   background-color: transparent;
   background-image: url(../img/rectangle-169.svg);
   background-size: 100% 100%;
@@ -2017,7 +2017,7 @@
   width: 1440px;
 }
 
-.home .rectangle-170-C61RwL {
+.home .home-job-search-background-overglow {
   background: linear-gradient(180deg, rgb(255, 155.12500405311584, 155.12500405311584) 0%, rgba(77.76171773672104, 77.76171773672104, 77.76171773672104, 0) 100%);
   background-color: transparent;
   height: 441px;
