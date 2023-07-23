@@ -13,7 +13,6 @@
 }
 
 .home .vector-C61RwL {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/vector.svg);
   background-size: 100% 100%;
@@ -26,7 +25,6 @@
 }
 
 .home .blob-C61RwL {
-  --z-index: 1;
   background-color: transparent;
   height: 788px;
   left: 1077px;
@@ -38,7 +36,6 @@
 }
 
 .home .group-16-orRHpx {
-  --z-index: 0;
   background-color: transparent;
   height: 469px;
   left: 208px;
@@ -49,7 +46,6 @@
 }
 
 .home .ellipse-2-thOxBC {
-  --z-index: 0;
   background-color: #d20027;
   border-radius: 156.38px;
   height: 313px;
@@ -62,7 +58,6 @@
 }
 
 .home .ellipse-4-thOxBC {
-  --z-index: 1;
   background-color: #dc002e;
   border-radius: 156.38px;
   height: 313px;
@@ -75,7 +70,6 @@
 }
 
 .home .ellipse-3-thOxBC {
-  --z-index: 2;
   background-color: #ef7385;
   border-radius: 156.38px;
   height: 313px;
@@ -88,7 +82,6 @@
 }
 
 .home .ellipse-5-orRHpx {
-  --z-index: 1;
   -webkit-backdrop-filter: blur(140.12591552734375px) brightness(100%);
   backdrop-filter: blur(140.12591552734375px) brightness(100%);
   background-color: #ffffffd9;
@@ -103,7 +96,6 @@
 }
 
 .home .blob-VMr6Om {
-  --z-index: 2;
   background-color: transparent;
   height: 788px;
   left: -487px;
@@ -114,7 +106,6 @@
 }
 
 .home .group-16-IKvdyx {
-  --z-index: 0;
   background-color: transparent;
   height: 469px;
   left: 208px;
@@ -125,7 +116,6 @@
 }
 
 .home .ellipse-2-vWGb6G {
-  --z-index: 0;
   background-color: #d20027;
   border-radius: 156.38px;
   height: 313px;
@@ -138,7 +128,6 @@
 }
 
 .home .ellipse-4-vWGb6G {
-  --z-index: 1;
   background-color: #dc002e;
   border-radius: 156.38px;
   height: 313px;
@@ -151,7 +140,6 @@
 }
 
 .home .ellipse-3-vWGb6G {
-  --z-index: 2;
   background-color: #ef7385;
   border-radius: 156.38px;
   height: 313px;
@@ -164,7 +152,6 @@
 }
 
 .home .ellipse-5-IKvdyx {
-  --z-index: 1;
   -webkit-backdrop-filter: blur(140.12591552734375px) brightness(100%);
   backdrop-filter: blur(140.12591552734375px) brightness(100%);
   background-color: #ffffffd9;
@@ -179,7 +166,6 @@
 }
 
 .home .rectangle-165-C61RwL {
-  --z-index: 3;
   background-color: #c2c6c9;
   height: 622px;
   left: 0px;
@@ -191,7 +177,6 @@
 }
 
 .home .frame-400-C61RwL {
-  --z-index: 4;
   align-items: flex-start;
   background-color: transparent;
   background-image: url(../img/frame-400.png);
@@ -207,7 +192,6 @@
 }
 
 .home .news-and-insights-C61RwL {
-  --z-index: 5;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -227,7 +211,6 @@
 }
 
 .home .frame-403-C61RwL {
-  --z-index: 6;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -241,7 +224,6 @@
 }
 
 .home .group-2-FS2xM9 {
-  --z-index: 0;
   background-color: transparent;
   height: 279px;
   min-width: 272px;
@@ -250,7 +232,6 @@
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-CGIxxI {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -270,7 +251,6 @@
 }
 
 .home .rectangle-3-CGIxxI {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/rectangle-3.svg);
   background-size: 100% 100%;
@@ -284,7 +264,6 @@
 }
 
 .home .group-3-FS2xM9 {
-  --z-index: 1;
   background-color: transparent;
   height: 279px;
   min-width: 272px;
@@ -293,7 +272,6 @@
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-weQ8l3 {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -313,7 +291,6 @@
 }
 
 .home .rectangle-4-weQ8l3 {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/rectangle-4.svg);
   background-size: 100% 100%;
@@ -327,7 +304,6 @@
 }
 
 .home .group-4-FS2xM9 {
-  --z-index: 2;
   background-color: transparent;
   height: 279px;
   min-width: 272px;
@@ -336,7 +312,6 @@
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-oCI8Gp {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -356,7 +331,6 @@
 }
 
 .home .rectangle-5-oCI8Gp {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/rectangle-5.svg);
   background-size: 100% 100%;
@@ -370,7 +344,6 @@
 }
 
 .home .group-5-FS2xM9 {
-  --z-index: 3;
   background-color: transparent;
   height: 279px;
   margin-right: -2.00px;
@@ -380,7 +353,6 @@
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-cZxX2Y {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -400,7 +372,6 @@
 }
 
 .home .rectangle-6-cZxX2Y {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/rectangle-6.svg);
   background-size: 100% 100%;
@@ -419,7 +390,6 @@
 }
 
 .home .frame-406-C61RwL {
-  --z-index: 7;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -431,7 +401,6 @@
 }
 
 .home .group-38216-EpPtXC {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 80px;
@@ -442,7 +411,6 @@
 }
 
 .home .group-38173-tVj8ay {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -453,7 +421,6 @@
 }
 
 .home .group-38161-mVxDdr {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -464,7 +431,6 @@
 }
 
 .home .rectangle-4288-EbbifK {
-  --z-index: 0;
   background-color: #ffffff;
   border: 1px solid;
   border-color: #eff0f6;
@@ -480,7 +446,6 @@
 }
 
 .home .group-39221-EbbifK {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/group-39221@2x.png);
   background-size: 100% 100%;
@@ -493,7 +458,6 @@
 }
 
 .home .lorem-ipsum-dolor-si-EbbifK {
-  --z-index: 2;
   background-color: transparent;
   color: #514f6e;
   font-family: 'DM Sans', Helvetica;
@@ -513,7 +477,6 @@
 }
 
 .home .group-38217-EpPtXC {
-  --z-index: 1;
   background-color: transparent;
   height: 224px;
   left: 664px;
@@ -524,7 +487,6 @@
 }
 
 .home .group-38173-RSj7cP {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -535,7 +497,6 @@
 }
 
 .home .group-38161-xpHVVT {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -546,7 +507,6 @@
 }
 
 .home .rectangle-4288-Pu2LNd {
-  --z-index: 0;
   background-color: #ffffff;
   border: 1px solid;
   border-color: #eff0f6;
@@ -562,7 +522,6 @@
 }
 
 .home .group-39221-Pu2LNd {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/group-39221-1@2x.png);
   background-size: 100% 100%;
@@ -575,7 +534,6 @@
 }
 
 .home .lorem-ipsum-dolor-si-Pu2LNd {
-  --z-index: 2;
   background-color: transparent;
   color: #514f6e;
   font-family: 'DM Sans', Helvetica;
@@ -595,7 +553,6 @@
 }
 
 .home .group-38218-EpPtXC {
-  --z-index: 2;
   background-color: transparent;
   height: 224px;
   left: 1248px;
@@ -606,7 +563,6 @@
 }
 
 .home .group-38173-tUkLob {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -617,7 +573,6 @@
 }
 
 .home .group-38161-ZawZPa {
-  --z-index: 0;
   background-color: transparent;
   height: 224px;
   left: 0px;
@@ -628,7 +583,6 @@
 }
 
 .home .rectangle-4288-Ilv2QH {
-  --z-index: 0;
   background-color: #ffffff;
   border: 1px solid;
   border-color: #eff0f6;
@@ -644,7 +598,6 @@
 }
 
 .home .group-39221-Ilv2QH {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/group-39221@2x.png);
   background-size: 100% 100%;
@@ -657,7 +610,6 @@
 }
 
 .home .lorem-ipsum-dolor-si-Ilv2QH {
-  --z-index: 2;
   background-color: transparent;
   color: #514f6e;
   font-family: 'DM Sans', Helvetica;
@@ -677,7 +629,6 @@
 }
 
 .home .dont-take-our-word-for-it-C61RwL {
-  --z-index: 8;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -698,7 +649,6 @@
 }
 
 .home .subtitle-C61RwL {
-  --z-index: 9;
   align-items: center;
   background-color: transparent;
   display: flex;
@@ -713,7 +663,6 @@
 }
 
 .home .rectangle-415-reA5uf {
-  --z-index: 0;
   background-color: #d20027;
   border-radius: 30px;
   height: 2px;
@@ -724,7 +673,6 @@
 }
 
 .home .testimonials-reA5uf {
-  --z-index: 1;
   background-color: transparent;
   color: #d20027;
   font-family: 'Montserrat', Helvetica;
@@ -743,7 +691,6 @@
 }
 
 .home .group-39222-C61RwL {
-  --z-index: 10;
   background-color: transparent;
   height: 64px;
   left: 258px;
@@ -754,7 +701,6 @@
 }
 
 .home .group-366-ITdx2a {
-  --z-index: 0;
   background-color: transparent;
   height: 64px;
   left: 0px;
@@ -765,7 +711,6 @@
 }
 
 .home .never-want-to-miss-any-job-news-lyMjxj {
-  --z-index: 0;
   background-color: transparent;
   color: transparent;
   font-family: 'Montserrat', Helvetica;
@@ -795,7 +740,6 @@
 }
 
 .home .frame-404-ITdx2a {
-  --z-index: 1;
   align-items: flex-start;
   background-color: transparent;
   box-shadow: 0px 2px 2px #0000000a;
@@ -809,7 +753,6 @@
 }
 
 .home .frame-14-kTLPqE {
-  --z-index: 0;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid;
@@ -826,7 +769,6 @@
 }
 
 .home .enter-your-email-TJFFVc {
-  --z-index: 0;
   background-color: transparent;
   color: #14141480;
   font-family: 'Montserrat', Helvetica;
@@ -845,7 +787,6 @@
 }
 
 .home .button-kTLPqE {
-  --z-index: 1;
   align-items: center;
   background-color: #d20027;
   border-radius: 0px 4px 4px 0px;
@@ -862,7 +803,6 @@
 }
 
 .home .subscribe-eC4pTL {
-  --z-index: 0;
   background-color: transparent;
   color: #ffffff;
   font-family: 'Montserrat', Helvetica;
@@ -880,7 +820,6 @@
 }
 
 .home .group-401-C61RwL {
-  --z-index: 11;
   background-color: transparent;
   height: 153px;
   left: 307px;
@@ -891,7 +830,6 @@
 }
 
 .home .clients-8xEr18 {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -911,7 +849,6 @@
 }
 
 .home .group-400-8xEr18 {
-  --z-index: 1;
   background-color: transparent;
   height: 64px;
   left: 0px;
@@ -922,7 +859,6 @@
 }
 
 .home .image-1-FWhac5 {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/image-1@2x.png);
   background-size: 100% 100%;
@@ -937,7 +873,6 @@
 }
 
 .home .image-2-FWhac5 {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/image-2@2x.png);
   background-size: 100% 100%;
@@ -952,7 +887,6 @@
 }
 
 .home .image-3-FWhac5 {
-  --z-index: 2;
   background-color: transparent;
   background-image: url(../img/image-3@2x.png);
   background-size: 100% 100%;
@@ -967,7 +901,6 @@
 }
 
 .home .frame-407-C61RwL {
-  --z-index: 12;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid;
@@ -988,7 +921,6 @@
 }
 
 .home .view-all-jobs-zayv2c {
-  --z-index: 0;
   background-color: transparent;
   color: #d20027;
   font-family: 'Montserrat', Helvetica;
@@ -1006,7 +938,6 @@
 }
 
 .home .jobs-featured-C61RwL {
-  --z-index: 13;
   background-color: transparent;
   height: 540px;
   left: 0px;
@@ -1017,7 +948,6 @@
 }
 
 .home .rectangle-162-BRXQlF {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/rectangle-162.png);
   background-size: 100% 100%;
@@ -1032,7 +962,6 @@
 }
 
 .home .rectangle-4298-BRXQlF {
-  --z-index: 1;
   background: linear-gradient(180deg, rgb(20.000000707805157, 20.000000707805157, 20.000000707805157) 0%, rgba(20.000000707805157, 20.000000707805157, 20.000000707805157, 0) 100%);
   background-color: transparent;
   height: 540px;
@@ -1045,7 +974,6 @@
 }
 
 .home .group-39231-BRXQlF {
-  --z-index: 2;
   background-color: transparent;
   height: 50px;
   left: 424px;
@@ -1056,7 +984,6 @@
 }
 
 .home .information-technology-9wWVRE {
-  --z-index: 0;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
@@ -1081,7 +1008,6 @@
 }
 
 .home .aviation-9wWVRE {
-  --z-index: 1;
   background-color: transparent;
   color: #ffffff;
   font-family: 'Montserrat', Helvetica;
@@ -1101,7 +1027,6 @@
 }
 
 .home .maritime-9wWVRE {
-  --z-index: 2;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
@@ -1126,7 +1051,6 @@
 }
 
 .home .vector-BRXQlF {
-  --z-index: 3;
   background-color: transparent;
   background-image: url(../img/vector.svg);
   background-size: 100% 100%;
@@ -1139,7 +1063,6 @@
 }
 
 .home .frame-375-BRXQlF {
-  --z-index: 4;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1154,7 +1077,6 @@
 }
 
 .home .group-355-zcYSoT {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/group-355@2x.png);
   background-size: 100% 100%;
@@ -1169,7 +1091,6 @@
 }
 
 .home .frame-374-zcYSoT {
-  --z-index: 1;
   align-items: flex-end;
   background-color: transparent;
   display: flex;
@@ -1184,7 +1105,6 @@
 }
 
 .home .frame-354-Sx3jkj {
-  --z-index: 0;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1197,7 +1117,6 @@
 }
 
 .home .group-350-WmiCL5 {
-  --z-index: 0;
   background-color: transparent;
   height: 23px;
   min-width: 207px;
@@ -1206,7 +1125,6 @@
 }
 
 .home .a320-captain-xxpKxy {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -1227,7 +1145,6 @@
 }
 
 .home .meliteh-is-seeking-f-WmiCL5 {
-  --z-index: 1;
   background-color: transparent;
   color: #585858;
   font-family: 'Roboto', Helvetica;
@@ -1245,7 +1162,6 @@
 }
 
 .home .frame-373-Sx3jkj {
-  --z-index: 1;
   align-items: center;
   background-color: #ffe7eb;
   border-radius: 4px;
@@ -1262,7 +1178,6 @@
 }
 
 .home .apply-now-Mwsoy7 {
-  --z-index: 0;
   background-color: transparent;
   color: #d20027;
   font-family: 'Montserrat', Helvetica;
@@ -1280,7 +1195,6 @@
 }
 
 .home .frame-376-BRXQlF {
-  --z-index: 5;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1295,7 +1209,6 @@
 }
 
 .home .group-355-fDUlA1 {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/group-355@2x.png);
   background-size: 100% 100%;
@@ -1310,7 +1223,6 @@
 }
 
 .home .frame-374-fDUlA1 {
-  --z-index: 1;
   align-items: flex-end;
   background-color: transparent;
   display: flex;
@@ -1325,7 +1237,6 @@
 }
 
 .home .frame-354-hWr4er {
-  --z-index: 0;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1338,7 +1249,6 @@
 }
 
 .home .group-350-J8tbXx {
-  --z-index: 0;
   background-color: transparent;
   height: 23px;
   min-width: 207px;
@@ -1347,7 +1257,6 @@
 }
 
 .home .a320-captain-hpQcjC {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -1368,7 +1277,6 @@
 }
 
 .home .meliteh-is-seeking-f-J8tbXx {
-  --z-index: 1;
   background-color: transparent;
   color: #585858;
   font-family: 'Roboto', Helvetica;
@@ -1386,7 +1294,6 @@
 }
 
 .home .frame-373-hWr4er {
-  --z-index: 1;
   align-items: center;
   background-color: #ffe7eb;
   border-radius: 4px;
@@ -1403,7 +1310,6 @@
 }
 
 .home .apply-now-sWTOix {
-  --z-index: 0;
   background-color: transparent;
   color: #d20027;
   font-family: 'Montserrat', Helvetica;
@@ -1421,7 +1327,6 @@
 }
 
 .home .frame-377-BRXQlF {
-  --z-index: 6;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1436,7 +1341,6 @@
 }
 
 .home .group-355-V2XI6q {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/group-355@2x.png);
   background-size: 100% 100%;
@@ -1451,7 +1355,6 @@
 }
 
 .home .frame-374-V2XI6q {
-  --z-index: 1;
   align-items: flex-end;
   background-color: transparent;
   display: flex;
@@ -1466,7 +1369,6 @@
 }
 
 .home .frame-354-aA6tWY {
-  --z-index: 0;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1479,7 +1381,6 @@
 }
 
 .home .group-350-5eKRLf {
-  --z-index: 0;
   background-color: transparent;
   height: 23px;
   min-width: 207px;
@@ -1488,7 +1389,6 @@
 }
 
 .home .a320-captain-EdtXDd {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -1509,7 +1409,6 @@
 }
 
 .home .meliteh-is-seeking-f-5eKRLf {
-  --z-index: 1;
   background-color: transparent;
   color: #585858;
   font-family: 'Roboto', Helvetica;
@@ -1527,7 +1426,6 @@
 }
 
 .home .frame-373-aA6tWY {
-  --z-index: 1;
   align-items: center;
   background-color: #ffe7eb;
   border-radius: 4px;
@@ -1544,7 +1442,6 @@
 }
 
 .home .apply-now-q0yWAj {
-  --z-index: 0;
   background-color: transparent;
   color: #d20027;
   font-family: 'Montserrat', Helvetica;
@@ -1562,7 +1459,6 @@
 }
 
 .home .frame-378-BRXQlF {
-  --z-index: 7;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1577,7 +1473,6 @@
 }
 
 .home .group-355-GXSu3i {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/group-355@2x.png);
   background-size: 100% 100%;
@@ -1592,7 +1487,6 @@
 }
 
 .home .frame-374-GXSu3i {
-  --z-index: 1;
   align-items: flex-end;
   background-color: transparent;
   display: flex;
@@ -1607,7 +1501,6 @@
 }
 
 .home .frame-354-3mcqxZ {
-  --z-index: 0;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1620,7 +1513,6 @@
 }
 
 .home .group-350-3YIVhR {
-  --z-index: 0;
   background-color: transparent;
   height: 23px;
   min-width: 207px;
@@ -1629,7 +1521,6 @@
 }
 
 .home .a320-captain-uBuIQz {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -1650,7 +1541,6 @@
 }
 
 .home .meliteh-is-seeking-f-3YIVhR {
-  --z-index: 1;
   background-color: transparent;
   color: #585858;
   font-family: 'Roboto', Helvetica;
@@ -1668,7 +1558,6 @@
 }
 
 .home .frame-373-3mcqxZ {
-  --z-index: 1;
   align-items: center;
   background-color: #ffe7eb;
   border-radius: 4px;
@@ -1685,7 +1574,6 @@
 }
 
 .home .apply-now-xxS2id {
-  --z-index: 0;
   background-color: transparent;
   color: #d20027;
   font-family: 'Montserrat', Helvetica;
@@ -1703,7 +1591,6 @@
 }
 
 .home .vector-tAMpC2 {
-  --z-index: 8;
   background-color: transparent;
   background-image: url(../img/vector-2.svg);
   background-size: 100% 100%;
@@ -1716,7 +1603,6 @@
 }
 
 .home .rectangle-4299-BRXQlF {
-  --z-index: 9;
   background-color: #d20027;
   border-radius: 2px;
   height: 4px;
@@ -1729,7 +1615,6 @@
 }
 
 .home .frame-402-BRXQlF {
-  --z-index: 10;
   align-items: center;
   background-color: transparent;
   border: 1px solid;
@@ -1749,7 +1634,6 @@
 }
 
 .home .view-all-aviation-jobs-zXdsaN {
-  --z-index: 0;
   background-color: transparent;
   color: #ffffff;
   font-family: 'Montserrat', Helvetica;
@@ -1767,7 +1651,6 @@
 }
 
 .home .group-39236-C61RwL {
-  --z-index: 14;
   background-color: transparent;
   height: 262px;
   left: 0px;
@@ -1778,7 +1661,6 @@
 }
 
 .home .rectangle-4304-TMaPHg {
-  --z-index: 0;
   background-color: #c2c6c9;
   height: 262px;
   left: 0px;
@@ -1790,7 +1672,6 @@
 }
 
 .home .frame-39247-TMaPHg {
-  --z-index: 1;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -1804,7 +1685,6 @@
 }
 
 .home .contact-us-Z3YC0x {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -1824,7 +1704,6 @@
 }
 
 .home .cookies-policy-Z3YC0x {
-  --z-index: 1;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -1844,7 +1723,6 @@
 }
 
 .home .privacy-policy-Z3YC0x {
-  --z-index: 2;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -1864,7 +1742,6 @@
 }
 
 .home .terms-conditions-Z3YC0x {
-  --z-index: 3;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -1884,7 +1761,6 @@
 }
 
 .home .disclaimers-Z3YC0x {
-  --z-index: 4;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -1904,7 +1780,6 @@
 }
 
 .home .group-39227-TMaPHg {
-  --z-index: 2;
   background-color: transparent;
   height: 31px;
   left: 80px;
@@ -1915,7 +1790,6 @@
 }
 
 .home .vector-41-mMJ9HP {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/vector-41.svg);
   background-size: 100% 100%;
@@ -1928,7 +1802,6 @@
 }
 
 .home .meliteh-all-right-reserved-mMJ9HP {
-  --z-index: 1;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -1948,7 +1821,6 @@
 }
 
 .home .microsoft-teams-image-4-TMaPHg {
-  --z-index: 3;
   background-color: transparent;
   background-image: url(../img/microsoftteams-image-4@2x.png);
   background-size: 100% 100%;
@@ -1963,7 +1835,6 @@
 }
 
 .home .group-39237-C61RwL {
-  --z-index: 15;
   background-color: transparent;
   height: 262px;
   left: 0px;
@@ -1974,7 +1845,6 @@
 }
 
 .home .rectangle-4304-cSLbfs {
-  --z-index: 0;
   background-color: #c2c6c9;
   height: 262px;
   left: 0px;
@@ -1986,7 +1856,6 @@
 }
 
 .home .frame-39247-cSLbfs {
-  --z-index: 1;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -2000,7 +1869,6 @@
 }
 
 .home .contact-us-7rHcQ2 {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2020,7 +1888,6 @@
 }
 
 .home .cookies-policy-7rHcQ2 {
-  --z-index: 1;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2040,7 +1907,6 @@
 }
 
 .home .privacy-policy-7rHcQ2 {
-  --z-index: 2;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2060,7 +1926,6 @@
 }
 
 .home .terms-conditions-7rHcQ2 {
-  --z-index: 3;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2080,7 +1945,6 @@
 }
 
 .home .disclaimers-7rHcQ2 {
-  --z-index: 4;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2100,7 +1964,6 @@
 }
 
 .home .group-39227-cSLbfs {
-  --z-index: 2;
   background-color: transparent;
   height: 31px;
   left: 80px;
@@ -2111,7 +1974,6 @@
 }
 
 .home .vector-41-sfIHlc {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/vector-41.svg);
   background-size: 100% 100%;
@@ -2124,7 +1986,6 @@
 }
 
 .home .meliteh-all-right-reserved-sfIHlc {
-  --z-index: 1;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -2144,7 +2005,6 @@
 }
 
 .home .microsoft-teams-image-4-cSLbfs {
-  --z-index: 3;
   background-color: transparent;
   background-image: url(../img/microsoftteams-image-4@2x.png);
   background-size: 100% 100%;
@@ -2159,7 +2019,6 @@
 }
 
 .home .rectangle-169-C61RwL {
-  --z-index: 16;
   background-color: transparent;
   background-image: url(../img/rectangle-169.svg);
   background-size: 100% 100%;
@@ -2173,7 +2032,6 @@
 }
 
 .home .rectangle-170-C61RwL {
-  --z-index: 17;
   background: linear-gradient(180deg, rgb(255, 155.12500405311584, 155.12500405311584) 0%, rgba(77.76171773672104, 77.76171773672104, 77.76171773672104, 0) 100%);
   background-color: transparent;
   height: 441px;
@@ -2186,7 +2044,6 @@
 }
 
 .home .group-39240-C61RwL {
-  --z-index: 18;
   background-color: transparent;
   height: 254px;
   left: 280px;
@@ -2197,7 +2054,6 @@
 }
 
 .home .frame-407-8dJy9b {
-  --z-index: 0;
   align-items: flex-start;
   background-color: transparent;
   box-shadow: 0px 2px 2px #0000000a;
@@ -2211,7 +2067,6 @@
 }
 
 .home .frame-405-hDZt1x {
-  --z-index: 0;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -2222,7 +2077,6 @@
 }
 
 .home .frame-9-OAjR4c {
-  --z-index: 0;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid;
@@ -2240,7 +2094,6 @@
 }
 
 .home .magnifying-glass-HKU3uw {
-  --z-index: 0;
   background-color: transparent;
   background-image: url(../img/magnifyingglass-1.svg);
   background-size: 100% 100%;
@@ -2252,7 +2105,6 @@
 }
 
 .home .what-position-are-you-looking-for-HKU3uw {
-  --z-index: 1;
   background-color: transparent;
   color: #14141480;
   font-family: 'Montserrat', Helvetica;
@@ -2271,7 +2123,6 @@
 }
 
 .home .frame-14-OAjR4c {
-  --z-index: 1;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid;
@@ -2288,7 +2139,6 @@
 }
 
 .home .job-categories-Zy0Qxf {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   flex: 1;
@@ -2307,7 +2157,6 @@
 }
 
 .home .vector-Zy0Qxf {
-  --z-index: 1;
   background-color: transparent;
   background-image: url(../img/vector-3.svg);
   background-size: 100% 100%;
@@ -2318,7 +2167,6 @@
 }
 
 .home .button-hDZt1x {
-  --z-index: 1;
   align-items: center;
   background-color: #d20027;
   border-radius: 0px 4px 4px 0px;
@@ -2335,7 +2183,6 @@
 }
 
 .home .search-job-kfW3Xh {
-  --z-index: 0;
   background-color: transparent;
   color: #ffffff;
   font-family: 'Montserrat', Helvetica;
@@ -2353,7 +2200,6 @@
 }
 
 .home .get-the-right-job-you-deserve-8dJy9b {
-  --z-index: 1;
   background-color: transparent;
   color: transparent;
   font-family: 'Montserrat', Helvetica;
@@ -2401,7 +2247,6 @@
 }
 
 .home .rectangle-166-uS5rdd {
-  --z-index: 0;
   background-color: #ffffff;
   height: 80px;
   left: 0px;
@@ -2413,7 +2258,6 @@
 }
 
 .home .frame-337-uS5rdd {
-  --z-index: 1;
   align-items: flex-start;
   background-color: transparent;
   display: flex;
@@ -2427,7 +2271,6 @@
 }
 
 .home .about-us-x0xFgv {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2446,7 +2289,6 @@
 }
 
 .home .our-services-x0xFgv {
-  --z-index: 1;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2465,7 +2307,6 @@
 }
 
 .home .news-x0xFgv {
-  --z-index: 2;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2484,7 +2325,6 @@
 }
 
 .home .find-jobs-x0xFgv {
-  --z-index: 3;
   background-color: transparent;
   color: #141414;
   cursor: pointer;
@@ -2503,7 +2343,6 @@
 }
 
 .home .group-336-uS5rdd {
-  --z-index: 2;
   background-color: transparent;
   height: 44px;
   left: 1133px;
@@ -2514,7 +2353,6 @@
 }
 
 .home .log-in-IQP3OD {
-  --z-index: 0;
   background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
@@ -2534,7 +2372,6 @@
 }
 
 .home .frame-335-IQP3OD {
-  --z-index: 1;
   align-items: center;
   background-color: #d20027;
   border-radius: 4px;
@@ -2552,7 +2389,6 @@
 }
 
 .home .register-now-cK7fuZ {
-  --z-index: 0;
   background-color: transparent;
   color: #ffffff;
   font-family: 'Montserrat', Helvetica;
@@ -2570,10 +2406,9 @@
 }
 
 .home .microsoft-teams-image-1-uS5rdd {
-  --z-index: 3;
   background-color: transparent;
   background-image: url(../img/microsoftteams-image-1@2x.png);
-  background-size: 100% 100%;
+  background-size: auto 100%;
   height: 80px;
   left: 64px;
   mix-blend-mode: normal;
