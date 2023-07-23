@@ -15,6 +15,36 @@ body {
   background: #ffffff;
 }
 
+.header-logo-image {
+  background-color: transparent;
+  background-image: url(../img/meliteh-logo.png);
+  background-size: auto 100%;
+  cursor: pointer;
+  height: 80px;
+  left: 64px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  opacity: 1;
+  top: 0px;
+  width: 145px;
+}
+
+.header-links {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 50px;
+  height: auto;
+  left: 312px;
+  opacity: 1;
+  top: 30px;
+  width: fit-content;
+}
+
+.header-links a:hover div {
+  color: rgb(26, 83, 136);
+}
+
 .screen a {
   display: contents;
   text-decoration: none;
@@ -33,14 +63,7 @@ body {
   pointer-events: auto;
 }
 
-.auto-animated div {
-  --z-index: -1;
-  opacity: 0;
-  position: absolute;
-}
-
 .auto-animated input {
-  --z-index: -1;
   opacity: 0;
   position: absolute;
 }
