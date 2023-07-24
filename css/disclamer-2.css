@@ -86,32 +86,6 @@
   width: 1280px;
 }
 
-.disclamer-2 .footer-navbar {
-  background-color: var(--alabaster);
-  flex-direction: column;
-  gap: 24px;
-  left: 505px;
-  min-height: 262px;
-  padding: 23px 78px;
-  position: absolute;
-  top: 678px;
-  width: 1440px;
-}
-
-.disclamer-2 .footer-links {
-  align-items: flex-start;
-  gap: 100px;
-  margin-right: 1.0px;
-}
-
-.disclamer-2 .all-rights-reserved-section {
-  align-self: flex-end;
-  flex-direction: column;
-  gap: 15px;
-  min-height: 31px;
-  width: 1282px;
-}
-
 .disclamer-2 .pexels-photo-by-edmond-dants {
   height: 248px;
   left: 505px;

@@ -75,32 +75,6 @@
   width: 1280px;
 }
 
-.disclamer .footer-navbar {
-  background-color: var(--alabaster);
-  flex-direction: column;
-  gap: 24px;
-  left: 487px;
-  min-height: 262px;
-  padding: 23px 78px;
-  position: absolute;
-  top: 516px;
-  width: 1440px;
-}
-
-.disclamer .footer-links {
-  align-items: flex-start;
-  gap: 100px;
-  margin-right: 1.0px;
-}
-
-.disclamer .all-rights-reserved-section {
-  align-self: flex-end;
-  flex-direction: column;
-  gap: 15px;
-  min-height: 31px;
-  width: 1282px;
-}
-
 .disclamer .pexels-photo-by-edmond-dants {
   height: 248px;
   left: 487px;

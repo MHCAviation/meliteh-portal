@@ -3,80 +3,46 @@
 .home {
   background-color: #ffffff;
   border: 1px none;
-  height: 3399px;
   mix-blend-mode: normal;
   position: relative;
-  max-width: 1440px;
   flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
-.home .vector-C61RwL {
-  background-color: transparent;
-  background-image: url(../img/vector.svg);
-  background-size: 100% 100%;
-  height: 52px;
-  left: 1373px;
-  opacity: 1;
-  position: absolute;
-  top: 1300px;
-  width: 28px;
+.news-section {
+  z-index: 0;
+  position: relative;
+  padding: 30px;
 }
 
 .home .home-news-and-insights-background {
   background-color: #c2c6c9;
-  height: 622px;
-  left: 0px;
-  mix-blend-mode: normal;
   opacity: 0.1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
   position: absolute;
-  top: 2323px;
-  width: 1440px;
-}
-
-.home .our-services-home-summary {
-  align-items: flex-start;
-  background-color: transparent;
-  background-image: url(../img/our-services-home-summary.png);
-  background-size: 100% 100%;
-  display: flex;
-  gap: 16px;
-  height: 396px;
-  left: 62px;
-  opacity: 1;
-  position: absolute;
-  top: 593px;
-  width: 1316px;
 }
 
 .home .news-and-insights-C61RwL {
-  background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
   font-size: 40px;
-  font-style: normal;
   font-weight: 500;
-  height: auto;
-  left: 532px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: absolute;
   text-align: center;
-  top: 2402px;
-  width: auto;
+  margin: 30px;
 }
 
 .home .home-news-list {
   align-items: flex-start;
-  background-color: transparent;
   display: flex;
   gap: 40px;
   height: auto;
-  left: 120px;
-  opacity: 1;
-  position: absolute;
-  top: 2492px;
   width: fit-content;
 }
 
@@ -247,14 +213,10 @@
 }
 
 .home .testimonials-list {
-  background-color: transparent;
   height: 224px;
-  left: 0px;
-  opacity: 1;
   overflow-x: scroll;
-  position: absolute;
-  top: 2019px;
   width: 1436px;
+  position: relative;
 }
 
 .home .group-38216-EpPtXC {
@@ -486,35 +448,24 @@
 }
 
 .home .dont-take-our-word-for-it-C61RwL {
-  background-color: transparent;
   color: #141414;
   font-family: 'Montserrat', Helvetica;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
   height: auto;
-  left: 80px;
-  letter-spacing: 0.00px;
+  margin-left: 80px;
   line-height: 46px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: absolute;
-  text-align: left;
-  top: 1946px;
   white-space: nowrap;
   width: 544px;
 }
 
 .home .subtitle-C61RwL {
   align-items: center;
-  background-color: transparent;
   display: flex;
   gap: 10px;
-  height: auto;
   justify-content: center;
-  left: 80px;
-  opacity: 1;
-  position: absolute;
+  padding-left: 80px;
   top: 1903px;
   width: fit-content;
 }
@@ -547,14 +498,10 @@
   width: fit-content;
 }
 
-.home .group-39222-C61RwL {
-  background-color: transparent;
+.home .subscribe-form {
   height: 64px;
-  left: 258px;
-  opacity: 1;
-  position: absolute;
-  top: 3009px;
   width: 923px;
+  position: relative;
 }
 
 .home .group-366-ITdx2a {
@@ -676,14 +623,10 @@
   width: fit-content;
 }
 
-.home .group-401-C61RwL {
-  background-color: transparent;
+.home .our-clients-section {
   height: 153px;
-  left: 307px;
-  opacity: 1;
-  position: absolute;
-  top: 1670px;
   width: 837px;
+  position: relative;
 }
 
 .home .clients-8xEr18 {
@@ -757,7 +700,7 @@
   width: 267px;
 }
 
-.home .frame-407-C61RwL {
+.home .view-all-jobs-button {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid;
@@ -765,15 +708,11 @@
   border-radius: 4px;
   display: flex;
   gap: 12px;
-  height: auto;
   justify-content: center;
-  left: 633px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  overflow: hidden;
   padding: 16px 24px;
-  position: absolute;
-  top: 2811px;
+  margin: 24px;
+  margin-left: auto;
+  margin-right: auto;
   width: fit-content;
 }
 
@@ -795,13 +734,9 @@
 }
 
 .home .jobs-featured-C61RwL {
-  background-color: transparent;
   height: 540px;
-  left: 0px;
-  opacity: 1;
-  position: absolute;
-  top: 1050px;
   width: 1440px;
+  position: relative;
 }
 
 .home .rectangle-162-BRXQlF {
@@ -1507,77 +1442,107 @@
   width: fit-content;
 }
 
+.home-job-search-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  padding: 60px;
+  overflow: hidden;
+}
+
 .home .home-job-search-background {
-  background-color: transparent;
   background-image: url(../img/rectangle-169.svg);
-  background-size: 100% 100%;
-  height: 441px;
-  left: 0px;
-  mix-blend-mode: normal;
-  opacity: 1;
   position: absolute;
-  top: 81px;
-  width: 1440px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  filter: blur(4px);
+  background-position: center;
+  animation: shake-airplane;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  z-index: -1;
+  /* cut out blur artifacts on edges */
+  transform: scale(1.05);
+}
+
+@keyframes shake-airplane {
+  0% {
+    filter: blur(4px);
+    background-position: 50% 50%;
+  }
+  25% {
+    background-position: 42% 45%;
+    filter: blur(5px);
+  }
+  50% {
+    background-position: 53% 52%;
+    filter: blur(2px);
+  }
+  75% {
+    background-position: 59% 46%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
 }
 
 .home .home-job-search-background-overglow {
-  background: linear-gradient(180deg, rgb(255, 155.12500405311584, 155.12500405311584) 0%, rgba(77.76171773672104, 77.76171773672104, 77.76171773672104, 0) 100%);
-  background-color: transparent;
-  height: 441px;
-  left: 0px;
-  mix-blend-mode: normal;
-  opacity: 1;
   position: absolute;
-  top: 81px;
-  width: 1440px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+      159deg,
+      rgb(255 155 155 / 76%) 0%,
+      rgba(77, 77, 77, 0) 75%
+  );
+  z-index: -1;
 }
 
-.home .home-job-search-form {
-  background-color: transparent;
-  height: 254px;
-  left: 280px;
-  opacity: 1;
-  position: absolute;
-  top: 174px;
-  width: 882px;
+.home .get-the-right-job-you-deserve-8dJy9b {
+  font-family: 'Montserrat', Helvetica;
+  font-size: 70px;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  text-align: center;
+  width: auto;
 }
 
-.home .frame-407-8dJy9b {
+.home .home-job-search-input {
+  margin-top: 24px;
   align-items: flex-start;
-  background-color: transparent;
   box-shadow: 0px 2px 2px #0000000a;
   display: flex;
   height: auto;
-  left: 0px;
   opacity: 1;
-  position: absolute;
-  top: 194px;
   width: 880px;
 }
 
 .home .frame-405-hDZt1x {
-  align-items: flex-start;
-  background-color: transparent;
+  align-items: stretch;
+  justify-content: center;
   display: flex;
   flex: 1;
-  height: auto;
-  opacity: 1;
-  position: relative;
 }
 
-.home .frame-9-OAjR4c {
-  align-items: center;
+.home .home-jobs-search-input-flexbox {
+  align-items: stretch;
   background-color: #ffffff;
   border: 1px solid;
   border-color: #1414141a;
   border-radius: 4px 0px 0px 4px;
   display: flex;
   gap: 16px;
-  height: auto;
-  mix-blend-mode: normal;
-  opacity: 1;
-  overflow: hidden;
-  padding: 18px;
+  padding-left: 18px;
   position: relative;
   width: 494px;
 }
@@ -1586,89 +1551,42 @@
   background-color: transparent;
   background-image: url(../img/magnifyingglass-1.svg);
   background-size: 100% 100%;
-  height: 24px;
   min-width: 24px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
+  background-position: center;
 }
 
 .home .what-position-are-you-looking-for-HKU3uw {
   background-color: transparent;
-  color: #14141480;
   font-family: 'Montserrat', Helvetica;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.00px;
-  line-height: 24px;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
   white-space: nowrap;
-  width: fit-content;
-}
-
-.home .frame-14-OAjR4c {
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #1414141a;
-  display: flex;
   flex: 1;
-  gap: 16px;
-  height: auto;
-  mix-blend-mode: normal;
-  opacity: 1;
-  overflow: hidden;
-  padding: 18px;
-  position: relative;
+  border: none;
+  outline: none;
+}
+.what-position-are-you-looking-for-HKU3uw:focus {
+  border: none;
+  outline: none;
 }
 
-.home .job-categories-Zy0Qxf {
-  background-color: transparent;
-  color: #141414;
-  flex: 1;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.00px;
-  line-height: 24px;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.home .vector-Zy0Qxf {
-  background-color: transparent;
-  background-image: url(../img/vector-3.svg);
-  background-size: 100% 100%;
-  height: 10px;
-  min-width: 18px;
-  opacity: 1;
-  position: relative;
-}
-
-.home .button-hDZt1x {
+.home .home-jobs-search-submit-button {
   align-items: center;
   background-color: #d20027;
   border-radius: 0px 4px 4px 0px;
   display: flex;
   gap: 8px;
-  height: auto;
   justify-content: center;
   margin-left: -1px;
   mix-blend-mode: normal;
-  opacity: 1;
   padding: 18px 40px;
   position: relative;
-  width: fit-content;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.home-jobs-search-submit-button:hover {
+  background-color: #ec002a;
 }
 
 .home .search-job-kfW3Xh {
@@ -1686,24 +1604,6 @@
   text-align: left;
   white-space: nowrap;
   width: fit-content;
-}
-
-.home .get-the-right-job-you-deserve-8dJy9b {
-  background-color: transparent;
-  color: transparent;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 70px;
-  font-style: normal;
-  font-weight: 700;
-  height: auto;
-  left: 111px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  opacity: 1;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  width: auto;
 }
 
 .home .span0-6mBiGF {
