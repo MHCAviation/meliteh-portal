@@ -183,7 +183,7 @@
   width: 1280px;
 }
 
-.our-services-payroll .group-39236 {
+.our-services-payroll .footer-navbar {
   align-items: center;
   background-color: var(--submarine);
   display: flex;
@@ -195,13 +195,13 @@
   width: 1440px;
 }
 
-.our-services-payroll .frame-39247 {
+.our-services-payroll .footer-links {
   align-items: flex-start;
   gap: 100px;
   margin-right: 1.0px;
 }
 
-.our-services-payroll .group-39227 {
+.our-services-payroll .all-rights-reserved-section {
   align-items: center;
   align-self: flex-end;
   display: flex;

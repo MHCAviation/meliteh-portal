@@ -582,7 +582,7 @@
   width: 788px;
 }
 
-.find-jobs-aviation .group-39236 {
+.find-jobs-aviation .footer-navbar {
   align-items: center;
   background-color: var(--submarine);
   display: flex;
@@ -594,7 +594,7 @@
   z-index: 4;
 }
 
-.find-jobs-aviation .frame-39247 {
+.find-jobs-aviation .footer-links {
   align-items: flex-start;
   display: flex;
   gap: 100px;
@@ -603,7 +603,7 @@
   width: fit-content;
 }
 
-.find-jobs-aviation .group-39227 {
+.find-jobs-aviation .all-rights-reserved-section {
   align-items: center;
   align-self: flex-end;
   display: flex;

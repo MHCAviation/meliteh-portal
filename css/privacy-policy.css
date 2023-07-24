@@ -216,7 +216,7 @@
   position: relative;
 }
 
-.privacy-policy .group-39227 {
+.privacy-policy .all-rights-reserved-section {
   height: 258px;
   left: 459px;
   position: absolute;
@@ -341,7 +341,7 @@
   z-index: 5;
 }
 
-.privacy-policy .group-39236 {
+.privacy-policy .footer-navbar {
   align-items: center;
   background-color: var(--submarine);
   display: flex;
@@ -354,7 +354,7 @@
   z-index: 6;
 }
 
-.privacy-policy .frame-39247 {
+.privacy-policy .footer-links {
   align-items: flex-start;
   gap: 100px;
   margin-right: 1.0px;
@@ -370,7 +370,7 @@
   width: fit-content;
 }
 
-.privacy-policy .group-39227-1 {
+.privacy-policy .all-rights-reserved-section-1 {
   align-items: center;
   align-self: flex-end;
   display: flex;

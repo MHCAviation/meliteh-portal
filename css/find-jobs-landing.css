@@ -19,11 +19,6 @@
   padding: 0 62px;
 }
 
-.find-jobs-landing .microsoft-teams-image-1 {
-  cursor: pointer;
-  width: 145px;
-}
-
 .find-jobs-landing .navbar {
   align-items: flex-start;
   display: flex;
@@ -297,38 +292,4 @@
   position: absolute;
   top: 432px;
   width: 269px;
-}
-
-.find-jobs-landing .group-39236 {
-  align-items: center;
-  background-color: var(--submarine);
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 572px;
-  min-height: 262px;
-  padding: 23px 78px;
-  width: 1440px;
-}
-
-.find-jobs-landing .frame-39247 {
-  align-items: flex-start;
-  gap: 100px;
-  margin-right: 1.0px;
-}
-
-.find-jobs-landing .group-39227 {
-  align-items: center;
-  align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  min-height: 31px;
-  width: 1282px;
-}
-
-.find-jobs-landing .frame {
-  display: flex;
-  position: relative;
-  width: fit-content;
 }

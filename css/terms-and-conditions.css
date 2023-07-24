@@ -159,7 +159,7 @@
   top: 81px;
 }
 
-.terms-and-conditions .group-39236 {
+.terms-and-conditions .footer-navbar {
   background-color: var(--submarine);
   flex-direction: column;
   gap: 24px;
@@ -169,13 +169,13 @@
   z-index: 2;
 }
 
-.terms-and-conditions .frame-39247 {
+.terms-and-conditions .footer-links {
   align-items: flex-start;
   gap: 100px;
   margin-right: 1.0px;
 }
 
-.terms-and-conditions .group-39227 {
+.terms-and-conditions .all-rights-reserved-section {
   align-self: flex-end;
   flex-direction: column;
   gap: 15px;

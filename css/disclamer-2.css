@@ -120,7 +120,7 @@
   width: 1280px;
 }
 
-.disclamer-2 .group-39236 {
+.disclamer-2 .footer-navbar {
   background-color: var(--alabaster);
   flex-direction: column;
   gap: 24px;
@@ -132,13 +132,13 @@
   width: 1440px;
 }
 
-.disclamer-2 .frame-39247 {
+.disclamer-2 .footer-links {
   align-items: flex-start;
   gap: 100px;
   margin-right: 1.0px;
 }
 
-.disclamer-2 .group-39227 {
+.disclamer-2 .all-rights-reserved-section {
   align-self: flex-end;
   flex-direction: column;
   gap: 15px;
