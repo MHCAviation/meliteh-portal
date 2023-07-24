@@ -1071,39 +1071,25 @@ body {
   width: fit-content;
 }
 
-.recruitment {
-  height: 48px;
-  left: 19px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
+.service-card-text {
   text-align: center;
-  top: 218px;
-  width: 262px;
-}
-
-.background-check-complience {
-  left: 19px;
-  letter-spacing: 0;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 1px solid;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  border-color: var(--meliteh-grey);
+  padding: 12px;
   line-height: 24px;
-  position: absolute;
-  text-align: center;
-  top: 218px;
-  width: 262px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-weight: 700;
 }
 
-.hr-payroll-services {
-  height: 48px;
-  left: 19px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 218px;
-  width: 262px;
-}
-
-.vector-45 {
+.sectioning-line {
   height: 1px;
   margin-top: 24px;
   object-fit: cover;

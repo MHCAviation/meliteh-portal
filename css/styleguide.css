@@ -108,8 +108,8 @@
   color: var(--neutral100);
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-m);
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
 }
 
 .montserrat-normal-black-16px {
