@@ -1,15 +1,12 @@
 /* screen - about-us */
 
 .about-us {
-    background-color: #ffffff;
     border: 1px none;
     height: 2257px;
     mix-blend-mode: normal;
-    opacity: 1;
-    overflow: hidden;
-    overflow-x: hidden;
     position: relative;
-    width: 1440px;
+    max-width: 1440px;
+    flex: 1;
   }
   
   .about-us .blob-C61RwL {
@@ -293,10 +290,10 @@
     width: 1280px;
   }
   
-  .about-us .frame-39225-C61RwL {
+  .about-us .about-our-values {
     align-items: flex-start;
     background-color: transparent;
-    background-image: url(../img/frame-39225.png);
+    background-image: url(../img/about-our-values.png);
     background-size: 100% 100%;
     display: flex;
     gap: 24px;
@@ -997,140 +994,4 @@
     position: absolute;
     top: 56px;
     width: 144px;
-  }
-  
-  .about-us .header-navbar {
-    background-color: #ffffff;
-    height: 80px;
-    opacity: 1;
-    position: fixed;
-    top: 0px;
-    width: 1440px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .about-us .about-us-x0xFgv {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: fit-content;
-  }
-  
-  .about-us .our-services-x0xFgv {
-    background-color: transparent;
-    color: #141414;
-    cursor: pointer;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: fit-content;
-  }
-  
-  .about-us .news-x0xFgv {
-    background-color: transparent;
-    color: #141414;
-    cursor: pointer;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: fit-content;
-  }
-  
-  .about-us .find-jobs-x0xFgv {
-    background-color: transparent;
-    color: #141414;
-    cursor: pointer;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: fit-content;
-  }
-  
-  .about-us .log-in-IQP3OD {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    height: auto;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 11px;
-    width: auto;
-  }
-  
-  .about-us .frame-335-IQP3OD {
-    align-items: center;
-    background-color: #d20027;
-    border-radius: 4px;
-    display: flex;
-    gap: 10px;
-    height: auto;
-    justify-content: center;
-    left: 82px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    padding: 12px 24px;
-    position: absolute;
-    top: 0px;
-    width: fit-content;
-  }
-  
-  .about-us .register-now-cK7fuZ {
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: fit-content;
   }

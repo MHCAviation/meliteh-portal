@@ -5,11 +5,9 @@
   border: 1px none;
   height: 3399px;
   mix-blend-mode: normal;
-  opacity: 1;
-  overflow: hidden;
-  overflow-x: hidden;
   position: relative;
-  width: 1440px;
+  max-width: 1440px;
+  flex: 1;
 }
 
 .home .vector-C61RwL {
@@ -2029,7 +2027,7 @@
   width: 1440px;
 }
 
-.home .group-39240-C61RwL {
+.home .home-job-search-form {
   background-color: transparent;
   height: 254px;
   left: 280px;
@@ -2221,141 +2219,4 @@
 .home .span3-6mBiGF {
   color: #ffffff;
   font-style: normal;
-}
-
-.home .header-navbar {
-  background-color: #ffffff;
-  height: 80px;
-  opacity: 1;
-  position: fixed;
-  top: 0px;
-  width: 1440px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.home .about-us-x0xFgv {
-  background-color: transparent;
-  color: #141414;
-  cursor: pointer;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
-  width: fit-content;
-}
-
-.home .our-services-x0xFgv {
-  background-color: transparent;
-  color: #141414;
-  cursor: pointer;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
-  width: fit-content;
-}
-
-.home .news-x0xFgv {
-  background-color: transparent;
-  color: #141414;
-  cursor: pointer;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
-  width: fit-content;
-}
-
-.home .find-jobs-x0xFgv {
-  background-color: transparent;
-  color: #141414;
-  cursor: pointer;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
-  width: fit-content;
-}
-
-.home .log-in-IQP3OD {
-  background-color: transparent;
-  color: #141414;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: absolute;
-  text-align: left;
-  top: 11px;
-  width: auto;
-}
-
-.home .frame-335-IQP3OD {
-  align-items: center;
-  background-color: #d20027;
-  border-radius: 4px;
-  display: flex;
-  gap: 10px;
-  height: auto;
-  justify-content: center;
-  left: 82px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  padding: 12px 24px;
-  position: absolute;
-  top: 0px;
-  width: fit-content;
-}
-
-.home .register-now-cK7fuZ {
-  background-color: transparent;
-  color: #ffffff;
-  font-family: 'Montserrat', Helvetica;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
-  position: relative;
-  text-align: left;
-  width: fit-content;
 }
