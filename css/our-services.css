@@ -144,12 +144,16 @@
 }
 
 .service-description p,
-.service-description ol,
 .recruiment-service-intro {
   margin-top: 38px;
   max-width: 1280px;
   letter-spacing: 0;
   line-height: 28px;
+}
+
+.service-description ol {
+  line-height: 28px;
+  max-width: 1280px;
 }
 
 .w-row {
