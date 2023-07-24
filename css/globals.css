@@ -1,4 +1,4 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700,400|DM+Sans:500,700,400|Roboto:400|Inter:500,400,700");
 
 @font-face {
@@ -1061,37 +1061,4 @@ body {
   gap: 1px;
   min-height: 344px;
   width: 1440px;
-}
-
-.navbar-link-about-us {
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  width: fit-content;
-}
-
-.service-card-text {
-  text-align: center;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  border: 1px solid;
-  border-top: none;
-  border-radius: 0 0 20px 20px;
-  border-color: var(--meliteh-grey);
-  padding: 12px;
-  line-height: 24px;
-  font-family: var(--font-family-montserrat);
-  font-size: var(--font-size-m);
-  font-weight: 700;
-}
-
-.sectioning-line {
-  height: 1px;
-  margin-top: 24px;
-  object-fit: cover;
-  width: 1280px;
 }

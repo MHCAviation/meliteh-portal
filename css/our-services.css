@@ -71,6 +71,31 @@
   overflow: hidden;
 }
 
+.service-card-text {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 1px solid;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  border-color: var(--meliteh-grey);
+  padding: 12px;
+  line-height: 24px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+}
+
+.sectioning-line {
+  height: 1px;
+  margin-top: 24px;
+  object-fit: cover;
+  width: 1280px;
+}
+
 [data-selected-service="RECRUITMENT"] .service-card[data-service="RECRUITMENT"],
 [data-selected-service="BG_CHECK"] .service-card[data-service="BG_CHECK"],
 [data-selected-service="PAYROLL"] .service-card[data-service="PAYROLL"],
@@ -107,13 +132,6 @@
   margin-right: auto;
 }
 
-.our-services-u45-landing-u45-recruitment-u45-alt .with-our-background {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-top: 38px;
-  min-height: 488px;
-}
-
 .service-description {
   display: none;
 }
@@ -125,6 +143,22 @@
   display: unset;
 }
 
-.service-description p {
+.service-description p,
+.service-description ol,
+.recruiment-service-intro {
+  margin-top: 38px;
   max-width: 1280px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.w-row {
+  display: flex;
+}
+
+.service-description strong {
+  color: rgb(210, 0, 39);
+}
+.service-description .list strong {
+  font-weight: normal;
 }
