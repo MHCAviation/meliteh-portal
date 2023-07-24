@@ -1476,15 +1476,15 @@
 }
 
 #home-job-search-background[data-slide-iteration="1"] {
-  background-image: url(../img/home_banner_ship.png);
+  background-image: url(../img/home_banner_ship.jpg);
 }
 
 #home-job-search-background[data-slide-iteration="2"] {
-  background-image: url(../img/home_banner_computer.png);
+  background-image: url(../img/home_banner_computer.jpg);
 }
 
 #home-job-search-background[data-slide-iteration="3"] {
-  background-image: url(../img/home_banner_business_man.png);
+  background-image: url(../img/home_banner_business_man.jpg);
 }
 
 @keyframes shake-airplane {
