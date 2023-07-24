@@ -19,8 +19,8 @@ body {
   z-index: 0;
 }
 
-/* todo: get rid of absolute positioning on home and about-us, it currently includes these 80px from header reserved */
-.screen:not(.about-us) {
+/* todo: get rid of absolute positioning on find-jobs-aviation and about-us, it currently includes these 80px from header reserved */
+.screen:not(.about-us):not(.find-jobs-aviation) {
   padding-top: var(--header-height);
 }
 

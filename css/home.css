@@ -1453,8 +1453,7 @@
   overflow: hidden;
 }
 
-.home .home-job-search-background {
-  background-image: url(../img/rectangle-169.svg);
+#home-job-search-background {
   position: absolute;
   left: 0;
   top: 0;
@@ -1469,6 +1468,23 @@
   z-index: -1;
   /* cut out blur artifacts on edges */
   transform: scale(1.05);
+  transition: all 0.6s ease-in-out;
+}
+
+#home-job-search-background[data-slide-iteration="0"] {
+  background-image: url(../img/home_banner_airplane.svg);
+}
+
+#home-job-search-background[data-slide-iteration="1"] {
+  background-image: url(../img/home_banner_ship.png);
+}
+
+#home-job-search-background[data-slide-iteration="2"] {
+  background-image: url(../img/home_banner_computer.png);
+}
+
+#home-job-search-background[data-slide-iteration="3"] {
+  background-image: url(../img/home_banner_business_man.png);
 }
 
 @keyframes shake-airplane {
@@ -1492,7 +1508,7 @@
   }
 }
 
-.home .home-job-search-background-overglow {
+.home-job-search-background-overglow {
   position: absolute;
   left: 0;
   top: 0;
