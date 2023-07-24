@@ -17,31 +17,6 @@
   width: 1440px;
 }
 
-.contact .group-402 {
-  background-color: var(--neutral100);
-  justify-content: flex-end;
-  min-width: 1440px;
-  padding: 0 62px;
-}
-
-.contact .microsoft-teams-image-1 {
-  width: 145px;
-}
-
-.contact .navbar {
-  align-items: flex-start;
-  display: flex;
-  gap: 50px;
-  margin-left: 103px;
-}
-
-.contact .navbar-link {
-  cursor: pointer;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-}
-
 .contact .group-336 {
   gap: 32px;
   height: 44px;

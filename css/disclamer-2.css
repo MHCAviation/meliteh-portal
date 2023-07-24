@@ -11,40 +11,6 @@
   width: 1440px;
 }
 
-.disclamer-2 .group-402 {
-  background-color: var(--neutral100);
-  height: 80px;
-  justify-content: flex-end;
-  left: 0;
-  min-width: 1440px;
-  padding: 0 62px;
-  position: fixed;
-  top: 0;
-  z-index: 6;
-}
-
-.disclamer-2 .microsoft-teams-image-1 {
-  width: 145px;
-}
-
-.disclamer-2 .navbar {
-  align-items: flex-start;
-  display: flex;
-  gap: 50px;
-  margin-left: 103px;
-  position: relative;
-  width: fit-content;
-}
-
-.disclamer-2 .navbar-link {
-  cursor: pointer;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  width: fit-content;
-}
-
 .disclamer-2 .group-336 {
   gap: 32px;
   height: 44px;

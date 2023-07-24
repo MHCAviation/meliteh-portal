@@ -10,42 +10,6 @@
   width: 1440px;
 }
 
-.find-jobs-landing .group-402 {
-  align-items: center;
-  background-color: var(--neutral100);
-  display: flex;
-  justify-content: flex-end;
-  min-width: 1440px;
-  padding: 0 62px;
-}
-
-.find-jobs-landing .navbar {
-  align-items: flex-start;
-  display: flex;
-  gap: 50px;
-  margin-left: 103px;
-  position: relative;
-  width: fit-content;
-}
-
-.find-jobs-landing .navbar-link {
-  cursor: pointer;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  width: fit-content;
-}
-
-.find-jobs-landing .group-336 {
-  align-items: center;
-  display: flex;
-  gap: 32px;
-  height: 44px;
-  margin-left: 369px;
-  min-width: 245px;
-}
-
 .find-jobs-landing .frame-335 {
   align-items: center;
   background-color: var(--meliteh-red);

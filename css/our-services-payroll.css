@@ -10,37 +10,6 @@
   width: 1440px;
 }
 
-.our-services-payroll .group-402 {
-  align-items: center;
-  background-color: var(--neutral100);
-  display: flex;
-  justify-content: flex-end;
-  min-width: 1440px;
-  padding: 0 62px;
-}
-
-.our-services-payroll .microsoft-teams-image-1 {
-  width: 145px;
-}
-
-.our-services-payroll .navbar {
-  align-items: flex-start;
-  display: flex;
-  gap: 50px;
-  margin-left: 103px;
-  position: relative;
-  width: fit-content;
-}
-
-.our-services-payroll .navbar-link {
-  cursor: pointer;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  width: fit-content;
-}
-
 .our-services-payroll .group-336 {
   align-items: center;
   display: flex;

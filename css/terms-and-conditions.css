@@ -12,40 +12,6 @@
   width: 1440px;
 }
 
-.terms-and-conditions .group-402 {
-  background-color: var(--neutral100);
-  height: 80px;
-  justify-content: flex-end;
-  left: 0;
-  min-width: 1440px;
-  padding: 0 62px;
-  position: fixed;
-  top: 0;
-  z-index: 3;
-}
-
-.terms-and-conditions .microsoft-teams-image-1 {
-  width: 145px;
-}
-
-.terms-and-conditions .navbar {
-  align-items: flex-start;
-  display: flex;
-  gap: 50px;
-  margin-left: 103px;
-  position: relative;
-  width: fit-content;
-}
-
-.terms-and-conditions .navbar-link {
-  cursor: pointer;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  width: fit-content;
-}
-
 .terms-and-conditions .group-336 {
   gap: 32px;
   height: 44px;
