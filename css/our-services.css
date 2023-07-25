@@ -1,7 +1,6 @@
 /* screen - our-services-u45-landing-u45-recruitment-u45-alt */
 
 .group-container {
-  max-width: 1440px;
   width: 100%;
 }
 
@@ -54,6 +53,7 @@
 }
 
 .service-cards-list {
+  margin-top: 5%;
   align-items: flex-start;
   display: flex;
   gap: 24px;
@@ -163,8 +163,7 @@
   display: unset;
 }
 
-.service-description p,
-.recruiment-service-intro {
+.service-description p,.recruiment-service-intro {
   margin-top: 38px;
   max-width: 1280px;
   letter-spacing: 0;
@@ -187,10 +186,39 @@
   font-weight: normal;
 }
 
+@media (max-width: 769px) {
+ 
+  .service-description p, .recruiment-service-intro {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+  }
+
+}
+
+
 @media (max-width: 500px) {
+
+  .montserrat-bold-white-70px {
+    font-size: var(--font-size-xxl-mobile);
+  }
+
+  .montserrat-bold-monza-70px {
+    font-size: var(--font-size-xxl-mobile);
+  }
+
+  .w-row {
+  flex-direction: column;
+  }
 
   .our-services-u45-landing-u45-recruitment-u45-alt {
     align-items: center;
+  }
+
+  .service-description p, .recruiment-service-intro {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
   }
 
   .service-cards-list {

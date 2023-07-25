@@ -33,6 +33,7 @@
   --font-size-xl: 20px;
   --font-size-xs: 12px;
   --font-size-xxl: 24px;
+  --font-size-xxl-mobile: 48px;
   --font-size-xxxl: 70px;
  
   --font-family-dm_sans: "DM Sans", Helvetica;
@@ -86,6 +87,7 @@
   font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 400;
+  text-align: center;
 }
 
 .montserrat-normal-cape-cod-16px {
