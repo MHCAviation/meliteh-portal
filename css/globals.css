@@ -1,5 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700,400|DM+Sans:500,700,400|Roboto:400|Inter:500,400,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("topnav.css");
 
 @font-face {
   font-family: "Font Awesome 6 Free-Solid";
@@ -29,67 +31,6 @@ body {
   padding-top: var(--header-height);
 }
 
-.header-navbar {
-  background-color: #ffffff;
-  height: var(--header-height);
-  opacity: 1;
-  position: fixed;
-  top: 0px;
-  right: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.header-logo-image {
-  background-color: transparent;
-  background-image: url(../img/meliteh-logo.png);
-  background-size: auto 100%;
-  cursor: pointer;
-  height: 80px;
-  mix-blend-mode: normal;
-  object-fit: cover;
-  opacity: 1;
-  top: 0px;
-  width: 145px;
-}
-
-.header-links {
-  align-items: flex-start;
-  background-color: transparent;
-  display: flex;
-  gap: 50px;
-  height: auto;
-  left: 312px;
-  opacity: 1;
-  top: 30px;
-  width: fit-content;
-}
-
-.header-links a,
-.footer-links a {
-  text-decoration: none;
-}
-
-.header-links a div {
-  color: #141414;
-  font-family: 'Montserrat', Helvetica;
-}
-
-.header-links a.current-page div,
-.footer-links a.current-page div {
-  color: #d20027;
-  font-weight: bold;
-}
-
-.header-links a:hover div,
-.footer-links a:hover div {
-  color: rgb(34, 102, 164);
-}
-
 .footer-navbar {
   align-items: center;
   background-color: var(--submarine);
@@ -97,8 +38,8 @@ body {
   flex-direction: column;
   gap: 24px;
   min-height: 262px;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .footer-logo {
@@ -110,7 +51,7 @@ body {
 
 .footer-links {
   align-items: center;
-  gap: 80px;
+  gap: 40px;
   display: flex;
   text-align: center;
   flex-wrap: wrap;
@@ -1070,15 +1011,7 @@ body {
   margin-bottom: 4%;
 }
 
-#expand-header-menu-button {
-  display: none;
-}
-
 @media (max-width: 769px) {
-
-  .header-navbar {
-    padding-left:0px;
-  }
 
   .footer-navbar {
     padding-left: 5%;
@@ -1093,40 +1026,9 @@ body {
     font-size: var(--font-size-m);
   }
 
-  header:not(.menu-expanded) .header-links {
-    display: none;
-  }
-  #expand-header-menu-button {
-    display: unset;
-  }
-  header.menu-expanded .header-links {
-    position: fixed;
-    flex-direction: column;
-    top: var(--header-height);
-    right: 0;
-    background-color: lightblue;
-  }
-}
-
-
-@media (max-width: 500px) {
-
-  .header-logo-image {
-    height: 64px;
-    width: 120px;
-  }
-
-  .header-navbar {
-    padding-left: 5%;
-  }
-
 }
 
 @media (max-width: 376px) {
-
-  .header-navbar {
-    padding-left: 40%;
-  }
 
   .footer-navbar {
     padding-left: 28%;
@@ -1140,7 +1042,5 @@ body {
   .montserrat-normal-licorice-20px {
     font-size: var(--font-size-m);
   }
-
-
 
 }

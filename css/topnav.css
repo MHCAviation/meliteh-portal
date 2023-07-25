@@ -1,0 +1,133 @@
+/* Header style */
+
+.header-navbar {
+    background-color: #ffffff;
+    height: var(--header-height);
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .header-logo-image {
+    background-color: transparent;
+    background-image: url(../img/meliteh-logo.png);
+    background-size: auto 100%;
+    cursor: pointer;
+    height: 80px;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    opacity: 1;
+    top: 0px;
+    width: 145px;
+  }
+  
+  .header-links {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    gap: 50px;
+    height: auto;
+    left: 312px;
+    opacity: 1;
+    top: 30px;
+    width: fit-content;
+  }
+  
+  .header-links a,
+  .footer-links a {
+    text-decoration: none;
+  }
+  
+  .header-links a div {
+    color: #141414;
+    font-family: 'Montserrat', Helvetica;
+  }
+  
+  .header-links a.current-page div,
+  .footer-links a.current-page div {
+    color: #d20027;
+    font-weight: bold;
+  }
+  
+  .header-links a:hover div,
+  .footer-links a:hover div {
+    color: rgb(26, 83, 136);
+  }
+  
+  
+/* Style the hamburger menu */
+#expand-header-menu-button {
+    display: none;
+    background: none;
+    border: none;
+  }
+
+  #expand-header-menu-button .fa,
+  #expand-header-menu-button .fa-regular {
+    font-size: 24px;
+    color:#d20027;
+  }
+
+  header:not(.menu-expanded) #expand-header-menu-button .close-btn {
+    display: none;
+  }
+  header.menu-expanded #expand-header-menu-button .open-btn {
+    display: flex;
+  }
+  
+/* Add color on mouse-over */
+  .header a:hover {
+    background-color: #ddd;
+    color: #d20027;
+  }
+  
+
+  @media (max-width: 769px) {
+    .header-navbar {
+        padding-left: 0px;
+      }
+
+    header:not(.menu-expanded) .header-links {
+        display: none;
+      }
+      #expand-header-menu-button {
+        display: unset;
+      }
+      header.menu-expanded .header-links {
+        position: fixed;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        width: 100%;
+        flex-direction: column;
+        top: var(--header-height);
+        align-items: left;
+        justify-content: space-between;
+        left: 0;
+        background-color: #ffff;
+      }
+  }
+
+  @media (max-width: 500px) {
+
+    .header-logo-image {
+      height: 64px;
+      width: 120px;
+    }
+  
+  }
+
+  @media (max-width: 376px) {
+    .header-navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+  }
