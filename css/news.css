@@ -1,14 +1,10 @@
 /* screen - news */
 
 .news {
-  align-items: flex-end;
   background-color: var(--neutral100);
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 1528px;
-  overflow: hidden;
-  width: 1440px;
 }
 
 .news .group-336 {
@@ -30,15 +26,13 @@
   width: fit-content;
 }
 
-.news .header-section {
+.news .header-section-1 {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-right: -152px;
-  margin-top: 112px;
+  margin-top: 40px;
   position: relative;
-  width: 1512px;
-  z-index: 2;
 }
 
 .news .title-section {
@@ -50,7 +44,6 @@
 }
 
 .news .rectangle {
-  align-self: stretch;
   background-color: var(--primary);
   border-radius: 12px;
   height: 49px;
@@ -63,78 +56,9 @@
   font-family: var(--font-family-montserrat);
   font-size: 40px;
   font-weight: 500;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
   position: relative;
   text-align: center;
-  width: fit-content;
-}
-
-.news .arrow-slider {
-  align-items: center;
-  display: flex;
-  gap: 20px;
-  position: relative;
-  width: fit-content;
-}
-
-.news .arrow {
-  background-color: var(--gray);
-  border-radius: 12px;
-  height: 40px;
-  min-width: 40px;
-  position: relative;
-}
-
-.news .v6-icon-free {
-  align-items: center;
-  display: flex;
-  height: 24px;
-  justify-content: center;
-  left: 8px;
-  position: relative;
-  top: 8px;
-  width: 24px;
-}
-
-.news .icon {
-  color: var(--black-50);
-  font-size: var(--font-size-m);
-  position: relative;
-  width: 16px;
-}
-
-.news .icon-1 {
-  color: var(--black);
-  font-size: var(--font-size-m);
-  position: relative;
-  width: 16px;
-}
-
-.news .post-cards-container {
-  gap: 40px;
-  margin-right: -200px;
-  margin-top: 24px;
-  min-width: 1560px;
-  z-index: 1;
-}
-
-.news .post-cards-2 {
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--neutral300);
-  border-radius: 20px;
-  box-shadow: 0px 5px 14px #080f340a;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 16px;
-  height: 340px;
-  overflow: hidden;
-  padding: 16px;
-  position: relative;
-  width: fit-content;
-}
+  width: fit-content;}
 
 .news .group-39228 {
   background-image: url(../img/unsplash-nrn5rvl89lo-1@2x.png);
@@ -162,13 +86,6 @@
   padding: 0 23px;
 }
 
-.news .icon-2 {
-  color: var(--primary);
-  font-size: var(--font-size-xxl);
-  height: 24px;
-  min-width: 18px;
-}
-
 .news .frame {
   align-items: flex-start;
   align-self: stretch;
@@ -179,9 +96,6 @@
 
 .news .title-1 {
   align-self: stretch;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
   position: relative;
 }
 
@@ -190,8 +104,15 @@
   line-height: 24px;
 }
 
-.news .post-cards {
-  align-items: flex-start;
+.news .article-portrait-card-container {
+  gap: 40px;
+  margin-top: 24px;
+  overflow-x: auto;
+  height: 400px;
+  display: flex;
+}
+
+.news .article-portrait-card {
   background-color: var(--neutral100);
   border: 1px solid;
   border-color: var(--neutral300);
@@ -200,11 +121,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 360px;
   height: 340px;
-  overflow: hidden;
   padding: 16px;
   position: relative;
-  width: fit-content;
 }
 
 .news .unsplash-js8-kgq-lfhw {
@@ -248,27 +168,16 @@
   position: relative;
 }
 
-.news .header-section-1 {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-right: -152px;
-  margin-top: 40px;
-  position: relative;
-  width: 1512px;
-  z-index: 3;
-}
 
-.news .frame-39232 {
-  align-items: flex-start;
-  align-self: center;
+.news .article-landscape-cards-list {
   gap: 40px;
   margin-top: 24px;
-  width: 1280px;
-  z-index: 4;
+  max-width: 1280px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.news .post-cards-1 {
+.news .article-landscape-card {
   background-color: var(--neutral100);
   border: 1px solid;
   border-color: var(--neutral300);
@@ -443,15 +352,6 @@
   position: relative;
 }
 
-.news .icon-3 {
-  font-family: var(--font-family-font_awesome_6_free-solid);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .news .imgtechnology04-2 {
   align-self: stretch;
   background-position: 50% 50%;
@@ -467,7 +367,6 @@
   display: flex;
 }
 
-.news .post-cards-3 {
-  align-items: flex-start;
+.news .flex-card {
   display: flex;
 }
