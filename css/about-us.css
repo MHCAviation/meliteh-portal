@@ -140,20 +140,13 @@
     width: 296px;
   }
   
-  .about-us .card-header-lR5AbU {
+  .about-us .team-sanita {
     align-self: stretch;
-    background-color: transparent;
-    background-image: url(../img/card-header.svg);
+    background-image: url(../img/team_sanita.jpg);
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 8px;
     height: 192px;
-    min-width: 248px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    overflow: hidden;
-    position: relative;
-    transform: rotate(180deg);
   }
   
   .about-us .content-lR5AbU {
