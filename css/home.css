@@ -1430,7 +1430,7 @@
   z-index: -1;
   /* cut out blur artifacts on edges */
   transform: scale(1.05);
-  transition: all 0.6s ease-in-out;
+  transition: all 1.2s ease-in-out;
 }
 
 #home-job-search-background[data-slide-iteration="0"] {
