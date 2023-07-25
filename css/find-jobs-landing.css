@@ -55,6 +55,7 @@
   margin-top: 80px;
   justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 400px;
 }
 
 .industry-card {
@@ -117,9 +118,18 @@
   border: 1px solid;
   border-top: none;
   border-color: var(--meliteh-grey);
+  border-radius: 0 0 20px 20px;
+}
+
+.industry-card-description p {
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 0 0 20px 20px;
+}
+
+.hover-details {
+  display: none;
+  color: var(--meliteh-red);
+  font-weight: bold;
 }
 
 .industry-card:hover .industry-card-top-part {
@@ -131,6 +141,9 @@
 }
 .industry-card:hover .industry-card-description {
   border-color: var(--meliteh-red);
+}
+.industry-card:hover .hover-details {
+  display: unset;
 }
 
 .find-jobs-landing .rectangle-4296 {
