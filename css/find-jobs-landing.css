@@ -57,77 +57,7 @@
   flex-wrap: wrap;
 }
 
-.find-jobs-landing .overlap-group {
-  align-items: center;
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  min-height: 432px;
-  width: 302px;
-}
-
-.find-jobs-landing .overlap-group-1 {
-  align-items: center;
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px 20px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  min-height: 260px;
-  width: 302px;
-}
-
-.find-jobs-landing .overlap-group-2 {
-  align-items: center;
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px 20px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-height: 260px;
-  width: 302px;
-}
-
-.find-jobs-landing .overlap-group-3 {
-  height: 432px;
-  margin-bottom: -0.5px;
-  position: relative;
-  width: 302px;
-}
-
-.find-jobs-landing .overlap-group2 {
-  height: 204px;
-  position: relative;
-  width: 302px;
-}
-
-.industry-card-title {
-  text-align: center;
-  font-weight: bold;
-}
-
-.find-jobs-landing .industry-card-image {
-  height: 204px;
-  margin-right: 2.0px;
-  margin-top: -1px;
-  width: 302px;
-  object-fit: cover;
-}
-
-.industry-card-description {
-  line-height: 24px;
-  margin: 12px;
-}
-
-.find-jobs-landing .industry-card {
+.industry-card {
   align-items: flex-start;
   background-color: var(--neutral100);
   border: 1px solid;
@@ -136,7 +66,71 @@
   box-shadow: 0px 5px 14px #080f340a;
   display: flex;
   height: 432px;
-  min-width: 302px;
+  width: 302px;
+  cursor: pointer;
+}
+
+.overlap-group {
+  align-items: center;
+  background-color: var(--neutral100);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 432px;
+  width: 302px;
+}
+
+.industry-card-top-part {
+  align-items: center;
+  background-color: var(--neutral100);
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  width: 302px;
+}
+
+.industry-card-title {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid;
+  border-top: none;
+  border-color: var(--meliteh-grey);
+  transition: none;
+}
+
+.find-jobs-landing .industry-card-image {
+  height: 204px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.industry-card-description {
+  flex: 1;
+  line-height: 24px;
+  padding: 12px;
+  padding-top: 24px;
+  border: 1px solid;
+  border-top: none;
+  border-color: var(--meliteh-grey);
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+.industry-card:hover .industry-card-top-part {
+  background-color: var(--meliteh-red);
+  color: white;
+}
+.industry-card:hover .industry-card-title {
+  border-color: var(--meliteh-red);
+}
+.industry-card:hover .industry-card-description {
+  border-color: var(--meliteh-red);
 }
 
 .find-jobs-landing .rectangle-4296 {

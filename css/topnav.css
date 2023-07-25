@@ -80,7 +80,7 @@
     display: none;
   }
   header.menu-expanded #expand-header-menu-button .open-btn {
-    display: flex;
+    display: none;
   }
   
 /* Add color on mouse-over */
