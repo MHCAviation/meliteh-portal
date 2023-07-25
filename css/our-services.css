@@ -35,6 +35,14 @@
   top: 78px;
 }
 
+.paragraph-title {
+  text-align: left;
+  top: 120px;
+  font-weight: 700;
+  font-size: xx-large;
+  color: var(--meliteh-red) ;
+}
+
 .service-cards-list {
   align-items: flex-start;
   display: flex;
@@ -125,7 +133,7 @@
   height: 16px;
   width: 36px;
   position: absolute;
-  bottom: -15px;
+  bottom: -12px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -165,4 +173,28 @@
 }
 .service-description .list strong {
   font-weight: normal;
+}
+
+@media (max-width: 500px) {
+
+  .our-services-u45-landing-u45-recruitment-u45-alt {
+    align-items: center;
+  }
+
+  .service-cards-list {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.service-card {
+  height: auto;
+}
+
+  .service-card-image {
+    overflow: hidden;
+    display: none;
+  }
 }
