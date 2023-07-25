@@ -82,16 +82,11 @@
   }
 
   .about-us .about-our-values {
-    align-items: flex-start;
-    background-color: transparent;
-    background-image: url(../img/about-our-values.png);
-    background-size: auto 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
-    height: 402px;
-    width: 1308px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    padding-bottom: 30px;
   }
   
   .about-us .meet-our-team-C61RwL {
@@ -105,33 +100,30 @@
   
   .about-us .at-meliteh-we-are-y-C61RwL {
     color: #141414;
-    font-family: 'Montserrat', Helvetica;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1280px;
+    padding: 24px;
   }
   
   .about-us .container-C61RwL {
     display: flex;
     flex-direction: column;
     gap: 64px;
-    height: 416px;
     justify-content: center;
     position: relative;
   }
   
   .about-us .row-tuzc6y {
-    align-items: center;
+    justify-content: center;
     display: flex;
     flex: 1;
     gap: 32px;
     opacity: 1;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
+    flex-wrap: wrap;
   }
   
   .about-us .profile-card-aMXTQU {
