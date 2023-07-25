@@ -12,6 +12,7 @@ body {
   margin: 0;
   background: #ffffff;
   --header-height: 80px;
+  font-family: var(--font-family-montserrat);
 }
 
 * {
@@ -126,7 +127,6 @@ body {
   flex-direction: column;
   gap: 15px;
   min-height: 31px;
-  width: 1282px;
 }
 
 .screen a {
@@ -950,7 +950,6 @@ body {
   height: 2px;
   margin-right: 2.0px;
   margin-top: -1px;
-  width: 1280px;
 }
 
 .meliteh-all-right-reserved {
