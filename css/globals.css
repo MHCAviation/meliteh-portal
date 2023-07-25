@@ -87,7 +87,7 @@ body {
 
 .header-links a:hover div,
 .footer-links a:hover div {
-  color: rgb(26, 83, 136);
+  color: rgb(34, 102, 164);
 }
 
 .footer-navbar {
@@ -264,7 +264,7 @@ body {
   align-items: center;
   display: flex;
   flex-flow:wrap;
-  flex-shrink: 3
+  flex-shrink: 3;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
@@ -1070,6 +1070,10 @@ body {
   margin-bottom: 4%;
 }
 
+#expand-header-menu-button {
+  display: none;
+}
+
 @media (max-width: 769px) {
 
   .header-navbar {
@@ -1089,6 +1093,19 @@ body {
     font-size: var(--font-size-m);
   }
 
+  header:not(.menu-expanded) .header-links {
+    display: none;
+  }
+  #expand-header-menu-button {
+    display: unset;
+  }
+  header.menu-expanded .header-links {
+    position: fixed;
+    flex-direction: column;
+    top: var(--header-height);
+    right: 0;
+    background-color: lightblue;
+  }
 }
 
 

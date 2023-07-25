@@ -11,7 +11,12 @@ async function main() {
                 a.classList.add("current-page");
             }
         }
+        const expandButton = header.querySelector("#expand-header-menu-button");
+        expandButton.addEventListener("click", () => {
+            header.classList.toggle("menu-expanded");
+        });
     }
+
     for (const footer of document.getElementsByTagName("footer")) {
         footer.innerHTML = footerHtml;
         for (const a of footer.getElementsByTagName("a")) {
