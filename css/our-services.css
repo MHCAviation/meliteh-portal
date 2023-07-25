@@ -21,6 +21,9 @@
   position: relative;
   width: 100%;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .our-services-u45-landing-u45-recruitment-u45-alt .rectangle-164 {
@@ -38,7 +41,6 @@
   left: 489px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
   text-align: center;
   top: 78px;
 }
