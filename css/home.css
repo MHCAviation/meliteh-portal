@@ -42,8 +42,8 @@
   align-items: flex-start;
   display: flex;
   gap: 40px;
-  height: auto;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home .group-2-FS2xM9 {
@@ -499,38 +499,18 @@
 }
 
 .home .subscribe-form {
-  height: 64px;
-  width: 923px;
   position: relative;
-}
-
-.home .group-366-ITdx2a {
-  background-color: transparent;
-  height: 64px;
-  left: 0px;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  width: 563px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
 }
 
 .home .never-want-to-miss-any-job-news-lyMjxj {
-  background-color: transparent;
-  color: transparent;
-  font-family: 'Montserrat', Helvetica;
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
   line-height: 64px;
-  opacity: 1;
-  position: absolute;
-  text-align: left;
-  top: 0px;
   white-space: nowrap;
-  width: auto;
 }
 
 .home .span0-TEjuvz {
@@ -544,16 +524,8 @@
 }
 
 .home .frame-404-ITdx2a {
-  align-items: flex-start;
-  background-color: transparent;
   box-shadow: 0px 2px 2px #0000000a;
   display: flex;
-  height: auto;
-  left: 585px;
-  opacity: 1;
-  position: absolute;
-  top: 2px;
-  width: 338px;
 }
 
 .home .frame-14-kTLPqE {
@@ -565,29 +537,19 @@
   flex: 1;
   gap: 16px;
   height: auto;
-  mix-blend-mode: normal;
-  opacity: 1;
-  overflow: hidden;
   padding: 18px;
   position: relative;
 }
 
 .home .enter-your-email-TJFFVc {
-  background-color: transparent;
   color: #14141480;
-  font-family: 'Montserrat', Helvetica;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.00px;
   line-height: 24px;
-  margin-top: -1.00px;
-  mix-blend-mode: normal;
-  opacity: 1;
   position: relative;
-  text-align: left;
   white-space: nowrap;
   width: fit-content;
+  min-width: 180px;
 }
 
 .home .button-kTLPqE {
@@ -1535,12 +1497,9 @@
 
 .home .home-job-search-input {
   margin-top: 24px;
-  align-items: flex-start;
   box-shadow: 0px 2px 2px #0000000a;
   display: flex;
-  height: auto;
-  opacity: 1;
-  width: 880px;
+  max-width: 880px;
 }
 
 .home .frame-405-hDZt1x {
@@ -1548,6 +1507,8 @@
   justify-content: center;
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
+
 }
 
 .home .home-jobs-search-input-flexbox {
@@ -1579,6 +1540,7 @@
   flex: 1;
   border: none;
   outline: none;
+  min-height: 48px;
 }
 .what-position-are-you-looking-for-HKU3uw:focus {
   border: none;
@@ -1640,4 +1602,11 @@
 .home .span3-6mBiGF {
   color: #ffffff;
   font-style: normal;
+}
+
+.our-services-home-summary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
