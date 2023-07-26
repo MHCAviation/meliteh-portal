@@ -52,6 +52,14 @@
   color: var(--meliteh-red) ;
 }
 
+.paragraph-title2 {
+  text-align: left;
+  top: 120px;
+  font-weight: 700;
+  font-size: xx-large;
+  color: var(--meliteh-red);
+}
+
 .service-cards-list {
   margin-top: 5%;
   align-items: flex-start;
@@ -220,6 +228,12 @@
     padding-right: 10%;
     padding-bottom: 10%;
   }
+
+  .paragraph-title2 {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
 
   .service-cards-list {
     display: flex;
