@@ -70,9 +70,13 @@
     border: none;
   }
 
-  #expand-header-menu-button .fa,
-  #expand-header-menu-button .fa-regular {
+  #expand-header-menu-button .fa {
     font-size: 24px;
+    color:#d20027;
+  }
+
+  #expand-header-menu-button .fa-regular {
+    font-size: 28px;
     color:#d20027;
   }
 
