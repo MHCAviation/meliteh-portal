@@ -123,9 +123,15 @@
       width: 120px;
     }
   
+    .header-navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
   }
 
   @media (max-width: 376px) {
+    
     .header-navbar {
         padding-left: 5%;
         padding-right: 5%;
