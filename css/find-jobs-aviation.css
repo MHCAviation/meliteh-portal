@@ -386,6 +386,9 @@
 .find-jobs-aviation .frame-17-3 {
   background-image: url(../img/frame-17-9@2x.png);
 }
+.find-jobs-aviation .frame-17-4 {
+  background-image: url(../img/frame-17-10@2x.png);
+}
 
 .find-jobs-aviation .cabin-crew {
   letter-spacing: 0;
@@ -420,10 +423,6 @@
   position: relative;
   white-space: nowrap;
   width: fit-content;
-}
-
-.find-jobs-aviation .frame-17-4 {
-  background-image: url(../img/frame-17-10@2x.png);
 }
 
 .find-jobs-aviation .abc-airlines-1 {

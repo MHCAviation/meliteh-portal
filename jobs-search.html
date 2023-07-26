@@ -7,9 +7,9 @@
     <title>Jobs Search</title>
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/find-jobs-it.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="css/jobs-search.css" />
   </head>
   <body>
     <div class="container-center-horizontal">
@@ -43,19 +43,19 @@
             </div>
           </div>
         </div>
-        <div class="single-element">
-          <div class="place montserrat-normal-licorice-12px">Home</div>
-          <div class="v6-icon-free">
-            <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
-          </div>
-          <div class="featured montserrat-normal-licorice-12px">Find Jobs</div>
-          <div class="v6-icon-free">
-            <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
-          </div>
-          <div class="how-to-spend-the-per montserrat-normal-monza-12px">Information Technology</div>
-        </div>
         <div class="overlap-group3">
           <div class="content">
+            <div class="single-element">
+              <div class="place montserrat-normal-licorice-12px">Home</div>
+              <div class="v6-icon-free">
+                <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
+              </div>
+              <div class="featured montserrat-normal-licorice-12px">Find Jobs</div>
+              <div class="v6-icon-free">
+                <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
+              </div>
+              <div class="how-to-spend-the-per montserrat-normal-monza-12px">Information Technology</div>
+            </div>
             <div class="frame-15">
               <div class="filter">
                 <div class="frame-36">
@@ -174,7 +174,7 @@
               <div class="cards">
                 <div class="frame-72">
                   <div class="frame-46">
-                    <div class="address">3177 Jobs</div>
+                    <div class="address"><span id="total-open-vacancies-counter">?</span> Jobs</div>
                     <div class="frame-14-1 frame-14-3">
                       <div class="frame-45">
                         <img class="funnel-simple" src="img/funnelsimple.svg"  />
@@ -183,10 +183,10 @@
                       <img class="caret-down" src="img/caretdown.svg"  />
                     </div>
                   </div>
-                  <div class="frame-2">
+                  <div class="open-vacancy-card">
                     <div class="frame-17"></div>
-                    <div class="frame-23">
-                      <div class="frame-28">
+                    <div>
+                      <div class="vacancy-summary">
                         <div class="frame-29">
                           <div class="frame-27">
                             <div class="linear-company montserrat-normal-licorice-18px">Linear company</div>
@@ -218,16 +218,16 @@
                           </div>
                         </div>
                       </div>
-                      <p class="mollit-in-laborum-te montserrat-normal-licorice-16px">
+                      <p class="vacancy-description">
                         Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="frame-2">
-                    <div class="frame-17-1 frame-17-6"></div>
-                    <div class="frame-23">
-                      <div class="frame-28">
+                  <div class="open-vacancy-card">
+                    <div class="company-logo-notion vacancy-card-company-logo"></div>
+                    <div>
+                      <div class="vacancy-summary">
                         <div class="frame-29">
                           <div class="frame-27"><div class="notion montserrat-normal-licorice-18px">Notion</div></div>
                           <div class="frame-30">
@@ -256,16 +256,16 @@
                           </div>
                         </div>
                       </div>
-                      <p class="mollit-in-laborum-te montserrat-normal-licorice-16px">
+                      <p class="vacancy-description">
                         Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="frame-2">
-                    <div class="frame-17-2 frame-17-6"></div>
-                    <div class="frame-23">
-                      <div class="frame-28">
+                  <div class="open-vacancy-card">
+                    <div class="company-logo-spline vacancy-card-company-logo"></div>
+                    <div>
+                      <div class="vacancy-summary">
                         <div class="frame-29">
                           <div class="frame-27">
                             <div class="spline-studio montserrat-normal-licorice-18px">Spline studio</div>
@@ -298,16 +298,16 @@
                           </div>
                         </div>
                       </div>
-                      <p class="mollit-in-laborum-te montserrat-normal-licorice-16px">
+                      <p class="vacancy-description">
                         Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="frame-2">
-                    <div class="frame-17-3 frame-17-6"></div>
-                    <div class="frame-23">
-                      <div class="frame-28">
+                  <div class="open-vacancy-card">
+                    <div class="frame-17-3 vacancy-card-company-logo"></div>
+                    <div>
+                      <div class="vacancy-summary">
                         <div class="frame-29">
                           <div class="frame-27">
                             <div class="raycast-corp montserrat-normal-licorice-18px">Raycast corp</div>
@@ -338,16 +338,16 @@
                           </div>
                         </div>
                       </div>
-                      <p class="mollit-in-laborum-te montserrat-normal-licorice-16px">
+                      <p class="vacancy-description">
                         Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="frame-2">
-                    <div class="frame-17-4 frame-17-6"></div>
-                    <div class="frame-23">
-                      <div class="frame-28">
+                  <div class="open-vacancy-card">
+                    <div class="frame-17-4 vacancy-card-company-logo"></div>
+                    <div>
+                      <div class="vacancy-summary">
                         <div class="frame-29">
                           <div class="frame-27"><div class="loom montserrat-normal-licorice-18px">Loom</div></div>
                           <div class="frame-30">
@@ -376,16 +376,16 @@
                           </div>
                         </div>
                       </div>
-                      <p class="mollit-in-laborum-te montserrat-normal-licorice-16px">
+                      <p class="vacancy-description">
                         Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
                   </div>
-                  <div class="frame-2">
-                    <div class="frame-17-5 frame-17-6"></div>
-                    <div class="frame-23">
-                      <div class="frame-28">
+                  <div class="open-vacancy-card">
+                    <div class="frame-17-5 vacancy-card-company-logo"></div>
+                    <div>
+                      <div class="vacancy-summary">
                         <div class="frame-29">
                           <div class="frame-27">
                             <div class="trainline-group montserrat-normal-licorice-18px">Trainline group</div>
@@ -418,7 +418,7 @@
                           </div>
                         </div>
                       </div>
-                      <p class="mollit-in-laborum-te montserrat-normal-licorice-16px">
+                      <p class="vacancy-description">
                         Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
@@ -490,5 +490,6 @@
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
     <script type="module" src="js/add-navbars.js"></script>
+    <script type="module" src="js/jobs-search.js"></script>
   </body>
 </html>

@@ -4,6 +4,19 @@
   width: unset;
 }
 
+.cards {
+  flex: unset;
+}
+
+.frame-15 {
+  align-self: unset;
+}
+
+.single-element {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
 .find-jobs-it {
   align-items: stretch;
   background-color: var(--neutral100);
@@ -169,13 +182,17 @@
 }
 
 .find-jobs-it .overlap-group3 {
-  height: 1742px;
-  margin-top: 24px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
 }
 
 .content {
   position: unset;
+  width: unset;
+  background-color: unset;
+  padding-top: 18px;
 }
 
 .find-jobs-it .frame-3 {
@@ -356,7 +373,7 @@
   width: 281px;
 }
 
-.find-jobs-it .frame-2 {
+.find-jobs-it .open-vacancy-card {
   align-items: flex-start;
   background-color: var(--neutral100);
   border: 1px solid;
@@ -432,8 +449,38 @@
   width: fit-content;
 }
 
-.find-jobs-it .frame-17-1 {
-  background-image: url(../img/frame-17-1@2x.png);
+.find-jobs-it .company-logo-notion {
+  background-image: url(../img/company-logo-notion.png);
+}
+
+.find-jobs-it .company-logo-spline {
+  background-image: url(../img/company-logo-spline.png);
+}
+
+.find-jobs-it .frame-17-3 {
+  background-image: url(../img/company-logo-raycast.png);
+}
+
+.find-jobs-it .frame-17-4 {
+  background-image: url(../img/company-logo-loom.png);
+}
+
+.find-jobs-it .frame-17-5 {
+  background-image: url(../img/company-logo-trainline.png);
+}
+
+.find-jobs-it .vacancy-card-company-logo {
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 4px;
+  height: 72px;
+  min-width: 72px;
+  position: relative;
+}
+
+.vacancy-description {
+  line-height: 24px;
+  color: var(--licorice-2);
 }
 
 .find-jobs-it .notion {
@@ -454,10 +501,6 @@
   width: fit-content;
 }
 
-.find-jobs-it .frame-17-2 {
-  background-image: url(../img/frame-17-5@2x.png);
-}
-
 .find-jobs-it .spline-studio {
   letter-spacing: 0;
   line-height: 27px;
@@ -474,10 +517,6 @@
   position: relative;
   white-space: nowrap;
   width: fit-content;
-}
-
-.find-jobs-it .frame-17-3 {
-  background-image: url(../img/frame-17-2@2x.png);
 }
 
 .find-jobs-it .raycast-corp {
@@ -507,10 +546,6 @@
   width: fit-content;
 }
 
-.find-jobs-it .frame-17-4 {
-  background-image: url(../img/frame-17-3@2x.png);
-}
-
 .find-jobs-it .loom {
   letter-spacing: 0;
   line-height: 27px;
@@ -536,10 +571,6 @@
   position: relative;
   white-space: nowrap;
   width: fit-content;
-}
-
-.find-jobs-it .frame-17-5 {
-  background-image: url(../img/frame-17-4@2x.png);
 }
 
 .find-jobs-it .trainline-group {
@@ -600,6 +631,7 @@
   position: absolute;
   top: 655px;
   transform: rotate(-180.00deg);
+  z-index: -1;
 }
 
 .find-jobs-it .overlap-group1 {
@@ -648,15 +680,6 @@
   box-shadow: 0px 1px 2px #00000008;
   display: flex;
   overflow: hidden;
-  position: relative;
-}
-
-.find-jobs-it .frame-17-6 {
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 4px;
-  height: 72px;
-  min-width: 72px;
   position: relative;
 }
 
