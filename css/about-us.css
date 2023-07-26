@@ -41,12 +41,19 @@
     z-index: -1;
   }
   
-  .about-us .about-us-C61RwL {
+  .about-us .about-us-title {
     font-family: 'Montserrat', Helvetica;
-    font-size: 70px;
+    font-size: 56px;
     font-weight: 700;
   }
   
+  .content-paragraph{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .about-us .span0-0yPRxl {
     color: #ffffff;
     font-style: normal;
@@ -115,6 +122,7 @@
     gap: 64px;
     justify-content: center;
     position: relative;
+    padding-bottom: 40px;
   }
   
   .about-us .row-tuzc6y {
@@ -594,3 +602,34 @@
     position: relative;
     text-align: left;
   }
+
+@media (max-width: 376px) {
+
+  img {
+    width: 320px;
+  }
+
+  .about-us .who-is-meliteh-C61RwL {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    margin: 0px;
+  }
+
+  .about-us .at-meliteh-we-are-y-C61RwL {
+    font-size: 12px;
+    padding: 16px;
+  }
+  .about-us .our-values-C61RwL {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .about-us .meet-our-team-C61RwL {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+}
