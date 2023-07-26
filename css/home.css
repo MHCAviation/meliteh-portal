@@ -511,7 +511,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 64px;
-  white-space: nowrap;
 }
 
 .home .span0-TEjuvz {
@@ -1487,10 +1486,9 @@
 
 .home .get-the-right-job-you-deserve-8dJy9b {
   font-family: 'Montserrat', Helvetica;
-  font-size: 70px;
+  font-size: 40px;
   font-weight: 700;
   height: auto;
-  letter-spacing: 0.00px;
   line-height: normal;
   text-align: center;
   width: auto;
@@ -1509,7 +1507,6 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-
 }
 
 .home .home-jobs-search-input-flexbox {
@@ -1610,4 +1607,39 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+@media (max-width: 769px) {
+
+  .home .get-the-right-job-you-deserve-8dJy9b {
+    font-size: 34px;
+  }
+
+  .home .subscribe-form {
+    gap: 16px;
+    width: 320px;
+  }
+
+  .home .never-want-to-miss-any-job-news-lyMjxj {
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .home .frame-405-hDZt1x {
+    gap: 16px;
+    flex-direction: column;
+    width: 320px;
+  }
+
+  .home .home-jobs-search-input-flexbox {
+    border-radius: 4px 4px 4px 4px;
+    width: 100%;
+  }
+
+  .home .home-jobs-search-submit-button {
+    border-radius: 4px 4px 4px 4px;
+    width: 100%;
+  }
+
 }
