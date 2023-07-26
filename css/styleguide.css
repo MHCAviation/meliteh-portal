@@ -295,3 +295,12 @@
   font-style: normal;
   font-weight: 700;
 }
+
+
+@media (max-width: 500px) {
+
+  .montserrat-medium-licorice-16px {
+    font-size: var(--font-size-xs);
+  }
+
+}
