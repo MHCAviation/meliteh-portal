@@ -526,7 +526,7 @@ body {
   position: relative;
 }
 
-.frame-46 {
+.sorting-panel {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -585,7 +585,7 @@ body {
   position: relative;
 }
 
-.frame-28 {
+.vacancy-summary {
   align-items: flex-start;
   align-self: stretch;
   display: flex;
@@ -603,7 +603,7 @@ body {
   width: fit-content;
 }
 
-.frame-27 {
+.company-name {
   align-items: center;
   display: flex;
   gap: 12px;
@@ -612,20 +612,9 @@ body {
 }
 
 .linear-company {
-  letter-spacing: 0;
   line-height: 27px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
-  width: fit-content;
-}
-
-.frame-30 {
-  align-items: center;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  position: relative;
   width: fit-content;
 }
 
@@ -893,7 +882,7 @@ body {
   min-width: 154px;
 }
 
-.address-7 {
+.time-posted-field {
   letter-spacing: 0;
   line-height: 24px;
   margin-top: -1.00px;
