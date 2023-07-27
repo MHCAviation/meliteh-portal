@@ -323,6 +323,7 @@
   border-radius: 20px;
   width: 100%;
   background: white;
+  max-width: 400px;
 }
 
 .card-title {
