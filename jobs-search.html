@@ -60,7 +60,7 @@
               <div class="filter">
                 <div class="frame-36">
                   <div class="filters montserrat-bold-licorice-20px">Filters</div>
-                  <div class="frame-3">
+                  <div class="filter-field">
                     <div class="location-1 montserrat-medium-licorice-18px">Location</div>
                     <div class="frame-3-1 frame-3-4">
                       <div class="frame-3-2 frame-3-4">
@@ -79,7 +79,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="frame-3">
+                  <!-- hidden for now, as we don't normally fill out salary in RDB -->
+                  <div class="filter-field" style="display: none">
                     <div class="frame-3-1 frame-3-4">
                       <div class="frame-3-1 frame-3-4">
                         <div class="salary-yearly montserrat-medium-licorice-18px">Salary (yearly)</div>
@@ -110,7 +111,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="frame-3">
+                  <div class="filter-field">
                     <div class="date-of-posting montserrat-medium-licorice-18px">Date of posting</div>
                     <div class="frame-3-1 frame-3-4">
                       <div class="frame-3-2 frame-3-4">
@@ -133,73 +134,92 @@
                       </div>
                     </div>
                   </div>
-                  <div class="frame-3">
-                    <div class="work-experience work montserrat-medium-licorice-18px">Work experience</div>
-                    <div class="frame-3-1 frame-3-4">
-                      <div class="frame-3-2 frame-3-4">
-                        <div class="group-1">
-                          <div class="ellipse-7"></div>
-                        </div>
-                        <div class="any-experience montserrat-normal-cape-cod-16px">Any experience</div>
-                      </div>
-                      <div class="frame-3-2 frame-3-4">
-                        <div class="ellipse-5"></div>
-                        <div class="intership montserrat-normal-cape-cod-16px">Intership</div>
-                      </div>
-                      <div class="frame-3-2 frame-3-4">
-                        <div class="ellipse-5"></div>
-                        <div class="work-remotely work montserrat-normal-cape-cod-16px">Work remotely</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="frame-3">
+                  <div class="filter-field">
                     <div class="type-of-employment montserrat-medium-licorice-18px">Type of employment</div>
                     <div class="frame-3-1 frame-3-4">
                       <div class="frame-3-2 frame-3-4">
                         <img class="group-4" src="img/group-4@2x.png"  />
-                        <div class="full-time montserrat-normal-cape-cod-16px">Full-time</div>
+                        <div class="full-time montserrat-normal-cape-cod-16px">Permanent</div>
                       </div>
                       <div class="frame-3-2 frame-3-4">
                         <div class="rectangle"></div>
-                        <div class="temporary montserrat-normal-cape-cod-16px">Temporary</div>
+                        <div class="temporary montserrat-normal-cape-cod-16px">Contract</div>
                       </div>
                       <div class="frame-3-2 frame-3-4">
                         <div class="rectangle"></div>
-                        <div class="part-time montserrat-normal-cape-cod-16px">Part-time</div>
+                        <div class="part-time montserrat-normal-cape-cod-16px">Temp</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="cards">
-                <div class="frame-72">
-                  <div class="frame-46">
-                    <div class="address"><span id="total-open-vacancies-counter">?</span> Jobs</div>
-                    <div class="frame-14-1 frame-14-3">
-                      <div class="frame-45">
-                        <img class="funnel-simple" src="img/funnelsimple.svg"  />
-                        <div class="sort-by montserrat-normal-licorice-16px-2">Sort By</div>
-                      </div>
-                      <img class="caret-down" src="img/caretdown.svg"  />
+                <div class="sorting-panel">
+                  <div class="address"><span id="total-open-vacancies-counter">?</span> Jobs</div>
+                  <div class="frame-14-1 frame-14-3">
+                    <div class="frame-45">
+                      <img class="funnel-simple" src="img/funnelsimple.svg"  />
+                      <div class="sort-by montserrat-normal-licorice-16px-2">Sort By</div>
                     </div>
+                    <img class="caret-down" src="img/caretdown.svg"  />
                   </div>
-                  <div class="open-vacancy-card">
-                    <div class="frame-17"></div>
+                </div>
+                <div class="open-vacancy-cards-list">
+                  <template id="open-vacancy-card-template">
+                    <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
+                      <div class="vacancy-card-company-logo"></div>
+                      <div class="vacancy-data-block">
+                        <div class="vacancy-summary">
+                          <div class="frame-29">
+                            <div class="company-name linear-company montserrat-normal-licorice-18px">?</div>
+                            <div class="job-title-panel">
+                              <div class="job-title-text software-engineer">?</div>
+                              <div class="frame-25"><div class="new-post">New post</div></div>
+                            </div>
+                          </div>
+                          <div class="key-facts">
+                            <div class="frame-5">
+                              <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
+                              <div class="location-field montserrat-normal-licorice-16px">?</div>
+                            </div>
+                            <div class="ellipse"></div>
+                            <div class="frame-5">
+                              <img class="calendar-blank" src="img/calendarblank.svg"  />
+                              <div class="time-posted-field montserrat-normal-licorice-16px">? min ago</div>
+                            </div>
+                            <div class="ellipse"></div>
+                            <div class="frame-5">
+                              <img class="clock" src="img/clock.svg"  />
+                              <div class="full-time-7 montserrat-normal-licorice-16px">Full time</div>
+                            </div>
+                            <div class="ellipse"></div>
+                            <div class="frame-5">
+                              <img class="currency-dollar" src="img/currencydollar.svg"  />
+                              <div class="x50 montserrat-normal-licorice-16px">?k-?k</div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="vacancy-description">
+                          ?
+                        </p>
+                      </div>
+                    </a>
+                  </template>
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
+                    <div class="company-logo-linear vacancy-card-company-logo"></div>
                     <div>
                       <div class="vacancy-summary">
                         <div class="frame-29">
-                          <div class="frame-27">
-                            <div class="linear-company montserrat-normal-licorice-18px">Linear company</div>
-                          </div>
-                          <div class="frame-30">
-                            <div class="software-engineer montserrat-medium-licorice-24px">Software Engineer</div>
+                          <div class="company-name linear-company montserrat-normal-licorice-18px">Linear company</div>
+                          <div class="job-title-panel">
+                            <div class="job-title-text software-engineer">Software Engineer</div>
                             <div class="frame-25"><div class="new-post">New post</div></div>
                           </div>
                         </div>
-                        <div class="frame-4">
+                        <div class="key-facts">
                           <div class="frame-5">
                             <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
-                            <div class="place-4 montserrat-normal-licorice-16px">Brussels</div>
+                            <div class="location-field montserrat-normal-licorice-16px">Brussels</div>
                           </div>
                           <div class="ellipse"></div>
                           <div class="frame-5">
@@ -214,7 +234,7 @@
                           <div class="ellipse"></div>
                           <div class="frame-5">
                             <img class="calendar-blank" src="img/calendarblank.svg"  />
-                            <div class="address-7 montserrat-normal-licorice-16px">29 min ago</div>
+                            <div class="time-posted-field montserrat-normal-licorice-16px">29 min ago</div>
                           </div>
                         </div>
                       </div>
@@ -223,21 +243,21 @@
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
-                  </div>
-                  <div class="open-vacancy-card">
+                  </a>
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
                     <div class="company-logo-notion vacancy-card-company-logo"></div>
                     <div>
                       <div class="vacancy-summary">
                         <div class="frame-29">
-                          <div class="frame-27"><div class="notion montserrat-normal-licorice-18px">Notion</div></div>
-                          <div class="frame-30">
-                            <div class="name montserrat-medium-licorice-24px">Junior UI Designer</div>
+                          <div class="company-name notion montserrat-normal-licorice-18px">Notion</div>
+                          <div class="job-title-panel">
+                            <div class="job-title-text name">Junior UI Designer</div>
                           </div>
                         </div>
-                        <div class="frame-4">
+                        <div class="key-facts">
                           <div class="frame-5">
                             <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
-                            <div class="place-4 montserrat-normal-licorice-16px">Madrid</div>
+                            <div class="location-field montserrat-normal-licorice-16px">Madrid</div>
                           </div>
                           <div class="ellipse"></div>
                           <div class="frame-5">
@@ -252,7 +272,7 @@
                           <div class="ellipse"></div>
                           <div class="frame-5">
                             <img class="calendar-blank-6" src="img/calendarblank.svg"  />
-                            <div class="address-7 montserrat-normal-licorice-16px">1 day ago</div>
+                            <div class="time-posted-field montserrat-normal-licorice-16px">1 day ago</div>
                           </div>
                         </div>
                       </div>
@@ -261,25 +281,25 @@
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
-                  </div>
-                  <div class="open-vacancy-card">
+                  </a>
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
                     <div class="company-logo-spline vacancy-card-company-logo"></div>
                     <div>
                       <div class="vacancy-summary">
                         <div class="frame-29">
-                          <div class="frame-27">
+                          <div class="company-name">
                             <div class="spline-studio montserrat-normal-licorice-18px">Spline studio</div>
                           </div>
-                          <div class="frame-30">
-                            <div class="technical-support-engineer montserrat-medium-licorice-24px">
+                          <div class="job-title-panel">
+                            <div class="job-title-text technical-support-engineer">
                               Technical Support Engineer
                             </div>
                           </div>
                         </div>
-                        <div class="frame-4">
+                        <div class="key-facts">
                           <div class="frame-5">
                             <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
-                            <div class="place-4 montserrat-normal-licorice-16px">United States</div>
+                            <div class="location-field montserrat-normal-licorice-16px">United States</div>
                           </div>
                           <div class="ellipse"></div>
                           <div class="frame-5">
@@ -294,7 +314,7 @@
                           <div class="ellipse"></div>
                           <div class="frame-5">
                             <img class="calendar-blank-6" src="img/calendarblank.svg"  />
-                            <div class="address-7 montserrat-normal-licorice-16px">1 day ago</div>
+                            <div class="time-posted-field montserrat-normal-licorice-16px">1 day ago</div>
                           </div>
                         </div>
                       </div>
@@ -303,20 +323,20 @@
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
-                  </div>
-                  <div class="open-vacancy-card">
+                  </a>
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
                     <div class="frame-17-3 vacancy-card-company-logo"></div>
                     <div>
                       <div class="vacancy-summary">
                         <div class="frame-29">
-                          <div class="frame-27">
+                          <div class="company-name">
                             <div class="raycast-corp montserrat-normal-licorice-18px">Raycast corp</div>
                           </div>
-                          <div class="frame-30">
-                            <div class="product-designer montserrat-medium-licorice-24px">Product Designer</div>
+                          <div class="job-title-panel">
+                            <div class="job-title-text product-designer">Product Designer</div>
                           </div>
                         </div>
-                        <div class="frame-4">
+                        <div class="key-facts">
                           <div class="frame-5">
                             <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
                             <div class="name-4 montserrat-normal-licorice-16px">London</div>
@@ -334,7 +354,7 @@
                           <div class="ellipse"></div>
                           <div class="frame-5">
                             <img class="calendar-blank-6" src="img/calendarblank.svg"  />
-                            <div class="address-7 montserrat-normal-licorice-16px">2 day ago</div>
+                            <div class="time-posted-field montserrat-normal-licorice-16px">2 day ago</div>
                           </div>
                         </div>
                       </div>
@@ -343,18 +363,18 @@
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
-                  </div>
-                  <div class="open-vacancy-card">
+                  </a>
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
                     <div class="frame-17-4 vacancy-card-company-logo"></div>
                     <div>
                       <div class="vacancy-summary">
                         <div class="frame-29">
-                          <div class="frame-27"><div class="loom montserrat-normal-licorice-18px">Loom</div></div>
-                          <div class="frame-30">
-                            <div class="copywriter-growth montserrat-medium-licorice-24px">Copywriter (Growth)</div>
+                          <div class="company-name"><div class="loom montserrat-normal-licorice-18px">Loom</div></div>
+                          <div class="job-title-panel">
+                            <div class="job-title-text copywriter-growth">Copywriter (Growth)</div>
                           </div>
                         </div>
-                        <div class="frame-4">
+                        <div class="key-facts">
                           <div class="frame-5">
                             <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
                             <div class="name-4 montserrat-normal-licorice-16px">London</div>
@@ -372,7 +392,7 @@
                           <div class="ellipse"></div>
                           <div class="frame-5">
                             <img class="calendar-blank-6" src="img/calendarblank.svg"  />
-                            <div class="address-7 montserrat-normal-licorice-16px">3 day ago</div>
+                            <div class="time-posted-field montserrat-normal-licorice-16px">3 day ago</div>
                           </div>
                         </div>
                       </div>
@@ -381,22 +401,22 @@
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
-                  </div>
-                  <div class="open-vacancy-card">
+                  </a>
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
                     <div class="frame-17-5 vacancy-card-company-logo"></div>
                     <div>
                       <div class="vacancy-summary">
                         <div class="frame-29">
-                          <div class="frame-27">
+                          <div class="company-name">
                             <div class="trainline-group montserrat-normal-licorice-18px">Trainline group</div>
                           </div>
-                          <div class="frame-30">
-                            <div class="senior-uxui-designer montserrat-medium-licorice-24px">
+                          <div class="job-title-panel">
+                            <div class="job-title-text senior-uxui-designer">
                               Senior UX/UI Designer
                             </div>
                           </div>
                         </div>
-                        <div class="frame-4">
+                        <div class="key-facts">
                           <div class="frame-5">
                             <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
                             <div class="name-4 montserrat-normal-licorice-16px">Paris</div>
@@ -414,7 +434,7 @@
                           <div class="ellipse"></div>
                           <div class="frame-5">
                             <img class="calendar-blank-6" src="img/calendarblank.svg"  />
-                            <div class="address-7 montserrat-normal-licorice-16px">4 day ago</div>
+                            <div class="time-posted-field montserrat-normal-licorice-16px">4 day ago</div>
                           </div>
                         </div>
                       </div>
@@ -423,7 +443,7 @@
                         incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="pagination">
                   <img class="button" src="img/button.svg"  />

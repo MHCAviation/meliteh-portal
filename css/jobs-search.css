@@ -195,7 +195,7 @@
   padding-top: 18px;
 }
 
-.find-jobs-it .frame-3 {
+.find-jobs-it .filter-field {
   align-items: flex-start;
   align-self: stretch;
   display: flex;
@@ -357,13 +357,14 @@
   position: relative;
 }
 
-.find-jobs-it .frame-72 {
-  align-items: flex-start;
+.find-jobs-it .open-vacancy-cards-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  position: relative;
-  width: fit-content;
+  max-height: 800px;
+  overflow-y: auto;
+  /* allocate some space for horizontal scroll not appear when card is scaled up on hover */
+  padding: 30px;
 }
 
 .find-jobs-it .frame-14-1 {
@@ -385,25 +386,31 @@
   padding: 24px;
   position: relative;
   width: 748px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
 }
 
-.find-jobs-it .frame-17 {
-  background-image: url(../img/frame-17@2x.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 4px;
-  height: 72px;
-  min-width: 72px;
-  position: relative;
+.open-vacancy-card:hover {
+  transform: scale(1.05);
 }
 
-.find-jobs-it .software-engineer {
-  letter-spacing: 0;
-  line-height: 36px;
-  margin-top: -1.00px;
+.vacancy-data-block {
+  flex: 1;
+}
+
+.job-title-panel {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
   position: relative;
-  white-space: nowrap;
   width: fit-content;
+  font-size: 24px;
+}
+
+.job-title-text {
+  line-height: 36px;
+  color: var(--meliteh-black-type);
 }
 
 .find-jobs-it .frame-25 {
@@ -431,7 +438,7 @@
   width: fit-content;
 }
 
-.find-jobs-it .frame-4 {
+.find-jobs-it .key-facts {
   align-items: center;
   display: flex;
   gap: 24px;
@@ -439,6 +446,7 @@
   padding: 2px 0px;
   position: relative;
   width: fit-content;
+  flex-wrap: wrap;
 }
 
 .find-jobs-it .frame-5 {
@@ -447,6 +455,10 @@
   gap: 6px;
   position: relative;
   width: fit-content;
+}
+
+.find-jobs-it .company-logo-linear {
+  background-image: url(../img/company-logo-linear.png);
 }
 
 .find-jobs-it .company-logo-notion {
@@ -481,120 +493,69 @@
 .vacancy-description {
   line-height: 24px;
   color: var(--licorice-2);
+  white-space: pre-wrap;
+  max-height: 180px;
+  overflow-y: auto;
 }
 
 .find-jobs-it .notion {
-  letter-spacing: 0;
   line-height: 27px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .name {
-  letter-spacing: 0;
   line-height: 36px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .spline-studio {
-  letter-spacing: 0;
   line-height: 27px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.find-jobs-it .technical-support-engineer {
-  letter-spacing: 0;
-  line-height: 36px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .raycast-corp {
-  letter-spacing: 0;
   line-height: 27px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.find-jobs-it .product-designer {
-  letter-spacing: 0;
-  line-height: 36px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .x40-42k {
-  letter-spacing: 0;
   line-height: 24px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .loom {
-  letter-spacing: 0;
   line-height: 27px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.find-jobs-it .copywriter-growth {
-  letter-spacing: 0;
-  line-height: 36px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .x38-40k {
-  letter-spacing: 0;
   line-height: 24px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .trainline-group {
-  letter-spacing: 0;
   line-height: 27px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.find-jobs-it .senior-uxui-designer {
-  letter-spacing: 0;
-  line-height: 36px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
 }
 
 .find-jobs-it .x38-40k-1 {
-  letter-spacing: 0;
   line-height: 24px;
-  margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
   width: fit-content;
@@ -707,7 +668,7 @@
   width: fit-content;
 }
 
-.find-jobs-it .place-4 {
+.find-jobs-it .location-field {
   letter-spacing: 0;
   line-height: 24px;
   margin-top: -1.00px;
