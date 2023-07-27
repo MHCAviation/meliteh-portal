@@ -90,7 +90,7 @@
 
   .about-us .about-our-values {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 24px;
     justify-content: center;
     padding-bottom: 30px;
@@ -630,6 +630,15 @@
   .about-us .meet-our-team-C61RwL {
     font-size: 32px;
     font-weight: 700;
+  }
+
+}
+
+@media (max-width: 1281px) {
+
+  .about-our-values {
+    padding-right: 1.5em;
+    padding-left: 1em;
   }
 
 }

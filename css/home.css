@@ -313,39 +313,6 @@
   justify-content: space-between;
 }
 
-.card {
-  flex: 0 1 calc(25% - 1em);  /* flex-grow | flex-shrink | flex-basis */
-  box-shadow: 0px 5px 14px rgba(8.24, 15.25, 52.06, 0.04);
-  padding: 1em 1.5em 0.5em 1.5em;
-  border: 0.50px #EFF0F6 solid;
-  margin: 0.5em;
-  box-sizing: border-box;
-  border-radius: 20px;
-  width: 100%;
-  background: white;
-  max-width: 400px;
-}
-
-.card-title {
-  margin: 0;
-  font-size: 1.25em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.card-description {
-  font-size: 1em;
-  margin-top: 0.5em;
-  line-height: 24px;
-}
-
-.card-icon {
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 0.5em;
-  width: 50px;  /* adjust this value as needed */
-}
-
 .home .group-38173-RSj7cP {
   background-color: transparent;
   height: 224px;
