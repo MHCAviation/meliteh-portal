@@ -7,6 +7,11 @@
     flex: 1;
   }
 
+  .card {
+    min-width: 270px;
+    max-width: 400px;
+  }
+
   .about-us-banner-section {
     position: relative;
     height: 263px;
@@ -93,6 +98,7 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
+    align-items: center;
     padding-bottom: 30px;
   }
   

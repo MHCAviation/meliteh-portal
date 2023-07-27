@@ -57,22 +57,22 @@
               <div class="how-to-spend-the-per montserrat-normal-monza-12px">Information Technology</div>
             </div>
             <div class="frame-15">
-              <div class="filter">
-                <form onsubmit="return false" class="frame-36">
+              <aside class="filter">
+                <form id="side-panel-filters" onsubmit="return false" class="frame-36">
                   <div class="filters montserrat-bold-licorice-20px">Filters</div>
                   <div class="filter-field">
                     <div class="location-1 montserrat-medium-licorice-18px">Location</div>
                     <div class="frame-3-1">
                       <label class="filter-check-option">
-                        <input type="radio" name="distance" value="NEARBY" checked="checked" />
+                        <input type="radio" name="distanceType" value="NEARBY" checked="checked" />
                         <span>Near me</span>
                       </label>
                       <label class="filter-check-option">
-                        <input type="radio" name="distance" value="REMOTE" />
+                        <input type="radio" name="distanceType" value="REMOTE" />
                         <span class="remote-job montserrat-normal-cape-cod-16px">Remote job</span>
                       </label>
                       <label class="filter-check-option">
-                        <input type="radio" name="distance" value="EXACT" />
+                        <input type="radio" name="distanceType" value="EXACT" />
                         <span class="exact-location montserrat-normal-cape-cod-16px">Exact location</span>
                       </label>
                     </div>
@@ -113,19 +113,19 @@
                     <div class="date-of-posting montserrat-medium-licorice-18px">Date of posting</div>
                     <div class="frame-3-1">
                       <label class="filter-check-option">
-                        <input name="posted-for-days" type="radio" value="" checked="checked"/>
+                        <input name="maxPostedForDays" type="radio" value="" checked="checked"/>
                         <span>All time</span>
                       </label>
                       <label class="filter-check-option">
-                        <input name="posted-for-days" type="radio" value="7"/>
+                        <input name="maxPostedForDays" type="radio" value="7"/>
                         <span>Last 7 days</span>
                       </label>
                       <label class="filter-check-option">
-                        <input name="posted-for-days" type="radio" value="14"/>
+                        <input name="maxPostedForDays" type="radio" value="14"/>
                         <span>Last 2 weeks</span>
                       </label>
                       <label class="filter-check-option">
-                        <input name="posted-for-days" type="radio" value="28"/>
+                        <input name="maxPostedForDays" type="radio" value="28"/>
                         <span>Last month</span>
                       </label>
                     </div>
@@ -134,22 +134,22 @@
                     <div class="type-of-employment montserrat-medium-licorice-18px">Type of employment</div>
                     <div class="frame-3-1">
                       <label class="filter-check-option">
-                        <input type="checkbox" checked="checked"/>
-                        <span class="full-time montserrat-normal-cape-cod-16px">Permanent</span>
+                        <input name="includePermanentEmployment" type="checkbox" checked="checked"/>
+                        <span>Permanent</span>
                       </label>
                       <label class="filter-check-option">
-                        <input type="checkbox" checked="checked"/>
-                        <span class="temporary montserrat-normal-cape-cod-16px">Contract</span>
+                        <input name="includeContractEmployment" type="checkbox" checked="checked"/>
+                        <span>Contract</span>
                       </label>
                       <label class="filter-check-option">
-                        <input type="checkbox" checked="checked"/>
-                        <span class="part-time montserrat-normal-cape-cod-16px">Temp</span>
+                        <input name="includeTempEmployment" type="checkbox" checked="checked"/>
+                        <span>Temp</span>
                       </label>
                     </div>
                   </div>
                 </form>
-              </div>
-              <div class="cards">
+              </aside>
+              <main class="cards">
                 <div class="sorting-panel">
                   <div class="address"><span id="total-open-vacancies-counter">?</span> Jobs</div>
                   <div class="frame-14-1 frame-14-3">
@@ -160,6 +160,7 @@
                     <img class="caret-down" src="img/caretdown.svg"  />
                   </div>
                 </div>
+                <img id="data-loading-spinner" src="img/loader.png" />
                 <div class="open-vacancy-cards-list">
                   <template id="open-vacancy-card-template">
                     <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
@@ -214,8 +215,8 @@
                   <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">5</div></div>
                   <img class="button" src="img/button-1.svg"  />
                 </div>
-              </div>
-              <div class="more-option">
+              </main>
+              <aside class="more-option">
                 <div class="more-option-3">
                   <div class="more-option-3">
                     <div class="frame-1-1">
@@ -251,7 +252,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </aside>
             </div>
           </div>
           <div class="blob">

@@ -682,3 +682,20 @@
   position: relative;
   white-space: nowrap;
 }
+
+#data-loading-spinner {
+  animation: rotate-spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 240px;
+}
+
+@keyframes rotate-spinner {
+  0% {
+    transform: rotate(0);
+  }
+  0% {
+    transform: rotate(-360deg);
+  }
+}
