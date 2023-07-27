@@ -308,6 +308,7 @@
 }
 
 .our-services-list {
+  padding: 0em 24em;
   display: flex;
   justify-content: space-between;
 }
@@ -1578,10 +1579,6 @@
   outline: none;
   min-height: 48px;
 }
-.what-position-are-you-looking-for-HKU3uw:focus {
-  border: none;
-  outline: none;
-}
 
 .home .home-jobs-search-submit-button {
   align-items: center;
@@ -1650,6 +1647,10 @@
 @media (max-width: 769px) {
 
   .our-services-list {
+    padding: 0;
+  }
+
+  .our-services-list {
     flex-direction: column;
     margin-left: 0.5em;
     margin-right: 1.5em;
@@ -1686,4 +1687,12 @@
     width: 100%;
   }
 
+}
+
+@media (max-width: 1281px) {
+
+  .our-services-list {
+    padding: 0;
+  }
+  
 }

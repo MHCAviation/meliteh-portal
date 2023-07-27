@@ -303,4 +303,12 @@
     font-size: var(--font-size-xs);
   }
 
+  .montserrat-bold-white-70px {
+    font-size: var(--font-size-xxl-mobile);
+  }
+
+  .montserrat-bold-monza-70px {
+    font-size: var(--font-size-xxl-mobile);
+  }
+
 }

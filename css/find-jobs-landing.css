@@ -47,6 +47,7 @@
 
 .find-jobs-landing .title {
   text-align: center;
+  line-height: 56px;
 }
 
 .find-jobs-landing .industry-cards-list {
@@ -231,4 +232,10 @@
   position: absolute;
   top: 432px;
   width: 269px;
+}
+
+@media (max-width: 500px) {
+  .find-jobs-landing .industry-cards-list {
+    padding-bottom: 4em;
+  }
 }
