@@ -449,6 +449,11 @@
   flex-wrap: wrap;
 }
 
+.employment-type {
+  line-height: 24px;
+  white-space: nowrap;
+}
+
 .currency-symbol {
   height: 16px;
   min-width: 16px;
