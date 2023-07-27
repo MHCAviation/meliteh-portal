@@ -13,51 +13,67 @@
   </head>
   <body>
     <div class="container-center-horizontal">
-      <div class="contact screen">
-        <div class="flex-col flex">
-          <h1 class="title valign-text-middle">Contact Us</h1>
-        </div>
-        <div class="flex-row flex">
-          <div class="flex-col-1 flex-col-3">
-            <div class="x1">
-              <div class="contact-info">Contact info:</div>
-              <div class="email-infomelitehcom montserrat-normal-licorice-17px">Email: info@meliteh.com</div>
-            </div>
-            <div class="x2">
-              <div class="office medium20">Office:</div>
-              <p class="mk-business-centre montserrat-normal-licorice-17px">
-                MK Business Centre, 115A, Floor 0, Valley Road, Birkirkara, BKR 9022 Malta
-              </p>
-            </div>
-            <div class="x3">
-              <div class="hours-of-operation medium20">Hours of Operation:</div>
-              <p class="monday-friday-700 montserrat-normal-licorice-17px">
-                Monday - Friday<br />7:00 am - 3:00 pm<br />Sat – Sun: Closed<br />We can provide 24/7 contact service
-              </p>
-            </div>
+      <div class="contact-flex">
+        <div class="contact screen">
+          <div class="flex-col flex">
+            <h1 class="title valign-text-middle">Contact Us</h1>
           </div>
-          <div class="flex-col-2 flex-col-3">
-            <div class="frame-39251 frame regular15">
-              <div class="frame-392 frame">
-                <div class="x2-1"><div class="name">Name*</div></div>
-                <img class="line" src="img/line-1.svg"  />
+          <div class="flex-row flex">
+            <div class="flex-col-1 flex-col-3">
+              <div class="x1">
+                <div class="contact-info">Contact info:</div>
+                <div class="email-infomelitehcom montserrat-normal-licorice-17px">Email: info@meliteh.com</div>
               </div>
-              <div class="frame-392 frame">
-                <div class="x2-2"><div class="email">Email *</div></div>
-                <img class="line" src="img/line-2.svg"  />
+              <div class="x2">
+                <div class="office medium20">Office:</div>
+                <p class="mk-business-centre montserrat-normal-licorice-17px">
+                  MK Business Centre, 115A, Floor 0, Valley Road, Birkirkara, BKR 9022 Malta
+                </p>
               </div>
-              <div class="frame-392 frame">
-                <div class="x9"><div class="mobile-phone">Mobile Phone</div></div>
-                <img class="line" src="img/line-3.svg"  />
+              <div class="x3">
+                <div class="hours-of-operation medium20">Hours of Operation:</div>
+                <p class="monday-friday-700 montserrat-normal-licorice-17px">
+                  Monday - Friday<br />7:00 am - 3:00 pm<br />Sat – Sun: Closed<br />We can provide 24/7 contact service
+                </p>
               </div>
             </div>
-            <div class="x8">
-              <div class="message regular15">Message *</div>
-              <img class="line-1" src="img/line.svg"  />
+
+            <div class="form">
+              <input type="text" id="name" placeholder="Name">
+              <input type="email" id="email" placeholder="Email">
+              <input type="tel" id="phone" placeholder="Phone Number">
+              <textarea id="message" placeholder="Message"></textarea>
+              <button type="submit" id="submit">Submit</button>
             </div>
-            <div class="frame-39248 frame">
-              <div class="submit valign-text-middle montserrat-medium-monza-16px">Submit</div>
-            </div>
+
+
+          <!--
+            <div class="flex-col-2 flex-col-3">
+              <div class="frame-39251 frame regular15">
+                <div class="typewriter">
+                  <input type="text" id="inputField" placeholder="Name*">
+                </div>
+                  <div class="frame-392 frame">
+                    <div class="typewriter">
+                      <input type="text" id="inputField" placeholder="Email*">
+                    </div>
+                <div class="frame-392 frame">
+                  <div class="frame-392 frame">
+                    <div class="typewriter">
+                      <input type="text" id="inputField" placeholder="Phone Number*">
+                    </div>
+                </div>
+                  <div class="x8">
+                    <div class="frame-392 frame">
+                      <div class="typewriter">
+                        <input type="text" id="inputField" placeholder="Message*">
+                      </div>
+                  </div>
+                 <div class="frame-39248 frame">
+                <div class="submit valign-text-middle montserrat-medium-monza-16px">Submit</div>
+              </div>
+            </div>-->
+            
           </div>
         </div>
       </div>

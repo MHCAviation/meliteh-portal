@@ -1,20 +1,18 @@
 /* screen - contact */
 
 .contact {
-  align-items: center;
+  padding-top: 4em;
+  padding-bottom: 4em;
   background-color: var(--neutral100);
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 942px;
-  width: 1440px;
 }
 
-.contact .flex-col {
-  flex-direction: column;
-  gap: 39px;
-  min-height: 235px;
-  width: 1440px;
+.contact-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .contact .group-336 {
@@ -42,16 +40,11 @@
   height: 116px;
   letter-spacing: 0;
   line-height: 116px;
-  margin-left: 80px;
-  white-space: nowrap;
 }
 
 .contact .flex-row {
-  gap: 197px;
-  height: 357px;
-  margin-left: 2.0px;
-  margin-top: 41px;
-  min-width: 1282px;
+  gap: 4em;
+  max-width: 100%;
 }
 
 .contact .flex-col-1 {
@@ -86,6 +79,50 @@
   white-space: nowrap;
 }
 
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 320px;
+}
+
+.form input[type="text"], .form input[type="email"], .form input[type="tel"], .form textarea {
+  font-family: 'Montserrat';
+  border: none;
+  border-bottom: 1px solid #000;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.form input[type="text"]:focus, .form input[type="email"]:focus, .form input[type="tel"]:focus, .form textarea:focus {
+  border-bottom: 1px solid #d20027;
+  outline: none;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+#submit {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  background-color: transparent;
+  color: #d20027;
+  border: 2px solid #d20027;
+  padding: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.25em;
+}
+
+#submit:hover {
+  background-color: #d20027;
+  color: white;
+}
+
 .contact .x2 {
   align-items: flex-start;
   display: flex;
@@ -96,6 +133,7 @@
 }
 
 .contact .office {
+  font-family: "Montserrat";
   color: var(--meliteh-black-type);
   font-weight: 500;
   line-height: 30px;
@@ -121,6 +159,7 @@
 }
 
 .contact .hours-of-operation {
+  font-family: "Montserrat";
   color: var(--meliteh-black-type);
   font-weight: 500;
   line-height: 30px;
@@ -134,17 +173,14 @@
 }
 
 .contact .flex-col-2 {
-  align-items: flex-end;
-  gap: 24px;
-  min-height: 169px;
+  align-items: flex-start;
+  gap: 1.75em;
   width: 772px;
 }
 
 .contact .frame-39251 {
-  align-items: flex-end;
-  gap: 32px;
-  margin-right: 2px;
-  width: 770px;
+  align-items: flex-start;
+  gap: 1.75em;
 }
 
 .contact .frame-392 {
@@ -285,6 +321,7 @@
 }
 
 .contact .flex {
+  justify-content: flex-start;
   align-items: flex-start;
   display: flex;
 }
@@ -297,4 +334,28 @@
 .contact .frame {
   display: flex;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  
+  .contact .title {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .contact .flex {
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact .flex-row {
+    gap: 2em;
+  }
+
+  .contact .frame {
+    flex-direction: column;
+  }
+  
 }

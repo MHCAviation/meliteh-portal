@@ -22,11 +22,6 @@ body {
   z-index: 0;
 }
 
-/* todo: get rid of absolute positioning on find-jobs-aviation and about-us, it currently includes these 80px from header reserved */
-.screen:not(.find-jobs-aviation) {
-  padding-top: var(--header-height);
-}
-
 .footer-navbar {
   align-items: center;
   background-color: var(--submarine);
@@ -1001,11 +996,11 @@ body {
 
 }
 
-@media (max-width: 376px) {
+@media (max-width: 500px) {
 
   .footer-navbar {
-    padding-left: 28%;
-    padding-right: 28%;
+    padding-left: 30%;
+    padding-right: 30%;
     padding-bottom: 10%;
   }
 
