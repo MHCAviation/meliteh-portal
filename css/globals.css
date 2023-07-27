@@ -18,6 +18,8 @@ body {
 }
 
 .screen {
+  /* since we are using absolute positioning for header, not sticky, all pages must have these 80px in the top reserved so that to not get content covered */
+  margin-top: var(--header-height);
   /* isolate internal z-index manipulations from conflicting with outside components (sticky header) */
   z-index: 0;
 }
@@ -155,20 +157,6 @@ body {
   position: relative;
 }
 
-.frame-9 {
-  align-items: center;
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--licorice);
-  border-radius: 4px 0px 0px 4px;
-  display: flex;
-  flex: 1;
-  gap: 16px;
-  overflow: hidden;
-  padding: 18px;
-  position: relative;
-}
-
 .magnifying-glass {
   height: 24px;
   min-width: 24px;
@@ -268,21 +256,6 @@ body {
   position: relative;
 }
 
-.filter {
-  align-items: flex-start;
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--neutral300);
-  border-radius: 20px;
-  box-shadow: 0px 5px 14px #080f340a;
-  display: flex;
-  gap: 24px;
-  overflow: hidden;
-  padding: 24px;
-  position: relative;
-  width: 250px;
-}
-
 .frame-36 {
   align-items: flex-start;
   display: flex;
@@ -290,15 +263,6 @@ body {
   flex-direction: column;
   gap: 16px;
   position: relative;
-}
-
-.filters {
-  letter-spacing: 0;
-  line-height: 30px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
 }
 
 .group-1 {
@@ -460,14 +424,6 @@ body {
   gap: 48px;
   justify-content: flex-end;
   position: relative;
-}
-
-.sorting-panel {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  width: 748px;
 }
 
 .address {

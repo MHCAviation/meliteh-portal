@@ -4,12 +4,32 @@
   width: unset;
 }
 
+.frame-9 {
+  align-items: center;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--licorice);
+  border-radius: 4px 0px 0px 4px;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  overflow: hidden;
+  padding: 18px;
+  min-width: 240px;
+}
+
 .cards {
   flex: unset;
+  align-items: stretch;
+  max-width: 748px;
+  flex: 1;
+  gap: 24px;
 }
 
 .frame-15 {
-  align-self: unset;
+  align-self: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .single-element {
@@ -23,7 +43,6 @@
   border: 1px none;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .find-jobs-it .group-336 {
@@ -50,6 +69,7 @@
 .find-jobs-it .jobs-search-title-banner {
   background-image: url(../img/pair-programming.jpeg);
   background-position: 50% 25%;
+  z-index: 0;
   background-size: cover;
   position: relative;
 }
@@ -57,6 +77,7 @@
 .find-jobs-it .banner-gradient-overlay-red {
   background: linear-gradient(113deg, rgb(246 29 29 / 100%) 0%, rgba(77.76, 77.76, 77.76, 0) 50%);
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   bottom: 0;
@@ -64,37 +85,22 @@
 }
 
 .find-jobs-it .search {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: center;
-  padding: 80px 280px;
- }
-
-.find-jobs-it .frame-69 {
-  align-items: flex-start;
-  display: flex;
-  margin-bottom: -78.49px;
-  position: relative;
-  width: fit-content;
+  margin-left: 10%;
 }
 
-.find-jobs-it .banner-gradient-overlay-white {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-  position: absolute;
-  left: 210px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.find-jobs-it .frame-12 {
+.find-jobs-it .banner-text-content {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 40px;
   position: relative;
+  margin: 48px;
 }
 
 .find-jobs-it .frame-11 {
@@ -102,22 +108,15 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-right: -200.00px;
   position: relative;
   width: fit-content;
 }
 
 .find-jobs-it .title {
-  color: transparent;
-  font-family: var(--font-family-montserrat);
   font-size: 56px;
   font-weight: 700;
-  letter-spacing: 0;
   line-height: 84px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
+  margin: 0;
 }
 
 .find-jobs-it .span1 {
@@ -128,6 +127,7 @@
   box-shadow: 0px 2px 2px #0000000a;
   display: flex;
   align-items: stretch;
+  justify-content: center;
   flex-wrap: wrap;
   align-self: stretch;
 }
@@ -181,18 +181,43 @@
   width: 16px;
 }
 
-.find-jobs-it .overlap-group3 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  z-index: 0;
-}
-
 .content {
   position: unset;
   width: unset;
   background-color: unset;
   padding-top: 18px;
+  z-index: 0;
+}
+
+.more-interaction-options {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: fit-content;
+}
+
+@media screen and (max-width: 1200px) {
+  .more-interaction-options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.filter-fields-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .filter-fields-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 
 .find-jobs-it .filter-field {
@@ -217,6 +242,18 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 8px;
+}
+
+.filter {
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--neutral300);
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  display: flex;
+  gap: 24px;
+  padding: 24px;
 }
 
 .filter-check-option {
@@ -338,7 +375,6 @@
   overflow-y: auto;
   /* allocate some space for horizontal scroll not appear when card is scaled up on hover */
   padding: 30px;
-  width: 748px;
 }
 
 .find-jobs-it .frame-14-1 {
@@ -346,6 +382,12 @@
   justify-content: space-between;
   padding: 12px;
   max-width: 281px;
+}
+
+.sorting-panel {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .find-jobs-it .open-vacancy-card {
@@ -582,25 +624,6 @@
   width: 202px;
 }
 
-.find-jobs-it .blob {
-  align-items: flex-start;
-  display: flex;
-  height: 788px;
-  left: 1094px;
-  min-width: 788px;
-  position: absolute;
-  top: 655px;
-  transform: rotate(-180.00deg);
-  z-index: -1;
-}
-
-.find-jobs-it .overlap-group1 {
-  border-radius: 393.82px;
-  height: 788px;
-  position: relative;
-  width: 788px;
-}
-
 .find-jobs-it .footer-navbar {
   align-items: center;
   background-color: var(--submarine);
@@ -649,15 +672,6 @@
   position: relative;
 }
 
-.find-jobs-it .more-option-3 {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  width: fit-content;
-}
-
 .find-jobs-it .name-4 {
   letter-spacing: 0;
   line-height: 24px;
@@ -681,6 +695,12 @@
   margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
+}
+
+.data-loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #data-loading-spinner {

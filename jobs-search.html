@@ -18,7 +18,7 @@
           <div class="banner-gradient-overlay-red"></div>
           <div class="search">
             <div class="banner-gradient-overlay-white"></div>
-            <div class="frame-12">
+            <div class="banner-text-content">
               <div class="frame-11">
                 <h1 class="title">
                   <span class="span0">Find job in </span><span class="span1">Information Technologies</span>
@@ -43,23 +43,23 @@
             </div>
           </div>
         </div>
-        <div class="overlap-group3">
-          <div class="content">
-            <div class="single-element">
-              <div class="place montserrat-normal-licorice-12px">Home</div>
-              <div class="v6-icon-free">
-                <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
-              </div>
-              <div class="featured montserrat-normal-licorice-12px">Find Jobs</div>
-              <div class="v6-icon-free">
-                <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
-              </div>
-              <div class="how-to-spend-the-per montserrat-normal-monza-12px">Information Technology</div>
+        <div class="content">
+          <div class="single-element">
+            <div class="place montserrat-normal-licorice-12px">Home</div>
+            <div class="v6-icon-free">
+              <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
             </div>
-            <div class="frame-15">
-              <aside class="filter">
-                <form id="side-panel-filters" onsubmit="return false" class="frame-36">
-                  <div class="filters montserrat-bold-licorice-20px">Filters</div>
+            <div class="featured montserrat-normal-licorice-12px">Find Jobs</div>
+            <div class="v6-icon-free">
+              <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
+            </div>
+            <div class="how-to-spend-the-per montserrat-normal-monza-12px">Information Technology</div>
+          </div>
+          <div class="frame-15">
+            <aside class="filter">
+              <form id="side-panel-filters" onsubmit="return false" class="frame-36">
+                <div class="filters montserrat-bold-licorice-20px">Filters</div>
+                <div class="filter-fields-list">
                   <div class="filter-field">
                     <div class="location-1 montserrat-medium-licorice-18px">Location</div>
                     <div class="frame-3-1">
@@ -147,123 +147,113 @@
                       </label>
                     </div>
                   </div>
-                </form>
-              </aside>
-              <main class="cards">
-                <div class="sorting-panel">
-                  <div class="address"><span id="total-open-vacancies-counter">?</span> Jobs</div>
-                  <div class="frame-14-1 frame-14-3">
-                    <div class="frame-45">
-                      <img class="funnel-simple" src="img/funnelsimple.svg"  />
-                      <div class="sort-by montserrat-normal-licorice-16px-2">Sort By</div>
-                    </div>
-                    <img class="caret-down" src="img/caretdown.svg"  />
+                </div>
+              </form>
+            </aside>
+            <main class="cards">
+              <div class="sorting-panel">
+                <div class="address"><span id="total-open-vacancies-counter">?</span> Jobs</div>
+                <div class="frame-14-1 frame-14-3">
+                  <div class="frame-45">
+                    <img class="funnel-simple" src="img/funnelsimple.svg"  />
+                    <div class="sort-by montserrat-normal-licorice-16px-2">Sort By</div>
                   </div>
+                  <img class="caret-down" src="img/caretdown.svg"  />
                 </div>
-                <img id="data-loading-spinner" src="img/loader.png" />
-                <div class="open-vacancy-cards-list">
-                  <template id="open-vacancy-card-template">
-                    <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
-                      <div class="vacancy-card-company-logo"></div>
-                      <div class="vacancy-data-block">
-                        <div class="vacancy-summary">
-                          <div class="frame-29">
-                            <div class="company-name linear-company montserrat-normal-licorice-18px">?</div>
-                            <div class="job-title-panel">
-                              <div class="job-title-text software-engineer">?</div>
-                              <div class="frame-25"><div class="new-post">New post</div></div>
-                            </div>
-                          </div>
-                          <div class="key-facts">
-                            <div class="frame-5">
-                              <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
-                              <div class="location-field montserrat-normal-licorice-16px">?</div>
-                            </div>
-                            <div class="ellipse"></div>
-                            <div class="frame-5">
-                              <img class="calendar-blank" src="img/calendarblank.svg"  />
-                              <div class="time-posted-field montserrat-normal-licorice-16px">? min ago</div>
-                            </div>
-                            <div class="ellipse"></div>
-                            <div class="frame-5">
-                              <img class="clock" src="img/clock.svg"  />
-                              <div class="employment-type montserrat-normal-licorice-16px">Full time</div>
-                            </div>
-                            <div class="salary-fact">
-                              <div class="ellipse"></div>
-                              <div class="frame-5">
-                                <span class="currency-symbol">$</span>
-                                <div class="salary-range x50">?k-?k</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <p class="vacancy-description">
-                          ?
-                        </p>
-                      </div>
-                    </a>
-                  </template>
-                </div>
-                <!-- there aren't too many jobs yet, so pagination is not actually needed -->
-                <div class="pagination" style="display: none">
-                  <img class="button" src="img/button.svg"  />
-                  <div class="button-3 button-6"><div class="number-1">1</div></div>
-                  <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">2</div></div>
-                  <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">3</div></div>
-                  <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">4</div></div>
-                  <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">5</div></div>
-                  <img class="button" src="img/button-1.svg"  />
-                </div>
-              </main>
-              <aside class="more-option">
-                <div class="more-option-3">
-                  <div class="more-option-3">
-                    <div class="frame-1-1">
-                      <div class="frame-3-3 filter-check-option">
-                        <p class="email-me-for-jobs montserrat-bold-licorice-20px">📨&nbsp;&nbsp;Email me for jobs</p>
-                      </div>
-                      <div class="frame-3-3 filter-check-option">
-                        <p class="x-eiusmod montserrat-normal-licorice-14px">
-                          Ut esse eiusmod aute. Sit enim labore dolore. Aute ea fugiat commodo ea foes.
-                        </p>
-                      </div>
-                      <div class="frame-72-1">
-                        <div class="frame-14-2 frame-14-3">
-                          <div class="namemailcom montserrat-normal-licorice-16px-3">name@mail.com</div>
-                        </div>
-                        <div class="button-4 button-6">
-                          <div class="subcribe montserrat-medium-white-16px">Subcribe</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="frame-1-1">
-                      <div class="frame-3-3 filter-check-option">
-                        <div class="get-noticed-faster montserrat-bold-licorice-20px">🚀 Get noticed faster</div>
-                      </div>
-                      <div class="frame-3-3 filter-check-option">
-                        <p class="x-eiusmod montserrat-normal-licorice-14px">
-                          Quis eiusmod deserunt cillum laboris magna cupidatat esse labore irure quis cupidatat in.
-                        </p>
-                      </div>
-                      <div class="button-5 button-6">
-                        <div class="upload-your-resume montserrat-medium-white-16px">Upload your resume</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </div>
-          <div class="blob">
-            <div class="overlap-group1">
-              <div class="ellipse-container">
-                <div class="ellipse-2"></div>
-                <div class="ellipse-4"></div>
-                <div class="ellipse-3"></div>
               </div>
-              <div class="ellipse-5-1"></div>
-            </div>
+              <div class="data-loading-spinner-container">
+                <img id="data-loading-spinner" src="img/loader.png" />
+              </div>
+              <div class="open-vacancy-cards-list">
+                <template id="open-vacancy-card-template">
+                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
+                    <div class="vacancy-card-company-logo"></div>
+                    <div class="vacancy-data-block">
+                      <div class="vacancy-summary">
+                        <div class="frame-29">
+                          <div class="company-name linear-company montserrat-normal-licorice-18px">?</div>
+                          <div class="job-title-panel">
+                            <div class="job-title-text software-engineer">?</div>
+                            <div class="frame-25"><div class="new-post">New post</div></div>
+                          </div>
+                        </div>
+                        <div class="key-facts">
+                          <div class="frame-5">
+                            <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
+                            <div class="location-field montserrat-normal-licorice-16px">?</div>
+                          </div>
+                          <div class="ellipse"></div>
+                          <div class="frame-5">
+                            <img class="calendar-blank" src="img/calendarblank.svg"  />
+                            <div class="time-posted-field montserrat-normal-licorice-16px">? min ago</div>
+                          </div>
+                          <div class="ellipse"></div>
+                          <div class="frame-5">
+                            <img class="clock" src="img/clock.svg"  />
+                            <div class="employment-type montserrat-normal-licorice-16px">Full time</div>
+                          </div>
+                          <div class="salary-fact">
+                            <div class="ellipse"></div>
+                            <div class="frame-5">
+                              <span class="currency-symbol">$</span>
+                              <div class="salary-range x50">?k-?k</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="vacancy-description">
+                        ?
+                      </p>
+                    </div>
+                  </a>
+                </template>
+              </div>
+              <!-- there aren't too many jobs yet, so pagination is not actually needed -->
+              <div class="pagination" style="display: none">
+                <img class="button" src="img/button.svg"  />
+                <div class="button-3 button-6"><div class="number-1">1</div></div>
+                <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">2</div></div>
+                <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">3</div></div>
+                <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">4</div></div>
+                <div class="button-1 button-6"><div class="number dmsans-normal-licorice-16px">5</div></div>
+                <img class="button" src="img/button-1.svg"  />
+              </div>
+            </main>
+            <aside class="more-option">
+                <div class="more-interaction-options">
+                  <div class="frame-1-1">
+                    <div class="frame-3-3 filter-check-option">
+                      <p class="email-me-for-jobs montserrat-bold-licorice-20px">📨&nbsp;&nbsp;Email me for jobs</p>
+                    </div>
+                    <div class="frame-3-3 filter-check-option">
+                      <p class="x-eiusmod montserrat-normal-licorice-14px">
+                        Ut esse eiusmod aute. Sit enim labore dolore. Aute ea fugiat commodo ea foes.
+                      </p>
+                    </div>
+                    <div class="frame-72-1">
+                      <div class="frame-14-2 frame-14-3">
+                        <div class="namemailcom montserrat-normal-licorice-16px-3">name@mail.com</div>
+                      </div>
+                      <div class="button-4 button-6">
+                        <div class="subcribe montserrat-medium-white-16px">Subcribe</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-1-1">
+                    <div class="frame-3-3 filter-check-option">
+                      <div class="get-noticed-faster montserrat-bold-licorice-20px">🚀 Get noticed faster</div>
+                    </div>
+                    <div class="frame-3-3 filter-check-option">
+                      <p class="x-eiusmod montserrat-normal-licorice-14px">
+                        Quis eiusmod deserunt cillum laboris magna cupidatat esse labore irure quis cupidatat in.
+                      </p>
+                    </div>
+                    <div class="button-5 button-6">
+                      <div class="upload-your-resume montserrat-medium-white-16px">Upload your resume</div>
+                    </div>
+                  </div>
+                </div>
+            </aside>
           </div>
         </div>
       </div>
