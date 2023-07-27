@@ -21,6 +21,11 @@
   padding: 30px;
 }
 
+.card {
+  max-width: 300px;
+  min-width: 240px;
+}
+
 .home .home-news-and-insights-background {
   background-color: #c2c6c9;
   opacity: 0.1;
@@ -309,9 +314,9 @@
 }
 
 .our-services-list {
-  padding: 0em 24em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .home .group-38173-RSj7cP {
@@ -1616,11 +1621,6 @@
 @media (max-width: 769px) {
 
   .our-services-list {
-    padding: 0;
-  }
-
-  .our-services-list {
-    flex-direction: column;
     margin-left: 0.5em;
     margin-right: 1.5em;
   }
@@ -1656,12 +1656,4 @@
     width: 100%;
   }
 
-}
-
-@media (max-width: 1281px) {
-
-  .our-services-list {
-    padding: 0;
-  }
-  
 }
