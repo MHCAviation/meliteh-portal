@@ -449,6 +449,27 @@
   flex-wrap: wrap;
 }
 
+.currency-symbol {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
+.no-salary-range .salary-fact {
+  display: none;
+}
+
+.salary-range {
+  font-size: var(--font-size-m);
+  color: var(--licorice-2);
+}
+
+.calendar-blank {
+  height: 16px;
+  min-width: 16px;
+  position: relative;
+}
+
 .find-jobs-it .frame-5 {
   align-items: center;
   display: flex;

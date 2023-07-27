@@ -632,18 +632,6 @@ body {
   position: relative;
 }
 
-.currency-dollar {
-  height: 16px;
-  min-width: 16px;
-  position: relative;
-}
-
-.calendar-blank {
-  height: 16px;
-  min-width: 16px;
-  position: relative;
-}
-
 .mollit-in-laborum-te {
   align-self: stretch;
   letter-spacing: 0;
@@ -898,19 +886,7 @@ body {
   position: relative;
 }
 
-.calendar-blank-6 {
-  height: 16px;
-  min-width: 16px;
-  position: relative;
-}
-
 .clock-6 {
-  height: 16px;
-  min-width: 16px;
-  position: relative;
-}
-
-.currency-dollar-6 {
   height: 16px;
   min-width: 16px;
   position: relative;
