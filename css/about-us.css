@@ -90,8 +90,8 @@
 
   .about-us .about-our-values {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 1em;
     justify-content: center;
     padding-bottom: 30px;
   }
@@ -604,6 +604,10 @@
   }
 
 @media (max-width: 500px) {
+
+  .about-us .about-our-values {
+    flex-direction: column;
+  }
 
   img {
     width: 320px;
