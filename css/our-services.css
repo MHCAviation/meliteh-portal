@@ -61,7 +61,6 @@
 }
 
 .service-cards-list {
-  margin-top: 5%;
   align-items: flex-start;
   display: flex;
   gap: 24px;
@@ -206,6 +205,10 @@
 
 
 @media (max-width: 500px) {
+
+  .service-cards-list {
+    margin-top: 5%;
+  }
 
   .montserrat-bold-white-70px {
     font-size: var(--font-size-xxl-mobile);
