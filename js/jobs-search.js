@@ -29,7 +29,7 @@ async function main() {
         card.querySelector(".job-title-text").textContent = jobTitle.replace(/\(\d+\)\s*$/, "");
         card.querySelector(".vacancy-card-company-logo").style.backgroundImage = `url('img/company-logos/${vacancy.ClientId}.png')`;
         card.querySelector(".vacancy-description").textContent = (vacancy.PublishedJobDescription ?? "").split(/[\r\n]+/)[0];
-        card.querySelector(".location-field").textContent = (vacancy.Location ?? "Globe").replace(/\(.*/, "");
+        card.querySelector(".location-field").textContent = (vacancy.Location ?? "Globe").replace(/\(.*/, "").replace(/,.*/, "");
         card.querySelector(".time-posted-field").textContent = new Date(vacancy.CreatedOn).toISOString().slice(0, 10);
         return card;
     });
