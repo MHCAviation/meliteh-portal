@@ -134,8 +134,8 @@
 [data-selected-service="BG_CHECK"] .service-card[data-service="BG_CHECK"] .service-card-text,
 [data-selected-service="PAYROLL"] .service-card[data-service="PAYROLL"] .service-card-text,
 [data-selected-service="CONSULTING"] .service-card[data-service="CONSULTING"] .service-card-text {
-  background-color: var(--meliteh-red);
-  border-color: var(--meliteh-red);
+  background-color: #D20027;
+  border-color: #D20027;
   color: white;
   transition: unset;
 }
