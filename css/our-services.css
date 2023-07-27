@@ -2,6 +2,7 @@
 
 .group-container {
   width: 100%;
+  padding-top: 4em;
 }
 
 .our-services-u45-landing-u45-recruitment-u45-alt {
@@ -63,7 +64,7 @@
 .service-cards-list {
   align-items: flex-start;
   display: flex;
-  gap: 24px;
+  gap: 1em;
   margin-bottom: 24px;
   flex-wrap: wrap;
   justify-content: center;
@@ -163,6 +164,20 @@
   display: none;
 }
 
+.service-descriptions{
+  padding-left: 1em;
+  padding-right: 1em;
+  align-items: center;
+  display: flex;
+  flex-flow:wrap;
+  flex-shrink: 3;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 4%;
+}
+
+
 [data-selected-service="RECRUITMENT"] .service-description[data-service="RECRUITMENT"],
 [data-selected-service="BG_CHECK"] .service-description[data-service="BG_CHECK"],
 [data-selected-service="PAYROLL"] .service-description[data-service="PAYROLL"],
@@ -171,7 +186,6 @@
 }
 
 .service-description p,.recruiment-service-intro {
-  margin-top: 38px;
   max-width: 1280px;
   letter-spacing: 0;
   line-height: 28px;
@@ -198,11 +212,9 @@
   .service-description p, .recruiment-service-intro {
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 5%;
   }
 
 }
-
 
 @media (max-width: 500px) {
 
