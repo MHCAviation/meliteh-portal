@@ -33,13 +33,20 @@ async function main() {
     const cards = vacancies.map(vacancy => {
         const card = template.content.firstElementChild.cloneNode(true);
         const [jobTitle, companyFromTitle] = vacancy.JobTitle.split("-");
+        const timePosted = new Date(vacancy.CreatedOn);
+        const postedForMs = Date.now() - timePosted.getTime();
+        const postedForDays = postedForMs / 1000 / 60 / 60 / 24;
+        card.setAttribute("data-employment-type", vacancy.Description);
+        card.classList.toggle("posted-over-7-days-ago", postedForDays > 7);
+        card.classList.toggle("posted-over-14-days-ago", postedForDays > 14);
+        card.classList.toggle("posted-over-28-days-ago", postedForDays > 28);
         card.setAttribute("href", "https://1rww.eu/Secure/Login.aspx?JobId=" + vacancy.JobId);
         card.querySelector(".company-name").textContent = vacancy.Company;
         card.querySelector(".job-title-text").textContent = jobTitle.replace(/\(\d+\)\s*$/, "");
         card.querySelector(".vacancy-card-company-logo").style.backgroundImage = `url('img/company-logos/${vacancy.ClientId}.png')`;
         card.querySelector(".vacancy-description").textContent = (vacancy.PublishedJobDescription ?? "").split(/[\r\n]+/)[0];
         card.querySelector(".location-field").textContent = (vacancy.Location ?? "Globe").replace(/\(.*/, "").replace(/,.*/, "");
-        card.querySelector(".time-posted-field").textContent = new Date(vacancy.CreatedOn).toISOString().slice(0, 10);
+        card.querySelector(".time-posted-field").textContent = timePosted.toISOString().slice(0, 10);
         card.querySelector(".currency-symbol").textContent = vacancy.CurrencySymbol ?? vacancy.CurrencyName ?? "$";
         card.querySelector(".employment-type").textContent = vacancy.Description;
         let salaryRangeStr;

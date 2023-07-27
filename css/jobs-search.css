@@ -219,41 +219,14 @@
   gap: 8px;
 }
 
-.find-jobs-it .ellipse-5 {
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--licorice-3);
-  border-radius: 8px;
-  height: 16px;
-  min-width: 16px;
+.filter-check-option {
+  align-self: stretch;
+  display: flex;
   position: relative;
-}
-
-.find-jobs-it .near-me {
-  letter-spacing: 0;
-  line-height: 24px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.find-jobs-it .remote-job {
-  letter-spacing: 0;
-  line-height: 24px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.find-jobs-it .exact-location {
-  letter-spacing: 0;
-  line-height: 24px;
-  margin-top: -1.00px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  color: var(--cape-cod);
+  font-size: var(--font-size-m);
 }
 
 .find-jobs-it .frame-39241 {
