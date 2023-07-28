@@ -20,10 +20,207 @@
   padding: 30px;
 }
 
+/* Service Features */
+
 .card {
   max-width: 300px;
   min-width: 240px;
 }
+
+/* Industry card */
+
+.grey-section{
+  width: 100%;
+  padding-top: 4em;
+  padding-bottom:4em;
+  background-color: var(--submarine);
+}
+
+.card-mobile-description{
+  border-top: none;
+  border: solid 0.5px;
+  padding: 1em;
+  border-color: var(--meliteh-grey);
+  background-color: white;
+  border-radius: 0em 0em 1em 1em;
+}
+
+.industry-cards-list {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.industry-card {
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--neutral300);
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  display: flex;
+  height: 432px;
+  width: 302px;
+  cursor: pointer;
+  color: var(--meliteh-black-type);
+}
+
+.overlap-group {
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 302px;
+}
+
+.industry-card-top-part {
+  align-items: center;
+  background-color: var(--neutral100);
+  border-radius: 1em 1em 0px 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  width: 302px;
+}
+
+.industry-card-title {
+  border-radius: 0em 0em 0.5em 0.5em;
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid;
+  border-top: none;
+  border-color: var(--meliteh-grey);
+  transition: none;
+}
+
+.industry-card-image-container {
+  position: relative;
+}
+
+.find-jobs-landing .industry-card-image {
+  height: 204px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.go-to-jobs-search-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--meliteh-red);
+  color: white;
+  border: none;
+  display: none;
+  padding: 21px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  padding-left: 27px;
+  padding-right: 66px;
+  background-image: url('../img/magnifyingglass_white.svg');
+  background-repeat: no-repeat;
+  background-position: 80% center;
+  cursor: pointer;
+}
+
+.industry-card-description p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hover-details {
+  background-color: white;
+  padding: 0em 1em;
+  border-radius: 0em 0em 0.5em 0.5em;
+  border: solid 0.5px;
+  display: none;
+  color: var(--meliteh-red);
+  font-weight: 500;
+  margin-bottom: 2em;
+}
+
+.industry-card:hover .industry-card-top-part {
+  background-color: var(--meliteh-red);
+  color: white;
+}
+.industry-card:hover .industry-card-title {
+  border-color: var(--meliteh-red);
+}
+.industry-card:hover .industry-card-description {
+  border-color: var(--meliteh-red);
+}
+.industry-card:hover .hover-details {
+  display: unset;
+}
+
+.industry-card:hover .go-to-jobs-search-btn {
+  display: unset;
+}
+
+.find-jobs-landing .rectangle-4296 {
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--meliteh-grey);
+  border-radius: 20px;
+  height: 432px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 302px;
+}
+
+.find-jobs-landing .rectangle-167 {
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--meliteh-grey);
+  border-radius: 20px 20px 0px 0px;
+  height: 260px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 302px;
+}
+
+.find-jobs-landing .others {
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 219px;
+  width: 262px;
+}
+
+.find-jobs-landing .finding-exceptional {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  top: 283px;
+  width: 270px;
+}
+
+.find-jobs-landing .vector-44 {
+  height: 1px;
+  left: 16px;
+  object-fit: cover;
+  position: absolute;
+  top: 432px;
+  width: 269px;
+}
+
+/* New Section */
 
 .home .home-news-and-insights-background {
   background-color: #c2c6c9;
@@ -511,14 +708,6 @@
   width: fit-content;
 }
 
-.home .subscribe-form {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25em;
-  justify-content: center;
-}
-
 .home .never-want-to-miss-any-job-news-lyMjxj {
   font-size: 32px;
   font-weight: 400;
@@ -554,6 +743,14 @@
 }
 
 
+.home .subscribe-form {
+  margin-top: 2.5em;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .email-subscription {
   width: 100%;
   display: flex;
@@ -571,7 +768,7 @@
 .email-subscription input[type="email"] {
   font-family: 'Montserrat';
   flex-grow: 1;
-  padding: 10px;
+  padding: 1em;
   border: 1px solid #ccc;
   border-radius: 0.5em 0em 0em 0.5em;
 }
@@ -1470,6 +1667,7 @@
     background-position: 42% 45%;
     filter: blur(5px);
   }
+
   50% {
     background-position: 53% 52%;
     filter: blur(2px);
@@ -1617,11 +1815,30 @@
   gap: 24px;
 }
 
+#mobileshow { 
+  display:none; 
+  }
+
 @media (max-width: 769px) {
+
+  #desktopshow {
+    display:none; 
+  }
+
+  #mobileshow { 
+    display:block; }
+
+  .industry-card-title {
+    border-radius: 0;
+  }
 
   .our-services-list {
     margin-left: 0.5em;
     margin-right: 1.5em;
+  }
+
+  .industry-cards-list {
+    gap: 2em;
   }
 
   .home .get-the-right-job-you-deserve-8dJy9b {
