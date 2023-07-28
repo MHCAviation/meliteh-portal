@@ -95,13 +95,14 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border: 1px solid;
+  border: 0.5px solid;
   border-top: none;
   border-color: var(--meliteh-grey);
   transition: none;
 }
 
 .industry-card-image-container {
+  display: flex;
   position: relative;
 }
 
