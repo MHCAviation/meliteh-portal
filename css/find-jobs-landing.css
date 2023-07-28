@@ -235,6 +235,12 @@
 }
 
 @media (max-width: 500px) {
+
+  .industry-card-description p {
+    font-size: 0.75em;
+    line-height: 20px;
+  }
+
   .find-jobs-landing .industry-cards-list {
     padding-bottom: 4em;
   }

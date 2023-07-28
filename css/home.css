@@ -789,6 +789,7 @@
   color:#ffffff;
   border-radius: 0em 0.5em 0.5em 0em;
   display: flex;
+  flex-grow: 3;
   height: auto;
   justify-content: center;
   mix-blend-mode: normal;
@@ -1838,7 +1839,7 @@
 
   .our-services-list {
     margin-left: 0.5em;
-    margin-right: 1.5em;
+    margin-right: 0.5em;
   }
 
   .industry-cards-list {
