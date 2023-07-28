@@ -37,6 +37,8 @@
 }
 
 .card-mobile-description{
+  font-size: 0.75em;
+  line-height: 20px;
   border-top: none;
   border: solid 0.5px;
   padding: 1em;
@@ -78,7 +80,7 @@
 .industry-card-top-part {
   align-items: center;
   background-color: var(--neutral100);
-  border-radius: 1em 1em 0px 0px;
+  border-radius: 20px 20px 0px 0px;
   display: flex;
   flex-direction: column;
   min-height: 260px;
@@ -142,7 +144,7 @@
 .hover-details {
   background-color: white;
   padding: 0em 1em;
-  border-radius: 0em 0em 0.5em 0.5em;
+  border-radius: 0em 0em 20px 20px;
   border: solid 0.5px;
   display: none;
   color: var(--meliteh-red);
@@ -1829,6 +1831,7 @@
     display:block; }
 
   .industry-card-title {
+    border-bottom: 0;
     border-radius: 0;
   }
 
