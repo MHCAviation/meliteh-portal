@@ -257,13 +257,12 @@
 }
 
 .filter-check-option {
-  align-self: stretch;
   display: flex;
-  position: relative;
   align-items: center;
   gap: 8px;
   color: var(--cape-cod);
   font-size: var(--font-size-m);
+  cursor: pointer;
 }
 
 .find-jobs-it .frame-39241 {
@@ -375,6 +374,27 @@
   overflow-y: auto;
   /* allocate some space for horizontal scroll not appear when card is scaled up on hover */
   padding: 30px;
+}
+
+.open-vacancy-cards-list[data-max-posted-for-days="7"] .open-vacancy-card.posted-over-7-days-ago {
+  display: none;
+}
+
+.open-vacancy-cards-list[data-max-posted-for-days="14"] .open-vacancy-card.posted-over-14-days-ago {
+  display: none;
+}
+
+.open-vacancy-cards-list[data-max-posted-for-days="28"] .open-vacancy-card.posted-over-28-days-ago {
+  display: none;
+}
+
+.no-jobs-matching-your-criteria-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
+  display: flex;
 }
 
 .find-jobs-it .frame-14-1 {

@@ -72,7 +72,7 @@
                         <span class="remote-job montserrat-normal-cape-cod-16px">Remote job</span>
                       </label>
                       <label class="filter-check-option">
-                        <input type="radio" name="distanceType" value="EXACT" />
+                        <input type="radio" name="distanceType" value="EXACT" disabled />
                         <span class="exact-location montserrat-normal-cape-cod-16px">Exact location</span>
                       </label>
                     </div>
@@ -163,6 +163,11 @@
               </div>
               <div class="data-loading-spinner-container">
                 <img id="data-loading-spinner" src="img/loader.png" />
+              </div>
+              <div class="no-jobs-matching-your-criteria-section">
+                <h2>Sorry, no job available with your wish criteria now</h2>
+                <p>Maybe you'll have interest in other positions in <a href="find-jobs-landing.html">Find Job</a> page</p>
+                <img src="img/no-matching-jobs.png" />
               </div>
               <div class="open-vacancy-cards-list">
                 <template id="open-vacancy-card-template">

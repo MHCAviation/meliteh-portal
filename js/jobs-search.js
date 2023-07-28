@@ -60,11 +60,16 @@ function fillCard(card, vacancy) {
     card.querySelector(".salary-range").textContent = salaryRangeStr;
 }
 
+function isHidden(el) {
+    return (el.offsetParent === null)
+}
+
 /**
  * @param {HTMLFormElement} sidePanelFilters
  * @param {HTMLElement} list
+ * @param {HTMLElement} counter
  */
-function handleFiltersChange(sidePanelFilters, list) {
+function handleFiltersChange(sidePanelFilters, list, counter, main) {
     const formData = new FormData(sidePanelFilters);
     list.setAttribute("data-distance-type", formData.get("distanceType"));
     list.setAttribute("data-max-posted-for-days", formData.get("maxPostedForDays"));
@@ -80,15 +85,23 @@ function handleFiltersChange(sidePanelFilters, list) {
         "include-temp-employment-type",
         formData.get("includeTempEmployment")
     );
+    let matching = 0;
+    for (const card of list.children) {
+        matching += !isHidden(card);
+    }
+    counter.textContent = matching;
+    main.setAttribute("total-jobs-matched", matching);
 }
 
 async function main() {
     /** @var {Vacancy[]} */
     const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
+    const main = document.querySelector("main");
     document.getElementById("data-loading-spinner").style.display = "none";
     document.getElementById("total-open-vacancies-counter").textContent = vacancies.length;
     const template = document.getElementById("open-vacancy-card-template");
     const list = document.getElementsByClassName("open-vacancy-cards-list")[0];
+    const counter = document.getElementById("total-open-vacancies-counter");
     const cards = vacancies.map(vacancy => {
         const card = template.content.firstElementChild.cloneNode(true);
         fillCard(card, vacancy);
@@ -99,9 +112,9 @@ async function main() {
     /** @var {HTMLFormElement} */
     const sidePanelFilters = document.getElementById("side-panel-filters");
     sidePanelFilters.addEventListener("change", () => {
-        handleFiltersChange(sidePanelFilters, list);
+        handleFiltersChange(sidePanelFilters, list, counter, main);
     });
-    handleFiltersChange(sidePanelFilters, list);
+    handleFiltersChange(sidePanelFilters, list, counter, main);
 }
 
 main().catch(error => {
