@@ -769,15 +769,17 @@
 }
 
 .email-subscription input[type="email"] {
+  border-right: 0;
   font-family: 'Montserrat';
   flex-grow: 1;
-  padding: 1em;
+  padding-left: 1em;
   border: 1px solid #ccc;
   border-radius: 0.5em 0em 0em 0.5em;
 }
 
 .email-subscription input[type="email"]:focus {
   outline-color: #d20027;
+  outline-width: 0.5px;
 }
 
 .email-subscription button {
@@ -789,7 +791,6 @@
   color:#ffffff;
   border-radius: 0em 0.5em 0.5em 0em;
   display: flex;
-  flex-grow: 3;
   height: auto;
   justify-content: center;
   mix-blend-mode: normal;
