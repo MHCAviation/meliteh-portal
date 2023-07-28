@@ -388,6 +388,18 @@
   display: none;
 }
 
+.open-vacancy-cards-list:not(.include-permanent-employment-type) .open-vacancy-card[data-employment-type="Permanent"] {
+  display: none;
+}
+
+.open-vacancy-cards-list:not(.include-contract-employment-type) .open-vacancy-card[data-employment-type="Contract"] {
+  display: none;
+}
+
+.open-vacancy-cards-list:not(.include-temp-employment-type) .open-vacancy-card[data-employment-type="Temp"] {
+  display: none;
+}
+
 .no-jobs-matching-your-criteria-section {
   display: none;
   flex-direction: column;
