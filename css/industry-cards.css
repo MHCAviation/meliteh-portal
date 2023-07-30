@@ -1,0 +1,100 @@
+
+.industry-cards-list {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.industry-card {
+    align-items: flex-start;
+    background-color: var(--neutral100);
+    border: 1px solid;
+    border-color: var(--neutral300);
+    border-radius: 20px;
+    box-shadow: 0px 5px 14px #080f340a;
+    display: flex;
+    height: 432px;
+    width: 302px;
+    cursor: pointer;
+    color: var(--meliteh-black-type);
+}
+
+.overlap-group {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 302px;
+}
+
+.industry-card-top-part {
+    align-items: center;
+    background-color: var(--neutral100);
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    width: 302px;
+}
+
+.industry-card-title {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-top: none;
+    border-color: var(--meliteh-grey);
+    border-style: solid;
+}
+
+.go-to-jobs-search-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--meliteh-red);
+    color: white;
+    border: none;
+    display: none;
+    padding: 21px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    padding-left: 27px;
+    padding-right: 66px;
+    background-image: url('../img/magnifyingglass_white.svg');
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    cursor: pointer;
+}
+
+.industry-card-description p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.industry-card:hover .industry-card-top-part {
+    background-color: var(--meliteh-red);
+    color: white;
+}
+.industry-card:hover .industry-card-title {
+    border-color: var(--meliteh-red);
+}
+.industry-card:hover .industry-card-description {
+    border-color: var(--meliteh-red);
+}
+.industry-card:hover .hover-details {
+    display: unset;
+}
+
+.industry-card:hover .go-to-jobs-search-btn {
+    display: unset;
+}
