@@ -6,7 +6,7 @@
   mix-blend-mode: normal;
   position: relative;
   flex: 1;
-  align-items: center;
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -32,7 +32,6 @@
 .grey-section{
   width: 100%;
   padding-top: 4em;
-  padding-bottom:4em;
   background-color: var(--submarine);
 }
 
@@ -53,6 +52,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  min-height: 440px;
 }
 
 .industry-card {
@@ -747,6 +747,7 @@
 
 
 .home .subscribe-form {
+  margin: auto;
   margin-top: 2.5em;
   position: relative;
   display: flex;
@@ -1853,7 +1854,7 @@
 
   .home .subscribe-form {
     gap: 16px;
-    width: 320px;
+    max-width: 320px;
   }
 
   .home .never-want-to-miss-any-job-news-lyMjxj {
