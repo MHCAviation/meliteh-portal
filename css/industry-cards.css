@@ -37,6 +37,16 @@
     flex-direction: column;
     min-height: 260px;
     width: 302px;
+    overflow: hidden;
+}
+.industry-card-image-container {
+    display: flex;
+    position: relative;
+}
+
+.industry-card-image {
+    height: 204px;
+    object-fit: cover;
 }
 
 .industry-card-title {
