@@ -26,6 +26,7 @@
 
 .overlap-group17 {
   position: relative;
+  overflow: hidden;
   z-index: 0;
 }
 
@@ -71,7 +72,7 @@
 .cookies-policy-title-banner {
   position: relative;
   z-index: 0;
-  padding: 80px;
+  padding: 4%;
 }
 
 .banner-gradient-overlay {
