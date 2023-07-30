@@ -56,7 +56,7 @@
   margin-top: 80px;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 200px;
+  min-height: 600px;
   align-items: flex-start;
 }
 
@@ -239,9 +239,5 @@
   .industry-card-description p {
     font-size: 0.75em;
     line-height: 20px;
-  }
-
-  .find-jobs-landing .industry-cards-list {
-    padding-bottom: 4em;
   }
 }
