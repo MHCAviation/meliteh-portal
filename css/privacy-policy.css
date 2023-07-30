@@ -1,14 +1,18 @@
 /* screen - privacy-policy */
 
 .privacy-policy {
-  align-items: flex-start;
+  align-items: stretch;
   background-color: var(--neutral100);
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 6143px;
   overflow: hidden;
-  width: 1440px;
+}
+
+.privacy-policy-title-banner {
+  position: relative;
+  z-index: 0;
+  padding: 4%;
 }
 
 .privacy-policy .group-336 {
@@ -31,12 +35,11 @@
 }
 
 .privacy-policy .overlap-group3 {
-  height: 4469px;
-  margin-left: -487px;
-  margin-top: 81px;
   position: relative;
-  width: 2315px;
-  z-index: 1;
+  z-index: 0;
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 60px;
 }
 
 .privacy-policy .blob {
@@ -47,6 +50,7 @@
   min-width: 788px;
   position: absolute;
   top: 110px;
+  z-index: -1;
 }
 
 .privacy-policy .overlap-group {
@@ -68,12 +72,14 @@
   width: 788px;
 }
 
-.privacy-policy .pexels-photo-by-edmond-dants {
-  height: 247px;
-  left: 487px;
+.privacy-policy .privacy-policy-title-banner-bg {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 1px;
-  width: 1440px;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .privacy-policy .blob-1 {
@@ -88,52 +94,42 @@
 }
 
 .privacy-policy .please-read-the-foll {
-  left: 567px;
-  letter-spacing: 0;
   line-height: 16px;
-  position: absolute;
   text-align: justify;
-  top: 327px;
-  width: 1280px;
+  margin: auto;
 }
 
-.privacy-policy .rectangle-164 {
+.privacy-policy .privacy-policy-title-banner-gradient-overlay {
   background: linear-gradient(180deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
-  height: 248px;
-  left: 487px;
   position: absolute;
   top: 0;
-  width: 1440px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .privacy-policy .title {
-  left: 952px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
   text-align: center;
-  top: 81px;
+  margin: 0;
 }
 
-.privacy-policy .frame-39246 {
-  align-items: flex-start;
-  align-self: center;
+.privacy-policy .frame {
+  display: flex;
+  position: relative;
+  background-color: var(--gray);
+  flex: 1;
+  gap: 16px;
+  border-radius: 12px;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.privacy-policy .privacy-motivation-cards-list {
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin-top: 17px;
-  width: 1280px;
-  z-index: 7;
-}
-
-.privacy-policy .frame-39244 {
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: var(--gray);
-  border-radius: 12px;
-  flex: 1;
-  flex-direction: column;
-  gap: 16px;
-  overflow: hidden;
-  padding: 24px;
 }
 
 .privacy-policy .title-section {
@@ -170,30 +166,8 @@
   width: 260px;
 }
 
-.privacy-policy .rectangle-430 {
-  align-self: stretch;
-  background-color: var(--gray);
-  border-radius: 12px;
-  flex: 1;
-  height: 447px;
-  min-width: 410.67px;
-  position: relative;
-}
-
-.privacy-policy .all-rights-reserved-section {
-  height: 258px;
-  left: 459px;
-  position: absolute;
-  top: 106px;
-  width: 356px;
-}
-
 .privacy-policy .header-1 {
   width: 354px;
-}
-
-.privacy-policy .title-section-1 {
-  left: 459px;
 }
 
 .privacy-policy .rectangle {
@@ -212,14 +186,6 @@
   margin-top: -1.00px;
   position: relative;
   width: fit-content;
-}
-
-.privacy-policy .frame-39245 {
-  align-items: flex-start;
-  align-self: stretch;
-  flex: 1;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .privacy-policy .group-39228 {
@@ -249,13 +215,9 @@
 
 .privacy-policy .please-contact-our-d {
   align-self: center;
-  height: 213px;
-  letter-spacing: 0;
   line-height: 28.8px;
   margin-top: 39px;
   text-align: justify;
-  width: 1280px;
-  z-index: 3;
 }
 
 .privacy-policy .span1 {
@@ -266,14 +228,8 @@
 }
 
 .privacy-policy .by-email-please-comp {
-  letter-spacing: 0;
   line-height: 32px;
-  margin-left: 80px;
   margin-top: 24px;
-  min-height: 224px;
-  min-width: 996px;
-  text-align: justify;
-  z-index: 4;
 }
 
 .privacy-policy .span2 {
@@ -292,17 +248,9 @@
 }
 
 .privacy-policy .name-meliteh-compa {
-  color: transparent;
-  font-family: var(--font-family-montserrat);
   font-size: var(--font-size-m);
   font-weight: 500;
-  height: 190px;
-  letter-spacing: 0;
   line-height: 28.8px;
-  margin-left: 80px;
-  text-align: justify;
-  width: 593px;
-  z-index: 5;
 }
 
 .privacy-policy .footer-navbar {
@@ -344,24 +292,12 @@
   width: 1282px;
 }
 
-.privacy-policy .frame {
-  display: flex;
-  position: relative;
-}
-
 .privacy-policy .header-3 {
-  left: 0;
-  letter-spacing: 0;
   line-height: 32px;
-  position: absolute;
-  top: 0;
 }
 
 .privacy-policy .title-section-3 {
   align-items: center;
   display: flex;
   gap: 6px;
-  position: absolute;
-  top: 24px;
-  width: 90px;
 }
