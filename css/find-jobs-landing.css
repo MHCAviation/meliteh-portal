@@ -182,30 +182,6 @@
   display: unset;
 }
 
-.find-jobs-landing .rectangle-4296 {
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px;
-  height: 432px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 302px;
-}
-
-.find-jobs-landing .rectangle-167 {
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px 20px 0px 0px;
-  height: 260px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 302px;
-}
-
 .find-jobs-landing .others {
   left: 20px;
   letter-spacing: 0;
@@ -223,15 +199,6 @@
   position: absolute;
   top: 283px;
   width: 270px;
-}
-
-.find-jobs-landing .vector-44 {
-  height: 1px;
-  left: 16px;
-  object-fit: cover;
-  position: absolute;
-  top: 432px;
-  width: 269px;
 }
 
 @media (max-width: 500px) {

@@ -264,11 +264,6 @@
   white-space: nowrap;
 }
 
-.contact .line-1 {
-  height: 1px;
-  width: 770px;
-}
-
 .contact .frame-39248 {
   align-items: center;
   background-color: var(--neutral100);
@@ -335,7 +330,7 @@
 }
 
 @media (max-width: 500px) {
-  
+
   .contact .title {
     font-size: 56px;
     line-height: 64px;
@@ -355,5 +350,5 @@
   .contact .frame {
     flex-direction: column;
   }
-  
+
 }

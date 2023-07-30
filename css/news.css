@@ -60,8 +60,8 @@
   text-align: center;
   width: fit-content;}
 
-.news .group-39228 {
-  background-image: url(../img/unsplash-nrn5rvl89lo-1@2x.png);
+.news .aircraft-turbine-image {
+  background-image: url(../img/aircraft-turbine.png);
   background-position: 50% 50%;
   background-size: cover;
   height: 130px;
@@ -142,7 +142,7 @@
 }
 
 .news .imgfood07 {
-  background-image: url(../img/img-food-07.jpg);
+  background-image: url(../img/solid-white.jpg);
   background-position: 50% 50%;
   background-size: cover;
   border-radius: 12px;
@@ -191,7 +191,7 @@
 }
 
 .news .imgtechnology04 {
-  background-image: url(../img/img-food-07.jpg);
+  background-image: url(../img/solid-white.jpg);
   overflow: hidden;
 }
 
@@ -265,8 +265,8 @@
   line-height: 20px;
 }
 
-.news .imgtechnology04-1 {
-  background-image: url(../img/unsplash-0vgg7cqtwco@2x.png);
+.news .aircraft-turbine-up-close {
+  background-image: url(../img/aircraft-turbine-up-close.png);
 }
 
 .news .group-39222 {

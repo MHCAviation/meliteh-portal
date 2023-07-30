@@ -171,30 +171,6 @@
   display: unset;
 }
 
-.find-jobs-landing .rectangle-4296 {
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px;
-  height: 432px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 302px;
-}
-
-.find-jobs-landing .rectangle-167 {
-  background-color: var(--neutral100);
-  border: 1px solid;
-  border-color: var(--meliteh-grey);
-  border-radius: 20px 20px 0px 0px;
-  height: 260px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 302px;
-}
-
 .find-jobs-landing .others {
   left: 20px;
   letter-spacing: 0;
@@ -212,15 +188,6 @@
   position: absolute;
   top: 283px;
   width: 270px;
-}
-
-.find-jobs-landing .vector-44 {
-  height: 1px;
-  left: 16px;
-  object-fit: cover;
-  position: absolute;
-  top: 432px;
-  width: 269px;
 }
 
 /* New Section */
@@ -282,7 +249,7 @@
 
 .home .rectangle-3-CGIxxI {
   background-color: transparent;
-  background-image: url(../img/rectangle-3.svg);
+  background-image: url(../img/aircraft-turbine-front.svg);
   background-size: 100% 100%;
   height: 176px;
   left: 0px;
@@ -322,7 +289,7 @@
 
 .home .rectangle-4-weQ8l3 {
   background-color: transparent;
-  background-image: url(../img/rectangle-4.svg);
+  background-image: url(../img/sea-port.svg);
   background-size: 100% 100%;
   height: 176px;
   left: 0px;
@@ -362,7 +329,7 @@
 
 .home .rectangle-5-oCI8Gp {
   background-color: transparent;
-  background-image: url(../img/rectangle-5.svg);
+  background-image: url(../img/cruise-ship.svg);
   background-size: 100% 100%;
   height: 176px;
   left: 0px;
@@ -403,7 +370,7 @@
 
 .home .rectangle-6-cZxX2Y {
   background-color: transparent;
-  background-image: url(../img/rectangle-6.svg);
+  background-image: url(../img/coding-left-angle-view-2.svg);
   background-size: 100% 100%;
   height: 176px;
   left: 0px;
@@ -473,7 +440,7 @@
 
 .home .group-39221-EbbifK {
   background-color: transparent;
-  background-image: url(../img/group-39221@2x.png);
+  background-image: url(../img/partner-airtable.png);
   background-size: 100% 100%;
   height: 32px;
   left: 40px;
@@ -555,7 +522,7 @@
 
 .home .group-39221-Pu2LNd {
   background-color: transparent;
-  background-image: url(../img/group-39221-1@2x.png);
+  background-image: url(../img/partner-airtable-2.png);
   background-size: 100% 100%;
   height: 32px;
   left: 40px;
@@ -631,7 +598,7 @@
 
 .home .group-39221-Ilv2QH {
   background-color: transparent;
-  background-image: url(../img/group-39221@2x.png);
+  background-image: url(../img/partner-airtable.png);
   background-size: 100% 100%;
   height: 32px;
   left: 40px;
@@ -837,7 +804,7 @@
 
 .home .image-1-FWhac5 {
   background-color: transparent;
-  background-image: url(../img/image-1@2x.png);
+  background-image: url(../img/partner-crm.png);
   background-size: 100% 100%;
   height: 64px;
   left: 0px;
@@ -851,7 +818,7 @@
 
 .home .image-2-FWhac5 {
   background-color: transparent;
-  background-image: url(../img/image-2@2x.png);
+  background-image: url(../img/partner-d2w.png);
   background-size: 100% 100%;
   height: 64px;
   left: 312px;
@@ -865,7 +832,7 @@
 
 .home .image-3-FWhac5 {
   background-color: transparent;
-  background-image: url(../img/image-3@2x.png);
+  background-image: url(../img/partner-losna-tech.png);
   background-size: 100% 100%;
   height: 64px;
   left: 568px;
@@ -916,9 +883,9 @@
   position: relative;
 }
 
-.home .rectangle-162-BRXQlF {
+.home .aircraft-flying-over-image {
   background-color: transparent;
-  background-image: url(../img/rectangle-162.png);
+  background-image: url(../img/aircraft-flying-over.png);
   background-size: 100% 100%;
   height: 540px;
   left: 0px;
@@ -1047,7 +1014,7 @@
 
 .home .group-355-zcYSoT {
   background-color: transparent;
-  background-image: url(../img/group-355@2x.png);
+  background-image: url(../img/solid-white-with-round-borders);
   background-size: 100% 100%;
   height: 242px;
   margin-bottom: -19.00px;
@@ -1179,7 +1146,7 @@
 
 .home .group-355-fDUlA1 {
   background-color: transparent;
-  background-image: url(../img/group-355@2x.png);
+  background-image: url(../img/solid-white-with-round-borders);
   background-size: 100% 100%;
   height: 242px;
   margin-bottom: -19.00px;
@@ -1311,7 +1278,7 @@
 
 .home .group-355-V2XI6q {
   background-color: transparent;
-  background-image: url(../img/group-355@2x.png);
+  background-image: url(../img/solid-white-with-round-borders);
   background-size: 100% 100%;
   height: 242px;
   margin-bottom: -19.00px;
@@ -1443,7 +1410,7 @@
 
 .home .group-355-GXSu3i {
   background-color: transparent;
-  background-image: url(../img/group-355@2x.png);
+  background-image: url(../img/solid-white-with-round-borders);
   background-size: 100% 100%;
   height: 242px;
   margin-bottom: -19.00px;
@@ -1821,17 +1788,17 @@
   gap: 24px;
 }
 
-#mobileshow { 
-  display:none; 
+#mobileshow {
+  display:none;
   }
 
 @media (max-width: 769px) {
 
   #desktopshow {
-    display:none; 
+    display:none;
   }
 
-  #mobileshow { 
+  #mobileshow {
     display:block; }
 
   .industry-card-title {
