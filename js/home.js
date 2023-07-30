@@ -1,6 +1,6 @@
 
 async function main() {
-    const bg = document.getElementById("home-job-search-background");
+    const bg = document.getElementById("title-banner-slideshow-image");
     let iteration = 0;
     setInterval(() => {
         ++iteration;

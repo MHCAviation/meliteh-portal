@@ -19,31 +19,7 @@
     justify-content: center;
     align-items: center;
     z-index: 0;
-  }
-
-  .about-us .about-us-title-background {
-    background-image: url(../img/business-woman-on-a-meeting.png);
-    background-size: cover;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  .about-us .about-us-title-background-overglow {
-    background: linear-gradient(
-        158deg,
-        rgb(255, 155.12500405311584, 155.12500405311584) 0%,
-        rgba(77.76171773672104, 77.76171773672104, 77.76171773672104, 0) 100%
-    );
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
+    overflow: hidden;
   }
 
   .about-us .about-us-title {
