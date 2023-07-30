@@ -8,14 +8,14 @@
   flex-direction: column;
 }
 
-.disclamer-2 .group-336 {
+.group-336 {
   gap: 32px;
   height: 44px;
   margin-left: 373px;
   min-width: 245px;
 }
 
-.disclamer-2 .frame-335 {
+.frame-335 {
   align-items: center;
   background-color: var(--meliteh-red);
   border-radius: 4px;
@@ -24,11 +24,12 @@
   padding: 12px 24px;
 }
 
-.disclamer-2 .overlap-group17 {
+.overlap-group17 {
   position: relative;
+  z-index: 0;
 }
 
-.disclamer-2 .blob {
+.blob {
   align-items: flex-start;
   display: flex;
   height: 788px;
@@ -36,16 +37,18 @@
   min-width: 788px;
   position: absolute;
   top: 47px;
+  z-index: -1;
 }
 
-.disclamer-2 .overlap-group {
+.overlap-group {
   border-radius: 393.82px;
   height: 788px;
   position: relative;
   width: 788px;
+  z-index: -1;
 }
 
-.disclamer-2 .ellipse-5 {
+.ellipse-5 {
   -webkit-backdrop-filter: blur(140.13px) brightness(100%);
   backdrop-filter: blur(140.13px) brightness(100%);
   background-color: var(--white-2);
@@ -57,52 +60,31 @@
   width: 788px;
 }
 
-.disclamer-2 .blob-3 {
-  align-items: flex-start;
-  display: flex;
-  height: 788px;
-  left: 0;
-  min-width: 788px;
-  position: absolute;
-  top: 81px;
-}
-
-.disclamer-2 .this-website-uses-c {
-  height: 270px;
-  left: 585px;
-  letter-spacing: 0;
+.this-website-uses-c {
   line-height: 28.8px;
-  position: absolute;
   text-align: justify;
-  top: 327px;
-  width: 1280px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 60px 24px;
 }
 
 .cookies-policy-title-banner {
   position: relative;
   z-index: 0;
+  padding: 80px;
 }
 
 .banner-gradient-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.disclamer-2 .pexels-photo-by-edmond-dants {
   object-fit: cover;
-  position: absolute;
   z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   top: 0;
+  left: 0;
 }
 
-.disclamer-2 .rectangle-166 {
+.rectangle-166 {
   background: linear-gradient(180deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
   position: absolute;
   left: 0;
@@ -112,21 +94,12 @@
   z-index: -1;
 }
 
-.disclamer-2 .title {
+.title {
   text-align: center;
+  margin: 0;
 }
 
-.disclamer-2 .blob-container {
-  align-self: flex-end;
-  height: 788px;
-  margin-right: -387.64px;
-  margin-top: 331px;
-  position: relative;
-  width: 788px;
-  z-index: 2;
-}
-
-.disclamer-2 .blob-1 {
+.blob-1 {
   align-items: flex-start;
   display: flex;
   height: 788px;
@@ -137,7 +110,7 @@
   transform: rotate(-180.00deg);
 }
 
-.disclamer-2 .blob-2 {
+.blob-2 {
   align-items: flex-start;
   display: flex;
   height: 788px;
@@ -147,7 +120,7 @@
   top: 0;
 }
 
-.disclamer-2 .frame {
+.frame {
   display: flex;
   position: relative;
   width: fit-content;
