@@ -1,14 +1,12 @@
 /* screen - terms-and-conditions */
 
 .terms-and-conditions {
-  align-items: flex-start;
+  align-items: stretch;
   background-color: var(--neutral100);
-  border: 1px none;
   display: flex;
   flex-direction: column;
   gap: 81px;
   overflow: hidden;
-  width: 1440px;
 }
 
 .terms-and-conditions .group-336 {
@@ -83,13 +81,11 @@
 }
 
 .terms-and-conditions .acceptance-this-page {
-  height: 6884px;
-  left: 567px;
-  letter-spacing: 0;
   line-height: 28.8px;
   text-align: justify;
-  top: 327px;
-  width: 1280px;
+  margin: auto;
+  max-width: 1280px;
+  padding: 18px;
 }
 
 .terms-banner {
