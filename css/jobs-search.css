@@ -67,11 +67,29 @@
 }
 
 .find-jobs-it .jobs-search-title-banner {
-  background-image: url(../img/pair-programming.jpeg);
-  background-position: 50% 25%;
+  background-position: center;
   z-index: 0;
   background-size: cover;
   position: relative;
+}
+body[data-industry="maritime"] .find-jobs-it .jobs-search-title-banner {
+  background-image: url(../img/cruise-ship.jfif);
+}
+body[data-industry="aviation"] .find-jobs-it .jobs-search-title-banner {
+  background-image: url(../img/jobs-search-banner-industry-aviation.png);
+}
+body[data-industry="it"] .find-jobs-it .jobs-search-title-banner {
+  background-image: url(../img/pair-programming.jpeg);
+}
+body[data-industry="other"] .find-jobs-it .jobs-search-title-banner {
+  background-image: url(../img/jobs-search-banner-industry-other.jpg);
+}
+
+body[data-industry="maritime"] .location-input,
+body[data-industry="aviation"] .location-input,
+body[data-industry="maritime"] .distance-type-filter,
+body[data-industry="aviation"] .distance-type-filter {
+  display: none;
 }
 
 .find-jobs-it .banner-gradient-overlay-red {
@@ -136,7 +154,7 @@
   margin: 0;
 }
 
-.find-jobs-it .frame-14 {
+.find-jobs-it .location-input {
   align-items: center;
   background-color: var(--neutral100);
   border: 1px solid;

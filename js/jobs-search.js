@@ -93,9 +93,11 @@ function handleFiltersChange(sidePanelFilters, list, counter, main) {
     main.setAttribute("total-jobs-matched", matching);
 }
 
-async function main() {
-    /** @var {Vacancy[]} */
-    const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
+/**
+ * @param {HTMLDocument} document
+ * @param {Vacancy[]} vacancies
+ */
+function placeVacancies(document, vacancies) {
     const main = document.querySelector("main");
     document.getElementById("data-loading-spinner").style.display = "none";
     document.getElementById("total-open-vacancies-counter").textContent = vacancies.length;
@@ -115,6 +117,15 @@ async function main() {
         handleFiltersChange(sidePanelFilters, list, counter, main);
     });
     handleFiltersChange(sidePanelFilters, list, counter, main);
+}
+
+async function main() {
+    const search = new URLSearchParams(window.location.search);
+    document.body.setAttribute("data-industry", search.get("industry") ?? "aviation");
+
+    /** @var {Vacancy[]} */
+    const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
+    placeVacancies(document, vacancies);
 }
 
 main().catch(error => {
