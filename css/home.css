@@ -613,11 +613,11 @@
 }
 
 .email-subscription input[type="email"] {
-  border-right: 0;
   font-family: 'Montserrat';
   flex-grow: 1;
   padding-left: 1em;
   border: 1px solid #ccc;
+  border-right: 0;
   border-radius: 0.5em 0em 0em 0.5em;
 }
 
