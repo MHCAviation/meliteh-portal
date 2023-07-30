@@ -19,7 +19,7 @@
             <h1 class="title valign-text-middle">Contact Us</h1>
           </div>
           <div class="flex-row flex">
-            <div class="flex-col-1 flex-col-3">
+            <div class="flex-col-1 company-contact-info">
               <div class="x1">
                 <div class="contact-info">Contact info:</div>
                 <div class="email-infomelitehcom montserrat-normal-licorice-17px">Email: info@meliteh.com</div>
@@ -38,42 +38,17 @@
               </div>
             </div>
 
-            <div class="form">
+            <form class="form">
               <input type="text" id="name" placeholder="Name">
-              <input type="email" id="email" placeholder="Email">
+              <input type="email" id="email" required="required" placeholder="Email">
               <input type="tel" id="phone" placeholder="Phone Number">
-              <textarea id="message" placeholder="Message"></textarea>
-              <button type="submit" id="submit">Submit</button>
-            </div>
-
-
-          <!--
-            <div class="flex-col-2 flex-col-3">
-              <div class="frame-39251 frame regular15">
-                <div class="typewriter">
-                  <input type="text" id="inputField" placeholder="Name*">
-                </div>
-                  <div class="frame-392 frame">
-                    <div class="typewriter">
-                      <input type="text" id="inputField" placeholder="Email*">
-                    </div>
-                <div class="frame-392 frame">
-                  <div class="frame-392 frame">
-                    <div class="typewriter">
-                      <input type="text" id="inputField" placeholder="Phone Number*">
-                    </div>
-                </div>
-                  <div class="x8">
-                    <div class="frame-392 frame">
-                      <div class="typewriter">
-                        <input type="text" id="inputField" placeholder="Message*">
-                      </div>
-                  </div>
-                 <div class="frame-39248 frame">
-                <div class="submit valign-text-middle montserrat-medium-monza-16px">Submit</div>
+              <div class="hr"></div>
+              <textarea id="message" required="required" placeholder="Message"></textarea>
+              <div class="hr"></div>
+              <div class="submit-button-container">
+                <button type="submit" id="submit">Submit</button>
               </div>
-            </div>-->
-            
+            </form>
           </div>
         </div>
       </div>
@@ -81,5 +56,6 @@
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
     <script type="module" src="js/add-navbars.js"></script>
+    <script type="module" src="js/contact.js"></script>
   </body>
 </html>
