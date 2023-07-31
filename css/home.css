@@ -35,17 +35,6 @@
   background-color: var(--submarine);
 }
 
-.card-mobile-description{
-  font-size: 0.75em;
-  line-height: 20px;
-  border-top: none;
-  border: solid 0.5px;
-  padding: 1em;
-  border-color: var(--meliteh-grey);
-  background-color: white;
-  border-radius: 0em 0em 1em 1em;
-}
-
 .industry-cards-list {
   min-height: 440px;
 }
@@ -1469,13 +1458,13 @@
   justify-content: center;
   align-items: center;
   z-index: 0;
-  padding: 60px;
+  padding: 6%;
   overflow: hidden;
 }
 
 .home .get-the-right-job-you-deserve-8dJy9b {
   font-family: 'Montserrat', Helvetica;
-  font-size: 40px;
+  font-size: 5vw;
   font-weight: 700;
   height: auto;
   line-height: normal;
@@ -1487,7 +1476,6 @@
   margin-top: 24px;
   box-shadow: 0px 2px 2px #0000000a;
   display: flex;
-  max-width: 880px;
 }
 
 .home .frame-405-hDZt1x {
@@ -1577,7 +1565,7 @@
   font-style: normal;
 }
 
-.home .span2-6mBiGF {
+.home .right-job {
   color: #d20027;
   font-style: normal;
 }
@@ -1594,31 +1582,26 @@
   gap: 24px;
 }
 
-#mobileshow {
-  display:none;
-  }
-
 @media (max-width: 769px) {
-
-  #desktopshow {
-    display:none;
-  }
-
-  #mobileshow {
-    display:block; }
 
   .industry-card-title {
     border-bottom: 0;
     border-radius: 0;
   }
 
+  .hover-details {
+    display: unset;
+    border: solid 0.5px;
+    border-color: var(--meliteh-grey);
+    font-size: 0.75em;
+    line-height: 20px;
+    padding: 1em;
+    color: black;
+  }
+
   .our-services-list {
     margin-left: 0.5em;
     margin-right: 0.5em;
-  }
-
-  .industry-cards-list {
-    gap: 2em;
   }
 
   .home .get-the-right-job-you-deserve-8dJy9b {

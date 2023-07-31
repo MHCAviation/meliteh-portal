@@ -81,6 +81,36 @@
   font-weight: bold;
 }
 
+
+.go-to-jobs-search-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--meliteh-red);
+  color: white;
+  border: none;
+  display: none;
+  padding: 21px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  padding-left: 27px;
+  padding-right: 66px;
+  background-image: url('../img/magnifyingglass_white.svg');
+  background-repeat: no-repeat;
+  background-position: 80% center;
+  cursor: pointer;
+}
+
+.industry-card:hover .go-to-jobs-search-btn {
+  display: unset;
+}
+
 @media (max-width: 500px) {
 
   .industry-card-description p {
