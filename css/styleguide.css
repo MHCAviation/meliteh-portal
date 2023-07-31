@@ -218,14 +218,6 @@
     font-weight: 700;
 }
 
-.montserrat-medium-monza-16px {
-    color: var(--meliteh-red);
-    font-family: var(--font-family-montserrat);
-    font-size: var(--font-size-m);
-    font-style: normal;
-    font-weight: 500;
-}
-
 .montserrat-medium-black-16px {
     color: var(--black-2);
     font-family: var(--font-family-montserrat);
