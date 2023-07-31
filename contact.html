@@ -38,14 +38,17 @@
               </div>
             </div>
 
-            <form class="form">
-              <input type="text" id="name" placeholder="Name">
-              <input type="email" id="email" required="required" placeholder="Email">
-              <input type="tel" id="phone" placeholder="Phone Number">
+            <form class="form" onsubmit="submitMessage(event)">
+              <textarea name="message" required="required" placeholder="Message"></textarea>
               <div class="hr"></div>
-              <textarea id="message" required="required" placeholder="Message"></textarea>
+              <input type="text" name="senderName" placeholder="Your Name">
+              <input type="email" name="senderEmail" required="required" placeholder="Your Email">
+              <input type="tel" name="senderPhoneNumber" placeholder="Phone Number">
               <div class="hr"></div>
               <div class="submit-button-container">
+                <div class="status-message">
+                  <span class="status-message-content"></span>
+                </div>
                 <button type="submit" id="submit">Submit</button>
               </div>
             </form>
