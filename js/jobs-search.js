@@ -121,7 +121,14 @@ function placeVacancies(document, vacancies) {
 
 async function main() {
     const search = new URLSearchParams(window.location.search);
-    document.body.setAttribute("data-industry", search.get("industry") ?? "aviation");
+    const industry = search.get("industry") ?? "aviation";
+    document.body.setAttribute("data-industry", industry);
+    document.querySelector(".industry-name").textContent = {
+        "maritime": "Maritime",
+        "aviation": "Aviation",
+        "it": "Information Technologies",
+        "other": "Any Industry",
+    }[industry];
 
     /** @var {Vacancy[]} */
     // const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());

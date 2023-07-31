@@ -592,22 +592,6 @@ body {
     width: fit-content;
 }
 
-.frame-1-1 {
-    align-items: flex-start;
-    background-color: var(--neutral100);
-    border: 1px solid;
-    border-color: var(--neutral300);
-    border-radius: 20px;
-    box-shadow: 0px 5px 14px #080f340a;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    overflow: hidden;
-    padding: 24px;
-    position: relative;
-    width: 250px;
-}
-
 .frame-3-3 {
     align-items: flex-start;
     flex-direction: column;
