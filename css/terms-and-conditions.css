@@ -80,14 +80,6 @@
   transform: rotate(-180.00deg);
 }
 
-.terms-and-conditions .acceptance-this-page {
-  line-height: 28.8px;
-  text-align: justify;
-  margin: auto;
-  max-width: 1280px;
-  padding: 18px;
-}
-
 .terms-banner {
   z-index: 0;
   position: relative;
@@ -159,4 +151,11 @@
   display: flex;
   position: relative;
   width: fit-content;
+}
+
+.WordSection1 {
+  line-height: 28.8px;
+  margin: auto;
+  max-width: 1280px;
+  padding: 18px;
 }
