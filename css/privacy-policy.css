@@ -80,6 +80,7 @@
     position: absolute;
     z-index: -1;
     object-fit: cover;
+    filter: blur(2px);
 }
 
 .privacy-policy .blob-1 {
