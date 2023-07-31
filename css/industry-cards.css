@@ -39,6 +39,7 @@
     overflow: hidden;
     align-items: stretch;
 }
+
 .industry-card-image-container {
     display: flex;
     position: relative;
@@ -71,12 +72,15 @@
     background-color: var(--meliteh-red);
     color: white;
 }
+
 .industry-card:hover .industry-card-title {
     border-color: var(--meliteh-red);
 }
+
 .industry-card:hover .industry-card-description {
     border-color: var(--meliteh-red);
 }
+
 .industry-card:hover .hover-details {
     display: unset;
 }

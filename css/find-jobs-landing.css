@@ -1,120 +1,120 @@
 /* screen - find-jobs-landing */
 
 .container-center-horizontal {
-  justify-content: stretch;
+    justify-content: stretch;
 }
 
 .find-jobs-landing {
-  background-color: var(--neutral100);
-  border: 1px none;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: stretch;
+    background-color: var(--neutral100);
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
 }
 
 .find-jobs-landing .frame-335 {
-  align-items: center;
-  background-color: var(--meliteh-red);
-  border-radius: 10px;
-  gap: 10px;
-  justify-content: center;
-  padding: 12px 24px;
+    align-items: center;
+    background-color: var(--meliteh-red);
+    border-radius: 10px;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 24px;
 }
 
 .find-jobs-landing .our-services-title-banner {
-  background-image: url(../img/services-banner.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 263px;
-  position: relative;
+    background-image: url(../img/services-banner.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 263px;
+    position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
 }
 
 .find-jobs-landing .find-jobs-title-banner-overglow {
-  background: linear-gradient(149deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
+    background: linear-gradient(149deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .find-jobs-landing .title {
-  text-align: center;
-  line-height: 56px;
+    text-align: center;
+    line-height: 56px;
 }
 
 .find-jobs-landing .industry-cards-list {
-  margin-top: 80px;
-  min-height: 600px;
+    margin-top: 80px;
+    min-height: 600px;
 }
 
 .overlap-group {
-  background-color: var(--neutral100);
+    background-color: var(--neutral100);
 }
 
 .industry-card-title {
-  border-width: 1px;
+    border-width: 1px;
 }
 
 .industry-card-description {
-  flex: 1;
-  line-height: 24px;
-  padding: 12px;
-  padding-top: 24px;
-  border: 1px solid;
-  border-top: none;
-  border-color: var(--meliteh-grey);
-  border-radius: 0 0 20px 20px;
-  min-height: 160px;
+    flex: 1;
+    line-height: 24px;
+    padding: 12px;
+    padding-top: 24px;
+    border: 1px solid;
+    border-top: none;
+    border-color: var(--meliteh-grey);
+    border-radius: 0 0 20px 20px;
+    min-height: 160px;
 }
 
 .hover-details {
-  display: none;
-  color: var(--meliteh-red);
-  font-weight: bold;
+    display: none;
+    color: var(--meliteh-red);
+    font-weight: bold;
 }
 
 
 .go-to-jobs-search-btn {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-  background-color: var(--meliteh-red);
-  color: white;
-  border: none;
-  display: none;
-  padding: 21px;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 6px;
-  padding-left: 27px;
-  padding-right: 66px;
-  background-image: url('../img/magnifyingglass_white.svg');
-  background-repeat: no-repeat;
-  background-position: 80% center;
-  cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--meliteh-red);
+    color: white;
+    border: none;
+    display: none;
+    padding: 21px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    padding-left: 27px;
+    padding-right: 66px;
+    background-image: url('../img/magnifyingglass_white.svg');
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    cursor: pointer;
 }
 
 .industry-card:hover .go-to-jobs-search-btn {
-  display: unset;
+    display: unset;
 }
 
 @media (max-width: 500px) {
 
-  .industry-card-description p {
-    font-size: 0.75em;
-    line-height: 20px;
-  }
+    .industry-card-description p {
+        font-size: 0.75em;
+        line-height: 20px;
+    }
 }

@@ -1,18 +1,18 @@
 /* screen - about-us */
 
-  .about-us {
+.about-us {
     border: 1px none;
     mix-blend-mode: normal;
     position: relative;
     flex: 1;
-  }
+}
 
-  .card {
+.card {
     min-width: 270px;
     max-width: 400px;
-  }
+}
 
-  .about-us-banner-section {
+.about-us-banner-section {
     position: relative;
     height: 263px;
     display: flex;
@@ -20,32 +20,32 @@
     align-items: center;
     z-index: 0;
     overflow: hidden;
-  }
+}
 
-  .about-us .about-us-title {
+.about-us .about-us-title {
     font-family: 'Montserrat', Helvetica;
     font-size: 56px;
     font-weight: 700;
-  }
+}
 
-  .content-paragraph{
+.content-paragraph {
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .about-us .span0-0yPRxl {
+.about-us .span0-0yPRxl {
     color: #ffffff;
     font-style: normal;
-  }
+}
 
-  .about-us .span1-0yPRxl {
+.about-us .span1-0yPRxl {
     color: #d20027;
     font-style: normal;
-  }
+}
 
-  .about-us .who-is-meliteh-C61RwL {
+.about-us .who-is-meliteh-C61RwL {
     color: #141414;
     font-family: 'Montserrat', Helvetica;
     font-size: 40px;
@@ -53,41 +53,41 @@
     text-align: center;
     top: 390px;
     margin: 30px;
-  }
+}
 
-  .about-us .our-values-C61RwL {
+.about-us .our-values-C61RwL {
     color: #141414;
     font-family: 'Montserrat', Helvetica;
     font-size: 40px;
     font-weight: 500;
     text-align: center;
     padding: 30px;
-  }
+}
 
-  .our-values-section {
+.our-values-section {
     background-color: var(--submarine);
     margin-top: 24px;
-  }
+}
 
-  .about-us .about-our-values {
+.about-us .about-our-values {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
-  }
+}
 
-  .about-us .meet-our-team-C61RwL {
+.about-us .meet-our-team-C61RwL {
     color: #141414;
     font-family: 'Montserrat', Helvetica;
     font-size: 40px;
     font-weight: 500;
     text-align: center;
     margin: 24px;
-  }
+}
 
-  .about-us .at-meliteh-we-are-y-C61RwL {
+.about-us .at-meliteh-we-are-y-C61RwL {
     color: #141414;
     font-size: 16px;
     font-weight: 400;
@@ -96,27 +96,27 @@
     margin-right: auto;
     max-width: 1280px;
     padding: 24px;
-  }
+}
 
-  .about-us .container-C61RwL {
+.about-us .container-C61RwL {
     display: flex;
     flex-direction: column;
     gap: 64px;
     justify-content: center;
     position: relative;
     padding-bottom: 40px;
-  }
+}
 
-  .about-us .row-tuzc6y {
+.about-us .row-tuzc6y {
     justify-content: center;
     display: flex;
     flex: 1;
     gap: 32px;
     opacity: 1;
     flex-wrap: wrap;
-  }
+}
 
-  .about-us .profile-card-aMXTQU {
+.about-us .profile-card-aMXTQU {
     align-items: flex-start;
     background-color: #ffffff;
     border: 1px solid;
@@ -128,18 +128,18 @@
     padding: 24px;
     position: relative;
     width: 296px;
-  }
+}
 
-  .about-us .team-sanita {
+.about-us .team-sanita {
     align-self: stretch;
     background-image: url(../img/team_sanita.jpg);
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 8px;
     height: 192px;
-  }
+}
 
-  .about-us .content-lR5AbU {
+.about-us .content-lR5AbU {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -149,9 +149,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .title-and-text-RUxdB5 {
+.about-us .title-and-text-RUxdB5 {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -161,9 +161,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-role-MxEePZ {
+.about-us .name-role-MxEePZ {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -172,9 +172,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-3ccayz {
+.about-us .name-3ccayz {
     align-self: stretch;
     background-color: transparent;
     color: #d20027;
@@ -190,9 +190,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .role-3ccayz {
+.about-us .role-3ccayz {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -207,9 +207,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .preview-MxEePZ {
+.about-us .preview-MxEePZ {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -223,9 +223,9 @@
     opacity: 1;
     position: relative;
     text-align: left;
-  }
+}
 
-  .about-us .profile-card-W9RvqP {
+.about-us .profile-card-W9RvqP {
     align-items: flex-start;
     align-self: stretch;
     background-color: #ffffff;
@@ -241,9 +241,9 @@
     padding: 24px;
     position: relative;
     width: 296px;
-  }
+}
 
-  .about-us .content-4enahb {
+.about-us .content-4enahb {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -253,9 +253,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .title-and-text-ocfK7x {
+.about-us .title-and-text-ocfK7x {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -265,9 +265,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-role-sMZ7pF {
+.about-us .name-role-sMZ7pF {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -276,9 +276,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-KCxwgx {
+.about-us .name-KCxwgx {
     align-self: stretch;
     background-color: transparent;
     color: #d20027;
@@ -294,9 +294,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .role-KCxwgx {
+.about-us .role-KCxwgx {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -311,9 +311,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .preview-sMZ7pF {
+.about-us .preview-sMZ7pF {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -327,9 +327,9 @@
     opacity: 1;
     position: relative;
     text-align: left;
-  }
+}
 
-  .about-us .profile-card-xMnb7S {
+.about-us .profile-card-xMnb7S {
     align-items: flex-start;
     align-self: stretch;
     background-color: #ffffff;
@@ -345,9 +345,9 @@
     padding: 24px;
     position: relative;
     width: 296px;
-  }
+}
 
-  .about-us .card-header-lpH274 {
+.about-us .card-header-lpH274 {
     align-self: stretch;
     background-color: transparent;
     background-image: url(../img/card-header-2.svg);
@@ -361,9 +361,9 @@
     overflow: hidden;
     position: relative;
     transform: rotate(180deg);
-  }
+}
 
-  .about-us .content-lpH274 {
+.about-us .content-lpH274 {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -373,9 +373,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .title-and-text-pCk9x3 {
+.about-us .title-and-text-pCk9x3 {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -385,9 +385,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-role-atrDLe {
+.about-us .name-role-atrDLe {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -396,9 +396,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-xH0HuX {
+.about-us .name-xH0HuX {
     align-self: stretch;
     background-color: transparent;
     color: #d20027;
@@ -414,9 +414,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .role-xH0HuX {
+.about-us .role-xH0HuX {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -431,9 +431,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .preview-atrDLe {
+.about-us .preview-atrDLe {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -447,9 +447,9 @@
     opacity: 1;
     position: relative;
     text-align: left;
-  }
+}
 
-  .about-us .profile-card-rexOJ1 {
+.about-us .profile-card-rexOJ1 {
     align-items: flex-start;
     align-self: stretch;
     background-color: #ffffff;
@@ -465,9 +465,9 @@
     padding: 24px;
     position: relative;
     width: 296px;
-  }
+}
 
-  .about-us .card-header-gC6P4c {
+.about-us .card-header-gC6P4c {
     align-self: stretch;
     background-color: transparent;
     background-image: url(../img/card-header-3.svg);
@@ -481,9 +481,9 @@
     overflow: hidden;
     position: relative;
     transform: rotate(180deg);
-  }
+}
 
-  .about-us .content-gC6P4c {
+.about-us .content-gC6P4c {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -493,9 +493,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .title-and-text-lt5Ixo {
+.about-us .title-and-text-lt5Ixo {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -505,9 +505,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-role-9H1XZZ {
+.about-us .name-role-9H1XZZ {
     align-items: flex-start;
     align-self: stretch;
     background-color: transparent;
@@ -516,9 +516,9 @@
     height: auto;
     opacity: 1;
     position: relative;
-  }
+}
 
-  .about-us .name-fVZwHX {
+.about-us .name-fVZwHX {
     align-self: stretch;
     background-color: transparent;
     color: #d20027;
@@ -534,9 +534,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .role-fVZwHX {
+.about-us .role-fVZwHX {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -551,9 +551,9 @@
     position: relative;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  .about-us .preview-9H1XZZ {
+.about-us .preview-9H1XZZ {
     align-self: stretch;
     background-color: transparent;
     color: #141414;
@@ -567,48 +567,49 @@
     opacity: 1;
     position: relative;
     text-align: left;
-  }
+}
 
 @media (max-width: 500px) {
 
-  .about-us .about-our-values {
-    flex-direction: column;
-  }
+    .about-us .about-our-values {
+        flex-direction: column;
+    }
 
-  img {
-    width: 320px;
-  }
+    img {
+        width: 320px;
+    }
 
-  .about-us .who-is-meliteh-C61RwL {
-    font-size: 32px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 24px;
-    padding-bottom: 16px;
-    margin: 0px;
-  }
+    .about-us .who-is-meliteh-C61RwL {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        margin: 0px;
+    }
 
-  .about-us .at-meliteh-we-are-y-C61RwL {
-    font-size: 12px;
-    padding: 16px;
-  }
-  .about-us .our-values-C61RwL {
-    font-size: 32px;
-    font-weight: 700;
-  }
+    .about-us .at-meliteh-we-are-y-C61RwL {
+        font-size: 12px;
+        padding: 16px;
+    }
 
-  .about-us .meet-our-team-C61RwL {
-    font-size: 32px;
-    font-weight: 700;
-  }
+    .about-us .our-values-C61RwL {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .about-us .meet-our-team-C61RwL {
+        font-size: 32px;
+        font-weight: 700;
+    }
 
 }
 
 @media (max-width: 1281px) {
 
-  .about-our-values {
-    padding-right: 1.5em;
-    padding-left: 1em;
-  }
+    .about-our-values {
+        padding-right: 1.5em;
+        padding-left: 1em;
+    }
 
 }

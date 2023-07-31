@@ -1,128 +1,128 @@
 /* screen - disclamer-2 */
 
 .disclamer-2 {
-  align-items: stretch;
-  background-color: var(--neutral100);
-  border: 1px none;
-  display: flex;
-  flex-direction: column;
+    align-items: stretch;
+    background-color: var(--neutral100);
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
 }
 
 .group-336 {
-  gap: 32px;
-  height: 44px;
-  margin-left: 373px;
-  min-width: 245px;
+    gap: 32px;
+    height: 44px;
+    margin-left: 373px;
+    min-width: 245px;
 }
 
 .frame-335 {
-  align-items: center;
-  background-color: var(--meliteh-red);
-  border-radius: 4px;
-  gap: 10px;
-  justify-content: center;
-  padding: 12px 24px;
+    align-items: center;
+    background-color: var(--meliteh-red);
+    border-radius: 4px;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 24px;
 }
 
 .overlap-group17 {
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .blob {
-  align-items: flex-start;
-  display: flex;
-  height: 788px;
-  left: 18px;
-  min-width: 788px;
-  position: absolute;
-  top: 47px;
-  z-index: -1;
+    align-items: flex-start;
+    display: flex;
+    height: 788px;
+    left: 18px;
+    min-width: 788px;
+    position: absolute;
+    top: 47px;
+    z-index: -1;
 }
 
 .overlap-group {
-  border-radius: 393.82px;
-  height: 788px;
-  position: relative;
-  width: 788px;
-  z-index: -1;
+    border-radius: 393.82px;
+    height: 788px;
+    position: relative;
+    width: 788px;
+    z-index: -1;
 }
 
 .ellipse-5 {
-  -webkit-backdrop-filter: blur(140.13px) brightness(100%);
-  backdrop-filter: blur(140.13px) brightness(100%);
-  background-color: var(--white-2);
-  border-radius: 393.82px;
-  height: 788px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 788px;
+    -webkit-backdrop-filter: blur(140.13px) brightness(100%);
+    backdrop-filter: blur(140.13px) brightness(100%);
+    background-color: var(--white-2);
+    border-radius: 393.82px;
+    height: 788px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 788px;
 }
 
 .this-website-uses-c {
-  line-height: 28.8px;
-  text-align: justify;
-  max-width: 1440px;
-  margin: auto;
-  padding: 60px 24px;
+    line-height: 28.8px;
+    text-align: justify;
+    max-width: 1440px;
+    margin: auto;
+    padding: 60px 24px;
 }
 
 .cookies-policy-title-banner {
-  position: relative;
-  z-index: 0;
-  padding: 4%;
+    position: relative;
+    z-index: 0;
+    padding: 4%;
 }
 
 .banner-gradient-overlay {
-  position: absolute;
-  object-fit: cover;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .rectangle-166 {
-  background: linear-gradient(180deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+    background: linear-gradient(180deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .title {
-  text-align: center;
-  margin: 0;
+    text-align: center;
+    margin: 0;
 }
 
 .blob-1 {
-  align-items: flex-start;
-  display: flex;
-  height: 788px;
-  left: 0;
-  min-width: 788px;
-  position: absolute;
-  top: 0;
-  transform: rotate(-180.00deg);
+    align-items: flex-start;
+    display: flex;
+    height: 788px;
+    left: 0;
+    min-width: 788px;
+    position: absolute;
+    top: 0;
+    transform: rotate(-180.00deg);
 }
 
 .blob-2 {
-  align-items: flex-start;
-  display: flex;
-  height: 788px;
-  left: 0;
-  min-width: 788px;
-  position: absolute;
-  top: 0;
+    align-items: flex-start;
+    display: flex;
+    height: 788px;
+    left: 0;
+    min-width: 788px;
+    position: absolute;
+    top: 0;
 }
 
 .frame {
-  display: flex;
-  position: relative;
-  width: fit-content;
+    display: flex;
+    position: relative;
+    width: fit-content;
 }
