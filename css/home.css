@@ -44,6 +44,10 @@
     border-width: 0.5px;
 }
 
+.industry-card {
+    cursor: help;
+}
+
 .hover-details {
     background-color: white;
     padding: 0em 1em;
@@ -1636,3 +1640,5 @@
     }
 
 }
+
+
