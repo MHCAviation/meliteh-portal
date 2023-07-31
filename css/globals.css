@@ -151,7 +151,6 @@ body {
     letter-spacing: 0;
     line-height: 27px;
     position: relative;
-    white-space: nowrap;
     width: fit-content;
 }
 

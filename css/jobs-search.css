@@ -45,7 +45,7 @@
     flex-direction: column;
 }
 
-.find-jobs-it .group-336 {
+.group-336 {
     align-items: center;
     display: flex;
     gap: 32px;
@@ -54,7 +54,7 @@
     min-width: 245px;
 }
 
-.find-jobs-it .frame-335 {
+.frame-335 {
     align-items: center;
     background-color: var(--meliteh-red);
     border-radius: 10px;
@@ -66,26 +66,26 @@
     width: fit-content;
 }
 
-.find-jobs-it .jobs-search-title-banner {
+.jobs-search-title-banner {
     background-position: center;
     z-index: 0;
     background-size: cover;
     position: relative;
 }
 
-body[data-industry="maritime"] .find-jobs-it .jobs-search-title-banner {
+body[data-industry="maritime"] .jobs-search-title-banner {
     background-image: url(../img/cruise-ship.jfif);
 }
 
-body[data-industry="aviation"] .find-jobs-it .jobs-search-title-banner {
+body[data-industry="aviation"] .jobs-search-title-banner {
     background-image: url(../img/jobs-search-banner-industry-aviation.png);
 }
 
-body[data-industry="it"] .find-jobs-it .jobs-search-title-banner {
+body[data-industry="it"] .jobs-search-title-banner {
     background-image: url(../img/pair-programming.jpeg);
 }
 
-body[data-industry="other"] .find-jobs-it .jobs-search-title-banner {
+body[data-industry="other"] .jobs-search-title-banner {
     background-image: url(../img/jobs-search-banner-industry-other.jpg);
 }
 
@@ -96,7 +96,7 @@ body[data-industry="aviation"] .distance-type-filter {
     display: none;
 }
 
-.find-jobs-it .banner-gradient-overlay-red {
+.banner-gradient-overlay-red {
     background: linear-gradient(113deg, rgb(246 29 29 / 100%) 0%, rgba(77.76, 77.76, 77.76, 0) 50%);
     position: absolute;
     z-index: -1;
@@ -106,7 +106,7 @@ body[data-industry="aviation"] .distance-type-filter {
     right: 0;
 }
 
-.find-jobs-it .search {
+.search {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
     align-items: flex-start;
     display: flex;
@@ -116,7 +116,7 @@ body[data-industry="aviation"] .distance-type-filter {
     margin-left: 10%;
 }
 
-.find-jobs-it .banner-text-content {
+.banner-text-content {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@ body[data-industry="aviation"] .distance-type-filter {
     margin: 48px;
 }
 
-.find-jobs-it .frame-11 {
+.frame-11 {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -134,18 +134,18 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .title {
+.title {
     font-size: 56px;
     font-weight: 700;
     line-height: 84px;
     margin: 0;
 }
 
-.find-jobs-it .span1 {
+.span1 {
     color: var(--meliteh-red);
 }
 
-.find-jobs-it .jobs-search-main-input {
+.jobs-search-main-input {
     box-shadow: 0px 2px 2px #0000000a;
     display: flex;
     align-items: stretch;
@@ -158,7 +158,7 @@ body[data-industry="aviation"] .distance-type-filter {
     margin: 0;
 }
 
-.find-jobs-it .location-input {
+.location-input {
     align-items: center;
     background-color: var(--neutral100);
     border: 1px solid;
@@ -170,13 +170,13 @@ body[data-industry="aviation"] .distance-type-filter {
     position: relative;
 }
 
-.find-jobs-it .map-pin-line {
+.map-pin-line {
     height: 24px;
     min-width: 24px;
     position: relative;
 }
 
-.find-jobs-it .location {
+.location {
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1.00px;
@@ -185,7 +185,7 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .v6-icon-free {
+.v6-icon-free {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -193,7 +193,7 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .icon {
+.icon {
     letter-spacing: 0;
     line-height: normal;
     margin-top: -1.00px;
@@ -242,7 +242,28 @@ body[data-industry="aviation"] .distance-type-filter {
     }
 }
 
-.find-jobs-it .filter-field {
+@media screen and (max-width: 600px) {
+    .banner-text-content {
+        margin-left: 0;
+    }
+    .title {
+        line-height: unset;
+        font-size: 32px;
+    }
+    .jobs-search-main-input {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .frame-9 {
+        min-width: unset;
+    }
+}
+
+.no-matching-jobs-illustration {
+    max-width: 100%;
+}
+
+.filter-field {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
@@ -251,7 +272,7 @@ body[data-industry="aviation"] .distance-type-filter {
     position: relative;
 }
 
-.find-jobs-it .location-1 {
+.location-1 {
     align-self: stretch;
     letter-spacing: 0;
     line-height: 27px;
@@ -260,7 +281,7 @@ body[data-industry="aviation"] .distance-type-filter {
     white-space: nowrap;
 }
 
-.find-jobs-it .frame-3-1 {
+.frame-3-1 {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
@@ -287,7 +308,7 @@ body[data-industry="aviation"] .distance-type-filter {
     cursor: pointer;
 }
 
-.find-jobs-it .frame-39241 {
+.frame-39241 {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -296,7 +317,7 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .price-1 {
+.price-1 {
     color: var(--neutral100);
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-xs);
@@ -312,7 +333,7 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .polygon-4 {
+.polygon-4 {
     height: 4px;
     left: 27px;
     position: absolute;
@@ -320,13 +341,13 @@ body[data-industry="aviation"] .distance-type-filter {
     width: 9px;
 }
 
-.find-jobs-it .overlap-group-1 {
+.overlap-group-1 {
     height: 24px;
     position: relative;
     width: 202px;
 }
 
-.find-jobs-it .frame-1 {
+.frame-1 {
     align-items: center;
     background-color: var(--neutral100);
     border: 1px solid;
@@ -340,7 +361,7 @@ body[data-industry="aviation"] .distance-type-filter {
     position: relative;
 }
 
-.find-jobs-it .price {
+.price {
     letter-spacing: 0;
     line-height: 18px;
     margin-top: -1.00px;
@@ -349,12 +370,12 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .work-experience {
+.work-experience {
     align-self: stretch;
     line-height: 27px;
 }
 
-.find-jobs-it .any-experience {
+.any-experience {
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1.00px;
@@ -363,7 +384,7 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .intership {
+.intership {
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1.00px;
@@ -372,12 +393,12 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
-.find-jobs-it .work-remotely {
+.work-remotely {
     line-height: 24px;
     width: fit-content;
 }
 
-.find-jobs-it .rectangle {
+.rectangle {
     background-color: var(--neutral100);
     border: 1px solid;
     border-color: var(--licorice-3);
@@ -388,7 +409,7 @@ body[data-industry="aviation"] .distance-type-filter {
     position: relative;
 }
 
-.find-jobs-it .open-vacancy-cards-list {
+.open-vacancy-cards-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -432,7 +453,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     display: flex;
 }
 
-.find-jobs-it .frame-14-1 {
+.frame-14-1 {
     border-color: var(--licorice);
     justify-content: space-between;
     padding: 12px;
@@ -445,7 +466,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     justify-content: space-between;
 }
 
-.find-jobs-it .open-vacancy-card {
+.open-vacancy-card {
     align-items: flex-start;
     background-color: var(--neutral100);
     border: 1px solid;
@@ -483,7 +504,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     color: var(--meliteh-black-type);
 }
 
-.find-jobs-it .frame-25 {
+.frame-25 {
     align-items: center;
     background-color: #7d5ae21a;
     border-radius: 3px;
@@ -495,7 +516,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .new-post {
+.new-post {
     color: #7d5ae2;
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-xs);
@@ -508,7 +529,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .key-facts {
+.key-facts {
     align-items: center;
     display: flex;
     gap: 24px;
@@ -545,7 +566,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     position: relative;
 }
 
-.find-jobs-it .frame-5 {
+.frame-5 {
     align-items: center;
     display: flex;
     gap: 6px;
@@ -553,31 +574,31 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .company-logo-linear {
+.company-logo-linear {
     background-image: url(../img/company-logo-linear.png);
 }
 
-.find-jobs-it .company-logo-notion {
+.company-logo-notion {
     background-image: url(../img/company-logo-notion.png);
 }
 
-.find-jobs-it .company-logo-spline {
+.company-logo-spline {
     background-image: url(../img/company-logo-spline.png);
 }
 
-.find-jobs-it .frame-17-3 {
+.frame-17-3 {
     background-image: url(../img/company-logo-raycast.png);
 }
 
-.find-jobs-it .frame-17-4 {
+.frame-17-4 {
     background-image: url(../img/company-logo-loom.png);
 }
 
-.find-jobs-it .frame-17-5 {
+.frame-17-5 {
     background-image: url(../img/company-logo-trainline.png);
 }
 
-.find-jobs-it .vacancy-card-company-logo {
+.vacancy-card-company-logo {
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 4px;
@@ -594,76 +615,76 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     overflow-y: auto;
 }
 
-.find-jobs-it .notion {
+.notion {
     line-height: 27px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .name {
+.name {
     line-height: 36px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .spline-studio {
+.spline-studio {
     line-height: 27px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .raycast-corp {
+.raycast-corp {
     line-height: 27px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .x40-42k {
+.x40-42k {
     line-height: 24px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .loom {
+.loom {
     line-height: 27px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .x38-40k {
+.x38-40k {
     line-height: 24px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .trainline-group {
+.trainline-group {
     line-height: 27px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .x38-40k-1 {
+.x38-40k-1 {
     line-height: 24px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-.find-jobs-it .button {
+.button {
     height: 40px;
     min-width: 40px;
     position: relative;
 }
 
-.find-jobs-it .frame-72-1 {
+.frame-72-1 {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -672,14 +693,14 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .frame-14-2 {
+.frame-14-2 {
     border-color: #14141433;
     gap: 16px;
     padding: 8px 12px;
     width: 202px;
 }
 
-.find-jobs-it .footer-navbar {
+.footer-navbar {
     align-items: center;
     background-color: var(--submarine);
     display: flex;
@@ -691,7 +712,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     z-index: 4;
 }
 
-.find-jobs-it .footer-links {
+.footer-links {
     align-items: flex-start;
     display: flex;
     gap: 100px;
@@ -700,7 +721,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .all-rights-reserved-section {
+.all-rights-reserved-section {
     align-items: center;
     align-self: flex-end;
     display: flex;
@@ -710,7 +731,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: 1282px;
 }
 
-.find-jobs-it .frame-14-3 {
+.frame-14-3 {
     align-items: center;
     background-color: var(--neutral100);
     border: 1px solid;
@@ -721,13 +742,13 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     position: relative;
 }
 
-.find-jobs-it .map-pin-line-7 {
+.map-pin-line-7 {
     height: 16px;
     min-width: 16px;
     position: relative;
 }
 
-.find-jobs-it .name-4 {
+.name-4 {
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1.00px;
@@ -736,7 +757,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .location-field {
+.location-field {
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1.00px;
@@ -745,7 +766,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     width: fit-content;
 }
 
-.find-jobs-it .work {
+.work {
     letter-spacing: 0;
     margin-top: -1.00px;
     position: relative;
