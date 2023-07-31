@@ -220,6 +220,13 @@ body[data-industry="aviation"] .distance-type-filter {
     width: fit-content;
 }
 
+.more-option {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 @media screen and (max-width: 1200px) {
     .more-interaction-options {
         flex-direction: row;
@@ -698,37 +705,6 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     gap: 16px;
     padding: 8px 12px;
     width: 202px;
-}
-
-.footer-navbar {
-    align-items: center;
-    background-color: var(--submarine);
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    min-height: 262px;
-    padding: 23px 78px;
-    width: 1440px;
-    z-index: 4;
-}
-
-.footer-links {
-    align-items: flex-start;
-    display: flex;
-    gap: 100px;
-    margin-right: 1.0px;
-    position: relative;
-    width: fit-content;
-}
-
-.all-rights-reserved-section {
-    align-items: center;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    min-height: 31px;
-    width: 1282px;
 }
 
 .frame-14-3 {

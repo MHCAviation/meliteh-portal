@@ -304,31 +304,6 @@ form[data-status="ERROR"] .status-message-content::before {
     width: fit-content;
 }
 
-.contact .footer-navbar {
-    background-color: var(--alabaster);
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 47px;
-    min-height: 262px;
-    padding: 23px 78px;
-    width: 1440px;
-}
-
-.contact .footer-links {
-    align-items: flex-start;
-    gap: 100px;
-    margin-right: 1.0px;
-    width: fit-content;
-}
-
-.contact .all-rights-reserved-section {
-    align-self: flex-end;
-    flex-direction: column;
-    gap: 15px;
-    min-height: 31px;
-    width: 1282px;
-}
-
 .contact .frame {
     display: flex;
     position: relative;

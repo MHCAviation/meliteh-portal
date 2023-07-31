@@ -592,15 +592,6 @@ body {
     width: fit-content;
 }
 
-.more-option {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-    width: fit-content;
-}
-
 .frame-1-1 {
     align-items: flex-start;
     background-color: var(--neutral100);
