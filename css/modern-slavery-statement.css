@@ -1,0 +1,16 @@
+
+h1 {
+    text-align: center;
+    padding-top: 48px;
+}
+
+.signature-block p {
+    margin: 0;
+}
+
+.WordSection1 {
+    line-height: 28.8px;
+    margin: auto;
+    max-width: 1280px;
+    padding: 18px;
+}
