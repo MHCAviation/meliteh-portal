@@ -30,7 +30,6 @@
 }
 
 .industry-card-top-part {
-    align-items: center;
     background-color: var(--neutral100);
     border-radius: 20px 20px 0px 0px;
     display: flex;
@@ -38,6 +37,7 @@
     min-height: 260px;
     width: 302px;
     overflow: hidden;
+    align-items: stretch;
 }
 .industry-card-image-container {
     display: flex;
@@ -47,6 +47,7 @@
 .industry-card-image {
     height: 204px;
     object-fit: cover;
+    width: 100%;
 }
 
 .industry-card-title {
