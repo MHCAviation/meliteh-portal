@@ -144,21 +144,6 @@
     background-color: #fff5ee;
 }
 
-[data-selected-service="RECRUITMENT"] .service-card[data-service="RECRUITMENT"]:after,
-[data-selected-service="BG_CHECK"] .service-card[data-service="BG_CHECK"]:after,
-[data-selected-service="PAYROLL"] .service-card[data-service="PAYROLL"]:after,
-[data-selected-service="CONSULTING"] .service-card[data-service="CONSULTING"]:after {
-    content: url('../img/polygon-4-2.svg');
-    height: 16px;
-    width: 36px;
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .service-description {
     display: none;
 }
@@ -251,7 +236,7 @@
 
     .service-cards-list {
         display: flex;
-        gap: 24px;
+        gap: 12px;
         margin-bottom: 24px;
         flex-wrap: wrap;
         flex-direction: column;
@@ -259,6 +244,12 @@
 
     .service-card {
         height: auto;
+    }
+
+    .service-card-text {
+        border-radius: 20px;
+        border-top-style: solid;
+        border-top-width: 1px;
     }
 
     .service-card-image {
@@ -269,5 +260,21 @@
     ol, ul {
         padding-left: 15%;
         padding-right: 10%;
+    }
+}
+@media (min-width: 501px) {
+    [data-selected-service="RECRUITMENT"] .service-card[data-service="RECRUITMENT"]:after,
+    [data-selected-service="BG_CHECK"] .service-card[data-service="BG_CHECK"]:after,
+    [data-selected-service="PAYROLL"] .service-card[data-service="PAYROLL"]:after,
+    [data-selected-service="CONSULTING"] .service-card[data-service="CONSULTING"]:after {
+        content: url('../img/polygon-4-2.svg');
+        height: 16px;
+        width: 36px;
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

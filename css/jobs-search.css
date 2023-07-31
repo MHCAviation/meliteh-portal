@@ -251,7 +251,7 @@ body[data-industry="aviation"] .distance-type-filter {
 
 @media screen and (max-width: 600px) {
     .banner-text-content {
-        margin-left: 0;
+        margin-left: 6px;
     }
     .title {
         line-height: unset;
@@ -259,7 +259,10 @@ body[data-industry="aviation"] .distance-type-filter {
     }
     .jobs-search-main-input {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: stretch;
+    }
+    .button-6 {
+        align-self: flex-end;
     }
     .frame-9 {
         min-width: unset;
