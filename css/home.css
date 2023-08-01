@@ -615,25 +615,22 @@
 }
 
 .email-subscription input[type="email"]:focus {
-    outline-color: #d20027;
-    outline-width: 0.5px;
+    border-color: #d20027;
+    outline: none;
 }
 
 .email-subscription button {
     border: 0;
     font-family: 'Montserrat';
     font-weight: 700;
-    align-items: center;
     background-color: #d20027;
     color: #ffffff;
     border-radius: 0em 0.5em 0.5em 0em;
-    display: flex;
-    height: auto;
-    justify-content: center;
-    mix-blend-mode: normal;
     padding: 1.5em 1.5em;
-    position: relative;
-    width: fit-content;
+    cursor: pointer;
+}
+.email-subscription button:hover {
+    background-color: #a80725;
 }
 
 .home .our-clients-section {

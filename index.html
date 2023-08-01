@@ -353,8 +353,8 @@
             <span class="span0-TEjuvz">Never Want to Miss Any </span><span class="span1-TEjuvz">Job News?</span>
           </div>
           <div class="email-subscription">
-            <form method="post">
-              <input type="email" id="email" name="email" placeholder="Enter email for job news">
+            <form onsubmit="subscribeToNews(event)">
+              <input required="required" type="email" id="email" name="email" placeholder="Enter email for job news">
               <button type="submit">Subscribe</button>
             </form>
           </div>
