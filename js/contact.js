@@ -17,8 +17,9 @@ window.submitMessage = async function(event) {
     event.preventDefault();
     /** @var {HTMLFormElement} */
     const form = event.target;
-    const formData = new FormData(event.target);
-    form.setAttribute("disabled", "disabled");
+    const formData = new FormData(form);
+    const fieldset = form.querySelector("#contact-form-root-fieldset");
+    fieldset.setAttribute("disabled", "disabled");
     form.setAttribute("data-status", "SUBMITTING");
     form.querySelector(".status-message-content").textContent = "";
     try {
@@ -31,7 +32,7 @@ window.submitMessage = async function(event) {
         });
         form.setAttribute("data-status", "SUCCESS");
     } catch (error) {
-        form.removeAttribute("disabled");
+        fieldset.removeAttribute("disabled");
         form.setAttribute("data-status", "ERROR");
         form.querySelector(".status-message-content").textContent = error?.message ?? String(error);
     }

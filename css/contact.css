@@ -146,18 +146,29 @@ form[data-status] .status-message {
 }
 
 form[data-status="SUBMITTING"] .status-message-content::before {
-    content: "Sending... ";
+    content: "Sending...";
     color: #5252b3;
 }
 
 form[data-status="SUCCESS"] .status-message-content::before {
-    content: "Success ";
+    content: "Submitted successfully. We'll read your message and write you back if needed.";
     color: green;
 }
 
 form[data-status="ERROR"] .status-message-content::before {
     content: "Failure ";
     color: #b92c2c;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    padding-inline: 0;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #submit {

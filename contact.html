@@ -39,18 +39,20 @@
             </div>
 
             <form class="form" onsubmit="submitMessage(event)">
-              <textarea name="message" required="required" placeholder="Message"></textarea>
-              <div class="hr"></div>
-              <input type="text" name="senderName" placeholder="Your Name">
-              <input type="email" name="senderEmail" required="required" placeholder="Your Email">
-              <input type="tel" name="senderPhoneNumber" placeholder="Phone Number">
-              <div class="hr"></div>
-              <div class="submit-button-container">
-                <div class="status-message">
-                  <span class="status-message-content"></span>
+              <fieldset id="contact-form-root-fieldset">
+                <textarea name="message" required="required" placeholder="Message"></textarea>
+                <div class="hr"></div>
+                <input type="text" name="senderName" placeholder="Your Name">
+                <input type="email" name="senderEmail" required="required" placeholder="Your Email">
+                <input type="tel" name="senderPhoneNumber" placeholder="Phone Number">
+                <div class="hr"></div>
+                <div class="submit-button-container">
+                  <div class="status-message">
+                    <span class="status-message-content"></span>
+                  </div>
+                  <button type="submit" id="submit">Submit</button>
                 </div>
-                <button type="submit" id="submit">Submit</button>
-              </div>
+              </fieldset>
             </form>
           </div>
         </div>
