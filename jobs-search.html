@@ -165,7 +165,7 @@
                 <img id="data-loading-spinner" src="img/loader.png" />
               </div>
               <div class="no-jobs-matching-your-criteria-section">
-                <h2>Sorry, no job available with your wish criteria now</h2>
+                <h2>Sorry, no jobs available with your wish criteria now</h2>
                 <p>Maybe you'll have interest in other positions in <a href="find-jobs-landing">Find Jobs</a> page</p>
                 <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png" />
               </div>
@@ -227,22 +227,18 @@
             <aside class="more-option">
                 <div class="more-interaction-options">
                   <div class="frame-1-1">
-                    <div class="frame-3-3 filter-check-option">
+                    <div class="frame-3-3">
                       <p class="email-me-for-jobs montserrat-bold-licorice-20px">📨&nbsp;&nbsp;Email me for jobs</p>
                     </div>
-                    <div class="frame-3-3 filter-check-option">
+                    <div class="frame-3-3">
                       <p class="x-eiusmod montserrat-normal-licorice-14px">
                         If you would like to receive news about our newest job vacancies add your email below.
                       </p>
                     </div>
-                    <div class="frame-72-1">
-                      <div class="frame-14-2 frame-14-3">
-                        <div class="namemailcom montserrat-normal-licorice-16px-3">name@mail.com</div>
-                      </div>
-                      <div class="button-4 button-6">
-                        <div class="subcribe montserrat-medium-white-16px">Subcribe</div>
-                      </div>
-                    </div>
+                    <form class="frame-72-1" onsubmit="subscribeToNews(event)">
+                      <input type="email" name="email" required class="frame-14-2 frame-14-3 subscribe-form-email-input" placeholder="name@mail.com" />
+                      <button class="subscribe-button button-6 subcribe montserrat-medium-white-16px">Subscribe</button>
+                    </form>
                   </div>
                   <!-- there is currently no functionality to register without a specific job -->
                   <div class="frame-1-1" style="display: none">
@@ -268,5 +264,6 @@
     <footer class="footer-navbar"></footer>
     <script type="module" src="js/add-navbars.js"></script>
     <script type="module" src="js/jobs-search.js"></script>
+    <script type="module" src="js/subscribe-to-news.js"></script>
   </body>
 </html>

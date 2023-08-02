@@ -221,7 +221,7 @@ body[data-industry="aviation"] .distance-type-filter {
 }
 
 .frame-1-1 {
-    align-items: center;
+    align-items: stretch;
     background-color: var(--neutral100);
     border: 1px solid;
     border-color: var(--neutral300);
@@ -230,9 +230,7 @@ body[data-industry="aviation"] .distance-type-filter {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    overflow: hidden;
     padding: 24px;
-    position: relative;
     min-width: 250px;
     max-width: 320px;
 }
@@ -716,19 +714,71 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
 }
 
 .frame-72-1 {
-    align-items: flex-start;
+    align-items: stretch;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    position: relative;
-    width: fit-content;
 }
 
 .frame-14-2 {
     border-color: #14141433;
     gap: 16px;
     padding: 8px 12px;
-    width: 202px;
+}
+
+.subscribe-form-email-input {
+    line-height: 24px;
+    white-space: nowrap;
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+}
+
+.subscribe-form-email-input:disabled {
+    background-color: #e8e8e8;
+}
+
+.get-noticed-faster {
+    align-self: stretch;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-top: -1.00px;
+    position: relative;
+}
+
+.subcribe {
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.subscribe-button {
+    background-color: var(--meliteh-red);
+    border-radius: 4px;
+    gap: 8px;
+    padding: 8px 20px 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+.button-6 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.button-5 {
+    align-self: stretch;
+    background-color: var(--meliteh-red);
+    border-radius: 4px;
+    gap: 8px;
+    padding: 8px 20px 8px 16px;
+}
+
+.upload-your-resume {
+    line-height: 24px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
 }
 
 .frame-14-3 {

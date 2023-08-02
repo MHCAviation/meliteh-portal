@@ -629,9 +629,6 @@
     padding: 1.5em 1.5em;
     cursor: pointer;
 }
-.email-subscription button:hover {
-    background-color: #a80725;
-}
 
 .home .our-clients-section {
     height: 153px;
