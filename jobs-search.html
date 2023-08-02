@@ -9,6 +9,7 @@
     <meta name="twitter:card" content="photo" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" href="css/jobs-text-search.css"/>
     <link rel="stylesheet" type="text/css" href="css/jobs-search.css" />
   </head>
   <body>
@@ -25,21 +26,31 @@
                 </h1>
                 <p class="available-vacancies">Available vacancies in the technology sectors.</p>
               </div>
-              <div class="jobs-search-main-input">
-                <div class="frame-9">
-                  <img class="magnifying-glass" src="img/magnifyingglass.svg"  />
-                  <p class="what-position-are-you-looking-for montserrat-normal-licorice-16px-3">
-                    What position are you looking for ?
-                  </p>
+              <form class=" job-text-search-form">
+                <div class="job-search-form-centering">
+                  <div class="jobs-search-input-flexbox">
+                    <div class="magnifying-glass-HKU3uw"></div>
+                    <input
+                      type="text"
+                      name="query"
+                      class="jobs-text-search-borderless-input"
+                      placeholder="What position are you looking for ?"
+                    />
+                  </div>
+                  <div class="jobs-search-input-flexbox">
+                    <div class="location-icon"></div>
+                    <input
+                      type="text"
+                      name="jobLocation"
+                      class="jobs-text-search-borderless-input"
+                      placeholder="Location"
+                    />
+                  </div>
+                  <button class="jobs-text-search-submit-button">
+                    <span class="search-job-button-text">Search job</span>
+                  </button>
                 </div>
-                <div class="location-input">
-                  <img class="map-pin-line" src="img/mappinline.svg"  />
-                  <div class="location montserrat-normal-licorice-16px-3">Location</div>
-                </div>
-                <div class="button-2 button-6">
-                  <div class="search-job montserrat-medium-white-16px">Search job</div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -260,6 +271,18 @@
         </div>
       </div>
     </div>
+    <datalist id="job-description-options">
+      <option>Looking for a top-notch mechanic, salary 999999999 EUR</option>
+      <option>Are you a result-oriented person, a problem solver, a charismatic leader? Come to work as a Crew Member in the Lufthansa!</option>
+      <option>Monkey Coders wanted for maintaining an open source project for free. Master degree in IT is welcome!</option>
+    </datalist>
+    <datalist id="job-location-options">
+      <option>Riga</option>
+      <option>Antalya</option>
+      <option>Moscow</option>
+      <option>Tokyo</option>
+      <option>New York</option>
+    </datalist>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
     <script type="module" src="js/add-navbars.js"></script>

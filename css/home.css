@@ -1469,92 +1469,6 @@
     width: auto;
 }
 
-.home .home-job-search-form {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-}
-
-.home .job-search-form-centering {
-    align-items: stretch;
-    justify-content: center;
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    max-width: 720px;
-    box-shadow: 0px 2px 2px #0000000a;
-}
-
-.home .home-jobs-search-input-flexbox {
-    align-items: stretch;
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #1414141a;
-    border-radius: 4px 0px 0px 4px;
-    display: flex;
-    gap: 16px;
-    padding-left: 18px;
-    position: relative;
-    flex: 1;
-}
-
-.home .magnifying-glass-HKU3uw {
-    background-color: transparent;
-    background-image: url(../img/magnifyingglass.svg);
-    background-size: 100% 100%;
-    min-width: 24px;
-    background-position: center;
-}
-
-.home .what-position-are-you-looking-for-HKU3uw {
-    background-color: transparent;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    white-space: nowrap;
-    flex: 1;
-    border: none;
-    outline: none;
-    min-height: 48px;
-    overflow: hidden;
-}
-
-.home .home-jobs-search-submit-button {
-    align-items: center;
-    background-color: #d20027;
-    border-radius: 0px 4px 4px 0px;
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-left: -1px;
-    mix-blend-mode: normal;
-    padding: 18px 40px;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-.home-jobs-search-submit-button:hover {
-    background-color: #ec002a;
-}
-
-.home .search-job-kfW3Xh {
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.00px;
-    line-height: 24px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    white-space: nowrap;
-    width: fit-content;
-}
-
 .home .span0-6mBiGF {
     color: #ffffff;
     font-style: normal;
@@ -1618,23 +1532,6 @@
         text-align: center;
         line-height: 32px;
     }
-
-    .home .job-search-form-centering {
-        gap: 16px;
-        flex-direction: column;
-        max-width: 320px;
-    }
-
-    .home .home-jobs-search-input-flexbox {
-        border-radius: 4px 4px 4px 4px;
-        width: 100%;
-    }
-
-    .home .home-jobs-search-submit-button {
-        border-radius: 4px 4px 4px 4px;
-        width: 100%;
-    }
-
 }
 
 

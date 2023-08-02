@@ -20,7 +20,7 @@
 
 .disclamer .frame-335 {
     align-items: center;
-    background-color: var(--meliteh-red);
+    background-color: var(--meliteh-red-semitransparent);
     border-radius: 4px;
     gap: 10px;
     justify-content: center;

@@ -18,7 +18,7 @@
     --meliteh-black-type: #141414;
     --meliteh-grey: #dddddd;
     --meliteh-grey-text: #979797;
-    --meliteh-red: rgba(210, 0, 39, 0.8);
+    --meliteh-red-semitransparent: rgba(210, 0, 39, 0.8);
     --neutral100: #ffffff;
     --neutral300: #eff0f6;
     --primary: #f81539;
@@ -132,7 +132,7 @@
 }
 
 .montserrat-bold-monza-16px {
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-m);
     font-style: normal;
@@ -195,7 +195,7 @@
 }
 
 .montserrat-bold-monza-70px {
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-xxxl);
     font-style: normal;
@@ -227,7 +227,7 @@
 }
 
 .fontawesome6free-solid-normal-monza-12px {
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
     font-family: var(--font-family-font_awesome_6_free-solid);
     font-size: var(--font-size-xs);
     font-style: normal;
@@ -259,7 +259,7 @@
 }
 
 .montserrat-normal-monza-12px {
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-xs);
     font-style: normal;

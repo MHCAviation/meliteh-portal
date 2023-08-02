@@ -25,7 +25,7 @@
 
 .contact .frame-335 {
     align-items: center;
-    background-color: var(--meliteh-red);
+    background-color: var(--meliteh-red-semitransparent);
     border-radius: 4px;
     gap: 10px;
     justify-content: center;
@@ -295,7 +295,7 @@ fieldset {
     align-items: center;
     background-color: var(--neutral100);
     border: 1px solid;
-    border-color: var(--meliteh-red);
+    border-color: var(--meliteh-red-semitransparent);
     border-radius: 8px;
     gap: 10px;
     justify-content: center;

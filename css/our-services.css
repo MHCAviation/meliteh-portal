@@ -49,7 +49,7 @@
     top: 120px;
     font-weight: 700;
     font-size: xx-large;
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
 }
 
 .paragraph-title2 {
@@ -57,7 +57,7 @@
     top: 120px;
     font-weight: 700;
     font-size: xx-large;
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
 }
 
 .service-cards-list {

@@ -8,20 +8,6 @@
     display: unset;
 }
 
-.frame-9 {
-    align-items: center;
-    background-color: var(--neutral100);
-    border: 1px solid;
-    border-color: var(--licorice);
-    border-radius: 4px 0px 0px 4px;
-    display: flex;
-    flex: 1;
-    gap: 16px;
-    overflow: hidden;
-    padding: 18px;
-    min-width: 240px;
-}
-
 .cards {
     flex: unset;
     align-items: stretch;
@@ -60,7 +46,7 @@
 
 .frame-335 {
     align-items: center;
-    background-color: var(--meliteh-red);
+    background-color: var(--meliteh-red-semitransparent);
     border-radius: 10px;
     display: flex;
     gap: 10px;
@@ -93,8 +79,8 @@ body[data-industry="other"] .jobs-search-title-banner {
     background-image: url(../img/jobs-search-banner-industry-other.jpg);
 }
 
-body[data-industry="maritime"] .location-input,
-body[data-industry="aviation"] .location-input,
+body[data-industry="maritime"] input[name="jobLocation"],
+body[data-industry="aviation"] input[name="jobLocation"],
 body[data-industry="maritime"] .distance-type-filter,
 body[data-industry="aviation"] .distance-type-filter {
     display: none;
@@ -121,11 +107,9 @@ body[data-industry="aviation"] .distance-type-filter {
 }
 
 .banner-text-content {
-    align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    position: relative;
     margin: 48px;
 }
 
@@ -146,47 +130,11 @@ body[data-industry="aviation"] .distance-type-filter {
 }
 
 .industry-name {
-    color: var(--meliteh-red);
+    color: var(--meliteh-red-semitransparent);
 }
 
-.jobs-search-main-input {
-    box-shadow: 0px 2px 2px #0000000a;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-self: stretch;
-}
-
-.jobs-search-main-input p {
-    margin: 0;
-}
-
-.location-input {
-    align-items: center;
-    background-color: var(--neutral100);
-    border: 1px solid;
-    border-color: var(--licorice);
-    display: flex;
-    flex: 1;
-    gap: 16px;
-    padding: 18px;
-    position: relative;
-}
-
-.map-pin-line {
-    height: 24px;
-    min-width: 24px;
-    position: relative;
-}
-
-.location {
-    letter-spacing: 0;
-    line-height: 24px;
-    margin-top: -1.00px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
+.jobs-text-search-submit-button:not(:hover) {
+    background-color: var(--meliteh-red-semitransparent);
 }
 
 .v6-icon-free {
@@ -279,16 +227,8 @@ body[data-industry="aviation"] .distance-type-filter {
         line-height: unset;
         font-size: 32px;
     }
-    .jobs-search-main-input {
-        flex-direction: column;
-        align-items: stretch;
-        box-shadow: none;
-    }
     .button-6 {
         align-self: flex-end;
-    }
-    .frame-9 {
-        min-width: unset;
     }
 }
 
@@ -757,7 +697,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
 }
 
 .subscribe-button {
-    background-color: var(--meliteh-red);
+    background-color: var(--meliteh-red-semitransparent);
     border-radius: 4px;
     gap: 8px;
     padding: 8px 20px;
@@ -772,7 +712,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
 
 .button-5 {
     align-self: stretch;
-    background-color: var(--meliteh-red);
+    background-color: var(--meliteh-red-semitransparent);
     border-radius: 4px;
     gap: 8px;
     padding: 8px 20px 8px 16px;

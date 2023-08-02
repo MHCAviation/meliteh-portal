@@ -69,16 +69,16 @@
 }
 
 .industry-card:hover .industry-card-top-part {
-    background-color: var(--meliteh-red);
+    background-color: var(--meliteh-red-semitransparent);
     color: white;
 }
 
 .industry-card:hover .industry-card-title {
-    border-color: var(--meliteh-red);
+    border-color: var(--meliteh-red-semitransparent);
 }
 
 .industry-card:hover .industry-card-description {
-    border-color: var(--meliteh-red);
+    border-color: var(--meliteh-red-semitransparent);
 }
 
 .industry-card:hover .hover-details {

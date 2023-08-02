@@ -1,0 +1,116 @@
+
+
+.job-text-search-form {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.job-search-form-centering {
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.job-search-form-centering > * {
+    box-shadow: 0px 2px 2px #0000000a;
+}
+
+.jobs-search-input-flexbox {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #1414141a;
+    border-radius: 4px 0px 0px 4px;
+    display: flex;
+    gap: 16px;
+    padding-left: 18px;
+    flex: 1;
+    max-width: 500px;
+}
+
+.jobs-search-input-flexbox:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.magnifying-glass-HKU3uw {
+    background-image: url(../img/magnifyingglass.svg);
+    background-size: 100% 100%;
+    min-width: 24px;
+    background-position: center;
+}
+
+.location-icon {
+    background-image: url(../img/mappinline.svg);
+    background-size: 100% 100%;
+    min-width: 24px;
+    background-position: center;
+}
+
+.jobs-text-search-borderless-input {
+    background-color: transparent;
+    font-family: 'Montserrat', Helvetica;
+    font-size: 16px;
+    white-space: nowrap;
+    flex: 1;
+    border: none;
+    outline: none;
+    min-height: 48px;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.jobs-text-search-submit-button {
+    align-items: center;
+    background-color: #d20027;
+    border-radius: 0px 4px 4px 0px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-left: -1px;
+    mix-blend-mode: normal;
+    padding: 18px 40px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.jobs-text-search-submit-button:hover {
+    background-color: #ec002a;
+}
+
+.search-job-button-text {
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Montserrat', Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    opacity: 1;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+@media (max-width: 769px) {
+    .job-search-form-centering {
+        gap: 16px;
+        flex-direction: column;
+        max-width: 320px;
+    }
+
+    .jobs-search-input-flexbox {
+        border-radius: 4px 4px 4px 4px;
+    }
+
+    .jobs-text-search-submit-button {
+        border-radius: 4px 4px 4px 4px;
+    }
+}
