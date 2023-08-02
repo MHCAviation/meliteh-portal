@@ -130,7 +130,8 @@ async function main() {
     }[industry];
 
     /** @var {Vacancy[]} */
-    const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
+    // const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
+    const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no jobs to offer yet
     placeVacancies(document, vacancies);
 }
 
