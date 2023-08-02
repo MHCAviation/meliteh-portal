@@ -1450,13 +1450,11 @@
 }
 
 .home-job-search-section {
-    width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 0;
     padding: 6%;
+    flex-direction: column;
     overflow: hidden;
 }
 
