@@ -148,20 +148,6 @@
     display: none;
 }
 
-.service-descriptions {
-    padding-left: 1em;
-    padding-right: 1em;
-    align-items: center;
-    display: flex;
-    flex-flow: wrap;
-    flex-shrink: 3;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: center;
-    margin-bottom: 4%;
-}
-
-
 [data-selected-service="RECRUITMENT"] .service-description[data-service="RECRUITMENT"],
 [data-selected-service="BG_CHECK"] .service-description[data-service="BG_CHECK"],
 [data-selected-service="PAYROLL"] .service-description[data-service="PAYROLL"],

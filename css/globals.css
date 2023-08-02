@@ -171,18 +171,6 @@ body {
     line-height: 24px;
 }
 
-.service-descriptions {
-    align-items: center;
-    display: flex;
-    flex-flow: wrap;
-    flex-shrink: 3;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: center;
-    margin-bottom: 4%;
-}
-
-
 .button-2 {
     background-color: var(--meliteh-red);
     border-radius: 0px 4px 4px 0px;

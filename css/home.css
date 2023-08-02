@@ -1456,6 +1456,7 @@
     padding: 6%;
     flex-direction: column;
     overflow: hidden;
+    align-items: stretch;
 }
 
 .home .get-the-right-job-you-deserve-8dJy9b {
@@ -1468,18 +1469,20 @@
     width: auto;
 }
 
-.home .home-job-search-input {
+.home .home-job-search-form {
     margin-top: 24px;
-    box-shadow: 0px 2px 2px #0000000a;
     display: flex;
+    justify-content: center;
 }
 
-.home .frame-405-hDZt1x {
+.home .job-search-form-centering {
     align-items: stretch;
     justify-content: center;
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    max-width: 720px;
+    box-shadow: 0px 2px 2px #0000000a;
 }
 
 .home .home-jobs-search-input-flexbox {
@@ -1492,7 +1495,7 @@
     gap: 16px;
     padding-left: 18px;
     position: relative;
-    width: 494px;
+    flex: 1;
 }
 
 .home .magnifying-glass-HKU3uw {
@@ -1512,6 +1515,7 @@
     border: none;
     outline: none;
     min-height: 48px;
+    overflow: hidden;
 }
 
 .home .home-jobs-search-submit-button {
@@ -1615,10 +1619,10 @@
         line-height: 32px;
     }
 
-    .home .frame-405-hDZt1x {
+    .home .job-search-form-centering {
         gap: 16px;
         flex-direction: column;
-        width: 320px;
+        max-width: 320px;
     }
 
     .home .home-jobs-search-input-flexbox {
