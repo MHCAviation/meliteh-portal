@@ -24,6 +24,13 @@ class Vacancy {
 }
 
 /**
+ * @param {Vacancy} vacancy
+ */
+function getQueryOptionText(vacancy) {
+    return vacancy.JobTitle + " | " + vacancy.PublishedJobDescription;
+}
+
+/**
  * @param {HTMLElement} card
  * @param {Vacancy} vacancy
  */
@@ -33,6 +40,8 @@ function fillCard(card, vacancy) {
     const postedForMs = Date.now() - timePosted.getTime();
     const postedForDays = postedForMs / 1000 / 60 / 60 / 24;
     card.setAttribute("data-employment-type", vacancy.EmploymentType);
+    card.setAttribute("data-job-location", vacancy.Location ?? "Globe");
+    card.setAttribute("data-description", getQueryOptionText(vacancy))
     card.classList.toggle("posted-over-7-days-ago", postedForDays > 7);
     card.classList.toggle("posted-over-14-days-ago", postedForDays > 14);
     card.classList.toggle("posted-over-28-days-ago", postedForDays > 28);
@@ -64,27 +73,11 @@ function isHidden(el) {
 }
 
 /**
- * @param {HTMLFormElement} sidePanelFilters
  * @param {HTMLElement} list
- * @param {HTMLElement} counter
- * @param {HTMLElement} main
  */
-function handleFiltersChange(sidePanelFilters, list, counter, main) {
-    const formData = new FormData(sidePanelFilters);
-    list.setAttribute("data-distance-type", formData.get("distanceType"));
-    list.setAttribute("data-max-posted-for-days", formData.get("maxPostedForDays"));
-    list.classList.toggle(
-        "include-permanent-employment-type",
-        formData.get("includePermanentEmployment")
-    );
-    list.classList.toggle(
-        "include-contract-employment-type",
-        formData.get("includeContractEmployment")
-    );
-    list.classList.toggle(
-        "include-temp-employment-type",
-        formData.get("includeTempEmployment")
-    );
+function updateCounter(list) {
+    const main = document.querySelector("main");
+    const counter = document.getElementById("total-open-vacancies-counter");
     let matching = 0;
     for (const card of list.children) {
         matching += !isHidden(card);
@@ -94,34 +87,120 @@ function handleFiltersChange(sidePanelFilters, list, counter, main) {
 }
 
 /**
+ * @param {HTMLFormElement} sidePanelFilters
+ * @param {HTMLElement} resultsList
+ */
+function handleFiltersChange(sidePanelFilters, resultsList) {
+    const formData = new FormData(sidePanelFilters);
+    resultsList.setAttribute("data-distance-type", formData.get("distanceType"));
+    resultsList.setAttribute("data-max-posted-for-days", formData.get("maxPostedForDays"));
+    resultsList.classList.toggle(
+        "include-permanent-employment-type",
+        formData.get("includePermanentEmployment")
+    );
+    resultsList.classList.toggle(
+        "include-contract-employment-type",
+        formData.get("includeContractEmployment")
+    );
+    resultsList.classList.toggle(
+        "include-temp-employment-type",
+        formData.get("includeTempEmployment")
+    );
+    updateCounter(resultsList);
+}
+
+/**
+ * @param {HTMLElement} card
+ * @param {FormData} formData
+ */
+function matchesTextFilters(card, formData) {
+    if (formData.get("jobLocation")) {
+        const jobLocation = formData.get("jobLocation").toLowerCase();
+        const matches = card
+            .getAttribute("data-job-location")
+            .toLowerCase()
+            .includes(jobLocation);
+        if (!matches) {
+            return false;
+        }
+    }
+    if (formData.get("query")) {
+        const query = formData.get("query").toLowerCase();
+        const matches = card
+            .getAttribute("data-description")
+            .toLowerCase()
+            .includes(query);
+        if (!matches) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * @param {Event} event
+ */
+window.handleTextFiltersChange = function(event) {
+    event.preventDefault();
+    /** @var {HTMLFormElement} */
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const resultsList = document.getElementsByClassName("open-vacancy-cards-list")[0];
+    for (const card of resultsList.children) {
+        let matches = matchesTextFilters(card, formData);
+        card.classList.toggle("mismatches-text-filters", !matches);
+    }
+    updateCounter(resultsList);
+};
+
+/**
  * @param {Document} document
  * @param {Vacancy[]} vacancies
  */
 function placeVacancies(document, vacancies) {
-    const main = document.querySelector("main");
+    const jobDescriptionsList = document.getElementById("job-description-options");
+    const locationToOccurrences = new Map();
+    for (const vacancy of vacancies) {
+        const option = document.createElement("option");
+        option.textContent = getQueryOptionText(vacancy);
+        jobDescriptionsList.appendChild(option);
+
+        const location = vacancy.Location ?? "Globe";
+        const occurrences = locationToOccurrences.get(location) ?? 0;
+        locationToOccurrences.set(location, occurrences + 1);
+    }
+
+    const jobLocationsList = document.getElementById("job-location-options");
+    for (const [location, occurrences] of locationToOccurrences) {
+        const option = document.createElement("option");
+        option.textContent = occurrences + " matches";
+        option.value = location;
+        jobLocationsList.appendChild(option);
+    }
+
     document.getElementById("data-loading-spinner").style.display = "none";
     const template = document.getElementById("open-vacancy-card-template");
-    const list = document.getElementsByClassName("open-vacancy-cards-list")[0];
-    const counter = document.getElementById("total-open-vacancies-counter");
+    const resultsList = document.getElementsByClassName("open-vacancy-cards-list")[0];
     const cards = vacancies.map(vacancy => {
         const card = template.content.firstElementChild.cloneNode(true);
         fillCard(card, vacancy);
         return card;
     });
-    list.prepend(...cards);
+    resultsList.prepend(...cards);
 
     /** @var {HTMLFormElement} */
     const sidePanelFilters = document.getElementById("side-panel-filters");
     sidePanelFilters.addEventListener("change", () => {
-        handleFiltersChange(sidePanelFilters, list, counter, main);
+        handleFiltersChange(sidePanelFilters, resultsList);
     });
-    handleFiltersChange(sidePanelFilters, list, counter, main);
+    handleFiltersChange(sidePanelFilters, resultsList);
 }
 
 async function main() {
     const search = new URLSearchParams(window.location.search);
     const industry = search.get("industry") ?? "aviation";
     document.body.setAttribute("data-industry", industry);
+    document.querySelector("input[type=\"hidden\"][name=\"industry\"]").setAttribute("value", industry);
     document.querySelector(".industry-name").textContent = {
         "maritime": "Maritime",
         "aviation": "Aviation",
@@ -131,7 +210,7 @@ async function main() {
 
     /** @var {Vacancy[]} */
     // const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
-    const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no jobs to offer yet
+    const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no Meliteh jobs to offer yet
     placeVacancies(document, vacancies);
 }
 

@@ -26,8 +26,9 @@
                 </h1>
                 <p class="available-vacancies">Available vacancies in the technology sectors.</p>
               </div>
-              <form class=" job-text-search-form">
+              <form class=" job-text-search-form" onsubmit="handleTextFiltersChange(event)" oninput="handleTextFiltersChange(event)">
                 <div class="job-search-form-centering">
+                  <input name="industry" type="hidden" value="other"/>
                   <div class="jobs-search-input-flexbox">
                     <div class="magnifying-glass-HKU3uw"></div>
                     <input
@@ -35,15 +36,17 @@
                       name="query"
                       class="jobs-text-search-borderless-input"
                       placeholder="What position are you looking for ?"
+                      list="job-description-options"
                     />
                   </div>
-                  <div class="jobs-search-input-flexbox">
+                  <div class="jobs-search-input-flexbox job-location-field">
                     <div class="location-icon"></div>
                     <input
                       type="text"
                       name="jobLocation"
                       class="jobs-text-search-borderless-input"
                       placeholder="Location"
+                      list="job-location-options"
                     />
                   </div>
                   <button class="jobs-text-search-submit-button">
@@ -180,50 +183,49 @@
                 <p>Maybe you'll have interest in other positions in <a href="find-jobs-landing">Find Jobs</a> page</p>
                 <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png" />
               </div>
-              <div class="open-vacancy-cards-list">
-                <template id="open-vacancy-card-template">
-                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
-                    <div class="vacancy-card-company-logo"></div>
-                    <div class="vacancy-data-block">
-                      <div class="vacancy-summary">
-                        <div class="frame-29">
-                          <div class="company-name linear-company montserrat-normal-licorice-18px">?</div>
-                          <div class="job-title-panel">
-                            <div class="job-title-text software-engineer">?</div>
-                            <div class="frame-25"><div class="new-post">New post</div></div>
-                          </div>
+              <div class="open-vacancy-cards-list"></div>
+              <template id="open-vacancy-card-template">
+                <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/" class="open-vacancy-card">
+                  <div class="vacancy-card-company-logo"></div>
+                  <div class="vacancy-data-block">
+                    <div class="vacancy-summary">
+                      <div class="frame-29">
+                        <div class="company-name linear-company montserrat-normal-licorice-18px">?</div>
+                        <div class="job-title-panel">
+                          <div class="job-title-text software-engineer">?</div>
+                          <div class="frame-25"><div class="new-post">New post</div></div>
                         </div>
-                        <div class="key-facts">
-                          <div class="frame-5">
-                            <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
-                            <div class="location-field montserrat-normal-licorice-16px">?</div>
-                          </div>
+                      </div>
+                      <div class="key-facts">
+                        <div class="frame-5">
+                          <img class="map-pin-line-7" src="img/mappinline-1.svg"  />
+                          <div class="location-field montserrat-normal-licorice-16px">?</div>
+                        </div>
+                        <div class="ellipse"></div>
+                        <div class="frame-5">
+                          <img class="calendar-blank" src="img/calendarblank.svg"  />
+                          <div class="time-posted-field montserrat-normal-licorice-16px">? min ago</div>
+                        </div>
+                        <div class="ellipse"></div>
+                        <div class="frame-5">
+                          <img class="clock" src="img/clock.svg"  />
+                          <div class="employment-type montserrat-normal-licorice-16px">Full time</div>
+                        </div>
+                        <div class="salary-fact">
                           <div class="ellipse"></div>
                           <div class="frame-5">
-                            <img class="calendar-blank" src="img/calendarblank.svg"  />
-                            <div class="time-posted-field montserrat-normal-licorice-16px">? min ago</div>
-                          </div>
-                          <div class="ellipse"></div>
-                          <div class="frame-5">
-                            <img class="clock" src="img/clock.svg"  />
-                            <div class="employment-type montserrat-normal-licorice-16px">Full time</div>
-                          </div>
-                          <div class="salary-fact">
-                            <div class="ellipse"></div>
-                            <div class="frame-5">
-                              <span class="currency-symbol">$</span>
-                              <div class="salary-range x50">?k-?k</div>
-                            </div>
+                            <span class="currency-symbol">$</span>
+                            <div class="salary-range x50">?k-?k</div>
                           </div>
                         </div>
                       </div>
-                      <p class="vacancy-description">
-                        ?
-                      </p>
                     </div>
-                  </a>
-                </template>
-              </div>
+                    <p class="vacancy-description">
+                      ?
+                    </p>
+                  </div>
+                </a>
+              </template>
               <!-- there aren't too many jobs yet, so pagination is not actually needed -->
               <div class="pagination" style="display: none">
                 <img class="button" src="img/button.svg"  />
@@ -271,18 +273,8 @@
         </div>
       </div>
     </div>
-    <datalist id="job-description-options">
-      <option>Looking for a top-notch mechanic, salary 999999999 EUR</option>
-      <option>Are you a result-oriented person, a problem solver, a charismatic leader? Come to work as a Crew Member in the Lufthansa!</option>
-      <option>Monkey Coders wanted for maintaining an open source project for free. Master degree in IT is welcome!</option>
-    </datalist>
-    <datalist id="job-location-options">
-      <option>Riga</option>
-      <option>Antalya</option>
-      <option>Moscow</option>
-      <option>Tokyo</option>
-      <option>New York</option>
-    </datalist>
+    <datalist id="job-description-options"></datalist>
+    <datalist id="job-location-options"></datalist>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
     <script type="module" src="js/add-navbars.js"></script>

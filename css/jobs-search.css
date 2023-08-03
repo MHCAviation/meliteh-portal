@@ -4,10 +4,6 @@
     width: unset;
 }
 
-.screen a {
-    display: unset;
-}
-
 .cards {
     flex: unset;
     align-items: stretch;
@@ -79,8 +75,8 @@ body[data-industry="other"] .jobs-search-title-banner {
     background-image: url(../img/jobs-search-banner-industry-other.jpg);
 }
 
-body[data-industry="maritime"] input[name="jobLocation"],
-body[data-industry="aviation"] input[name="jobLocation"],
+body[data-industry="maritime"] .jobs-search-input-flexbox.job-location-field,
+body[data-industry="aviation"] .jobs-search-input-flexbox.job-location-field,
 body[data-industry="maritime"] .distance-type-filter,
 body[data-industry="aviation"] .distance-type-filter {
     display: none;
@@ -143,16 +139,6 @@ body[data-industry="aviation"] .distance-type-filter {
     justify-content: center;
     position: relative;
     width: fit-content;
-}
-
-.icon {
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: 16px;
 }
 
 .content {
@@ -416,6 +402,10 @@ body[data-industry="aviation"] .distance-type-filter {
     display: none;
 }
 
+.open-vacancy-card.mismatches-text-filters {
+    display: none;
+}
+
 .no-jobs-matching-your-criteria-section {
     display: none;
     flex-direction: column;
@@ -439,7 +429,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     justify-content: space-between;
 }
 
-.screen .open-vacancy-card {
+.open-vacancy-card {
     align-items: flex-start;
     background-color: var(--neutral100);
     border: 1px solid;
