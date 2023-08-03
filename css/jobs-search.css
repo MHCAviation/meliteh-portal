@@ -18,7 +18,13 @@
     flex-wrap: wrap;
 }
 
-.single-element {
+
+.breadcrumbs {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: fit-content;
+    gap: 12px;
     margin: 0;
     margin-bottom: 24px;
 }
@@ -75,6 +81,10 @@ body[data-industry="other"] .jobs-search-title-banner {
     background-image: url(../img/jobs-search-banner-industry-other.jpg);
 }
 
+.job-location-field {
+    max-width: 360px;
+}
+
 body[data-industry="maritime"] .jobs-search-input-flexbox.job-location-field,
 body[data-industry="aviation"] .jobs-search-input-flexbox.job-location-field,
 body[data-industry="maritime"] .distance-type-filter,
@@ -94,12 +104,16 @@ body[data-industry="aviation"] .distance-type-filter {
 
 .search {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 8px;
     justify-content: center;
     margin-left: 10%;
+    align-items: stretch;
+}
+
+.job-search-form-centering {
+    justify-content: flex-start;
 }
 
 .banner-text-content {

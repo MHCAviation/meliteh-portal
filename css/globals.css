@@ -160,16 +160,6 @@ body {
     position: relative;
 }
 
-.single-element {
-    align-items: center;
-    display: flex;
-    margin-left: 80px;
-    margin-top: 24px;
-    position: relative;
-    width: fit-content;
-    z-index: 3;
-}
-
 .place {
     letter-spacing: 0;
     line-height: normal;
