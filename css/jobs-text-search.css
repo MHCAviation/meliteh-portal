@@ -103,7 +103,7 @@
     .job-search-form-centering {
         gap: 16px;
         flex-direction: column;
-        max-width: 320px;
+        max-width: 360px;
     }
 
     .jobs-search-input-flexbox {
