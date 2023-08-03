@@ -23,6 +23,22 @@ class Vacancy {
     MaxPackage = "0E-7";
 }
 
+const DOM_INDEX = {
+    main: document.querySelector("main"),
+    body: document.body,
+    industryName: document.querySelector(".industry-name"),
+    breadcrumbsIndustryName: document.querySelector(".breadcrumbs-industry-name"),
+    /** @type {HTMLFormElement} */
+    jobTextSearchForm: document.querySelector("form.job-text-search-form"),
+    jobDescriptionOptions: document.getElementById("job-description-options"),
+    jobLocationOptions: document.getElementById("job-location-options"),
+    sidePanelFilters: document.getElementById("side-panel-filters"),
+    totalOpenVacanciesCounter: document.getElementById("total-open-vacancies-counter"),
+    dataLoadingSpinner: document.getElementById("data-loading-spinner"),
+    openVacancyCardTemplate: document.getElementById("open-vacancy-card-template"),
+    openVacancyCardsList: document.getElementsByClassName("open-vacancy-cards-list")[0],
+};
+
 /**
  * @param {Vacancy} vacancy
  */
@@ -72,41 +88,13 @@ function isHidden(el) {
     return (el.offsetParent === null)
 }
 
-/**
- * @param {HTMLElement} list
- */
-function updateCounter(list) {
-    const main = document.querySelector("main");
-    const counter = document.getElementById("total-open-vacancies-counter");
+function updateCounter() {
     let matching = 0;
-    for (const card of list.children) {
+    for (const card of DOM_INDEX.openVacancyCardsList.children) {
         matching += !isHidden(card);
     }
-    counter.textContent = matching;
-    main.setAttribute("total-jobs-matched", matching);
-}
-
-/**
- * @param {HTMLFormElement} sidePanelFilters
- * @param {HTMLElement} resultsList
- */
-function handleFiltersChange(sidePanelFilters, resultsList) {
-    const formData = new FormData(sidePanelFilters);
-    resultsList.setAttribute("data-distance-type", formData.get("distanceType"));
-    resultsList.setAttribute("data-max-posted-for-days", formData.get("maxPostedForDays"));
-    resultsList.classList.toggle(
-        "include-permanent-employment-type",
-        formData.get("includePermanentEmployment")
-    );
-    resultsList.classList.toggle(
-        "include-contract-employment-type",
-        formData.get("includeContractEmployment")
-    );
-    resultsList.classList.toggle(
-        "include-temp-employment-type",
-        formData.get("includeTempEmployment")
-    );
-    updateCounter(resultsList);
+    DOM_INDEX.totalOpenVacanciesCounter.textContent = matching;
+    DOM_INDEX.main.setAttribute("total-jobs-matched", matching);
 }
 
 /**
@@ -137,82 +125,107 @@ function matchesTextFilters(card, formData) {
     return true;
 }
 
+function handleFiltersChange() {
+    const formData = new FormData(DOM_INDEX.sidePanelFilters);
+    DOM_INDEX.openVacancyCardsList.setAttribute("data-distance-type", formData.get("distanceType"));
+    DOM_INDEX.openVacancyCardsList.setAttribute("data-max-posted-for-days", formData.get("maxPostedForDays"));
+    DOM_INDEX.openVacancyCardsList.classList.toggle(
+        "include-permanent-employment-type",
+        formData.get("includePermanentEmployment")
+    );
+    DOM_INDEX.openVacancyCardsList.classList.toggle(
+        "include-contract-employment-type",
+        formData.get("includeContractEmployment")
+    );
+    DOM_INDEX.openVacancyCardsList.classList.toggle(
+        "include-temp-employment-type",
+        formData.get("includeTempEmployment")
+    );
+    updateCounter(DOM_INDEX.openVacancyCardsList);
+}
+
 /**
- * @param {Event} event
+ * @param {HTMLFormElement} form
  */
-window.handleTextFiltersChange = function(event) {
-    event.preventDefault();
-    /** @var {HTMLFormElement} */
-    const form = event.currentTarget;
+function handleTextFiltersChange(form) {
     const formData = new FormData(form);
-    const resultsList = document.getElementsByClassName("open-vacancy-cards-list")[0];
-    for (const card of resultsList.children) {
+    for (const card of DOM_INDEX.openVacancyCardsList.children) {
         let matches = matchesTextFilters(card, formData);
         card.classList.toggle("mismatches-text-filters", !matches);
     }
-    updateCounter(resultsList);
-};
+    updateCounter();
+}
 
 /**
  * @param {Document} document
  * @param {Vacancy[]} vacancies
  */
-function placeVacancies(document, vacancies) {
-    const jobDescriptionsList = document.getElementById("job-description-options");
+function placeVacancies(vacancies) {
     const locationToOccurrences = new Map();
     for (const vacancy of vacancies) {
         const option = document.createElement("option");
         option.textContent = getQueryOptionText(vacancy);
-        jobDescriptionsList.appendChild(option);
+        DOM_INDEX.jobDescriptionOptions.appendChild(option);
 
         const location = vacancy.Location ?? "Globe";
         const occurrences = locationToOccurrences.get(location) ?? 0;
         locationToOccurrences.set(location, occurrences + 1);
     }
 
-    const jobLocationsList = document.getElementById("job-location-options");
+    const jobLocationsList = DOM_INDEX.jobLocationOptions;
     for (const [location, occurrences] of locationToOccurrences) {
         const option = document.createElement("option");
-        option.textContent = occurrences + " matches";
+        option.textContent = occurrences + " positions";
         option.value = location;
         jobLocationsList.appendChild(option);
     }
 
-    document.getElementById("data-loading-spinner").style.display = "none";
-    const template = document.getElementById("open-vacancy-card-template");
-    const resultsList = document.getElementsByClassName("open-vacancy-cards-list")[0];
+    DOM_INDEX.dataLoadingSpinner.style.display = "none";
     const cards = vacancies.map(vacancy => {
-        const card = template.content.firstElementChild.cloneNode(true);
+        const card = DOM_INDEX.openVacancyCardTemplate
+            .content.firstElementChild.cloneNode(true);
         fillCard(card, vacancy);
         return card;
     });
-    resultsList.prepend(...cards);
+    DOM_INDEX.openVacancyCardsList.prepend(...cards);
 
-    /** @var {HTMLFormElement} */
-    const sidePanelFilters = document.getElementById("side-panel-filters");
-    sidePanelFilters.addEventListener("change", () => {
-        handleFiltersChange(sidePanelFilters, resultsList);
-    });
-    handleFiltersChange(sidePanelFilters, resultsList);
+    DOM_INDEX.sidePanelFilters.addEventListener("change", handleFiltersChange);
+    handleFiltersChange();
 }
 
 async function main() {
     const search = new URLSearchParams(window.location.search);
-    const industry = search.get("industry") ?? "aviation";
-    document.body.setAttribute("data-industry", industry);
-    document.querySelector("input[type=\"hidden\"][name=\"industry\"]").setAttribute("value", industry);
-    document.querySelector(".industry-name").textContent = {
+    const industry = search.get("industry") ?? "other";
+    DOM_INDEX.body.setAttribute("data-industry", industry);
+    for (const [key, value] of search) {
+        if (DOM_INDEX.jobTextSearchForm.elements[key]) {
+            DOM_INDEX.jobTextSearchForm.elements[key].value = value;
+        }
+    }
+    const industryHumanName = {
         "maritime": "Maritime",
         "aviation": "Aviation",
         "it": "Information Technologies",
         "other": "Any Industry",
     }[industry];
+    DOM_INDEX.industryName.textContent = industryHumanName;
+    DOM_INDEX.breadcrumbsIndustryName.textContent = industryHumanName;
 
     /** @var {Vacancy[]} */
-    // const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
-    const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no Meliteh jobs to offer yet
-    placeVacancies(document, vacancies);
+    const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
+    // const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no Meliteh jobs to offer yet
+    placeVacancies(vacancies);
+    handleTextFiltersChange(DOM_INDEX.jobTextSearchForm);
 }
+
+/**
+ * @param {Event} event
+ */
+window.submitTextFilters = function(event) {
+    event.preventDefault();
+    /** @var {HTMLFormElement} */
+    handleTextFiltersChange(event.currentTarget);
+};
 
 main().catch(error => {
     console.error(error);

@@ -176,12 +176,9 @@ body {
     width: fit-content;
 }
 
-.how-to-spend-the-per {
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    width: fit-content;
+.breadcrumbs-industry-name {
+    color: var(--meliteh-red-semitransparent);
+    font-size: var(--font-size-xs);
 }
 
 .content {
