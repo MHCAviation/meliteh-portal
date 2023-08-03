@@ -429,6 +429,13 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     display: flex;
 }
 
+.vacancy-description {
+    transition: filter 1s linear;
+}
+.vacancy-description:hover {
+    filter: drop-shadow(10px 10px 2px #6190b9);
+}
+
 .frame-14-1 {
     border-color: var(--licorice);
     justify-content: space-between;

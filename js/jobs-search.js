@@ -66,6 +66,7 @@ function fillCard(card, vacancy) {
     card.querySelector(".job-title-text").textContent = jobTitle.replace(/\(\d+\)\s*$/, "");
     card.querySelector(".vacancy-card-company-logo").style.backgroundImage = `url('img/company-logos/${vacancy.ClientId}.png')`;
     card.querySelector(".vacancy-description").textContent = (vacancy.PublishedJobDescription ?? "").split(/[\r\n]+/)[0];
+    card.querySelector(".vacancy-description").title = vacancy.PublishedJobDescription;
     card.querySelector(".location-field").textContent = (vacancy.Location ?? "Globe").replace(/\(.*/, "").replace(/,.*/, "");
     card.querySelector(".time-posted-field").textContent = timePosted.toISOString().slice(0, 10);
     card.querySelector(".currency-symbol").textContent = vacancy.CurrencySymbol ?? vacancy.CurrencyName ?? "$";
@@ -196,18 +197,14 @@ function placeVacancies(vacancies) {
 async function main() {
     const search = new URLSearchParams(window.location.search);
     const industry = search.get("industry") ?? "other";
-    DOM_INDEX.body.setAttribute("data-industry", industry);
-    for (const [key, value] of search) {
-        if (DOM_INDEX.jobTextSearchForm.elements[key]) {
-            DOM_INDEX.jobTextSearchForm.elements[key].value = value;
-        }
-    }
     const industryHumanName = {
         "maritime": "Maritime",
         "aviation": "Aviation",
         "it": "Information Technologies",
         "other": "Any Industry",
     }[industry];
+
+    DOM_INDEX.body.setAttribute("data-industry", industry);
     DOM_INDEX.industryName.textContent = industryHumanName;
     DOM_INDEX.breadcrumbsIndustryName.textContent = industryHumanName;
 
@@ -215,6 +212,11 @@ async function main() {
     // const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
     const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no Meliteh jobs to offer yet
     placeVacancies(vacancies);
+    for (const [key, value] of search) {
+        if (DOM_INDEX.jobTextSearchForm.elements[key]) {
+            DOM_INDEX.jobTextSearchForm.elements[key].value = value;
+        }
+    }
     handleTextFiltersChange(DOM_INDEX.jobTextSearchForm);
 }
 
