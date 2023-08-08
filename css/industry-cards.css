@@ -29,7 +29,6 @@
 }
 
 .industry-card-top-part {
-    background-color: var(--neutral100);
     border-radius: 20px 20px 0px 0px;
     display: flex;
     flex-direction: column;
