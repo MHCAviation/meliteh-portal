@@ -46,6 +46,9 @@
 
 .industry-card {
     cursor: help;
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .hover-details {
