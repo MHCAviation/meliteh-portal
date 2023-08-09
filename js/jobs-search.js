@@ -209,8 +209,7 @@ async function main() {
     DOM_INDEX.breadcrumbsIndustryName.textContent = industryHumanName;
 
     /** @var {Vacancy[]} */
-    // const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
-    const vacancies = await new Promise(resolve => setTimeout(() => resolve([]), 1000)); // no Meliteh jobs to offer yet
+    const vacancies = await fetch(VACANCIES_ENDPOINT).then(rs => rs.json());
     placeVacancies(vacancies);
     for (const [key, value] of search) {
         if (DOM_INDEX.jobTextSearchForm.elements[key]) {
