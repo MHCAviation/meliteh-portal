@@ -216,6 +216,7 @@
     }
 
     .paragraph-title2 {
+        line-height: 36px;
         padding-left: 10%;
         padding-right: 10%;
     }
@@ -233,7 +234,7 @@
     }
 
     .service-card-text {
-        border-radius: 20px;
+        border-radius: 8px;
         border-top-style: solid;
         border-top-width: 1px;
     }

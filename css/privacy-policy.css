@@ -87,8 +87,8 @@
 }
 
 .privacy-policy .please-read-the-foll {
-    line-height: 16px;
-    text-align: justify;
+    line-height: 24px;
+    text-align: left;
     margin: auto;
 }
 
@@ -213,4 +213,11 @@
 
 .contacts-subheader {
     font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .privacy-policy-main-text {
+    font-size: 12px;
+    line-height: 16px;
+    }
 }

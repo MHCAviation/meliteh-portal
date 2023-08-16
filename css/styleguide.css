@@ -76,6 +76,7 @@
 
 .montserrat-normal-licorice-16px-2 {
     color: var(--meliteh-black-type);
+    line-height: 24px;
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-m);
     font-style: normal;
@@ -286,6 +287,7 @@
 
     .montserrat-medium-licorice-16px {
         font-size: var(--font-size-xs);
+        line-height: 20px;
     }
 
     .montserrat-bold-white-70px {

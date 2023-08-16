@@ -32,6 +32,7 @@
 .grey-section {
     width: 100%;
     padding-top: 4em;
+    padding-bottom: 2em;
     background-color: var(--submarine);
 }
 
@@ -1496,6 +1497,10 @@
 }
 
 @media (max-width: 769px) {
+
+    .grey-section {
+        padding-bottom: 4em;
+    }
 
     .industry-card-title {
         border-bottom: 0;

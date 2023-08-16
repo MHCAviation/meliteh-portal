@@ -130,6 +130,8 @@
 }
 
 .submit-button-container {
+    margin-top: 1em;
+    padding-right: 0.5em;
     display: flex;
     justify-content: flex-end;
     flex: 1;
@@ -321,6 +323,17 @@ fieldset {
 }
 
 @media (max-width: 500px) {
+
+    #submit {
+        margin-top: 0px;
+        max-width: none;
+    }
+
+    .submit-button-container {
+        margin-top: 2em;
+        padding: 10px;
+        flex-grow: 3;
+    }
 
     .contact .title {
         font-size: 56px;

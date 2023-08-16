@@ -54,9 +54,9 @@ body {
     flex-wrap: wrap;
 }
 
-.footer-links > a {
+.footer-links a {
     flex: 1;
-    color: black;
+    color: #141414;
     font-weight: 500;
 }
 
@@ -751,6 +751,14 @@ body {
         font-size: var(--font-size-m);
     }
 
+    .footer-links {
+        padding-left: 8em;
+        padding-right: 8em;
+        justify-content: :center;
+        gap: 4em;
+        flex-direction: column;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 500px) {
