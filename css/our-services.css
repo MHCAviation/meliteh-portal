@@ -5,6 +5,7 @@
 }
 
 .our-services-page-root {
+    padding-bottom: 4em;
     align-items: center;
     background-color: var(--neutral100);
     border: 1px none;
@@ -203,10 +204,6 @@
 
     .w-row {
         flex-direction: column;
-    }
-
-    .our-services-page-root {
-        align-items: center;
     }
 
     .service-description p, .recruiment-service-intro {

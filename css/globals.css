@@ -177,6 +177,7 @@ body {
 }
 
 .breadcrumbs-industry-name {
+    font-weight: 700;
     color: var(--meliteh-red-semitransparent);
     font-size: var(--font-size-xs);
 }

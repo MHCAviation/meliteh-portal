@@ -193,6 +193,10 @@ body[data-industry="aviation"] .distance-type-filter {
     gap: 16px;
 }
 
+.link_red {
+    color: #D20027;
+}
+
 @media screen and (max-width: 1200px) {
     .more-interaction-options {
         flex-direction: row;
@@ -202,7 +206,6 @@ body[data-industry="aviation"] .distance-type-filter {
 }
 
 .filter-fields-list {
-    display: flex;
     flex-direction: column;
     gap: 18px;
 }
@@ -216,8 +219,31 @@ body[data-industry="aviation"] .distance-type-filter {
 }
 
 @media screen and (max-width: 600px) {
+
+    .filter-field {
+        padding-bottom: 1.5em;
+    }
+
+    .search {
+        padding-left: 1em;
+        margin-left: 5%;
+    }
+
+    .frame-1-1 {
+        max-width: 100%;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    .banner-text-content {
+        gap: 0px;
+        margin: 2em;
+    }
+
     .content {
-        padding: 12px;
+        padding: 1.5em;
     }
     .banner-text-content {
         margin-left: 6px;
@@ -232,7 +258,7 @@ body[data-industry="aviation"] .distance-type-filter {
 }
 
 .no-matching-jobs-illustration {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .filter-field {
@@ -427,6 +453,7 @@ body[data-industry="aviation"] .distance-type-filter {
 
 main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     display: flex;
+    text-align: center;
 }
 
 .vacancy-description {
