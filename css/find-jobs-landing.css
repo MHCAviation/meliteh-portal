@@ -1,6 +1,7 @@
 /* screen - find-jobs-landing */
 
 .container-center-horizontal {
+    padding-bottom: 4em;
     justify-content: stretch;
 }
 
