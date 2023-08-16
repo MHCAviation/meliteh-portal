@@ -785,9 +785,9 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
 
 #data-loading-spinner {
     animation: rotate-spinner;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: steps(15);
     width: 240px;
 }
 
