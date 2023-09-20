@@ -57,6 +57,7 @@ function fillCard(card, vacancy) {
     const timePosted = new Date(vacancy.CreatedOn);
     const postedForMs = Date.now() - timePosted.getTime();
     const postedForDays = postedForMs / 1000 / 60 / 60 / 24;
+    card.setAttribute("data-job-id", vacancy.JobId);
     card.setAttribute("data-employment-type", vacancy.EmploymentType);
     card.setAttribute("data-job-location", vacancy.Location ?? "Globe");
     card.setAttribute("data-description", getQueryOptionText(vacancy))
@@ -233,6 +234,14 @@ async function main() {
     for (const [key, value] of search) {
         if (DOM_INDEX.jobTextSearchForm.elements[key]) {
             DOM_INDEX.jobTextSearchForm.elements[key].value = value;
+        }
+    }
+    const focusedJobId = search.get("focusedJobId");
+    if (focusedJobId) {
+        const card = [...DOM_INDEX.openVacancyCardsList.children]
+            .find(card => card.getAttribute("data-job-id") === focusedJobId);
+        if (card) {
+            card.click();
         }
     }
     handleTextFiltersChange(DOM_INDEX.jobTextSearchForm);
