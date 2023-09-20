@@ -488,6 +488,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     padding: 24px;
     position: relative;
     transition: transform 0.5s ease-in-out;
+    flex-wrap: wrap;
 }
 
 .open-vacancy-card:not(.dialog-header) {
@@ -496,6 +497,12 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
 
 .open-vacancy-card:not(.dialog-header):hover {
     transform: scale(1.05);
+}
+
+dialog {
+    max-width: unset;
+    border-radius: 9px;
+    border-color: #d32020ab;
 }
 
 .full-description {
@@ -631,6 +638,9 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     max-height: 180px;
     overflow-y: auto;
 }
+.open-vacancy-card.dialog-header .vacancy-description {
+    display: none;
+}
 
 .notion {
     line-height: 27px;
@@ -738,6 +748,16 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     letter-spacing: 0;
     line-height: 24px;
     white-space: nowrap;
+}
+
+.full-description {
+    margin: 24px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .action-buttons button,
