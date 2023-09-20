@@ -463,10 +463,12 @@ dialog {
 
 dialog label {
     font-weight: bold;
+    cursor: pointer;
 }
 
 dialog input[type=checkbox]#apply-form-privacy-policy-checkbox {
     vertical-align: middle;
+    cursor: pointer;
 }
 
 #apply-form-privacy-policy-checkbox:not(:checked) ~ .action-buttons a {

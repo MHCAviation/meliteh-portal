@@ -97,6 +97,9 @@ function fillCard(card, vacancy) {
     const dialogApplyLinkButton = DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(".apply-link-button");
     card.onclick = (event) => {
         event.preventDefault();
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set("focusedJobId", vacancy.JobId);
+        history.pushState({}, '', currentUrl.toString());
         dialogHeaderContainer.innerHTML = "";
         dialogHeaderContainer.appendChild(dialogHeader);
         fullDescriptionContainer.textContent = fullDescription;
