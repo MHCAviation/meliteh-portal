@@ -226,15 +226,15 @@
                   </div>
                 </a>
               </template>
-              <dialog id="expanded-vacancy-card-details-dialog">
-                <form>
-                  <div class="header-container"></div>
-                  <div class="full-description"></div>
+              <dialog id="expanded-vacancy-card-details-dialog" onclick="event.target==this && this.close()">
+                <div class="header-container"></div>
+                <div class="full-description"></div>
+                <div class="action-buttons">
                   <button type="reset" onclick="document.getElementById('expanded-vacancy-card-details-dialog').close()">Cancel</button>
-                  <a href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/">
-                    <button>Apply For The Job</button>
+                  <a class="apply-link-button" href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/">
+                    <button type="button">Apply For The Job</button>
                   </a>
-                </form>
+                </div>
               </dialog>
               <!-- there aren't too many jobs yet, so pagination is not actually needed -->
               <div class="pagination" style="display: none">
@@ -260,7 +260,7 @@
                     </div>
                     <form class="frame-72-1" onsubmit="subscribeToNews(event)">
                       <input type="email" name="email" required class="frame-14-2 frame-14-3 subscribe-form-email-input" placeholder="name@mail.com" />
-                      <button class="subscribe-button button-6 subcribe montserrat-medium-white-16px">Subscribe</button>
+                      <button class="subscribe-button button-6">Subscribe</button>
                     </form>
                   </div>
                   <!-- there is currently no functionality to register without a specific job -->

@@ -740,6 +740,7 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     white-space: nowrap;
 }
 
+.action-buttons button,
 .subscribe-button {
     background-color: var(--meliteh-red-semitransparent);
     border-radius: 4px;
@@ -747,6 +748,13 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     padding: 8px 20px;
     border: none;
     cursor: pointer;
+    color: var(--neutral100);
+    font-size: 16px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 500;
+}
+.action-buttons button:hover {
+    background-color: rgba(140, 0, 28, 0.8);
 }
 .button-6 {
     align-items: center;

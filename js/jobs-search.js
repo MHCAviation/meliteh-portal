@@ -63,7 +63,8 @@ function fillCard(card, vacancy) {
     card.classList.toggle("posted-over-7-days-ago", postedForDays > 7);
     card.classList.toggle("posted-over-14-days-ago", postedForDays > 14);
     card.classList.toggle("posted-over-28-days-ago", postedForDays > 28);
-    card.setAttribute("href", "https://1rww.eu/Secure/Login.aspx?JobId=" + vacancy.JobId);
+    const applyUrl = "https://1rww.eu/Secure/Login.aspx?JobId=" + vacancy.JobId;
+    card.setAttribute("href", applyUrl);
     card.querySelector(".company-name").textContent = vacancy.Company;
     card.querySelector(".job-title-text").textContent = jobTitle.replace(/\(\d+\)\s*$/, "");
     card.querySelector(".vacancy-card-company-logo").style.backgroundImage = `url('img/company-logos/${vacancy.ClientId}.png')`;
@@ -92,11 +93,13 @@ function fillCard(card, vacancy) {
     dialogHeader.removeAttribute("href");
     const dialogHeaderContainer = DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(".header-container");
     const fullDescriptionContainer = DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(".full-description");
+    const dialogApplyLinkButton = DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(".apply-link-button");
     card.onclick = (event) => {
         event.preventDefault();
         dialogHeaderContainer.innerHTML = "";
         dialogHeaderContainer.appendChild(dialogHeader);
         fullDescriptionContainer.textContent = fullDescription;
+        dialogApplyLinkButton.setAttribute("href", applyUrl);
         DOM_INDEX.expandedVacancyCardDetailsDialog.showModal();
     };
 }
