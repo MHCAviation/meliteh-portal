@@ -461,6 +461,22 @@ dialog {
     white-space: pre-wrap;
 }
 
+dialog label {
+    font-weight: bold;
+}
+
+dialog input[type=checkbox]#apply-form-privacy-policy-checkbox {
+    vertical-align: middle;
+}
+
+#apply-form-privacy-policy-checkbox:not(:checked) ~ .action-buttons a {
+    pointer-events: none;
+}
+
+#apply-form-privacy-policy-checkbox:not(:checked) ~ .action-buttons a button {
+    background-color: grey;
+}
+
 .vacancy-data-block {
     flex: 1;
     min-width: 240px;

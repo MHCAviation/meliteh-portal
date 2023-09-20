@@ -229,12 +229,21 @@
               <dialog id="expanded-vacancy-card-details-dialog" onclick="event.target==this && this.close()">
                 <div class="header-container"></div>
                 <div class="full-description"></div>
-                <div class="action-buttons">
-                  <button type="reset" onclick="document.getElementById('expanded-vacancy-card-details-dialog').close()">Cancel</button>
-                  <a class="apply-link-button" href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/">
-                    <button type="button">Apply For The Job</button>
-                  </a>
-                </div>
+                <form>
+                  <input type="checkbox" id="apply-form-privacy-policy-checkbox"/>
+                  <label for="apply-form-privacy-policy-checkbox">
+                    By applying, I confirm I have read and agreed to the <a target="_blank" href="/privacy-policy.html">Privacy Notice</a>
+                  </label>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <div class="action-buttons">
+                    <button type="reset" onclick="document.getElementById('expanded-vacancy-card-details-dialog').close()">Cancel</button>
+                    <a class="apply-link-button" href="https://www.linkedin.com/company/mhcaviation/mycompany/verification/">
+                      <button type="button">Apply For The Job</button>
+                    </a>
+                  </div>
+                </form>
               </dialog>
               <!-- there aren't too many jobs yet, so pagination is not actually needed -->
               <div class="pagination" style="display: none">
