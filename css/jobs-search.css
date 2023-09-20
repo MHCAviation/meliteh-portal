@@ -487,12 +487,19 @@ main[total-jobs-matched="0"] .no-jobs-matching-your-criteria-section {
     gap: 24px;
     padding: 24px;
     position: relative;
-    cursor: pointer;
     transition: transform 0.5s ease-in-out;
 }
 
-.open-vacancy-card:hover {
+.open-vacancy-card:not(.dialog-header) {
+    cursor: pointer;
+}
+
+.open-vacancy-card:not(.dialog-header):hover {
     transform: scale(1.05);
+}
+
+.full-description {
+    white-space: pre-wrap;
 }
 
 .vacancy-data-block {

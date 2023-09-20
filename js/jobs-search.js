@@ -37,6 +37,8 @@ const DOM_INDEX = {
     dataLoadingSpinner: document.getElementById("data-loading-spinner"),
     openVacancyCardTemplate: document.getElementById("open-vacancy-card-template"),
     openVacancyCardsList: document.getElementsByClassName("open-vacancy-cards-list")[0],
+    /** @type {HTMLDialogElement} */
+    expandedVacancyCardDetailsDialog: document.getElementById("expanded-vacancy-card-details-dialog"),
 };
 
 /**
@@ -65,7 +67,8 @@ function fillCard(card, vacancy) {
     card.querySelector(".company-name").textContent = vacancy.Company;
     card.querySelector(".job-title-text").textContent = jobTitle.replace(/\(\d+\)\s*$/, "");
     card.querySelector(".vacancy-card-company-logo").style.backgroundImage = `url('img/company-logos/${vacancy.ClientId}.png')`;
-    card.querySelector(".vacancy-description").textContent = (vacancy.PublishedJobDescription ?? "").split(/[\r\n]+/)[0];
+    const fullDescription = (vacancy.PublishedJobDescription ?? "");
+    card.querySelector(".vacancy-description").textContent = fullDescription.split(/[\r\n]+/)[0];
     card.querySelector(".vacancy-description").title = vacancy.PublishedJobDescription;
     card.querySelector(".location-field").textContent = (vacancy.Location ?? "Globe").replace(/\(.*/, "").replace(/,.*/, "");
     card.querySelector(".time-posted-field").textContent = timePosted.toISOString().slice(0, 10);
@@ -83,6 +86,19 @@ function fillCard(card, vacancy) {
         salaryRangeStr = "";
     }
     card.querySelector(".salary-range").textContent = salaryRangeStr;
+
+    const dialogHeader = card.cloneNode(true);
+    dialogHeader.classList.add("dialog-header");
+    dialogHeader.removeAttribute("href");
+    const dialogHeaderContainer = DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(".header-container");
+    const fullDescriptionContainer = DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(".full-description");
+    card.onclick = (event) => {
+        event.preventDefault();
+        dialogHeaderContainer.innerHTML = "";
+        dialogHeaderContainer.appendChild(dialogHeader);
+        fullDescriptionContainer.textContent = fullDescription;
+        DOM_INDEX.expandedVacancyCardDetailsDialog.showModal();
+    };
 }
 
 function isHidden(el) {
