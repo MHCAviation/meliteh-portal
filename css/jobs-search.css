@@ -596,7 +596,8 @@ dialog input[type=checkbox]#apply-form-privacy-policy-checkbox {
 
 .vacancy-card-company-logo {
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 4px;
     height: 72px;
     min-width: 72px;
