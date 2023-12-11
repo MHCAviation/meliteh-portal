@@ -77,11 +77,11 @@ function fillCard(card, vacancy) {
     card.querySelector(".currency-symbol").textContent = vacancy.CurrencySymbol ?? vacancy.CurrencyName ?? "$";
     card.querySelector(".employment-type").textContent = vacancy.EmploymentType;
     let salaryRangeStr;
-    if (vacancy.Salary && vacancy.Salary !== "0E-7") {
+    if (vacancy.Salary && vacancy.Salary !== "0E-7" && vacancy.Salary !== "0") {
         salaryRangeStr = vacancy.Salary
-    } else if (vacancy.MinBasic && vacancy.MinBasic !== "0E-7") {
+    } else if (vacancy.MinBasic && vacancy.MinBasic !== "0E-7" && vacancy.MinBasic !== "0") {
         salaryRangeStr = vacancy.MinBasic + "-" + vacancy.MaxBasic;
-    } else if (vacancy.MinPackage && vacancy.MinPackage !== "0E-7") {
+    } else if (vacancy.MinPackage && vacancy.MinPackage !== "0E-7" && vacancy.MinPackage !== "0") {
         salaryRangeStr = vacancy.MinPackage + "-" + vacancy.MaxPackage;
     } else {
         card.classList.add("no-salary-range");
