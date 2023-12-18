@@ -22,7 +22,7 @@
     cursor: pointer;
     height: 80px;
     mix-blend-mode: normal;
-    object-fit: cover;
+    object-fit: fill;
     opacity: 1;
     top: 0px;
     width: 145px;
