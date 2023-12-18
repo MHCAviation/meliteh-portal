@@ -24,7 +24,8 @@
     height: 80px;
     text-align: center;
     mix-blend-mode: normal;
-    object-fit: fill;
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: 1;
     top: 0px;
 }
