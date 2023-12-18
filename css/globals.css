@@ -43,7 +43,7 @@ body {
 .footer-logo {
     width: 144px;
     height: 80px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .footer-links {
