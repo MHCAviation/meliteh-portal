@@ -18,11 +18,10 @@
 
 .header-logo-image {
     background-color: transparent;
-    padding: 1em;
     background-image: url(../img/meliteh-recruiting-logo.png);
     cursor: pointer;
-    width: 180px;
-    height: 80px;
+    width: 124px;
+    height: 56px;
     text-align: center;
     mix-blend-mode: normal;
     background-size: contain;
