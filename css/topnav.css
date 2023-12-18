@@ -20,6 +20,7 @@
     background-color: transparent;
     background-image: url(../img/meliteh-recruiting-logo.png);
     cursor: pointer;
+    width: 164px;
     height: 80px;
     mix-blend-mode: normal;
     object-fit: fill;
