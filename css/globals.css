@@ -41,7 +41,8 @@ body {
 }
 
 .footer-logo {
-    width: 180px;
+    padding: 1em;
+    width: 186px;
     height: 80px;
     object-fit: fill;
 }
