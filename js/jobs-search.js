@@ -64,7 +64,7 @@ function fillCard(card, vacancy) {
     card.classList.toggle("posted-over-7-days-ago", postedForDays > 7);
     card.classList.toggle("posted-over-14-days-ago", postedForDays > 14);
     card.classList.toggle("posted-over-28-days-ago", postedForDays > 28);
-    const applyUrl = "https://1rww.eu/Secure/Login.aspx?JobId=" + vacancy.JobId;
+    const applyUrl = "https://hiportal.eu/Secure/Membership/Registration/Register.aspx?JobId=" + vacancy.JobId;
     card.setAttribute("href", applyUrl);
     card.querySelector(".company-name").textContent = vacancy.Company;
     card.querySelector(".job-title-text").textContent = jobTitle.replace(/\(\d+\)\s*$/, "");
