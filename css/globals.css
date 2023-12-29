@@ -81,6 +81,10 @@ body {
     height: 32px;
 }
 
+.social-media-container object {
+    cursor: pointer;
+}
+
 .screen a {
     text-decoration: none;
 }
