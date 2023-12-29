@@ -61,11 +61,22 @@ body {
     font-weight: 500;
 }
 
+.grayscale {
+    filter: grayscale(100%);
+}
+
 .all-rights-reserved-section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
+}
+
+.social-media-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
 }
 
 .screen a {
@@ -731,7 +742,8 @@ body {
     display: block;
     margin: 0 auto;
     padding-bottom: 0.5em;
-    width: 50px; /* adjust this value as needed */
+    width: 50px;
+    /* adjust this value as needed */
 }
 
 .subscribe-button:hover:not(:disabled) {
