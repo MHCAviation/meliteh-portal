@@ -77,6 +77,8 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 16px;
+    align-items: flex-start;
+    height: 32px;
 }
 
 .screen a {
