@@ -87,7 +87,7 @@ body {
 
 .social-media-container a:hover {
     cursor: pointer;
-    color: var(--meliteh-red-semitransparent);
+    fill: var(--meliteh-red-semitransparent);
 }
 
 .screen a {
