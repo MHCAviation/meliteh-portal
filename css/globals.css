@@ -774,7 +774,7 @@ body {
     .footer-links {
         padding-left: 8em;
         padding-right: 8em;
-        justify-content: :center;
+        justify-content: center;
         gap: 4em;
         flex-direction: column;
         font-size: 12px;
