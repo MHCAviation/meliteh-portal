@@ -81,15 +81,6 @@ body {
     height: 32px;
 }
 
-.social-media-container a {
-    cursor: pointer;
-}
-
-.social-media-container a:hover {
-    cursor: pointer;
-    fill: var(--meliteh-red-semitransparent);
-}
-
 .screen a {
     text-decoration: none;
 }
