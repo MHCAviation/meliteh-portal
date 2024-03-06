@@ -219,7 +219,7 @@ function placeVacancies(vacancies) {
 
 async function main() {
     const search = new URLSearchParams(window.location.search);
-    const industry = search.get("industry") ?? "other";
+    const industry = search.get("industry") ?? "aviation";
     const industryHumanName = {
         "maritime": "Maritime",
         "aviation": "Aviation",
