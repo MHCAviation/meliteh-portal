@@ -127,7 +127,7 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 @media (max-width: 500px) {
 
     .header-logo-image {
-        height: 64px;
+        height: 56px;
         width: 120px;
     }
 
