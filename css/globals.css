@@ -64,6 +64,7 @@ body {
 .grayscale {
     transition: filter 0.5s;
 }
+
 .grayscale:not(:hover) {
     filter: grayscale(100%);
 }

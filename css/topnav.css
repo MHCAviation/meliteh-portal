@@ -12,8 +12,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .header-logo-image {
@@ -67,6 +67,8 @@
 /* Style the hamburger menu */
 #expand-header-menu-button {
     display: none;
+    height: fit-content;
+    width: fit-content;
     background: none;
     border: none;
 }
@@ -95,18 +97,44 @@ header.menu-expanded #expand-header-menu-button .open-btn {
     color: #d20027;
 }
 
+.top-menu {
+    display: flex;
+    align-items: center;
+    gap: 3.5em;
+}
+
+.login_button {
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+    background-color: #ce0a2e;
+    border-radius: 0.5em;
+    padding: 0.75em;
+    color: white;
+
+}
+
+.login_button:hover {
+    color: white;
+    background-color: var(--primary);
+}
+
 
 @media (max-width: 769px) {
+    .top-menu {
+        gap: 1em;
+    }
+
     .header-navbar {
         padding-left: 0px;
     }
 
-    header:not(.menu-expanded) .header-links {
-        display: none;
+    #expand-header-menu-button {
+        display: block;
     }
 
-    #expand-header-menu-button {
-        display: unset;
+    header:not(.menu-expanded) .header-links {
+        display: none;
     }
 
     header.menu-expanded .header-links {
@@ -132,8 +160,8 @@ header.menu-expanded #expand-header-menu-button .open-btn {
     }
 
     .header-navbar {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
 }
@@ -141,7 +169,7 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 @media (max-width: 376px) {
 
     .header-navbar {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
