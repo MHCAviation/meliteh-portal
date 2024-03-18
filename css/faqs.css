@@ -28,6 +28,14 @@
     z-index: -1;
 }
 
+.underline-link {
+    text-decoration: underline;
+}
+
+.text-component a {
+    cursor: pointer;
+}
+
 a:hover {
     color: var(--primary);
 }
