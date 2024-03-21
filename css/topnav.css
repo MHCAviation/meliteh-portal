@@ -127,14 +127,18 @@ header.menu-expanded #expand-header-menu-button .open-btn {
     }
 }
 
+@media (max-width: 1024px) {
+
+    .header-navbar {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
 
 @media (max-width: 769px) {
     .top-menu {
         gap: 1em;
-    }
-
-    .header-navbar {
-        padding-left: 0px;
     }
 
     #expand-header-menu-button {

@@ -72,6 +72,7 @@
 
 .industry-card:hover .industry-card-title {
     border-color: var(--meliteh-red-semitransparent);
+    color: white;
 }
 
 .industry-card:hover .industry-card-description {

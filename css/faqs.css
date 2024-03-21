@@ -4,6 +4,11 @@
     padding-bottom: 40px;
 }
 
+.avion-logo {
+    max-width: 160px;
+    padding-bottom: 1em;
+}
+
 .overlap-group4 {
     background-image: url(../img/questions-photo.jpg);
     background-position: 20% 70%;
@@ -3824,7 +3829,16 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+
+    .text-title {
+        font-size: 16px;
+        padding-bottom: 1em;
+    }
+
+    .cd-faq {
+        gap: 2em;
+    }
 
     .cd-faq__items {
         background: unset;
