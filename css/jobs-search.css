@@ -739,6 +739,7 @@ dialog input[type="checkbox"]#apply-form-privacy-policy-checkbox {
 
 .full-description {
   margin: 24px;
+  max-width: 800px;
 }
 
 .action-buttons {
