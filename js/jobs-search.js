@@ -1,5 +1,4 @@
-const VACANCIES_ENDPOINT =
-  "https://meliteh-api.azurewebsites.net/category_vacancies?categoryId=17";
+const VACANCIES_ENDPOINT = "https://meliteh-api.azurewebsites.net/category_vacancies";
 
 class Vacancy {
   JobId = 476;
@@ -267,6 +266,25 @@ function placeVacancies(vacancies) {
   handleFiltersChange();
 }
 
+/** @return {Vacancy[]} */
+async function getVacancies(industry) {
+  const apiParams = new URLSearchParams({
+    categoryId: 17, // 17 = "Meliteh - Recruitment" publishing category
+  });
+  if (industry === "aviation") {
+    apiParams.append("oneOfAttributeIds", 36); // Cabin Crew
+    apiParams.append("oneOfAttributeIds", 37); // Flight Deck
+    apiParams.append("oneOfAttributeIds", 38); // Maintenance
+    apiParams.append("oneOfAttributeIds", 39); // Operations
+    apiParams.append("oneOfAttributeIds", 40); // Load Master
+  } else if (industry === "construction") {
+    apiParams.append("oneOfAttributeIds", 275); // Construction
+  } else {
+    return [];
+  }
+  return await fetch(VACANCIES_ENDPOINT + "?" + apiParams).then((rs) => rs.json());
+}
+
 async function main() {
   const search = new URLSearchParams(window.location.search);
   const industry = search.get("industry") ?? "aviation";
@@ -281,11 +299,7 @@ async function main() {
   DOM_INDEX.industryName.textContent = industryHumanName;
   DOM_INDEX.breadcrumbsIndustryName.textContent = industryHumanName;
 
-  /** @var {Vacancy[]} */
-  const vacancies =
-    industry !== "aviation"
-      ? []
-      : await fetch(VACANCIES_ENDPOINT).then((rs) => rs.json());
+  const vacancies = await getVacancies(industry);
   placeVacancies(vacancies);
   for (const [key, value] of search) {
     if (DOM_INDEX.jobTextSearchForm.elements[key]) {
