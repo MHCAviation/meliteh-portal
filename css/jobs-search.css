@@ -624,6 +624,9 @@ dialog input[type="checkbox"]#apply-form-privacy-policy-checkbox {
   white-space: pre-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .open-vacancy-card.dialog-header .vacancy-description {
