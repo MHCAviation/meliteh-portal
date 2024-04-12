@@ -1,1538 +1,1551 @@
 /* screen - home */
 
 .home {
-    background-color: #ffffff;
-    border: 1px none;
-    mix-blend-mode: normal;
-    position: relative;
-    flex: 1;
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin-bottom: 60px;
+  background-color: #ffffff;
+  border: 1px none;
+  mix-blend-mode: normal;
+  position: relative;
+  flex: 1;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
 .news-section {
-    width: 100%;
-    z-index: 0;
-    position: relative;
-    padding: 30px;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+  padding: 30px;
 }
 
 /* Service Features */
 
 .card {
-    max-width: 300px;
-    min-width: 240px;
+  max-width: 300px;
+  min-width: 240px;
 }
 
 /* Industry card */
 
 .grey-section {
-    width: 100%;
-    padding-top: 4em;
-    padding-bottom: 2em;
-    background-color: var(--submarine);
+  width: 100%;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  background-color: var(--submarine);
+}
+
+.client-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.client-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.client-image {
+  object-fit: contain;
+  object-position: center;
+  width: 160px;
+  height: auto;
+}
+
+.clientTitle {
+  color: #141414;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
 }
 
 .industry-cards-list {
-    min-height: 400px;
+  min-height: 400px;
 }
 
 .industry-card-title {
-    border-radius: 0em 0em 0.5em 0.5em;
-    border-width: 0.5px;
-    color: #141414;
+  border-radius: 0em 0em 0.5em 0.5em;
+  border-width: 0.5px;
+  color: #141414;
 }
 
 .hover-details {
-    background-color: white;
-    padding: 0em 1em;
-    border-radius: 0em 0em 20px 20px;
-    border: solid 0.5px var(--meliteh-red-semitransparent);
-    display: none;
-    color: #585858;
-    font-weight: 500;
+  background-color: white;
+  padding: 0em 1em;
+  border-radius: 0em 0em 20px 20px;
+  border: solid 0.5px var(--meliteh-red-semitransparent);
+  display: none;
+  color: #585858;
+  font-weight: 500;
 }
 
 /* New Section */
 
 .home .home-news-and-insights-background {
-    background-color: #c2c6c9;
-    opacity: 0.1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    position: absolute;
+  background-color: #c2c6c9;
+  opacity: 0.1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
 }
 
 .home .news-and-insights-C61RwL {
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
-    margin: 30px;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px;
 }
 
 .home .home-news-list {
-    align-items: flex-start;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home .group-2-FS2xM9 {
-    background-color: transparent;
-    height: 279px;
-    min-width: 272px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 279px;
+  min-width: 272px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-CGIxxI {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    height: auto;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 192px;
-    width: 270px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 192px;
+  width: 270px;
 }
 
 .home .rectangle-3-CGIxxI {
-    background-color: transparent;
-    background-image: url(../img/aircraft-turbine-front.svg);
-    background-size: 100% 100%;
-    height: 176px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 270px;
+  background-color: transparent;
+  background-image: url(../img/aircraft-turbine-front.svg);
+  background-size: 100% 100%;
+  height: 176px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 270px;
 }
 
 .home .group-3-FS2xM9 {
-    background-color: transparent;
-    height: 279px;
-    min-width: 272px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 279px;
+  min-width: 272px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-weQ8l3 {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    height: auto;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 192px;
-    width: 270px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 192px;
+  width: 270px;
 }
 
 .home .rectangle-4-weQ8l3 {
-    background-color: transparent;
-    background-image: url(../img/sea-port.svg);
-    background-size: 100% 100%;
-    height: 176px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 270px;
+  background-color: transparent;
+  background-image: url(../img/sea-port.svg);
+  background-size: 100% 100%;
+  height: 176px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 270px;
 }
 
 .home .group-4-FS2xM9 {
-    background-color: transparent;
-    height: 279px;
-    min-width: 272px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 279px;
+  min-width: 272px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-oCI8Gp {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    height: auto;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 192px;
-    width: 270px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 192px;
+  width: 270px;
 }
 
 .home .rectangle-5-oCI8Gp {
-    background-color: transparent;
-    background-image: url(../img/cruise-ship.jfif);
-    background-size: 100% 100%;
-    height: 176px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 270px;
+  background-color: transparent;
+  background-image: url(../img/cruise-ship.jfif);
+  background-size: 100% 100%;
+  height: 176px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 270px;
 }
 
 .home .group-5-FS2xM9 {
-    background-color: transparent;
-    height: 279px;
-    margin-right: -2.00px;
-    min-width: 272px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 279px;
+  margin-right: -2px;
+  min-width: 272px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .news-title-lorem-ipsum-dolor-sit-amet-cZxX2Y {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    height: auto;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 192px;
-    width: 270px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 192px;
+  width: 270px;
 }
 
 .home .rectangle-6-cZxX2Y {
-    background-color: transparent;
-    background-image: url(../img/coding-left-angle-view-2.svg);
-    background-size: 100% 100%;
-    height: 176px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 270px;
+  background-color: transparent;
+  background-image: url(../img/coding-left-angle-view-2.svg);
+  background-size: 100% 100%;
+  height: 176px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 270px;
 }
 
 .home .testimonials-list::-webkit-scrollbar {
-    display: none;
-    width: 0;
+  display: none;
+  width: 0;
 }
 
 .home .testimonials-list {
-    height: 224px;
-    overflow-x: scroll;
-    width: 1436px;
-    position: relative;
+  height: 224px;
+  overflow-x: scroll;
+  width: 1436px;
+  position: relative;
 }
 
 .home .group-38216-EpPtXC {
-    background-color: transparent;
-    height: 224px;
-    left: 80px;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 544px;
+  background-color: transparent;
+  height: 224px;
+  left: 80px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-38173-tVj8ay {
-    background-color: transparent;
-    height: 224px;
-    left: 0px;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    width: 544px;
+  background-color: transparent;
+  height: 224px;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-38161-mVxDdr {
-    background-color: transparent;
-    height: 224px;
-    left: 0px;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    width: 546px;
+  background-color: transparent;
+  height: 224px;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  width: 546px;
 }
 
 .home .rectangle-4288-EbbifK {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #eff0f6;
-    border-radius: 20px;
-    box-shadow: 0px 5px 14px #080f340a;
-    height: 224px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 544px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #eff0f6;
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  height: 224px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-39221-EbbifK {
-    background-color: transparent;
-    background-image: url(../img/partner-airtable.png);
-    background-size: 100% 100%;
-    height: 32px;
-    left: 40px;
-    opacity: 1;
-    position: absolute;
-    top: 40px;
-    width: 148px;
+  background-color: transparent;
+  background-image: url(../img/partner-airtable.png);
+  background-size: 100% 100%;
+  height: 32px;
+  left: 40px;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  width: 148px;
 }
 
 .home .lorem-ipsum-dolor-si-EbbifK {
-    background-color: transparent;
-    color: #514f6e;
-    font-family: 'DM Sans', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    height: auto;
-    left: 40px;
-    letter-spacing: 0.00px;
-    line-height: 30px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 92px;
-    width: 464px;
+  background-color: transparent;
+  color: #514f6e;
+  font-family: "DM Sans", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 92px;
+  width: 464px;
 }
 
 .home .group-38217-EpPtXC {
-    background-color: transparent;
-    height: 224px;
-    left: 664px;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 544px;
+  background-color: transparent;
+  height: 224px;
+  left: 664px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 544px;
 }
 
 .our-services-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .home .group-38173-RSj7cP {
-    background-color: transparent;
-    height: 224px;
-    left: 0px;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    width: 544px;
+  background-color: transparent;
+  height: 224px;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-38161-xpHVVT {
-    background-color: transparent;
-    height: 224px;
-    left: 0px;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    width: 546px;
+  background-color: transparent;
+  height: 224px;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  width: 546px;
 }
 
 .home .rectangle-4288-Pu2LNd {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #eff0f6;
-    border-radius: 20px;
-    box-shadow: 0px 5px 14px #080f340a;
-    height: 224px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 544px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #eff0f6;
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  height: 224px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-39221-Pu2LNd {
-    background-color: transparent;
-    background-image: url(../img/partner-airtable-2.png);
-    background-size: 100% 100%;
-    height: 32px;
-    left: 40px;
-    opacity: 1;
-    position: absolute;
-    top: 40px;
-    width: 148px;
+  background-color: transparent;
+  background-image: url(../img/partner-airtable-2.png);
+  background-size: 100% 100%;
+  height: 32px;
+  left: 40px;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  width: 148px;
 }
 
 .home .lorem-ipsum-dolor-si-Pu2LNd {
-    background-color: transparent;
-    color: #514f6e;
-    font-family: 'DM Sans', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    height: auto;
-    left: 40px;
-    letter-spacing: 0.00px;
-    line-height: 30px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 92px;
-    width: 464px;
+  background-color: transparent;
+  color: #514f6e;
+  font-family: "DM Sans", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 92px;
+  width: 464px;
 }
 
 .home .group-38218-EpPtXC {
-    background-color: transparent;
-    height: 224px;
-    left: 1248px;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 544px;
+  background-color: transparent;
+  height: 224px;
+  left: 1248px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-38173-tUkLob {
-    background-color: transparent;
-    height: 224px;
-    left: 0px;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    width: 544px;
+  background-color: transparent;
+  height: 224px;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-38161-ZawZPa {
-    background-color: transparent;
-    height: 224px;
-    left: 0px;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    width: 546px;
+  background-color: transparent;
+  height: 224px;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  width: 546px;
 }
 
 .home .rectangle-4288-Ilv2QH {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #eff0f6;
-    border-radius: 20px;
-    box-shadow: 0px 5px 14px #080f340a;
-    height: 224px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 544px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #eff0f6;
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  height: 224px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 544px;
 }
 
 .home .group-39221-Ilv2QH {
-    background-color: transparent;
-    background-image: url(../img/partner-airtable.png);
-    background-size: 100% 100%;
-    height: 32px;
-    left: 40px;
-    opacity: 1;
-    position: absolute;
-    top: 40px;
-    width: 148px;
+  background-color: transparent;
+  background-image: url(../img/partner-airtable.png);
+  background-size: 100% 100%;
+  height: 32px;
+  left: 40px;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  width: 148px;
 }
 
 .home .lorem-ipsum-dolor-si-Ilv2QH {
-    background-color: transparent;
-    color: #514f6e;
-    font-family: 'DM Sans', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    height: auto;
-    left: 40px;
-    letter-spacing: 0.00px;
-    line-height: 30px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 92px;
-    width: 464px;
+  background-color: transparent;
+  color: #514f6e;
+  font-family: "DM Sans", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 92px;
+  width: 464px;
 }
 
 .home .dont-take-our-word-for-it-C61RwL {
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-    height: auto;
-    margin-left: 80px;
-    line-height: 46px;
-    white-space: nowrap;
-    width: 544px;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  margin-left: 80px;
+  line-height: 46px;
+  white-space: nowrap;
+  width: 544px;
 }
 
 .home .subtitle-C61RwL {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding-left: 80px;
-    top: 1903px;
-    width: fit-content;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-left: 80px;
+  top: 1903px;
+  width: fit-content;
 }
 
 .home .rectangle-415-reA5uf {
-    background-color: #d20027;
-    border-radius: 30px;
-    height: 2px;
-    min-width: 22px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
+  background-color: #d20027;
+  border-radius: 30px;
+  height: 2px;
+  min-width: 22px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
 }
 
 .home .testimonials-reA5uf {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 1.80px;
-    line-height: 20px;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    white-space: nowrap;
-    width: fit-content;
+  background-color: transparent;
+  color: #d20027;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 20px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 .home .never-want-to-miss-any-job-news-lyMjxj {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 64px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 64px;
 }
 
 .home .span0-TEjuvz {
-    color: #141414;
-    font-style: normal;
+  color: #141414;
+  font-style: normal;
 }
 
 .home .span1-TEjuvz {
-    color: #d20027;
-    font-style: normal;
+  color: #d20027;
+  font-style: normal;
 }
 
 .home .frame-404-ITdx2a {
-    box-shadow: 0px 2px 2px #0000000a;
-    display: flex;
+  box-shadow: 0px 2px 2px #0000000a;
+  display: flex;
 }
 
 .home .frame-14-kTLPqE {
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #1414141a;
-    display: flex;
-    flex: 1;
-    gap: 16px;
-    height: auto;
-    padding: 18px;
-    position: relative;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #1414141a;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: auto;
+  padding: 18px;
+  position: relative;
 }
 
-
 .home .subscribe-form {
-    margin: auto;
-    margin-top: 2.5em;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  margin: auto;
+  margin-top: 2.5em;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .email-subscription {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    font-style: normal;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  font-style: normal;
 }
 
 .email-subscription form {
-    width: 100%;
-    max-width: 560px;
-    display: flex;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
 }
 
 .email-subscription input[type="email"] {
-    font-family: 'Montserrat';
-    flex-grow: 1;
-    padding-left: 1em;
-    border: 1px solid #ccc;
-    border-right: 0;
-    border-radius: 0.5em 0em 0em 0.5em;
+  font-family: "Montserrat";
+  flex-grow: 1;
+  padding-left: 1em;
+  border: 1px solid #ccc;
+  border-right: 0;
+  border-radius: 0.5em 0em 0em 0.5em;
 }
 
 .email-subscription input[type="email"]:focus {
-    border-color: #d20027;
-    outline: none;
+  border-color: #d20027;
+  outline: none;
 }
 
 .email-subscription button {
-    border: 0;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    background-color: #d20027;
-    color: #ffffff;
-    border-radius: 0em 0.5em 0.5em 0em;
-    padding: 1.5em 1.5em;
-    cursor: pointer;
-}
-
-.home .our-clients-section {
-    height: 153px;
-    width: 837px;
-    position: relative;
-}
-
-.home .clients-8xEr18 {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-    height: auto;
-    left: 347px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: center;
-    top: 0px;
-    width: auto;
+  border: 0;
+  font-family: "Montserrat";
+  font-weight: 700;
+  background-color: #d20027;
+  color: #ffffff;
+  border-radius: 0em 0.5em 0.5em 0em;
+  padding: 1.5em 1.5em;
+  cursor: pointer;
 }
 
 .home .group-400-8xEr18 {
-    background-color: transparent;
-    height: 64px;
-    left: 0px;
-    opacity: 1;
-    position: absolute;
-    top: 89px;
-    width: 835px;
+  background-color: transparent;
+  height: 64px;
+  left: 0px;
+  opacity: 1;
+  position: absolute;
+  top: 89px;
+  width: 835px;
 }
 
 .home .image-1-FWhac5 {
-    background-color: transparent;
-    background-image: url(../img/partner-crm.png);
-    background-size: 100% 100%;
-    height: 64px;
-    left: 0px;
-    mix-blend-mode: normal;
-    object-fit: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 216px;
+  background-color: transparent;
+  background-image: url(../img/partner-crm.png);
+  background-size: 100% 100%;
+  height: 64px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 216px;
 }
 
 .home .image-2-FWhac5 {
-    background-color: transparent;
-    background-image: url(../img/partner-d2w.png);
-    background-size: 100% 100%;
-    height: 64px;
-    left: 312px;
-    mix-blend-mode: normal;
-    object-fit: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 160px;
+  background-color: transparent;
+  background-image: url(../img/partner-d2w.png);
+  background-size: 100% 100%;
+  height: 64px;
+  left: 312px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 160px;
 }
 
 .home .image-3-FWhac5 {
-    background-color: transparent;
-    background-image: url(../img/partner-losna-tech.png);
-    background-size: 100% 100%;
-    height: 64px;
-    left: 568px;
-    mix-blend-mode: normal;
-    object-fit: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 267px;
+  background-color: transparent;
+  background-image: url(../img/partner-losna-tech.png);
+  background-size: 100% 100%;
+  height: 64px;
+  left: 568px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 267px;
 }
 
 .home .view-all-jobs-button {
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #d20027;
-    border-radius: 4px;
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    padding: 16px 24px;
-    margin: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #d20027;
+  border-radius: 4px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 16px 24px;
+  margin: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 }
 
 .home .view-all-jobs-zayv2c {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-    width: fit-content;
+  background-color: transparent;
+  color: #d20027;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .home .jobs-featured-C61RwL {
-    height: 540px;
-    width: 1440px;
-    position: relative;
+  height: 540px;
+  width: 1440px;
+  position: relative;
 }
 
 .home .aircraft-flying-over-image {
-    background-color: transparent;
-    background-image: url(../img/aircraft-flying-over.jpg);
-    background-size: 100% 100%;
-    height: 540px;
-    left: 0px;
-    mix-blend-mode: normal;
-    object-fit: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    width: 1440px;
+  background-color: transparent;
+  background-image: url(../img/aircraft-flying-over.jpg);
+  background-size: 100% 100%;
+  height: 540px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
 }
 
 .home .rectangle-4298-BRXQlF {
-    background: linear-gradient(180deg, rgb(20.000000707805157, 20.000000707805157, 20.000000707805157) 0%, rgba(20.000000707805157, 20.000000707805157, 20.000000707805157, 0) 100%);
-    background-color: transparent;
-    height: 540px;
-    left: 0px;
-    mix-blend-mode: normal;
-    opacity: 0.75;
-    position: absolute;
-    top: 0px;
-    width: 1440px;
+  background: linear-gradient(
+    180deg,
+    rgb(20.000000707805157, 20.000000707805157, 20.000000707805157) 0%,
+    rgba(20.000000707805157, 20.000000707805157, 20.000000707805157, 0) 100%
+  );
+  background-color: transparent;
+  height: 540px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
 }
 
 .home .group-39231-BRXQlF {
-    background-color: transparent;
-    height: 50px;
-    left: 424px;
-    opacity: 1;
-    position: absolute;
-    top: 63px;
-    width: 890px;
+  background-color: transparent;
+  height: 50px;
+  left: 424px;
+  opacity: 1;
+  position: absolute;
+  top: 63px;
+  width: 890px;
 }
 
 .home .information-technology-9wWVRE {
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-    background-clip: text;
-    background-color: transparent;
-    color: transparent;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    height: auto;
-    left: 404px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    text-fill-color: transparent;
-    top: 1px;
-    width: auto;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-clip: text;
+  background-color: transparent;
+  color: transparent;
+  font-family: "Montserrat", Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 404px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  text-fill-color: transparent;
+  top: 1px;
+  width: auto;
 }
 
 .home .aviation-9wWVRE {
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    height: auto;
-    left: 206px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: right;
-    top: 1px;
-    width: auto;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat", Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 206px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: right;
+  top: 1px;
+  width: auto;
 }
 
 .home .maritime-9wWVRE {
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-    background-clip: text;
-    background-color: transparent;
-    color: transparent;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    height: auto;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: right;
-    text-fill-color: transparent;
-    top: 0px;
-    width: auto;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-clip: text;
+  background-color: transparent;
+  color: transparent;
+  font-family: "Montserrat", Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: right;
+  text-fill-color: transparent;
+  top: 0px;
+  width: auto;
 }
 
 .home .vector-BRXQlF {
-    background-color: transparent;
-    background-image: url(../img/vector.svg);
-    background-size: 100% 100%;
-    height: 52px;
-    left: 1374px;
-    opacity: 1;
-    position: absolute;
-    top: 250px;
-    width: 28px;
+  background-color: transparent;
+  background-image: url(../img/vector.svg);
+  background-size: 100% 100%;
+  height: 52px;
+  left: 1374px;
+  opacity: 1;
+  position: absolute;
+  top: 250px;
+  width: 28px;
 }
 
 .home .frame-375-BRXQlF {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    left: 107px;
-    opacity: 1;
-    position: absolute;
-    top: 169px;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 107px;
+  opacity: 1;
+  position: absolute;
+  top: 169px;
+  width: fit-content;
 }
 
 .home .group-355-zcYSoT {
-    background-color: transparent;
-    background-image: url(../img/solid-white-with-round-borders);
-    background-size: 100% 100%;
-    height: 242px;
-    margin-bottom: -19.00px;
-    margin-left: -14.00px;
-    margin-right: -14.00px;
-    margin-top: -9.00px;
-    min-width: 304px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  background-image: url(../img/solid-white-with-round-borders);
+  background-size: 100% 100%;
+  height: 242px;
+  margin-bottom: -19px;
+  margin-left: -14px;
+  margin-right: -14px;
+  margin-top: -9px;
+  min-width: 304px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .frame-374-zcYSoT {
-    align-items: flex-end;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    left: 24px;
-    opacity: 1;
-    position: absolute;
-    top: 24px;
-    width: fit-content;
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  left: 24px;
+  opacity: 1;
+  position: absolute;
+  top: 24px;
+  width: fit-content;
 }
 
 .home .frame-354-Sx3jkj {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    opacity: 1;
-    position: relative;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  opacity: 1;
+  position: relative;
+  width: fit-content;
 }
 
 .home .group-350-WmiCL5 {
-    background-color: transparent;
-    height: 23px;
-    min-width: 207px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 23px;
+  min-width: 207px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .a320-captain-xxpKxy {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    height: 23px;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 0px;
-    white-space: nowrap;
-    width: 205px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  height: 23px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 205px;
 }
 
 .home .meliteh-is-seeking-f-WmiCL5 {
-    background-color: transparent;
-    color: #585858;
-    font-family: 'Roboto', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    height: 72px;
-    letter-spacing: 0.00px;
-    line-height: 24px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: 228px;
+  background-color: transparent;
+  color: #585858;
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 72px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  width: 228px;
 }
 
 .home .frame-373-Sx3jkj {
-    align-items: center;
-    background-color: #ffe7eb;
-    border-radius: 4px;
-    display: flex;
-    gap: 10px;
-    height: auto;
-    justify-content: center;
-    mix-blend-mode: normal;
-    opacity: 1;
-    overflow: hidden;
-    padding: 9px 16px;
-    position: relative;
-    width: fit-content;
+  align-items: center;
+  background-color: #ffe7eb;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: center;
+  mix-blend-mode: normal;
+  opacity: 1;
+  overflow: hidden;
+  padding: 9px 16px;
+  position: relative;
+  width: fit-content;
 }
 
 .home .apply-now-Mwsoy7 {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-    width: fit-content;
+  background-color: transparent;
+  color: #d20027;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .home .frame-376-BRXQlF {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    left: 423px;
-    opacity: 1;
-    position: absolute;
-    top: 169px;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 423px;
+  opacity: 1;
+  position: absolute;
+  top: 169px;
+  width: fit-content;
 }
 
 .home .group-355-fDUlA1 {
-    background-color: transparent;
-    background-image: url(../img/solid-white-with-round-borders);
-    background-size: 100% 100%;
-    height: 242px;
-    margin-bottom: -19.00px;
-    margin-left: -14.00px;
-    margin-right: -14.00px;
-    margin-top: -9.00px;
-    min-width: 304px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  background-image: url(../img/solid-white-with-round-borders);
+  background-size: 100% 100%;
+  height: 242px;
+  margin-bottom: -19px;
+  margin-left: -14px;
+  margin-right: -14px;
+  margin-top: -9px;
+  min-width: 304px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .frame-374-fDUlA1 {
-    align-items: flex-end;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    left: 24px;
-    opacity: 1;
-    position: absolute;
-    top: 24px;
-    width: fit-content;
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  left: 24px;
+  opacity: 1;
+  position: absolute;
+  top: 24px;
+  width: fit-content;
 }
 
 .home .frame-354-hWr4er {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    opacity: 1;
-    position: relative;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  opacity: 1;
+  position: relative;
+  width: fit-content;
 }
 
 .home .group-350-J8tbXx {
-    background-color: transparent;
-    height: 23px;
-    min-width: 207px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 23px;
+  min-width: 207px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .a320-captain-hpQcjC {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    height: 23px;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 0px;
-    white-space: nowrap;
-    width: 205px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  height: 23px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 205px;
 }
 
 .home .meliteh-is-seeking-f-J8tbXx {
-    background-color: transparent;
-    color: #585858;
-    font-family: 'Roboto', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    height: 72px;
-    letter-spacing: 0.00px;
-    line-height: 24px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: 228px;
+  background-color: transparent;
+  color: #585858;
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 72px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  width: 228px;
 }
 
 .home .frame-373-hWr4er {
-    align-items: center;
-    background-color: #ffe7eb;
-    border-radius: 4px;
-    display: flex;
-    gap: 10px;
-    height: auto;
-    justify-content: center;
-    mix-blend-mode: normal;
-    opacity: 1;
-    overflow: hidden;
-    padding: 9px 16px;
-    position: relative;
-    width: fit-content;
+  align-items: center;
+  background-color: #ffe7eb;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: center;
+  mix-blend-mode: normal;
+  opacity: 1;
+  overflow: hidden;
+  padding: 9px 16px;
+  position: relative;
+  width: fit-content;
 }
 
 .home .apply-now-sWTOix {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-    width: fit-content;
+  background-color: transparent;
+  color: #d20027;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .home .frame-377-BRXQlF {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    left: 739px;
-    opacity: 1;
-    position: absolute;
-    top: 169px;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 739px;
+  opacity: 1;
+  position: absolute;
+  top: 169px;
+  width: fit-content;
 }
 
 .home .group-355-V2XI6q {
-    background-color: transparent;
-    background-image: url(../img/solid-white-with-round-borders);
-    background-size: 100% 100%;
-    height: 242px;
-    margin-bottom: -19.00px;
-    margin-left: -14.00px;
-    margin-right: -14.00px;
-    margin-top: -9.00px;
-    min-width: 304px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  background-image: url(../img/solid-white-with-round-borders);
+  background-size: 100% 100%;
+  height: 242px;
+  margin-bottom: -19px;
+  margin-left: -14px;
+  margin-right: -14px;
+  margin-top: -9px;
+  min-width: 304px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .frame-374-V2XI6q {
-    align-items: flex-end;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    left: 24px;
-    opacity: 1;
-    position: absolute;
-    top: 24px;
-    width: fit-content;
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  left: 24px;
+  opacity: 1;
+  position: absolute;
+  top: 24px;
+  width: fit-content;
 }
 
 .home .frame-354-aA6tWY {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    opacity: 1;
-    position: relative;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  opacity: 1;
+  position: relative;
+  width: fit-content;
 }
 
 .home .group-350-5eKRLf {
-    background-color: transparent;
-    height: 23px;
-    min-width: 207px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 23px;
+  min-width: 207px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .a320-captain-EdtXDd {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    height: 23px;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 0px;
-    white-space: nowrap;
-    width: 205px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  height: 23px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 205px;
 }
 
 .home .meliteh-is-seeking-f-5eKRLf {
-    background-color: transparent;
-    color: #585858;
-    font-family: 'Roboto', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    height: 72px;
-    letter-spacing: 0.00px;
-    line-height: 24px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: 228px;
+  background-color: transparent;
+  color: #585858;
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 72px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  width: 228px;
 }
 
 .home .frame-373-aA6tWY {
-    align-items: center;
-    background-color: #ffe7eb;
-    border-radius: 4px;
-    display: flex;
-    gap: 10px;
-    height: auto;
-    justify-content: center;
-    mix-blend-mode: normal;
-    opacity: 1;
-    overflow: hidden;
-    padding: 9px 16px;
-    position: relative;
-    width: fit-content;
+  align-items: center;
+  background-color: #ffe7eb;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: center;
+  mix-blend-mode: normal;
+  opacity: 1;
+  overflow: hidden;
+  padding: 9px 16px;
+  position: relative;
+  width: fit-content;
 }
 
 .home .apply-now-q0yWAj {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-    width: fit-content;
+  background-color: transparent;
+  color: #d20027;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .home .frame-378-BRXQlF {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    left: 1055px;
-    opacity: 1;
-    position: absolute;
-    top: 169px;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 1055px;
+  opacity: 1;
+  position: absolute;
+  top: 169px;
+  width: fit-content;
 }
 
 .home .group-355-GXSu3i {
-    background-color: transparent;
-    background-image: url(../img/solid-white-with-round-borders);
-    background-size: 100% 100%;
-    height: 242px;
-    margin-bottom: -19.00px;
-    margin-left: -14.00px;
-    margin-right: -14.00px;
-    margin-top: -9.00px;
-    min-width: 304px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  background-image: url(../img/solid-white-with-round-borders);
+  background-size: 100% 100%;
+  height: 242px;
+  margin-bottom: -19px;
+  margin-left: -14px;
+  margin-right: -14px;
+  margin-top: -9px;
+  min-width: 304px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .frame-374-GXSu3i {
-    align-items: flex-end;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    left: 24px;
-    opacity: 1;
-    position: absolute;
-    top: 24px;
-    width: fit-content;
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  left: 24px;
+  opacity: 1;
+  position: absolute;
+  top: 24px;
+  width: fit-content;
 }
 
 .home .frame-354-3mcqxZ {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-    opacity: 1;
-    position: relative;
-    width: fit-content;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  opacity: 1;
+  position: relative;
+  width: fit-content;
 }
 
 .home .group-350-3YIVhR {
-    background-color: transparent;
-    height: 23px;
-    min-width: 207px;
-    opacity: 1;
-    position: relative;
+  background-color: transparent;
+  height: 23px;
+  min-width: 207px;
+  opacity: 1;
+  position: relative;
 }
 
 .home .a320-captain-uBuIQz {
-    background-color: transparent;
-    color: #141414;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    height: 23px;
-    left: 0px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    text-align: left;
-    top: 0px;
-    white-space: nowrap;
-    width: 205px;
+  background-color: transparent;
+  color: #141414;
+  font-family: "Montserrat", Helvetica;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  height: 23px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 205px;
 }
 
 .home .meliteh-is-seeking-f-3YIVhR {
-    background-color: transparent;
-    color: #585858;
-    font-family: 'Roboto', Helvetica;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    height: 72px;
-    letter-spacing: 0.00px;
-    line-height: 24px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: left;
-    width: 228px;
+  background-color: transparent;
+  color: #585858;
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 72px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  width: 228px;
 }
 
 .home .frame-373-3mcqxZ {
-    align-items: center;
-    background-color: #ffe7eb;
-    border-radius: 4px;
-    display: flex;
-    gap: 10px;
-    height: auto;
-    justify-content: center;
-    mix-blend-mode: normal;
-    opacity: 1;
-    overflow: hidden;
-    padding: 9px 16px;
-    position: relative;
-    width: fit-content;
+  align-items: center;
+  background-color: #ffe7eb;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: center;
+  mix-blend-mode: normal;
+  opacity: 1;
+  overflow: hidden;
+  padding: 9px 16px;
+  position: relative;
+  width: fit-content;
 }
 
 .home .apply-now-xxS2id {
-    background-color: transparent;
-    color: #d20027;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-    width: fit-content;
+  background-color: transparent;
+  color: #d20027;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .home .vector-tAMpC2 {
-    background-color: transparent;
-    background-image: url(../img/vector-2.svg);
-    background-size: 100% 100%;
-    height: 52px;
-    left: 38px;
-    opacity: 1;
-    position: absolute;
-    top: 250px;
-    width: 28px;
+  background-color: transparent;
+  background-image: url(../img/vector-2.svg);
+  background-size: 100% 100%;
+  height: 52px;
+  left: 38px;
+  opacity: 1;
+  position: absolute;
+  top: 250px;
+  width: 28px;
 }
 
 .home .rectangle-4299-BRXQlF {
-    background-color: #d20027;
-    border-radius: 2px;
-    height: 4px;
-    left: 626px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: absolute;
-    top: 113px;
-    width: 180px;
+  background-color: #d20027;
+  border-radius: 2px;
+  height: 4px;
+  left: 626px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: absolute;
+  top: 113px;
+  width: 180px;
 }
 
 .home .frame-402-BRXQlF {
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid;
-    border-color: #ffffff;
-    border-radius: 4px;
-    display: flex;
-    gap: 12px;
-    height: auto;
-    justify-content: center;
-    left: 592px;
-    opacity: 1;
-    overflow: hidden;
-    padding: 16px 24px;
-    position: absolute;
-    top: 423px;
-    width: fit-content;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  justify-content: center;
+  left: 592px;
+  opacity: 1;
+  overflow: hidden;
+  padding: 16px 24px;
+  position: absolute;
+  top: 423px;
+  width: fit-content;
 }
 
 .home .view-all-aviation-jobs-zXdsaN {
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'Montserrat', Helvetica;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    margin-top: -1.00px;
-    mix-blend-mode: normal;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-    width: fit-content;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat", Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .home-job-search-section {
-    position: relative;
-    display: flex;
-    z-index: 0;
-    padding: 6%;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: stretch;
+  position: relative;
+  display: flex;
+  z-index: 0;
+  padding: 6%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: stretch;
 }
 
 .home .get-the-right-job-you-deserve-8dJy9b {
-    font-family: 'Montserrat', Helvetica;
-    font-size: 3.2vw;
-    font-weight: 700;
-    height: auto;
-    line-height: normal;
-    text-align: center;
-    width: auto;
+  font-family: "Montserrat", Helvetica;
+  font-size: 3.2vw;
+  font-weight: 700;
+  height: auto;
+  line-height: normal;
+  text-align: center;
+  width: auto;
 }
 
 .home .span0-6mBiGF {
-    color: #ffffff;
-    font-style: normal;
+  color: #ffffff;
+  font-style: normal;
 }
 
 .home .span1-6mBiGF {
-    color: #141414;
-    font-style: normal;
+  color: #141414;
+  font-style: normal;
 }
 
 .home .right-job {
-    color: #d20027;
-    font-style: normal;
+  color: #d20027;
+  font-style: normal;
 }
 
 .home .span3-6mBiGF {
-    color: #ffffff;
-    font-style: normal;
+  color: #ffffff;
+  font-style: normal;
 }
 
 .our-services-home-summary {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 @media (max-width: 769px) {
+  .grey-section {
+    padding-bottom: 4em;
+  }
 
-    .grey-section {
-        padding-bottom: 4em;
-    }
+  .industry-card-title {
+    border-bottom: 0;
+    border-radius: 0;
+  }
 
-    .industry-card-title {
-        border-bottom: 0;
-        border-radius: 0;
-    }
+  .hover-details {
+    display: unset;
+    border: solid 0.5px;
+    border-color: var(--meliteh-grey);
+    font-size: 0.75em;
+    line-height: 20px;
+    padding: 1em;
+    color: black;
+  }
 
-    .hover-details {
-        display: unset;
-        border: solid 0.5px;
-        border-color: var(--meliteh-grey);
-        font-size: 0.75em;
-        line-height: 20px;
-        padding: 1em;
-        color: black;
-    }
+  .our-services-list {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
 
-    .our-services-list {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
+  .home .get-the-right-job-you-deserve-8dJy9b {
+    font-size: 34px;
+  }
 
-    .home .get-the-right-job-you-deserve-8dJy9b {
-        font-size: 34px;
-    }
+  .home .subscribe-form {
+    gap: 16px;
+    max-width: 320px;
+  }
 
-    .home .subscribe-form {
-        gap: 16px;
-        max-width: 320px;
-    }
-
-    .home .never-want-to-miss-any-job-news-lyMjxj {
-        font-size: 24px;
-        text-align: center;
-        line-height: 32px;
-    }
+  .home .never-want-to-miss-any-job-news-lyMjxj {
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+  }
 }
-
-
