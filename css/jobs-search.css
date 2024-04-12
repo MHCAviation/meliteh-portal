@@ -373,8 +373,7 @@ body[data-industry="aviation"] .distance-type-filter {
   gap: 16px;
   max-height: 800px;
   overflow-y: auto;
-  /* allocate some space for horizontal scroll not appear when card is scaled up on hover */
-  padding: 30px;
+  padding: 24px;
 }
 
 .open-vacancy-cards-list[data-max-posted-for-days="7"]
@@ -619,12 +618,14 @@ dialog input[type="checkbox"]#apply-form-privacy-policy-checkbox {
 }
 
 .vacancy-description {
+  max-height: calc(24px * 3);
   line-height: 24px;
   color: var(--licorice-2);
   white-space: pre-wrap;
-  max-height: 180px;
-  overflow-y: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .open-vacancy-card.dialog-header .vacancy-description {
   display: none;
 }
