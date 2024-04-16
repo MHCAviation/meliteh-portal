@@ -29,6 +29,10 @@
 /* Industry card */
 
 .grey-section {
+  display: flex;
+  justify-content: center;
+  padding-left: 120px;
+  padding-right: 120px;
   width: 100%;
   padding-top: 4em;
   padding-bottom: 2em;
@@ -67,6 +71,12 @@
 }
 
 .industry-cards-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em;
+  text-align: center;
+  align-items: flex-start;
+  width: min-content;
   min-height: 400px;
 }
 
@@ -1509,6 +1519,12 @@
   gap: 24px;
 }
 
+@media (max-width: 1024px) {
+  .industry-cards-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 769px) {
   .grey-section {
     padding-bottom: 4em;
@@ -1547,5 +1563,11 @@
     font-size: 24px;
     text-align: center;
     line-height: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .industry-cards-list {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

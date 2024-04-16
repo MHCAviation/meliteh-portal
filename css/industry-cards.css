@@ -8,12 +8,12 @@
 }
 
 .industry-card {
-    align-items: flex-start;
+    justify-content: flex-start;
     border: 1px solid;
     border-color: transparent;
     border-radius: 20px;
-    display: flex;
-    width: 302px;
+    display: inline-flex;
+    width: max-content;
     cursor: pointer;
     color: var(--meliteh-black-type);
 }
