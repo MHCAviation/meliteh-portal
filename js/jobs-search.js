@@ -73,7 +73,7 @@ function fillCard(card, vacancy) {
   card.classList.toggle("posted-over-14-days-ago", postedForDays > 14);
   card.classList.toggle("posted-over-28-days-ago", postedForDays > 28);
   const applyUrl =
-    "https://hiportal.eu/Secure/Membership/Registration/Register.aspx?JobId=" +
+    "https://hiportal.eu/Secure/Membership/Registration/JobDetails.aspx?JobId=" +
     vacancy.JobId;
   card.setAttribute("href", applyUrl);
   card.querySelector(".company-name").textContent = vacancy.Company;
@@ -136,7 +136,7 @@ function fillCard(card, vacancy) {
     DOM_INDEX.expandedVacancyCardDetailsDialog.querySelector(
       ".apply-link-button"
     );
-  card.onclick = (event) => {
+  const onclick = (event) => {
     event.preventDefault();
     const currentUrl = new URL(window.location.href);
     currentUrl.searchParams.set("focusedJobId", vacancy.JobId);
@@ -147,6 +147,8 @@ function fillCard(card, vacancy) {
     dialogApplyLinkButton.setAttribute("href", applyUrl);
     DOM_INDEX.expandedVacancyCardDetailsDialog.showModal();
   };
+  // we probably will have no use for this dialog anymore since we now use hiportal job details page...
+  // card.onclick = onclick;
 }
 
 function isHidden(el) {
