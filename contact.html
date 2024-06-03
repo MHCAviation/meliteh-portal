@@ -11,16 +11,16 @@
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <script type="text/javascript">
-window.Trengo = window.Trengo || {};
-window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
-(function(d, script, t) {
-    script = d.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://static.widget.trengo.eu/embed.js';
-    d.getElementsByTagName('head')[0].appendChild(script);
-}(document));
-</script>
+      window.Trengo = window.Trengo || {};
+      window.Trengo.key = "HM1TBzHiwbKzSBt6ruC5";
+      (function (d, script, t) {
+        script = d.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://static.widget.trengo.eu/embed.js";
+        d.getElementsByTagName("head")[0].appendChild(script);
+      })(document);
+    </script>
   </head>
   <body>
     <div class="container-center-horizontal">
@@ -29,34 +29,61 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
           <div class="flex-col flex">
             <h1 class="title valign-text-middle">Contact Us</h1>
           </div>
-          <div class="flex-row flex">
-            <div class="flex-col-1 company-contact-info">
+          <div class="contactContainer">
+            <div class="company-contact-info">
               <div class="x1">
                 <div class="contact-info">Contact info:</div>
-                <div class="email-infomelitehcom montserrat-normal-licorice-17px">Email: job@meliteh.com</div>
+                <div
+                  class="email-infomelitehcom montserrat-normal-licorice-17px"
+                >
+                  Email: job@meliteh.com
+                </div>
               </div>
               <div class="x2">
                 <div class="office medium20">Office:</div>
-                <span class="mk-business-centre montserrat-normal-licorice-17px">
-                  MK Business Centre, 115A, Floor 0, Valley Road, Birkirkara, BKR 9022 Malta
+                <span
+                  class="mk-business-centre montserrat-normal-licorice-17px"
+                >
+                  MK Business Centre, 115A, Floor 0, Valley Road, Birkirkara,
+                  BKR 9022 Malta
                 </span>
               </div>
               <div class="x3">
-                <div class="hours-of-operation medium20">Hours of Operation:</div>
+                <div class="hours-of-operation medium20">
+                  Hours of Operation:
+                </div>
                 <span class="monday-friday-700 montserrat-normal-licorice-17px">
-                  Monday - Friday<br />7:00 am - 3:00 pm<br />Sat – Sun: Closed<br />We can provide 24/7 contact service
+                  Monday - Friday<br />7:00 am - 3:00 pm<br />Sat – Sun:
+                  Closed<br />We can provide 24/7 contact service
                 </span>
               </div>
             </div>
 
             <form class="form" onsubmit="submitMessage(event)">
               <fieldset id="contact-form-root-fieldset">
-                <textarea name="message" required="required" placeholder="Message"></textarea>
-                <div class="hr"></div>
-                <input type="text" name="senderName" placeholder="Your Name">
-                <input type="email" name="senderEmail" required="required" placeholder="Your Email">
-                <input type="tel" name="senderPhoneNumber" placeholder="Phone Number">
-                <div class="hr"></div>
+                <textarea
+                  name="message"
+                  required="required"
+                  placeholder="Message"
+                ></textarea>
+                <div class="formContactFields">
+                  <input
+                    type="text"
+                    name="senderName"
+                    placeholder="Your Name"
+                  />
+                  <input
+                    type="email"
+                    name="senderEmail"
+                    required="required"
+                    placeholder="Your Email"
+                  />
+                  <input
+                    type="tel"
+                    name="senderPhoneNumber"
+                    placeholder="Phone Number"
+                  />
+                </div>
                 <div class="submit-button-container">
                   <div class="status-message">
                     <span class="status-message-content"></span>
