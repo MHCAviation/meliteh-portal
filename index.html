@@ -82,6 +82,32 @@
     </script>
   </head>
   <body>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2 class="popup-text">Welcome to Meliteh Recruiting</h2>
+        <img
+          src="img/popup-image.png"
+          alt="Meliteh Recruiting Image"
+          class="popup-image"
+        />
+        <p class="popup-text">
+          Explore and accelerate your next career with us. Follow our LinkedIn
+          page for our latest opportunities in real time!
+        </p>
+        <div class="button-popup">
+          <button
+            class="button-followLinkedin"
+            onclick=" window.open('https://www.linkedin.com/company/meliteh','_blank'); return false;"
+          >
+            Go to Meliteh LinkedIn
+          </button>
+          <button class="button-close" onclick="closePopup()">
+            I am already followed
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="container-center-horizontal">
       <div class="home auto-animated screen">
         <div class="home-job-search-section">
@@ -545,6 +571,7 @@
     </div>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script src="js/popup-modal.js"></script>
     <script type="module" src="js/add-navbars.js"></script>
     <script type="module" src="js/home.js"></script>
     <script type="module" src="js/subscribe-to-news.js"></script>
