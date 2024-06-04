@@ -739,9 +739,9 @@ body {
 }
 
 .card-description {
-    font-size: 1em;
+    font-size: 0.75em;
     margin-top: 0.5em;
-    line-height: 24px;
+    line-height: 20px;
 }
 
 .card-icon {
