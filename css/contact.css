@@ -169,7 +169,7 @@ form[data-status="ERROR"] .status-message-content::before {
   color: #b92c2c;
 }
 
-fieldset {
+.contactus-fieldset {
   border: none;
   flex-direction: column;
   display: flex;
@@ -183,7 +183,7 @@ fieldset {
   gap: 16px;
 }
 
-#submit {
+.contactus-submit {
   font-family: "Montserrat";
   font-weight: 700;
   background-color: transparent;
@@ -198,7 +198,7 @@ fieldset {
   flex: 1;
 }
 
-#submit:hover {
+.contactus-submit:hover {
   background-color: #d20027;
   color: white;
 }

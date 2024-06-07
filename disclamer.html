@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/disclamer.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
   </head>
   <body>
     <div class="container-center-horizontal">
@@ -25,15 +26,16 @@
             </div>
           </div>
           <p class="this-e-mail-message montserrat-medium-licorice-16px">
-            This e-mail message and any attachments are confidential and may be privileged. If you are not the intended
-            recipient, please uphold strict confidentiality and neither read, copy, nor otherwise make use of their
-            content in any way and notify sender immediately — by replying to this message or by sending an e-mail — and
-            destroy all copies of this message and any attachments. Thank you.
+            This e-mail message and any attachments are confidential and may be
+            privileged. If you are not the intended recipient, please uphold
+            strict confidentiality and neither read, copy, nor otherwise make
+            use of their content in any way and notify sender immediately — by
+            replying to this message or by sending an e-mail — and destroy all
+            copies of this message and any attachments. Thank you.
           </p>
           <img
             class="pexels-photo-by-edmond-dants"
             src="img/surveillance-camera.png"
-
           />
           <div class="rectangle-165"></div>
           <h1 class="title montserrat-bold-white-70px">Disclaimer</h1>
@@ -170,6 +172,18 @@
     </div>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script>
+      // Fetch the content of popup-hire-staff.html using fetch API
+      fetch("popup-hire-staff.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Append the HTML content to the body
+          document.body.innerHTML += html;
+        })
+        .catch((error) =>
+          console.error("Error fetching popup-hire-staff.html:", error)
+        );
+    </script>
     <script type="module" src="js/add-navbars.js"></script>
   </body>
 </html>

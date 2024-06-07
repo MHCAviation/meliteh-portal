@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <link rel="stylesheet" href="css/jobs-text-search.css"/>
     <link rel="stylesheet" type="text/css" href="css/jobs-search.css" />
+    <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
     <script type="text/javascript">
 window.Trengo = window.Trengo || {};
 window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
@@ -70,11 +71,11 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
         </div>
         <div class="content">
           <div class="breadcrumbs">
-            <div class="place montserrat-normal-licorice-12px">Home</div>
+            <div class="place montserrat-normal-licorice-12px"><a class="menu-link" href="index.html">Home</a></div>
             <div class="v6-icon-free">
               <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
             </div>
-            <div class="featured montserrat-normal-licorice-12px">Find Jobs</div>
+            <div class="featured montserrat-normal-licorice-12px"><a class="menu-link" href="find-jobs-landing.html">Find Jobs</a></div>
             <div class="v6-icon-free">
               <div class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"></div>
             </div>
@@ -308,6 +309,22 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
     <datalist id="job-location-options"></datalist>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', async function() {
+        try {
+          const response = await fetch('popup-hire-staff.html');
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          const htmlContent = await response.text();
+          const newDiv = document.createElement('div');
+          newDiv.innerHTML = htmlContent;
+          document.body.appendChild(newDiv);
+        } catch (error) {
+          console.error('Failed to load popup-hire-staff.html:', error);
+        }
+      });
+    </script>
     <script type="module" src="js/add-navbars.js"></script>
     <script type="module" src="js/jobs-search.js"></script>
     <script type="module" src="js/subscribe-to-news.js"></script>

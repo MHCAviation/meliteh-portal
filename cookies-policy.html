@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/cookies-policy.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
   </head>
   <body>
     <div class="container-center-horizontal">
@@ -26,30 +27,53 @@
             </div>
           </div>
           <div class="cookies-policy-title-banner">
-            <img class="banner-gradient-overlay" src="img/legal-agreement.svg"  />
+            <img
+              class="banner-gradient-overlay"
+              src="img/legal-agreement.svg"
+            />
             <div class="rectangle-166 rectangle"></div>
             <h1 class="title montserrat-bold-white-70px-2">
               <span class="montserrat-bold-white-70px">Cookies </span
               ><span class="montserrat-bold-monza-70px">Policy</span>
             </h1>
           </div>
-          <p class="this-website-uses-c valign-text-middle montserrat-medium-licorice-16px">
-            ​This website uses cookies (digital footprints). Cookies are small text files that are placed on your device
-            (pc/ipad/smartphone etc.) to help the website provide a better user experience. Cookies enable your device
-            to remember previous visits for a certain length of time which for example shortens loading time of the
-            site. In general, cookies are used to retain user preferences, store anonymous information about how users
-            use the website, and provide anonymized tracking data to third party applications like Google Analytics and
-            facebook pixel to enable us track and monitor traffic on the website to help us understand user behavior
-            better so that we can improve the website.<br />​<br />No personal information is stored about users and no
-            information are shared with a third party. If you want to turn off cookies than we recommend that you do so
-            in your browser settings. You can also visit the website aboutcookies.org that offers good information about
-            cookies and instructions how to turn them off in all the main browsers.
+          <p
+            class="this-website-uses-c valign-text-middle montserrat-medium-licorice-16px"
+          >
+            ​This website uses cookies (digital footprints). Cookies are small
+            text files that are placed on your device (pc/ipad/smartphone etc.)
+            to help the website provide a better user experience. Cookies enable
+            your device to remember previous visits for a certain length of time
+            which for example shortens loading time of the site. In general,
+            cookies are used to retain user preferences, store anonymous
+            information about how users use the website, and provide anonymized
+            tracking data to third party applications like Google Analytics and
+            facebook pixel to enable us track and monitor traffic on the website
+            to help us understand user behavior better so that we can improve
+            the website.<br />​<br />No personal information is stored about
+            users and no information are shared with a third party. If you want
+            to turn off cookies than we recommend that you do so in your browser
+            settings. You can also visit the website aboutcookies.org that
+            offers good information about cookies and instructions how to turn
+            them off in all the main browsers.
           </p>
         </div>
       </div>
     </div>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script>
+      // Fetch the content of popup-hire-staff.html using fetch API
+      fetch("popup-hire-staff.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Append the HTML content to the body
+          document.body.innerHTML += html;
+        })
+        .catch((error) =>
+          console.error("Error fetching popup-hire-staff.html:", error)
+        );
+    </script>
     <script type="module" src="js/add-navbars.js"></script>
   </body>
 </html>

@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/contact.css" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
     <script type="text/javascript">
       window.Trengo = window.Trengo || {};
       window.Trengo.key = "HM1TBzHiwbKzSBt6ruC5";
@@ -60,7 +61,7 @@
             </div>
 
             <form class="form" onsubmit="submitMessage(event)">
-              <fieldset id="contact-form-root-fieldset">
+              <fieldset class="contactus-fieldset" id="contact-form-root-fieldset">
                 <textarea
                   name="message"
                   required="required"
@@ -88,7 +89,7 @@
                   <div class="status-message">
                     <span class="status-message-content"></span>
                   </div>
-                  <button type="submit" id="submit">Submit</button>
+                  <button class="contactus-submit" type="submit" id="submit">Submit</button>
                 </div>
               </fieldset>
             </form>
@@ -98,6 +99,18 @@
     </div>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script>
+      // Fetch the content of popup-hire-staff.html using fetch API
+      fetch("popup-hire-staff.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Append the HTML content to the body
+          document.body.innerHTML += html;
+        })
+        .catch((error) =>
+          console.error("Error fetching popup-hire-staff.html:", error)
+        );
+    </script>
     <script type="module" src="js/add-navbars.js"></script>
     <script type="module" src="js/contact.js"></script>
   </body>

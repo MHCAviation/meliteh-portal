@@ -9,20 +9,20 @@
     <meta name="twitter:card" content="photo" />
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
-    <link rel="stylesheet" href="css/industry-cards.css"/>
+    <link rel="stylesheet" href="css/industry-cards.css" />
     <link rel="stylesheet" type="text/css" href="css/find-jobs-landing.css" />
-<script type="text/javascript">
-window.Trengo = window.Trengo || {};
-window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
-(function(d, script, t) {
-    script = d.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://static.widget.trengo.eu/embed.js';
-    d.getElementsByTagName('head')[0].appendChild(script);
-}(document));
-</script>
-    
+    <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
+    <script type="text/javascript">
+      window.Trengo = window.Trengo || {};
+      window.Trengo.key = "HM1TBzHiwbKzSBt6ruC5";
+      (function (d, script, t) {
+        script = d.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://static.widget.trengo.eu/embed.js";
+        d.getElementsByTagName("head")[0].appendChild(script);
+      })(document);
+    </script>
   </head>
   <body>
     <div class="container-center-horizontal">
@@ -46,11 +46,12 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
               </div>
               <div class="industry-card-description">
                 <p>
-                  Specializing in delivering customized recruitment solutions for the global maritime and shipping
-                  industries, both onshore and offshore including:
+                  Specializing in delivering customized recruitment solutions
+                  for the global maritime and shipping industries, both onshore
+                  and offshore including:
                 </p>
                 <div class="hover-details">
-                  <hr/>
+                  <hr />
                   <ul>
                     <li>Cruise</li>
                     <li>Shipping</li>
@@ -65,18 +66,22 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
             <div class="overlap-group">
               <div class="industry-card-top-part">
                 <div class="industry-card-image-container">
-                  <img class="industry-card-image" src="img/industry-aviation.svg"  />
+                  <img
+                    class="industry-card-image"
+                    src="img/industry-aviation.svg"
+                  />
                   <button class="go-to-jobs-search-btn">Find job</button>
                 </div>
                 <div class="industry-card-title">Aviation</div>
               </div>
               <div class="industry-card-description">
                 <p>
-                  We are dedicated to providing comprehensive staffing solutions for the aviation industry, catering to a
-                  wide range of positions including:
+                  We are dedicated to providing comprehensive staffing solutions
+                  for the aviation industry, catering to a wide range of
+                  positions including:
                 </p>
                 <div class="hover-details">
-                  <hr/>
+                  <hr />
                   <ul>
                     <li>Flight Crew</li>
                     <li>Maintenance</li>
@@ -92,18 +97,21 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
             <div class="overlap-group">
               <div class="industry-card-top-part">
                 <div class="industry-card-image-container">
-                  <img class="industry-card-image" src="img/industry-informational-technologies.svg"  />
+                  <img
+                    class="industry-card-image"
+                    src="img/industry-informational-technologies.svg"
+                  />
                   <button class="go-to-jobs-search-btn">Find job</button>
                 </div>
                 <div class="industry-card-title">Information Technology</div>
               </div>
               <div class="industry-card-description">
                 <p>
-                  Specializes in offering customized recruitment solutions specifically designed for the global IT markets
-                  including:
+                  Specializes in offering customized recruitment solutions
+                  specifically designed for the global IT markets including:
                 </p>
                 <div class="hover-details">
-                  <hr/>
+                  <hr />
                   <ul>
                     <li>Help Desk / Technical Support</li>
                     <li>Project Manager</li>
@@ -123,18 +131,22 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
               </div>
             </div>
           </a>
-          <a href="jobs-search.html?industry=construction" class="industry-card">
+          <a
+            href="jobs-search.html?industry=construction"
+            class="industry-card"
+          >
             <div class="overlap-group">
               <div class="industry-card-top-part">
                 <div class="industry-card-image-container">
-                  <img class="industry-card-image" src="img/construction.png"  />
+                  <img class="industry-card-image" src="img/construction.png" />
                   <button class="go-to-jobs-search-btn">Find job</button>
                 </div>
                 <div class="industry-card-title">Construction</div>
               </div>
               <div class="industry-card-description">
                 <p>
-                  Offering customized recruitment solutions specifically designed for the global construction markets.
+                  Offering customized recruitment solutions specifically
+                  designed for the global construction markets.
                 </p>
               </div>
             </div>
@@ -144,6 +156,18 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
     </div>
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script>
+      // Fetch the content of popup-hire-staff.html using fetch API
+      fetch("popup-hire-staff.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Append the HTML content to the body
+          document.body.innerHTML += html;
+        })
+        .catch((error) =>
+          console.error("Error fetching popup-hire-staff.html:", error)
+        );
+    </script>
     <script type="module" src="js/add-navbars.js"></script>
   </body>
 </html>

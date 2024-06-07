@@ -9,5 +9,12 @@ function showPopup() {
 }
 
 window.onload = function () {
-  showPopup();
+  // Check if the current URL has query parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const hasQueryParams = urlParams.toString().length > 0;
+
+  // If the current URL has query parameters, skip showing the popup
+  if (!hasQueryParams) {
+    showPopup();
+  }
 };

@@ -1,0 +1,50 @@
+<!-- Hiring Staffs Section -->
+<div class="overlay" id="popupOverlay">
+  <div class="popup-hiring">
+    <div class="form-header">
+      <img class="img-hiring" src="img/hiring-popup.png" alt="Image Hiring" />
+      <div class="form-title-and-close">
+        <button id="closePopupBtn" class="hiring-button-close" onclick="closePopup()">
+            <img src="img/icon/close.svg" alt="close icon" width="16" height="16"></img>
+          </button>
+      <h2 class="hiring-popup-title">Hiring staffs or employees with us</h2>
+    </div>
+    </div>
+    <form id="contactForm" onsubmit="submitMessage(event)">
+      <fieldset id="contact-form-root-fieldset">
+        <div class="form-group">
+          <input type="text" name="senderName" required="required" placeholder="Your Name" />
+        </div>
+        <div class="form-group">
+          <input type="email" name="senderEmail" required="required" placeholder="Your Email" />
+        </div>
+        <div class="form-group">
+          <input type="tel" name="senderPhoneNumber" required="required" placeholder="Phone Number" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" required="required" placeholder="Subject" />
+        </div>
+        <div class="select-dropdown">
+          <select class="selection" name="industry" required>
+            <option value="maritime">Maritime</option>
+            <option value="aviation">Aviation</option>
+            <option value="it">Information Technology</option>
+            <option value="construction">Construction</option>
+            <option value="finance">Finance</option>
+            <option value="igaming">IGaming</option>
+            <option value="hospitality">Hospitality</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="message" required="required" placeholder="Message"></textarea>
+        </div>
+        <div class="hiring-submit-button-container">
+          <div class="status-message-content"></div>
+          <button class="btn-hire" type="submit" id="submit">Send message</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
