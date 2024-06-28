@@ -62,13 +62,14 @@ function getQueryOptionText(vacancy) {
  */
 function fillCard(card, vacancy) {
   const [jobTitle, companyFromTitle] = vacancy.JobTitle.split("-");
-  const timePosted = new Date(vacancy.CreatedOn);
+  const timePosted = new Date(vacancy.StartDate);
   const postedForMs = Date.now() - timePosted.getTime();
   const postedForDays = postedForMs / 1000 / 60 / 60 / 24;
   card.setAttribute("data-job-id", vacancy.JobId);
   card.setAttribute("data-employment-type", vacancy.EmploymentType);
   card.setAttribute("data-job-location", vacancy.Location ?? "Globe");
   card.setAttribute("data-description", getQueryOptionText(vacancy));
+  card.classList.toggle("posted-in-future", postedForDays < 0);
   card.classList.toggle("posted-over-7-days-ago", postedForDays > 7);
   card.classList.toggle("posted-over-14-days-ago", postedForDays > 14);
   card.classList.toggle("posted-over-28-days-ago", postedForDays > 28);
