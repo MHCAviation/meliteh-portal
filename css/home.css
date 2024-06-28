@@ -369,9 +369,10 @@
   flex-direction: column;
 }
 
-.home .testimonials-list {
+.testimonials-list {
   height: 100%;
   display: flex;
+  gap: 32px;
   justify-content: center;
 }
 
@@ -407,8 +408,8 @@
 
 .rectangleTestimonials {
   display: flex;
-  flex-direction: column;
   gap: 16px;
+  flex-direction: column;
   padding: 24px;
   background-color: #ffffff;
   border: 1px solid;
@@ -419,18 +420,26 @@
   mix-blend-mode: normal;
   opacity: 1;
   top: 0px;
-  width: 640px;
+  max-width: 600px;
 }
 
-.pictureTestimonials {
+.pictureTestimonialsIvan,
+.pictureTestimonialsJaime {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../img/testimonials/IvanMDS.jpg);
-  background-size: contain;
+  background-size: cover;
   height: 160px;
   width: 120px;
   border-radius: 16px;
+}
+
+.pictureTestimonialsIvan {
+  background-image: url(../img/testimonials/IvanMDS.jpg);
+}
+
+.pictureTestimonialsJaime {
+  background-image: url(../img/testimonials/CaptainJaime.jpg);
 }
 
 .home .descTestimonials {
@@ -1647,6 +1656,11 @@
 }
 
 @media (max-width: 720px) {
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .our-services-list {
     display: flex;
   }
