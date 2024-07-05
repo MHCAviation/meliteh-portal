@@ -1596,9 +1596,13 @@
   gap: 24px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   .card {
     max-width: none;
+  }
+
+  .rectangleTestimonials {
+    max-width: 460px;
   }
 
   .our-services-list {
