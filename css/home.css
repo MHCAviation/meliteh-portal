@@ -1569,23 +1569,18 @@
   width: auto;
 }
 
-.home .span0-6mBiGF {
+.homeTitle {
   color: #ffffff;
   font-style: normal;
 }
 
-.home .span1-6mBiGF {
+.span1-6mBiGF {
   color: #141414;
   font-style: normal;
 }
 
-.home .right-job {
+.homeTitle-red {
   color: #d20027;
-  font-style: normal;
-}
-
-.home .span3-6mBiGF {
-  color: #ffffff;
   font-style: normal;
 }
 
@@ -1675,6 +1670,9 @@
 }
 
 @media (max-width: 480px) {
+  .homeTitle,.homeTitle-red {
+    font-size: 32px;
+  }
   .popup-content {
     max-width: 360px;
   }
