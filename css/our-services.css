@@ -80,6 +80,13 @@
     cursor: pointer;
 }
 
+.recruiment-service-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .our-services-page-root .rectangle-16 {
     background-color: var(--neutral100);
     border: 1px solid;
@@ -177,15 +184,6 @@
 
 .service-description .list strong {
     font-weight: normal;
-}
-
-@media (max-width: 769px) {
-
-    .service-description p, .recruiment-service-intro {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
 }
 
 @media (max-width: 500px) {

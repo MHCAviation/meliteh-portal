@@ -80,6 +80,22 @@ body[data-industry="Construction"] .jobs-search-title-banner {
   background-image: url(../img/construction_x4_upscale.jpeg);
 }
 
+body[data-industry="Finance"] .jobs-search-title-banner {
+  background-image: url(../img/industry-finance.png);
+}
+
+body[data-industry="iGaming"] .jobs-search-title-banner {
+  background-image: url(../img/industry-igaming.png);
+}
+
+body[data-industry="Hospitality"] .jobs-search-title-banner {
+  background-image: url(../img/industry-hospitality.jpg);
+}
+
+body[data-industry="Manufacturing"] .jobs-search-title-banner {
+  background-image: url(../img/industry-manufacture.jpg);
+}
+
 .job-location-field {
   max-width: 360px;
 }
