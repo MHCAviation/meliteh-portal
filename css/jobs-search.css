@@ -84,10 +84,10 @@ body[data-industry="Construction"] .jobs-search-title-banner {
   max-width: 360px;
 }
 
-body[data-industry="maritime"] .jobs-search-input-flexbox.job-location-field,
+body[data-industry="Maritime"] .jobs-search-input-flexbox.job-location-field,
 body[data-industry="aviation"] .jobs-search-input-flexbox.job-location-field,
-body[data-industry="maritime"] .distance-type-filter,
-body[data-industry="aviation"] .distance-type-filter {
+body[data-industry="Maritime"] .distance-type-filter,
+body[data-industry="Aviation"] .distance-type-filter {
   display: none;
 }
 
