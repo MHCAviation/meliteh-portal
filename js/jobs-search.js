@@ -279,13 +279,25 @@ async function getVacancies(industry) {
     apiParams.append("oneOfAttributeIds", 37); // Flight Deck
     apiParams.append("oneOfAttributeIds", 38); // Maintenance
     apiParams.append("oneOfAttributeIds", 40); // Load Master
-  } else if (industry === "construction") {
-    apiParams.append("oneOfAttributeIds", 275); // Construction
   } else if (industry === "it") {
     // I'm a shitcoder and I know it.
     // We put all Operations job under IT because Narc is an IT company and is looking
     // for some Operations jobs apparently it was not a very good idea to tie position to industry
     apiParams.append("oneOfAttributeIds", 39); // Operations
+  } else if (industry === "Hospitality") {
+    apiParams.append("oneOfAttributeIds", 274);
+  } else if (industry === "Construction" || industry === "construction") {
+    apiParams.append("oneOfAttributeIds", 275);
+  } else if (industry === "Maritime") {
+    apiParams.append("oneOfAttributeIds", 276);
+  } else if (industry === "IT") {
+    apiParams.append("oneOfAttributeIds", 277);
+  } else if (industry === "Finance") {
+    apiParams.append("oneOfAttributeIds", 278);
+  } else if (industry === "iGaming") {
+    apiParams.append("oneOfAttributeIds", 279);
+  } else if (industry === "Manufacturing") {
+    apiParams.append("oneOfAttributeIds", 280);
   } else {
     return [];
   }
