@@ -64,7 +64,7 @@
   position: relative;
 }
 
-body[data-industry="maritime"] .jobs-search-title-banner {
+body[data-industry="Maritime"] .jobs-search-title-banner {
   background-image: url(../img/cruise-ship.jfif);
 }
 
@@ -72,11 +72,11 @@ body[data-industry="aviation"] .jobs-search-title-banner {
   background-image: url(../img/jobs-search-banner-industry-aviation.png);
 }
 
-body[data-industry="it"] .jobs-search-title-banner {
+body[data-industry="IT"] .jobs-search-title-banner {
   background-image: url(../img/pair-programming.jpeg);
 }
 
-body[data-industry="construction"] .jobs-search-title-banner {
+body[data-industry="Construction"] .jobs-search-title-banner {
   background-image: url(../img/construction_x4_upscale.jpeg);
 }
 
