@@ -304,11 +304,11 @@ async function main() {
   const search = new URLSearchParams(window.location.search);
   const industry = search.get("industry") ?? "aviation";
   const industryHumanName = {
-    maritime: "Maritime",
+    Maritime: "Maritime",
     aviation: "Aviation",
-    it: "Information Technologies",
-    construction: "Construction",
-  }[industry];
+    IT: "Information Technologies",
+    Construction: "Construction",
+  }[industry] || industry;
 
   DOM_INDEX.body.setAttribute("data-industry", industry);
   DOM_INDEX.industryName.textContent = industryHumanName;
