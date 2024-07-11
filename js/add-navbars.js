@@ -41,13 +41,13 @@ async function initializePage() {
       loadPageContent(basePath + "footer.html"),
     ]);
 
-    for (const header of document.getElementsByTagName("header")) {
+    document.querySelectorAll("header").forEach(header => {
       header.innerHTML = headerHtml;
-    }
+    });
 
-    for (const footer of document.getElementsByTagName("footer")) {
+    document.querySelectorAll("footer").forEach(footer => {
       footer.innerHTML = footerHtml;
-    }
+    });
 
     highlightActivePage();
 
@@ -167,26 +167,21 @@ window.submitMessage = async function (event) {
           form.querySelector(".status-message-content").textContent =
             error?.message ?? String(error);
         }
+      }).catch(error => {
+        console.error("reCAPTCHA execution error:", error);
+        form.setAttribute("data-status", "ERROR");
+        form.querySelector(".status-message-content").textContent =
+          "reCAPTCHA failed. Please try again.";
       });
   });
 };
 
-document.addEventListener("DOMContentLoaded", initializePage);
-window.addEventListener("popstate", initializePage);
+initializePage(); // Initialize the page immediately on script load
 
-async function main() {
-  try {
-    const url = window.location.href;
-    const html = await loadPageContent(url);
-    document.body.innerHTML = html;
-    initializePage();
-  } catch (error) {
-    console.error("Failed to load page:", error);
-  }
-}
+window.addEventListener("popstate", initializePage); // Re-initialize page when popstate event occurs
 
-// Add the Google reCAPTCHA script
+// Add the Google reCAPTCHA script to the head section
 const recaptchaScript = document.createElement("script");
 recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
 recaptchaScript.async = true;
-document.body.appendChild(recaptchaScript);
+document.head.appendChild(recaptchaScript);
