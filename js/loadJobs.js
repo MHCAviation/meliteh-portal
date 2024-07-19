@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function filterVacancies(vacancies, query) {
     return vacancies.filter(job =>
-      job.JobTitle.toLowerCase().includes(query)
+      job.JobTitle.toLowerCase().includes(query.toLowerCase())
     );
   }
 
@@ -78,7 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (data.length === 0) {
       const noJobsMessage = document.createElement("h2");
-      noJobsMessage.textContent = `Sorry, there are no jobs available in "${activeIndustry || "All Industries"}"`;
+      if (query) {
+        noJobsMessage.textContent = `Sorry, there are no jobs available for "${query}" in "${activeIndustry || "All Industries"}"`;
+      } else {
+        noJobsMessage.textContent = `Sorry, there are no jobs available in "${activeIndustry || "All Industries"}"`;
+      }
 
       const noJobsIllustration = document.createElement("img");
       noJobsIllustration.classList.add("no-matching-jobs-illustration");
@@ -164,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let vacancies = await getVacancies();
 
       if (query) {
-        vacancies = await searchVacancies(query);
+        vacancies = filterVacancies(vacancies, query);
       }
 
       displayVacancies(vacancies);
