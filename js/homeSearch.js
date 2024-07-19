@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (query) {
       // If there is a query, construct a new URL and redirect to it
       let newUrl = `/find-jobs-landing.html?query=${encodeURIComponent(query)}`;
-      console.log("New URL:", newUrl); // Debugging line
 
       window.location.href = newUrl; // Redirect to the new URL
     } else {
