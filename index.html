@@ -121,18 +121,19 @@
             <span class="homeTitle-red">Right Job</span>
             <br /><span class="homeTitle">You Deserve</span>
           </div>
-          <form action="jobs-search" class="job-text-search-form">
+          <form id="job-text-search-form" class="job-text-search-form">
             <div class="job-search-form-centering">
               <div class="jobs-search-input-flexbox">
-                <div class="magnifying-glass-HKU3uw"></div>
+                <div class="magnifying-glass"></div>
                 <input
                   type="text"
+                  id="jobs-text-search-input"
                   name="query"
                   class="jobs-text-search-borderless-input"
-                  placeholder="What job are you looking for ?"
+                  placeholder="What job are you looking for?"
                 />
               </div>
-              <button class="jobs-text-search-submit-button">
+              <button class="jobs-text-search-submit-button" type="submit">
                 <span class="search-job-button-text">Search job</span>
               </button>
             </div>
@@ -145,7 +146,7 @@
               <div class="overlap-group">
                 <a
                   class="industry-card-top-part"
-                  href="/jobs-search.html?industry=Maritime"
+                  href="/find-jobs-landing.html?industry=Maritime"
                 >
                   <div class="industry-card-image-container">
                     <img
@@ -169,7 +170,7 @@
               <div class="overlap-group">
                 <a
                   class="industry-card-top-part"
-                  href="/jobs-search.html?industry=aviation"
+                  href="/find-jobs-landing.html?industry=Aviation"
                 >
                   <div class="industry-card-image-container">
                     <img
@@ -193,7 +194,7 @@
               <div class="overlap-group">
                 <a
                   class="industry-card-top-part"
-                  href="/jobs-search.html?industry=IT"
+                  href="/find-jobs-landing.html?industry=IT"
                 >
                   <div class="industry-card-image-container">
                     <img
@@ -216,7 +217,7 @@
               <div class="overlap-group">
                 <a
                   class="industry-card-top-part"
-                  href="/jobs-search.html?industry=Construction"
+                  href="/find-jobs-landing.html?industry=Construction"
                 >
                   <div class="industry-card-image-container">
                     <img
@@ -237,7 +238,10 @@
 
             <div class="industry-card">
               <div class="overlap-group">
-                <a class="industry-card-top-part" href="/jobs-search.html?industry=Finance">
+                <a
+                  class="industry-card-top-part"
+                  href="/find-jobs-landing.html?industry=Finance"
+                >
                   <div class="industry-card-image-container">
                     <img
                       class="industry-card-image"
@@ -257,7 +261,10 @@
 
             <div class="industry-card">
               <div class="overlap-group">
-                <a class="industry-card-top-part" href="/jobs-search.html?industry=iGaming">
+                <a
+                  class="industry-card-top-part"
+                  href="/find-jobs-landing.html?industry=iGaming"
+                >
                   <div class="industry-card-image-container">
                     <img
                       class="industry-card-image"
@@ -277,7 +284,10 @@
 
             <div class="industry-card">
               <div class="overlap-group">
-                <a class="industry-card-top-part" href="/jobs-search.html?industry=Hospitality">
+                <a
+                  class="industry-card-top-part"
+                  href="/find-jobs-landing.html?industry=Hospitality"
+                >
                   <div class="industry-card-image-container">
                     <img
                       class="industry-card-image"
@@ -294,7 +304,10 @@
 
             <div class="industry-card">
               <div class="overlap-group">
-                <a class="industry-card-top-part" href="/jobs-search.html?industry=Manufacturing">
+                <a
+                  class="industry-card-top-part"
+                  href="/find-jobs-landing.html?industry=Manufacturing"
+                >
                   <div class="industry-card-image-container">
                     <img
                       class="industry-card-image"
@@ -322,6 +335,10 @@
               <img
                 class="client-image"
                 src="img/company-logos/Bridge logo.png"
+              />
+              <img
+                class="client-image"
+                src="img/company-logos/dbgroup-logo.png"
               />
               <img
                 class="client-image"
@@ -603,7 +620,8 @@
     </script>
     <script src="js/popup-modal.js"></script>
     <script src="js/textAnimation.js"></script>
-    <script type="module" src="js/add-navbars.js"></script>
+    <script src="js/homeSearch.js"></script>
+    <script src="js/add-navbars.js"></script>
     <script type="module" src="js/home.js"></script>
     <script type="module" src="js/subscribe-to-news.js"></script>
   </body>

@@ -697,6 +697,10 @@
   position: relative;
 }
 
+.jobs-text-search-borderless-input.warning::placeholder {
+  color: red;
+}
+
 .home .subscribe-form {
   margin: auto;
   margin-top: 2.5em;
@@ -1670,7 +1674,8 @@
 }
 
 @media (max-width: 480px) {
-  .homeTitle,.homeTitle-red {
+  .homeTitle,
+  .homeTitle-red {
     font-size: 32px;
   }
   .popup-content {

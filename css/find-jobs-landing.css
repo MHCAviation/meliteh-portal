@@ -28,17 +28,22 @@
   padding: 12px 24px;
 }
 
-.find-jobs-landing .our-services-title-banner {
+.our-services-title-banner {
   background-image: url(../img/find-jobs-banner.jpg);
   background-position: 50% 50%;
   background-size: cover;
-  height: 263px;
+  height: 360px;
   position: relative;
-
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
+}
+
+.top-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .find-jobs-landing .find-jobs-title-banner-overglow {
@@ -57,7 +62,7 @@
 
 .find-jobs-landing .title {
   text-align: center;
-  line-height: 56px;
+  line-height: 72px;
 }
 
 .find-jobs-landing .industry-cards-list {
@@ -120,7 +125,428 @@
   display: unset;
 }
 
-@media (max-width: 500px) {
+.content-find-jobs-wrapper,
+.find-jobs-wrapper,
+.filter,
+.filter-field,
+.filter-fields-list,
+.filter-list,
+.filter-content,
+.center-content,
+.job-cards-container,
+.job-card,
+.newsletter,
+.form-newsletter {
+  flex-direction: column;
+}
+
+.find-jobs-wrapper,
+.content-find-jobs-wrapper,
+.content-find-jobs,
+.job-cards-container,
+.job-card,
+.title-company-wrapper,
+.job-title-wrapper,
+.job-info-wrapper,
+.breadcrumbs,
+.filter,
+.filter-fields-list,
+.filter-field,
+.filter-list,
+.filter-content,
+.center-content,
+.sort-button,
+.sorting-panel,
+.newsletter,
+.category-pills,
+.category-image,
+.pills-title,
+.industry-categories-list,
+.image-container,
+.form-newsletter,
+.subscribe-button {
+  display: flex;
+}
+
+.content-find-jobs-wrapper,
+.find-jobs-wrapper,
+.content-find-jobs {
+  gap: 24px;
+}
+
+.form-newsletter input {
+  padding: 8px;
+}
+
+.job-company,
+.job-title {
+  margin: 0;
+}
+
+.job-company {
+  font-size: 16px;
+}
+
+.job-title {
+  font-size: 24px;
+}
+
+.job-description {
+  max-height: calc(24px * 3);
+  line-height: 24px;
+  color: var(--licorice-2);
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.filter {
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--neutral300);
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  padding: 24px;
+}
+
+.sorting-panel,
+.filter-fields-list,
+.job-info-wrapper,
+.center-content,
+.form-newsletter {
+  gap: 16px;
+}
+
+.sorting-panel,
+.job-info-wrapper {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filter {
+  height: max-content;
+}
+
+.content-find-jobs-wrapper {
+  justify-content: center;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.content-find-jobs {
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+}
+
+.subscribe-button {
+  justify-content: center;
+  background-color: var(--meliteh-red-semitransparent);
+  border-radius: 4px;
+  gap: 8px;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+  color: var(--neutral100);
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+}
+
+.newsletter {
+  align-items: stretch;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--neutral300);
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px #080f340a;
+  gap: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 320px;
+  height: max-content;
+}
+
+.job-card,
+.sort-button,
+.filter-list,
+.breadcrumbs {
+  gap: 8px;
+}
+
+.breadcrumbs {
+  align-items: center;
+}
+
+.industry-categories-list {
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  padding-left: 120px;
+  padding-right: 120px;
+  justify-content: center;
+}
+
+.job-cards-container {
+  min-width: 240px;
+  gap: 24px;
+  max-height: 720px;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.job-card {
+  width: 100%;
+  color: var(--meliteh-black-type);
+  padding: 24px;
+  align-items: flex-start;
+  background-color: var(--neutral100);
+  border: 1px solid;
+  border-color: var(--licorice-7);
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px #00000008;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.title-company-wrapper {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-title-wrapper {
+  gap: 16px;
+}
+
+.image-container {
+  width: 64px;
+  height: 64px;
+}
+
+.category-image {
+  object-fit: cover;
+  border-radius: 8px;
+  height: auto;
+  width: 64px;
+}
+
+.category-pills {
+  font-size: 12px;
+  color: var(--meliteh-red-semitransparent);
+  justify-content: center;
+  min-width: 120px;
+  height: 80px;
+  gap: 8px;
+  background-color: var(--neutral100);
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #0e101d31;
+  width: 100%;
+  padding: 8px;
+  transition: ease 0.4s;
+}
+
+.category-pills:hover,
+.industry-categories.active .category-pills {
+  background-color: var(--meliteh-red-semitransparent);
+  color: white;
+  border: none;
+}
+
+.pills-title {
+  font-weight: 700;
+}
+
+.company-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 48px;
+  min-width: 72px;
+  position: relative;
+}
+
+.subscribe-form-email-input {
+  line-height: 24px;
+  white-space: nowrap;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+}
+
+.subscribe-form-email-input:disabled {
+  background-color: #e8e8e8;
+}
+
+.magnifying-glass {
+  position: absolute;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 640px;
+  height: 48px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-bar {
+  color: #111111;
+  font-family: "Montserrat";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid;
+  border-color: #1414141a;
+  border-radius: 4px 0px 0px 4px;
+  display: flex;
+  padding: 16px 16px 16px 48px;
+  flex: 1;
+}
+
+.search-bar:focus-visible {
+  outline: none;
+  border: 1px solid #d20027;
+}
+
+.search-button {
+  font-family: "Montserrat";
+  font-weight: 700;
+  height: 100%;
+  color: white;
+  align-items: center;
+  background-color: #d20027;
+  border-radius: 0px 4px 4px 0px;
+  display: flex;
+  justify-content: center;
+  padding: 16px 32px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.no-matching-jobs-illustration {
+  max-width: 400px;
+  align-self: center;
+}
+
+.top-title {
+  padding-top: 64px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 40px;
+}
+
+.search-button:hover {
+  background-color: var(--meliteh-red-semitransparent);
+}
+
+.red-text {
+  margin-top: 8px;
+}
+
+@media (max-width: 1366px) {
+  .top-title,
+  .industry-categories-list,
+  .content-find-jobs-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .top-title {
+    padding-top: 40px;
+  }
+
+  .content-find-jobs-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-services-title-banner {
+    height: 280px;
+  }
+
+  .find-jobs-landing .title {
+    text-align: center;
+    line-height: 36px;
+  }
+
+  .montserrat-bold-white-70px,
+  .montserrat-bold-monza-70px {
+    font-size: 32px;
+  }
+
+  .search-bar-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 400px;
+  }
+
+  .industry-categories-list {
+    justify-content: flex-start;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .no-matching-jobs-illustration {
+    max-width: 240px;
+    align-self: center;
+  }
+
+  .category-pills {
+    border-radius: 8px;
+    min-width: 32px;
+    max-height: 48px;
+    padding: 8px;
+  }
+
+  .company-logo {
+    max-width: 64px;
+    height: auto;
+  }
+
+  .content-find-jobs {
+    flex-direction: column;
+  }
+
+  .content-find-jobs-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .job-title-wrapper {
+    flex-direction: column;
+  }
+
+  .job-cards-container {
+    max-height: unset;
+    overflow-y: unset;
+    padding: 0;
+  }
+
+  .newsletter {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
   .industry-card-description p {
     font-size: 0.75em;
     line-height: 20px;
@@ -129,5 +555,20 @@
   .industry-card-description {
     padding-bottom: 16px;
     min-height: unset;
+  }
+}
+
+@media (max-width: 360px) {
+  .montserrat-bold-white-70px,
+  .montserrat-bold-monza-70px {
+    font-size: 24px;
+  }
+
+  .find-jobs-landing .title {
+    line-height: 28px;
+  }
+
+  .search-bar-wrapper {
+    max-width: 320px;
   }
 }

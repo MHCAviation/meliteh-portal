@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/industry-cards.css" />
     <link rel="stylesheet" type="text/css" href="css/find-jobs-landing.css" />
     <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script type="text/javascript">
       window.Trengo = window.Trengo || {};
       window.Trengo.key = "HM1TBzHiwbKzSBt6ruC5";
@@ -29,238 +33,346 @@
       <div class="find-jobs-landing screen">
         <div class="our-services-title-banner">
           <div class="find-jobs-title-banner-overglow"></div>
-          <h1 class="title montserrat-bold-white-70px-2">
-            <span class="montserrat-bold-white-70px">Choose </span>
-            <span class="montserrat-bold-monza-70px">Your Expertise</span>
-          </h1>
+          <div class="top-title">
+            <h1 class="title montserrat-bold-white-70px-2">
+              <span class="montserrat-bold-white-70px">Find Job</span> <br />
+              <span class="montserrat-bold-monza-70px">For Your Expertise</span>
+            </h1>
+            <form
+              id="job-search-form"
+              class="search-bar-wrapper"
+              onsubmit="handleSearch(event); return false;"
+            >
+              <div class="input-wrapper">
+                <img
+                  src="../img/magnifyingglass.svg"
+                  alt="Search"
+                  class="magnifying-glass"
+                />
+                <input
+                  type="text"
+                  id="job-search-input"
+                  class="search-bar"
+                  placeholder="Search jobs..."
+                />
+              </div>
+              <button
+                type="submit"
+                id="job-search-button"
+                class="search-button"
+              >
+                Search
+              </button>
+            </form>
+          </div>
         </div>
 
-        <div class="industry-cards-container">
-          <div class="industry-cards-list">
-            <a href="jobs-search.html?industry=Maritime" class="industry-card">
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/cruise-ship.jfif"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Maritime</div>
-                </div>
-                <div class="industry-card-description">
-                  <p>
-                    Specializing in delivering customized recruitment solutions
-                    for the global maritime and shipping industries, both
-                    onshore and offshore including:
-                  </p>
-                  <div class="hover-details">
-                    <hr />
-                    <ul>
-                      <li>Cruise</li>
-                      <li>Shipping</li>
-                      <li>Super yachts</li>
-                      <li>Other</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="jobs-search.html?industry=aviation" class="industry-card">
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/industry-aviation.svg"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Aviation</div>
-                </div>
-                <div class="industry-card-description">
-                  <p>
-                    We are dedicated to providing comprehensive staffing
-                    solutions for the aviation industry, catering to a wide
-                    range of positions including:
-                  </p>
-                  <div class="hover-details">
-                    <hr />
-                    <ul>
-                      <li>Flight Crew</li>
-                      <li>Maintenance</li>
-                      <li>Operations</li>
-                      <li>Ground Staff</li>
-                      <li>Other</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="jobs-search.html?industry=IT" class="industry-card">
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/industry-informational-technologies.svg"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Information Technology</div>
-                </div>
-                <div class="industry-card-description">
-                  <p>
-                    Specializes in offering customized recruitment solutions
-                    specifically designed for the global IT markets including:
-                  </p>
-                  <div class="hover-details">
-                    <hr />
-                    <ul>
-                      <li>Help Desk / Technical Support</li>
-                      <li>Project Manager</li>
-                      <li>Business Analyst</li>
-                      <li>Hardware Technician</li>
-                      <li>Software Engineer</li>
-                      <li>Database Administrator</li>
-                      <li>Database Developer</li>
-                      <li>Data Scientist</li>
-                      <li>Graphics / Multimedia</li>
-                      <li>Quality Assurance</li>
-                      <li>Systems Administrator</li>
-                      <li>Configuration Management</li>
-                      <li>Other</li>
-                    </ul>
-                  </div>
-                </div>
+        <div class="find-jobs-wrapper">
+          <div class="industry-categories-list">
+            <a href="find-jobs-landing.html" class="industry-categories">
+              <div class="category-pills">
+                <div class="pills-title">All Jobs</div>
               </div>
             </a>
 
             <a
-              href="jobs-search.html?industry=Construction"
-              class="industry-card"
+              href="find-jobs-landing.html?industry=maritime"
+              class="industry-categories"
             >
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/construction.png"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Construction</div>
+              <div class="category-pills">
+                <div class="image-container">
+                  <img class="category-image" src="img/cruise-ship.jfif" />
                 </div>
-                <div class="industry-card-description">
-                  <p>
-                    Offering customized recruitment solutions specifically
-                    designed for the global construction markets.
-                  </p>
-                </div>
+                <div class="pills-title">Maritime</div>
               </div>
             </a>
 
             <a
-              href="jobs-search.html?industry=Finance"
-              class="industry-card"
+              href="find-jobs-landing.html?industry=aviation"
+              class="industry-categories"
             >
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/industry-finance.png"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Finance</div>
+              <div class="category-pills">
+                <div class="image-container">
+                  <img class="category-image" src="img/industry-aviation.svg" />
                 </div>
-                <div class="industry-card-description">
-                  <p>
-                    Specialize in delivering customized recruitment solutions for the global industries.
-                  </p>
-                </div>
+                <div class="pills-title">Aviation</div>
               </div>
             </a>
 
             <a
-              href="jobs-search.html?industry=iGaming"
-              class="industry-card"
+              href="find-jobs-landing.html?industry=IT"
+              class="industry-categories"
             >
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/industry-igaming.png"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">IGaming</div>
+              <div class="category-pills">
+                <div class="image-container">
+                  <img
+                    class="category-image"
+                    src="img/industry-informational-technologies.svg"
+                  />
                 </div>
-                <div class="industry-card-description">
-                  <p>
-                    We are dedicated to providing comprehensive staffing solutions for the iGaming industry.
-                  </p>
-                </div>
+                <div class="pills-title">Information Technology</div>
               </div>
             </a>
 
             <a
-              href="jobs-search.html?industry=Hospitality"
-              class="industry-card"
+              href="find-jobs-landing.html?industry=Construction"
+              class="industry-categories"
             >
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/industry-hospitality.jpg"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Hospitality</div>
+              <div class="category-pills">
+                <div class="image-container">
+                  <img class="category-image" src="img/construction.png" />
                 </div>
-                <div class="industry-card-description">
-                  <p>
-                    Finding exceptional talents in hospitality sector.
-                  </p>
-                </div>
+                <div class="pills-title">Construction</div>
               </div>
             </a>
 
             <a
-              href="jobs-search.html?industry=Manufacturing"
-              class="industry-card"
+              href="find-jobs-landing.html?industry=Finance"
+              class="industry-categories"
             >
-              <div class="overlap-group">
-                <div class="industry-card-top-part">
-                  <div class="industry-card-image-container">
-                    <img
-                      class="industry-card-image"
-                      src="img/industry-manufacture.jpg"
-                    />
-                    <button class="go-to-jobs-search-btn">Find job</button>
-                  </div>
-                  <div class="industry-card-title">Manufacturing</div>
+              <div class="category-pills">
+                <div class="image-container">
+                  <img class="category-image" src="img/industry-finance.png" />
                 </div>
-                <div class="industry-card-description">
-                  <p>
-                    Provide necessity talents in manufacturing sectors.
-                  </p>
-                </div>
+                <div class="pills-title">Finance</div>
               </div>
             </a>
+
+            <a
+              href="find-jobs-landing.html?industry=iGaming"
+              class="industry-categories"
+            >
+              <div class="category-pills">
+                <div class="image-container">
+                  <img class="category-image" src="img/industry-igaming.png" />
+                </div>
+                <div class="pills-title">IGaming</div>
+              </div>
+            </a>
+
+            <a
+              href="find-jobs-landing.html?industry=Hospitality"
+              class="industry-categories"
+            >
+              <div class="category-pills">
+                <div class="image-container">
+                  <img
+                    class="category-image"
+                    src="img/industry-hospitality.jpg"
+                  />
+                </div>
+                <div class="pills-title">Hospitality</div>
+              </div>
+            </a>
+
+            <a
+              href="find-jobs-landing.html?industry=Manufacturing"
+              class="industry-categories"
+            >
+              <div class="category-pills">
+                <div class="image-container">
+                  <img
+                    class="category-image"
+                    src="img/industry-manufacture.jpg"
+                  />
+                </div>
+                <div class="pills-title">Manufacturing</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="content-find-jobs-wrapper">
+            <div class="breadcrumbs">
+              <div class="place montserrat-normal-licorice-12px">
+                <a class="menu-link" href="index.html">Home</a>
+              </div>
+              <div class="v6-icon-free">
+                <div
+                  class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"
+                >
+                  
+                </div>
+              </div>
+              <div class="breadcrumbs-industry-name">All Jobs</div>
+            </div>
+
+            <div class="content-find-jobs">
+              <aside class="filter">
+                <form
+                  id="side-panel-filters"
+                  onsubmit="return false"
+                  class="frame-36"
+                >
+                  <div class="filters montserrat-bold-licorice-20px">
+                    Filters
+                  </div>
+                  <div class="filter-fields-list">
+                    <!-- Location filter -->
+                    <div class="filter-list">
+                      <div class="location-1 montserrat-medium-licorice-18px">
+                        Location
+                      </div>
+                      <div class="filter-content">
+                        <label class="filter-check-option">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            name="distanceType"
+                            value="Exact"
+                            onclick="applyFilters()"
+                          />
+                          <span
+                            class="remote-job montserrat-normal-cape-cod-16px"
+                            >Exact Location</span
+                          >
+                        </label>
+                        <label class="filter-check-option">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            name="distanceType"
+                            value="Global"
+                            onclick="applyFilters()"
+                          />
+                          <span
+                            class="exact-location montserrat-normal-cape-cod-16px"
+                            >Global</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Date of posting filter -->
+                    <div class="filter-list">
+                      <div
+                        class="date-of-posting montserrat-medium-licorice-18px"
+                      >
+                        Date of posting
+                      </div>
+                      <div class="filter-content">
+                        <label class="filter-check-option">
+                          <input
+                            name="maxPostedForDays"
+                            type="radio"
+                            value=""
+                            checked="checked"
+                            onclick="applyFilters()"
+                          />
+                          <span>All time</span>
+                        </label>
+                        <label class="filter-check-option">
+                          <input
+                            name="maxPostedForDays"
+                            type="radio"
+                            value="7"
+                            onclick="applyFilters()"
+                          />
+                          <span>Last 7 days</span>
+                        </label>
+                        <label class="filter-check-option">
+                          <input
+                            name="maxPostedForDays"
+                            type="radio"
+                            value="14"
+                            onclick="applyFilters()"
+                          />
+                          <span>Last 2 weeks</span>
+                        </label>
+                        <label class="filter-check-option">
+                          <input
+                            name="maxPostedForDays"
+                            type="radio"
+                            value="28"
+                            onclick="applyFilters()"
+                          />
+                          <span>Last month</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Type of employment filter -->
+                    <div class="filter-list">
+                      <div
+                        class="type-of-employment montserrat-medium-licorice-18px"
+                      >
+                        Type of employment
+                      </div>
+                      <div class="filter-content">
+                        <label class="filter-check-option">
+                          <input
+                            name="employmentType"
+                            checked="checked"
+                            type="checkbox"
+                            value="Permanent"
+                            onclick="applyFilters()"
+                          />
+                          <span>Permanent</span>
+                        </label>
+                        <label class="filter-check-option">
+                          <input
+                            name="employmentType"
+                            checked="checked"
+                            type="checkbox"
+                            value="Contract"
+                            onclick="applyFilters()"
+                          />
+                          <span>Contract</span>
+                        </label>
+                        <label class="filter-check-option">
+                          <input
+                            name="employmentType"
+                            checked="checked"
+                            type="checkbox"
+                            value="Temporary"
+                            onclick="applyFilters()"
+                          />
+                          <span>Temporary</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </aside>
+
+              <div class="center-content">
+                <div class="sorting-panel">
+                  <div class="address">
+                    <span id="total-open-vacancies-counter">0</span> Jobs
+                  </div>
+                </div>
+
+                <div id="job-cards-container" class="job-cards-container">
+                  <!-- Job cards will be inserted here -->
+                </div>
+              </div>
+              <div class="newsletter">
+                <p class="email-me-for-jobs montserrat-bold-licorice-20px">
+                  Email me for jobs
+                </p>
+                <p class="x-eiusmod montserrat-normal-licorice-14px">
+                  If you would like to receive news about our newest job
+                  vacancies add your email below.
+                </p>
+                <form class="form-newsletter" onsubmit="subscribeToNews(event)">
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="frame-14-2 frame-14-3 subscribe-form-email-input"
+                    placeholder="name@mail.com"
+                  />
+                  <button class="subscribe-button">Subscribe</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
-    <script>
+    <script type="text/javascript">
       // Fetch the content of popup-hire-staff.html using fetch API
       fetch("popup-hire-staff.html")
         .then((response) => response.text())
@@ -273,5 +385,9 @@
         );
     </script>
     <script type="module" src="js/add-navbars.js"></script>
+    <script type="module" src="js/loadJobs.js"></script>
+    <script type="module" src="js/subscribe-to-news.js"></script>
+    <script src="js/filterJobs.js"></script>
+    <script src="js/jobSearch.js"></script>
   </body>
 </html>

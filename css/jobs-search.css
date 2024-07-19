@@ -847,6 +847,60 @@ dialog input[type="checkbox"]#apply-form-privacy-policy-checkbox {
   white-space: nowrap;
 }
 
+.category-pills,
+.category-image,
+.pills-title,
+.industry-categories-list,
+.image-container {
+  display: flex;
+}
+
+.industry-categories-list {
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  padding-left: 120px;
+  padding-right: 120px;
+  justify-content: center;
+}
+
+.category-pills {
+  font-size: 12px;
+  color: var(--meliteh-red-semitransparent);
+  justify-content: flex-start;
+  height: 80px;
+  gap: 8px;
+  background-color: var(--neutral100);
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #0e101d31;
+  width: min-content;
+  padding: 8px;
+  transition: ease 0.4s;
+}
+
+.category-pills:hover {
+  background-color: var(--meliteh-red-semitransparent);
+  color: white;
+  border: none;
+}
+
+.pills-title {
+  font-weight: 700;
+}
+
+.image-container {
+  width: 64px;
+  height: 64px;
+}
+
+.category-image {
+  object-fit: cover;
+  border-radius: 8px;
+  height: auto;
+  width: 64px;
+}
+
 .data-loading-spinner-container {
   display: flex;
   justify-content: center;
