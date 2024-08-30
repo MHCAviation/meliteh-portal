@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const VACANCIES_ENDPOINT = "https://meliteh-api.azurewebsites.net/category_vacancies";
+  const VACANCIES_ENDPOINT = "https://api.mhcaviation.com/category_vacancies";
   const urlParams = new URLSearchParams(window.location.search);
   const activeIndustry = urlParams.get("industry");
   const query = urlParams.get("query");
 
   async function fetchVacancies(params) {
     try {
-      const response = await fetch(VACANCIES_ENDPOINT + "?" + params.toString());
+      const response = await fetch(
+        VACANCIES_ENDPOINT + "?" + params.toString()
+      );
       return await response.json();
     } catch (error) {
       console.error("Error fetching job data:", error);
@@ -24,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     switch (industry) {
       case "Aviation":
-        [36, 37, 38, 39, 40].forEach((id) => params.append("oneOfAttributeIds", id));
+        [36, 37, 38, 39, 40].forEach((id) =>
+          params.append("oneOfAttributeIds", id)
+        );
         break;
       case "Hospitality":
         params.append("oneOfAttributeIds", 274);
@@ -64,14 +68,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterVacancies(vacancies, query) {
-    return vacancies.filter(job =>
+    return vacancies.filter((job) =>
       job.JobTitle.toLowerCase().includes(query.toLowerCase())
     );
   }
 
   window.displayVacancies = function (data) {
     const jobCardsContainer = document.getElementById("job-cards-container");
-    const totalVacanciesCounter = document.getElementById("total-open-vacancies-counter");
+    const totalVacanciesCounter = document.getElementById(
+      "total-open-vacancies-counter"
+    );
     jobCardsContainer.innerHTML = "";
 
     totalVacanciesCounter.textContent = data.length;
@@ -79,9 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (data.length === 0) {
       const noJobsMessage = document.createElement("h2");
       if (query) {
-        noJobsMessage.textContent = `Sorry, there are no jobs available for "${query}" in "${activeIndustry || "All Industries"}"`;
+        noJobsMessage.textContent = `Sorry, there are no jobs available for "${query}" in "${
+          activeIndustry || "All Industries"
+        }"`;
       } else {
-        noJobsMessage.textContent = `Sorry, there are no jobs available in "${activeIndustry || "All Industries"}"`;
+        noJobsMessage.textContent = `Sorry, there are no jobs available in "${
+          activeIndustry || "All Industries"
+        }"`;
       }
 
       const noJobsIllustration = document.createElement("img");
@@ -97,7 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
         jobCard.href = `https://hiportal.eu/Secure/Membership/Registration/JobDetails.aspx?JobId=${job.JobId}`;
         jobCard.target = "_blank";
 
-        jobCard.setAttribute("data-location", job.Location ? job.Location : "Global");
+        jobCard.setAttribute(
+          "data-location",
+          job.Location ? job.Location : "Global"
+        );
         jobCard.setAttribute("data-date", job.StartDate);
         jobCard.setAttribute("data-type", job.EmploymentType);
 
@@ -106,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const companyLogo = document.createElement("img");
         companyLogo.classList.add("company-logo");
-        companyLogo.src = `img/company-logos/25565.png`;
+        companyLogo.src = `https://hiportal.eu/images/Logos/client_logos/${job.ClientId}.png`; // Updated to fetch logo based on ClientId
 
         const titleCompanyWrapper = document.createElement("div");
         titleCompanyWrapper.classList.add("title-company-wrapper");
@@ -115,20 +128,20 @@ document.addEventListener("DOMContentLoaded", () => {
         jobTitle.classList.add("job-title");
         jobTitle.textContent = job.JobTitle;
 
-        const jobCompany = document.createElement("p");
-        jobCompany.classList.add("job-company");
-        jobCompany.textContent = job.Company;
-
         const jobDetailsWrapper = document.createElement("div");
         jobDetailsWrapper.classList.add("job-info-wrapper");
 
         const jobLocation = document.createElement("p");
         jobLocation.classList.add("job-location");
-        jobLocation.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${job.Location ? job.Location : "Global"}`;
+        jobLocation.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${
+          job.Location ? job.Location : "Global"
+        }`;
 
         const jobDate = document.createElement("p");
         jobDate.classList.add("job-date");
-        jobDate.innerHTML = `<i class="fas fa-calendar-alt"></i> ${new Date(job.StartDate).toLocaleDateString()}`;
+        jobDate.innerHTML = `<i class="fas fa-calendar-alt"></i> ${new Date(
+          job.StartDate
+        ).toLocaleDateString()}`;
 
         const jobType = document.createElement("p");
         jobType.classList.add("job-type");
@@ -136,16 +149,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const jobDescription = document.createElement("p");
         jobDescription.classList.add("job-description");
-        jobDescription.textContent = job.PublishedJobDescription.split("\r\n")[0];
+        jobDescription.textContent =
+          job.PublishedJobDescription.split("\r\n")[0];
 
         jobDetailsWrapper.appendChild(jobLocation);
         jobDetailsWrapper.appendChild(jobDate);
         jobDetailsWrapper.appendChild(jobType);
 
         titleCompanyWrapper.appendChild(jobTitle);
-        titleCompanyWrapper.appendChild(jobCompany);
 
         jobWrapper.appendChild(companyLogo);
+
         jobWrapper.appendChild(titleCompanyWrapper);
 
         jobCard.appendChild(jobWrapper);
@@ -160,7 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getAllVacancies = getAllVacancies;
   window.getVacanciesByIndustry = getVacanciesByIndustry;
   window.searchVacancies = function (query) {
-    return getAllVacancies().then(vacancies => filterVacancies(vacancies, query));
+    return getAllVacancies().then((vacancies) =>
+      filterVacancies(vacancies, query)
+    );
   };
 
   async function loadVacancies() {
@@ -175,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       console.error("Error loading vacancies:", error);
       const jobCardsContainer = document.getElementById("job-cards-container");
-      jobCardsContainer.innerHTML = "<p>Error loading vacancies. Please try again later.</p>";
+      jobCardsContainer.innerHTML =
+        "<p>Error loading vacancies. Please try again later.</p>";
     }
   }
 
@@ -203,20 +220,27 @@ document.addEventListener("DOMContentLoaded", () => {
   if (activeIndustry) {
     document.querySelectorAll(".industry-categories").forEach((link) => {
       const industryName = link.href.split("industry=")[1];
-      if (industryName && industryName.toLowerCase() === activeIndustry.toLowerCase()) {
+      if (
+        industryName &&
+        industryName.toLowerCase() === activeIndustry.toLowerCase()
+      ) {
         link.classList.add("active");
       }
     });
   } else {
     document.querySelectorAll(".industry-categories").forEach((link) => {
-      const industryName = link.querySelector(".pills-title").textContent.trim();
+      const industryName = link
+        .querySelector(".pills-title")
+        .textContent.trim();
       if (industryName === "All Jobs") {
         link.classList.add("active");
       }
     });
   }
 
-  const industryNameElement = document.querySelector(".breadcrumbs-industry-name");
+  const industryNameElement = document.querySelector(
+    ".breadcrumbs-industry-name"
+  );
   if (activeIndustry) {
     industryNameElement.textContent = activeIndustry;
   } else {
