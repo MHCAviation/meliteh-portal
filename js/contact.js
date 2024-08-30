@@ -1,5 +1,5 @@
 
-const SUBMIT_ENDPOINT = "https://meliteh-api.azurewebsites.net/submit-message";
+const SUBMIT_ENDPOINT = "https://api.mhcaviation.com/submit-message";
 
 async function main() {
     document.querySelector("textarea[name=\"message\"]").focus();

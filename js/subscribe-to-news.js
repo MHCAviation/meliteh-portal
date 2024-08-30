@@ -1,5 +1,5 @@
 
-const SUBSCRIBE_ENDPOINT = "https://meliteh-api.azurewebsites.net/subscribe-to-news";
+const SUBSCRIBE_ENDPOINT = "https://api.mhcaviation.com/subscribe-to-news";
 
 /**
  * @param {SubmitEvent} event

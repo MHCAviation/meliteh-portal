@@ -1,4 +1,4 @@
-const VACANCIES_ENDPOINT = "https://meliteh-api.azurewebsites.net/category_vacancies";
+const VACANCIES_ENDPOINT = "https://api.mhcaviation.com/category_vacancies";
 
 class Vacancy {
   JobId = 476;
