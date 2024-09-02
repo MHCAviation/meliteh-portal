@@ -50,7 +50,7 @@
   text-align: left;
 }
 
-.popup-content > p {
+.popup-content>p {
   font-size: 12px;
 }
 
@@ -860,11 +860,9 @@
 }
 
 .home .rectangle-4298-BRXQlF {
-  background: linear-gradient(
-    180deg,
-    rgb(20.000000707805157, 20.000000707805157, 20.000000707805157) 0%,
-    rgba(20.000000707805157, 20.000000707805157, 20.000000707805157, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(20.000000707805157, 20.000000707805157, 20.000000707805157) 0%,
+      rgba(20.000000707805157, 20.000000707805157, 20.000000707805157, 0) 100%);
   background-color: transparent;
   height: 540px;
   left: 0px;
@@ -888,11 +886,9 @@
 .home .information-technology-9wWVRE {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0) 100%);
   background-clip: text;
   background-color: transparent;
   color: transparent;
@@ -934,11 +930,9 @@
 .home .maritime-9wWVRE {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0) 100%);
   background-clip: text;
   background-color: transparent;
   color: transparent;
@@ -1600,6 +1594,11 @@
   gap: 24px;
 }
 
+.partners-link {
+  color: var(--meliteh-black-type);
+  text-decoration: none;
+}
+
 @media (max-width: 1366px) {
   .card {
     max-width: none;
@@ -1616,6 +1615,7 @@
     grid-gap: 2em;
     margin: 0;
   }
+
   .industry-cards-list,
   .our-services-list {
     grid-template-columns: repeat(2, 1fr);
@@ -1679,10 +1679,12 @@
 }
 
 @media (max-width: 480px) {
+
   .homeTitle,
   .homeTitle-red {
     font-size: 32px;
   }
+
   .popup-content {
     max-width: 360px;
   }

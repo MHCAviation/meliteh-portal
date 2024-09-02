@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       data.forEach((job) => {
         const jobCard = document.createElement("a");
         jobCard.classList.add("job-card");
-        jobCard.href = `https://hiportal.eu/Secure/Membership/Registration/JobDetails.aspx?JobId=${job.JobId}`;
+        jobCard.href = `https://portal.meliteh.com/Secure/Membership/Registration/JobDetails.aspx?JobId=${job.JobId}`;
         jobCard.target = "_blank";
 
         jobCard.setAttribute(
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const companyLogo = document.createElement("img");
         companyLogo.classList.add("company-logo");
-        companyLogo.src = `https://hiportal.eu/images/Logos/client_logos/${job.ClientId}.png`; // Updated to fetch logo based on ClientId
+        companyLogo.src = `https://hiportal.eu/Secure/api/Job/GetClientLogoFromDb?clientId=${job.ClientId}`; 
 
         const titleCompanyWrapper = document.createElement("div");
         titleCompanyWrapper.classList.add("title-company-wrapper");
