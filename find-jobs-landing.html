@@ -1,53 +1,97 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>Vacancies</title>
+    <meta
+      name="description"
+      content="Browse available jobs at Meliteh Recruiting ltd. in Hospitality, IT, Construction, Finance, and other industries."
+    />
+    <meta name="og:type" content="website" />
+    <meta property="og:url" content="https://www.meliteh.com/find-jobs-landing.html" />
+    <meta property="og:site_name" content="Meliteh Recruiting" />
+    <meta
+      property="og:image"
+      itemprop="image primaryImageOfPage"
+      content="https://meliteh.com/img/favicon.png"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  <title>Vacancies</title>
-  <meta name="og:type" content="website" />
-  <meta name="twitter:card" content="photo" />
-  <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-  <link rel="stylesheet" type="text/css" href="css/globals.css" />
-  <link rel="stylesheet" href="css/industry-cards.css" />
-  <link rel="stylesheet" type="text/css" href="css/find-jobs-landing.css" />
-  <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <script type="text/javascript">
-    window.Trengo = window.Trengo || {};
-    window.Trengo.key = "HM1TBzHiwbKzSBt6ruC5";
-    (function (d, script, t) {
-      script = d.createElement("script");
-      script.type = "text/javascript";
-      script.async = true;
-      script.src = "https://static.widget.trengo.eu/embed.js";
-      d.getElementsByTagName("head")[0].appendChild(script);
-    })(document);
-  </script>
-</head>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:domain" content="meliteh.com" />
+    <meta
+      name="twitter:title"
+      property="og:title"
+      itemprop="name"
+      content="Vacancies"
+    />
+    <meta
+      name="twitter:description"
+      property="og:description"
+      itemprop="description"
+      content="Browse available jobs at Meliteh Recruiting ltd. in Hospitality, IT, Construction, Finance, and other industries."
+    />
 
-<body>
-  <div class="container-center-horizontal">
-    <div class="find-jobs-landing screen">
-      <div class="our-services-title-banner">
-        <div class="find-jobs-title-banner-overglow"></div>
-        <div class="top-title">
-          <h1 class="title montserrat-bold-white-70px-2">
-            <span class="montserrat-bold-white-70px">Find Job</span> <br />
-            <span class="montserrat-bold-monza-70px">For Your Expertise</span>
-          </h1>
-          <form id="job-search-form" class="search-bar-wrapper" onsubmit="handleSearch(event); return false;">
-            <div class="input-wrapper">
-              <img src="../img/magnifyingglass.svg" alt="Search" class="magnifying-glass" />
-              <input type="text" id="job-search-input" class="search-bar" placeholder="Search jobs..." />
-            </div>
-            <button type="submit" id="job-search-button" class="search-button">
-              Search
-            </button>
-          </form>
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" href="css/industry-cards.css" />
+    <link rel="stylesheet" type="text/css" href="css/find-jobs-landing.css" />
+    <link rel="stylesheet" type="text/css" href="css/hire-staff.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script type="text/javascript">
+      window.Trengo = window.Trengo || {};
+      window.Trengo.key = "HM1TBzHiwbKzSBt6ruC5";
+      (function (d, script, t) {
+        script = d.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://static.widget.trengo.eu/embed.js";
+        d.getElementsByTagName("head")[0].appendChild(script);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="container-center-horizontal">
+      <div class="find-jobs-landing screen">
+        <div class="our-services-title-banner">
+          <div class="find-jobs-title-banner-overglow"></div>
+          <div class="top-title">
+            <h1 class="title montserrat-bold-white-70px-2">
+              <span class="montserrat-bold-white-70px">Find Job</span> <br />
+              <span class="montserrat-bold-monza-70px">For Your Expertise</span>
+            </h1>
+            <form
+              id="job-search-form"
+              class="search-bar-wrapper"
+              onsubmit="handleSearch(event); return false;"
+            >
+              <div class="input-wrapper">
+                <img
+                  src="../img/magnifyingglass.svg"
+                  alt="Search"
+                  class="magnifying-glass"
+                />
+                <input
+                  type="text"
+                  id="job-search-input"
+                  class="search-bar"
+                  placeholder="Search jobs..."
+                />
+              </div>
+              <button
+                type="submit"
+                id="job-search-button"
+                class="search-button"
+              >
+                Search
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
 
       <div class="find-jobs-wrapper">
         <div class="industry-categories-list">

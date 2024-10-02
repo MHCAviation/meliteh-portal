@@ -296,7 +296,6 @@
 .job-cards-container {
   min-width: 240px;
   gap: 24px;
-  max-height: 720px;
   overflow-y: auto;
   padding: 24px;
 }
