@@ -11,35 +11,50 @@ document.addEventListener("DOMContentLoaded", () => {
     Manufacturing: "/find-jobs-landing.html?industry=Manufacturing",
   };
 
-  const handleSearch = async function (query) {
+  const handleSearch = async function (event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
+
+    const searchInput = document.getElementById("job-search-input");
+    const query = searchInput.value.trim().toLowerCase();
     const urlParams = new URLSearchParams(window.location.search);
-    const activeIndustry = urlParams.get("industry");
+    let activeIndustry = urlParams.get("industry");
 
-    console.log("Search query:", query); // Debugging line
-    console.log("Active industry:", activeIndustry); // Debugging line
+    console.log("Search initiated with query:", query);
+    console.log("Active industry:", activeIndustry);
 
-    let newUrl;
-    if (activeIndustry && industryLinks.hasOwnProperty(activeIndustry)) {
-      newUrl = `${industryLinks[activeIndustry]}&query=${encodeURIComponent(
-        query
-      )}`;
-    } else {
-      newUrl = `/find-jobs-landing.html?query=${encodeURIComponent(query)}`;
+    // Ensure the URL is updated with the query and industry
+    if (!activeIndustry || !industryLinks.hasOwnProperty(activeIndustry)) {
+      activeIndustry = "All Jobs"; // Default to "All Jobs" if no industry is active
     }
 
-    history.pushState({}, "", newUrl);
+    let newUrl = industryLinks[activeIndustry];
+    if (query) {
+      newUrl += newUrl.includes("?")
+        ? `&query=${encodeURIComponent(query)}`
+        : `?query=${encodeURIComponent(query)}`;
+    }
 
+    console.log("New URL being pushed to history:", newUrl);
+    history.pushState({}, "", newUrl); // Update the browser URL with the new query
+
+    // Fetch vacancies based on the current industry or all vacancies
     let vacancies;
-    if (activeIndustry) {
-      vacancies = await getVacanciesByIndustry(activeIndustry); // Assuming getVacanciesByIndustry is globally accessible
+    if (activeIndustry && activeIndustry !== "All Jobs") {
+      vacancies = await getVacanciesByIndustry(activeIndustry);
     } else {
-      vacancies = await getAllVacancies(); // Assuming getAllVacancies is globally accessible
+      vacancies = await getAllVacancies();
     }
 
-    // Filter the vacancies based on the job title
+    console.log("Fetched vacancies for industry:", activeIndustry, vacancies);
+
+    // Filter vacancies based on the search query
     const filteredData = vacancies.filter((job) =>
-      job.JobTitle.toLowerCase().includes(query.toLowerCase())
+      job.JobTitle.toLowerCase().includes(query)
     );
+
+    console.log("Filtered vacancies:", filteredData);
 
     const jobCardsContainer = document.getElementById("job-cards-container");
     const totalVacanciesCounter = document.getElementById(
@@ -47,31 +62,44 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     if (filteredData.length > 0) {
-      displayVacancies(filteredData); // Assuming displayVacancies is globally accessible
+      displayVacancies(filteredData); // Display filtered vacancies
       totalVacanciesCounter.textContent = filteredData.length.toString();
     } else {
       jobCardsContainer.innerHTML = `
-        <h2>Sorry, no jobs available for "${query}" in "${
-        activeIndustry || "All Industries"
-      }"</h2>
-      <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png">
-      `;
+              <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
+              <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png">
+          `;
       totalVacanciesCounter.textContent = "0";
     }
   };
 
-  // Call handleSearch initially if there's a query parameter in the URL
+  // Attach event listeners
+  const searchInput = document.getElementById("job-search-input");
+  const searchButton = document.getElementById("job-search-button");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", handleSearch); // Trigger search on typing
+    searchInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        handleSearch(event); // Trigger search on pressing Enter
+      }
+    });
+  }
+
+  if (searchButton) {
+    searchButton.addEventListener("click", handleSearch); // Trigger search on button click
+  }
+
+  const searchForm = document.getElementById("job-search-form");
+  if (searchForm) {
+    searchForm.addEventListener("submit", handleSearch); // Handle form submission
+  }
+
+  // Check for any initial query in the URL and trigger search when page loads
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = urlParams.get("query");
   if (initialQuery) {
-    document.getElementById("job-search-input").value = initialQuery;
-    handleSearch(initialQuery);
+    searchInput.value = initialQuery; // Keep the query in the input field
+    handleSearch(new Event("input")); // Trigger search for the initial query
   }
-
-  // Add event listener to the input field to trigger search on typing
-  const searchInput = document.getElementById("job-search-input");
-  searchInput.addEventListener("input", (event) => {
-    const query = event.target.value.trim();
-    handleSearch(query);
-  });
 });
