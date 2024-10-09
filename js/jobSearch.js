@@ -1,16 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const industryLinks = {
-    "All Jobs": "/find-jobs-landing.html",
-    Maritime: "/find-jobs-landing.html?industry=Maritime",
-    Aviation: "/find-jobs-landing.html?industry=Aviation",
-    "Information Technology": "/find-jobs-landing.html?industry=IT",
-    Construction: "/find-jobs-landing.html?industry=Construction",
-    Finance: "/find-jobs-landing.html?industry=Finance",
-    Igaming: "/find-jobs-landing.html?industry=iGaming",
-    Hospitality: "/find-jobs-landing.html?industry=Hospitality",
-    Manufacturing: "/find-jobs-landing.html?industry=Manufacturing",
-  };
-
   const handleSearch = async function (event) {
     if (event && event.preventDefault) {
       event.preventDefault();
@@ -24,32 +12,36 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Search initiated with query:", query);
     console.log("Active industry:", activeIndustry);
 
-    // Ensure the URL is updated with the query and industry
+    // Build the new URL by updating existing parameters
     if (!activeIndustry || !industryLinks.hasOwnProperty(activeIndustry)) {
       activeIndustry = "All Jobs"; // Default to "All Jobs" if no industry is active
     }
 
-    let newUrl = industryLinks[activeIndustry];
+    let newUrlParams = new URLSearchParams(window.location.search);
+
     if (query) {
-      newUrl += newUrl.includes("?")
-        ? `&query=${encodeURIComponent(query)}`
-        : `?query=${encodeURIComponent(query)}`;
+      newUrlParams.set("query", query); // Set or update the 'query' parameter
+    } else {
+      newUrlParams.delete("query"); // Remove 'query' if it's empty
     }
+
+    if (activeIndustry && activeIndustry !== "All Jobs") {
+      newUrlParams.set("industry", activeIndustry); // Set the industry
+    } else {
+      newUrlParams.delete("industry"); // Remove industry if it's "All Jobs"
+    }
+
+    let newUrl = `${window.location.pathname}?${newUrlParams.toString()}`;
 
     console.log("New URL being pushed to history:", newUrl);
     history.pushState({}, "", newUrl); // Update the browser URL with the new query
 
-    // Fetch vacancies based on the current industry or all vacancies
-    let vacancies;
-    if (activeIndustry && activeIndustry !== "All Jobs") {
-      vacancies = await getVacanciesByIndustry(activeIndustry);
-    } else {
-      vacancies = await getAllVacancies();
-    }
+    // Reset the fetch process: ignore previous filters and get fresh data
+    let vacancies = await window.getAllVacancies(); // Always fetch all vacancies
 
     console.log("Fetched vacancies for industry:", activeIndustry, vacancies);
 
-    // Filter vacancies based on the search query
+    // Now filter based on the search query
     const filteredData = vacancies.filter((job) =>
       job.JobTitle.toLowerCase().includes(query)
     );
@@ -62,18 +54,17 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     if (filteredData.length > 0) {
-      displayVacancies(filteredData); // Display filtered vacancies
+      window.displayVacancies(filteredData); // Display filtered vacancies using loadJobs.js function
       totalVacanciesCounter.textContent = filteredData.length.toString();
     } else {
       jobCardsContainer.innerHTML = `
-              <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
-              <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png">
-          `;
+                <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
+                <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png">
+            `;
       totalVacanciesCounter.textContent = "0";
     }
   };
 
-  // Attach event listeners
   const searchInput = document.getElementById("job-search-input");
   const searchButton = document.getElementById("job-search-button");
 
@@ -95,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     searchForm.addEventListener("submit", handleSearch); // Handle form submission
   }
 
-  // Check for any initial query in the URL and trigger search when page loads
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = urlParams.get("query");
   if (initialQuery) {

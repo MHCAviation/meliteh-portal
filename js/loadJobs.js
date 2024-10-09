@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const companyLogo = document.createElement("img");
         companyLogo.classList.add("company-logo");
-        companyLogo.src = `https://hiportal.eu/Secure/api/Job/GetClientLogoFromDb?clientId=${job.ClientId}`; 
+        companyLogo.src = `https://hiportal.eu/Secure/api/Job/GetClientLogoFromDb?clientId=${job.ClientId}`;
 
         const titleCompanyWrapper = document.createElement("div");
         titleCompanyWrapper.classList.add("title-company-wrapper");
