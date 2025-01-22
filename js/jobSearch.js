@@ -1,109 +1,95 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Define handleSearch and attach it to the window object
-  window.handleSearch = async (event) => {
-    // Prevent default behavior for form submissions
+  const handleSearch = async function (event) {
     if (event && event.preventDefault) {
       event.preventDefault();
     }
 
     const searchInput = document.getElementById("job-search-input");
-    const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+    const query = searchInput.value.trim().toLowerCase();
     const urlParams = new URLSearchParams(window.location.search);
     let activeIndustry = urlParams.get("industry");
 
     console.log("Search initiated with query:", query);
     console.log("Active industry:", activeIndustry);
 
-    // Default to "All Jobs" if no valid industry is active
-    if (!activeIndustry) {
-      activeIndustry = "All Jobs";
+    // Build the new URL by updating existing parameters
+    if (!activeIndustry || !industryLinks.hasOwnProperty(activeIndustry)) {
+      activeIndustry = "All Jobs"; // Default to "All Jobs" if no industry is active
     }
 
-    // Update URL parameters based on search input and active industry
     let newUrlParams = new URLSearchParams(window.location.search);
 
     if (query) {
-      newUrlParams.set("query", query);
+      newUrlParams.set("query", query); // Set or update the 'query' parameter
     } else {
-      newUrlParams.delete("query");
+      newUrlParams.delete("query"); // Remove 'query' if it's empty
     }
 
     if (activeIndustry && activeIndustry !== "All Jobs") {
-      newUrlParams.set("industry", activeIndustry);
+      newUrlParams.set("industry", activeIndustry); // Set the industry
     } else {
-      newUrlParams.delete("industry");
+      newUrlParams.delete("industry"); // Remove industry if it's "All Jobs"
     }
 
-    const newUrl = `${window.location.pathname}?${newUrlParams.toString()}`;
+    let newUrl = `${window.location.pathname}?${newUrlParams.toString()}`;
+
     console.log("New URL being pushed to history:", newUrl);
-    history.pushState({}, "", newUrl);
+    history.pushState({}, "", newUrl); // Update the browser URL with the new query
 
-    // Fetch vacancies and filter by query
-    let vacancies = [];
-    if (window.getAllVacancies) {
-      vacancies = await window.getAllVacancies();
-    } else {
-      console.error("getAllVacancies function is not defined.");
-    }
+    // Reset the fetch process: ignore previous filters and get fresh data
+    let vacancies = await window.getAllVacancies(); // Always fetch all vacancies
 
-    console.log("Fetched vacancies:", vacancies);
+    console.log("Fetched vacancies for industry:", activeIndustry, vacancies);
 
+    // Now filter based on the search query
     const filteredData = vacancies.filter((job) =>
       job.JobTitle.toLowerCase().includes(query)
     );
 
     console.log("Filtered vacancies:", filteredData);
 
-    // Update DOM with filtered vacancies or show no matches message
     const jobCardsContainer = document.getElementById("job-cards-container");
     const totalVacanciesCounter = document.getElementById(
       "total-open-vacancies-counter"
     );
 
     if (filteredData.length > 0) {
-      if (window.displayVacancies) {
-        window.displayVacancies(filteredData);
-      }
+      window.displayVacancies(filteredData); // Display filtered vacancies using loadJobs.js function
       totalVacanciesCounter.textContent = filteredData.length.toString();
     } else {
       jobCardsContainer.innerHTML = `
-        <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
-        <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png" alt="No jobs found" />
-      `;
+                <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
+                <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png">
+            `;
       totalVacanciesCounter.textContent = "0";
     }
   };
 
-  // Attach event listeners for search functionality
   const searchInput = document.getElementById("job-search-input");
   const searchButton = document.getElementById("job-search-button");
-  const searchForm = document.getElementById("job-search-form");
 
   if (searchInput) {
-    searchInput.addEventListener("input", window.handleSearch);
-    searchInput.addEventListener("keypress", (event) => {
+    searchInput.addEventListener("input", handleSearch); // Trigger search on typing
+    searchInput.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
-        window.handleSearch(event);
+        handleSearch(event); // Trigger search on pressing Enter
       }
     });
   }
 
-  if (searchForm) {
-    searchForm.addEventListener("submit", window.handleSearch);
-  }
-
   if (searchButton) {
-    searchButton.addEventListener("click", window.handleSearch);
+    searchButton.addEventListener("click", handleSearch); // Trigger search on button click
   }
 
-  // Trigger initial search if query exists in URL
+  const searchForm = document.getElementById("job-search-form");
+  if (searchForm) {
+    searchForm.addEventListener("submit", handleSearch); // Handle form submission
+  }
+
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = urlParams.get("query");
-
   if (initialQuery) {
-    if (searchInput) {
-      searchInput.value = initialQuery;
-    }
-    window.handleSearch(new Event("input"));
+    searchInput.value = initialQuery; // Keep the query in the input field
+    handleSearch(new Event("input")); // Trigger search for the initial query
   }
 });
