@@ -219,6 +219,15 @@ initializePage(); // Initialize the page immediately on script load
 
 window.addEventListener("popstate", initializePage); // Re-initialize page when popstate event occurs
 
+// Add the Cookiebot script to the head section
+const cookiebotScript = document.createElement("script");
+cookiebotScript.id = "Cookiebot";
+cookiebotScript.src = "https://consent.cookiebot.com/uc.js";
+cookiebotScript.dataset.cbid = "a59dd3af-e684-456a-ac66-13065d599510";
+cookiebotScript.dataset.blockingmode = "auto";
+cookiebotScript.type = "text/javascript";
+document.head.appendChild(cookiebotScript);
+
 // Add the Google reCAPTCHA script to the head section
 const recaptchaScript = document.createElement("script");
 recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
