@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const handleSearch = async (event) => {
+  // Define handleSearch and attach it to the window object
+  window.handleSearch = async (event) => {
     // Prevent default behavior for form submissions
     if (event && event.preventDefault) {
       event.preventDefault();
@@ -79,20 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById("job-search-form");
 
   if (searchInput) {
-    searchInput.addEventListener("input", handleSearch);
+    searchInput.addEventListener("input", window.handleSearch);
     searchInput.addEventListener("keypress", (event) => {
       if (event.key === "Enter") {
-        handleSearch(event);
+        window.handleSearch(event);
       }
     });
   }
 
   if (searchForm) {
-    searchForm.addEventListener("submit", handleSearch);
+    searchForm.addEventListener("submit", window.handleSearch);
   }
 
   if (searchButton) {
-    searchButton.addEventListener("click", handleSearch);
+    searchButton.addEventListener("click", window.handleSearch);
   }
 
   // Trigger initial search if query exists in URL
@@ -103,6 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searchInput) {
       searchInput.value = initialQuery;
     }
-    handleSearch(new Event("input"));
+    window.handleSearch(new Event("input"));
   }
 });

@@ -1,4 +1,3 @@
-// EmailJS public and private keys
 const EMAILJS_PUBLIC_KEY = "rVo2Vl1YSL1wp0yWe"; // Replace with your EmailJS public key
 const EMAILJS_PRIVATE_KEY = "2EeUhv9bhnPGViMpyvWOF"; // Replace with your EmailJS private key
 const EMAILJS_SERVICE_ID = "service_8wru0ec"; // Replace with your EmailJS service ID
@@ -34,12 +33,15 @@ function highlightActivePage() {
 
 async function initializePage() {
   try {
+    console.log("Initializing page..."); // Debug log
     const basePath = "/components/";
 
     const [headerHtml, footerHtml] = await Promise.all([
       loadPageContent(basePath + "header.html"),
       loadPageContent(basePath + "footer.html"),
     ]);
+
+    console.log("Header and footer loaded successfully."); // Debug log
 
     document.querySelectorAll("header").forEach((header) => {
       header.innerHTML = headerHtml;
@@ -49,13 +51,18 @@ async function initializePage() {
       footer.innerHTML = footerHtml;
     });
 
+    console.log("Header and footer injected into the DOM."); // Debug log
+
     // Highlight active navigation link
     highlightActivePage();
+
+    console.log("Navigation links highlighted."); // Debug log
 
     const expandButton = document.querySelector("#expand-header-menu-button");
     if (expandButton) {
       expandButton.addEventListener("click", () => {
         document.querySelector("header").classList.toggle("menu-expanded");
+        console.log("Menu expanded/collapsed."); // Debug log
       });
     }
 
@@ -64,6 +71,7 @@ async function initializePage() {
     if (popupOverlay) {
       popupOverlay.addEventListener("click", function (event) {
         if (event.target === this) {
+          console.log("Popup overlay clicked, closing..."); // Debug log
           closePopupOverlay();
         }
       });
@@ -72,32 +80,44 @@ async function initializePage() {
     const closePopupBtn = document.querySelector("#closePopupBtn");
     if (closePopupBtn) {
       closePopupBtn.addEventListener("click", closePopupOverlay);
+      console.log("Close popup button initialized."); // Debug log
     }
 
     const hireStaffButton = document.querySelector("#openFormBtn");
     if (hireStaffButton) {
       hireStaffButton.addEventListener("click", openPopupOverlay);
+      console.log("Hire Staff button initialized."); // Debug log
     }
 
     // Trigger the search functionality when the page initializes
     if (typeof handleSearch === "function") {
+      console.log("Attempting to initialize job search..."); // Debug log
+
       const urlParams = new URLSearchParams(window.location.search);
       const query = urlParams.get("query") || "";
       const industry = urlParams.get("industry") || "";
 
+      console.log("Query:", query, "Industry:", industry); // Debug log
+
       const searchInput = document.getElementById("job-search-input");
       if (searchInput) {
         searchInput.value = query; // Pre-fill search input
+        console.log("Search input pre-filled with:", query); // Debug log
+      } else {
+        console.error("Search input not found in DOM."); // Debug error
       }
 
-      // Call handleSearch to update the job listing dynamically
+      console.log("Calling handleSearch to update job listings..."); // Debug log
       handleSearch(new Event("input"));
+    } else {
+      console.warn("handleSearch function is not defined."); // Debug warning
     }
 
     // Initialize contact form logic
     initializeContactForm();
+    console.log("Contact form initialized."); // Debug log
   } catch (error) {
-    console.error("Failed to initialize page navigation:", error);
+    console.error("Error during page initialization:", error); // Debug error
     alert("Failed to initialize page navigation!");
   }
 }
