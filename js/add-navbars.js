@@ -41,14 +41,15 @@ async function initializePage() {
       loadPageContent(basePath + "footer.html"),
     ]);
 
-    document.querySelectorAll("header").forEach(header => {
+    document.querySelectorAll("header").forEach((header) => {
       header.innerHTML = headerHtml;
     });
 
-    document.querySelectorAll("footer").forEach(footer => {
+    document.querySelectorAll("footer").forEach((footer) => {
       footer.innerHTML = footerHtml;
     });
 
+    // Highlight active navigation link
     highlightActivePage();
 
     const expandButton = document.querySelector("#expand-header-menu-button");
@@ -58,6 +59,7 @@ async function initializePage() {
       });
     }
 
+    // Handle popup overlay for "Hire Staff" button
     const popupOverlay = document.getElementById("popupOverlay");
     if (popupOverlay) {
       popupOverlay.addEventListener("click", function (event) {
@@ -77,6 +79,22 @@ async function initializePage() {
       hireStaffButton.addEventListener("click", openPopupOverlay);
     }
 
+    // Trigger the search functionality when the page initializes
+    if (typeof handleSearch === "function") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get("query") || "";
+      const industry = urlParams.get("industry") || "";
+
+      const searchInput = document.getElementById("job-search-input");
+      if (searchInput) {
+        searchInput.value = query; // Pre-fill search input
+      }
+
+      // Call handleSearch to update the job listing dynamically
+      handleSearch(new Event("input"));
+    }
+
+    // Initialize contact form logic
     initializeContactForm();
   } catch (error) {
     console.error("Failed to initialize page navigation:", error);
@@ -106,19 +124,6 @@ async function initializeContactForm() {
     document.querySelector("textarea[name='message']").focus();
   } catch (error) {
     console.error("Failed to initialize contact form:", error);
-  }
-}
-
-function initializeVacanciesReset() {
-  const vacanciesMenu = document.querySelector(".vacancies-menu");
-  if (vacanciesMenu) {
-    vacanciesMenu.addEventListener("click", (event) => {
-      const searchInput = document.getElementById("job-search-input");
-      const jobCardsContainer = document.getElementById("job-cards-container");
-
-      if (searchInput) searchInput.value = "";
-      if (jobCardsContainer) jobCardsContainer.innerHTML = "";
-    });
   }
 }
 
@@ -180,7 +185,8 @@ window.submitMessage = async function (event) {
           form.querySelector(".status-message-content").textContent =
             error?.message ?? String(error);
         }
-      }).catch(error => {
+      })
+      .catch((error) => {
         console.error("reCAPTCHA execution error:", error);
         form.setAttribute("data-status", "ERROR");
         form.querySelector(".status-message-content").textContent =
