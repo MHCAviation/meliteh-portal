@@ -109,6 +109,19 @@ async function initializeContactForm() {
   }
 }
 
+function initializeVacanciesReset() {
+  const vacanciesMenu = document.querySelector(".vacancies-menu");
+  if (vacanciesMenu) {
+    vacanciesMenu.addEventListener("click", (event) => {
+      const searchInput = document.getElementById("job-search-input");
+      const jobCardsContainer = document.getElementById("job-cards-container");
+
+      if (searchInput) searchInput.value = "";
+      if (jobCardsContainer) jobCardsContainer.innerHTML = "";
+    });
+  }
+}
+
 window.submitMessage = async function (event) {
   event.preventDefault();
   const form = event.target;
