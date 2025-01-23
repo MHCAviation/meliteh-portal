@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
           activeIndustry || "All Industries"
         }"`;
       } else {
+        jobCardsContainer.classList.remove("grid-layout");
+        jobCardsContainer.classList.add("flex-layout");
+        
         noJobsMessage.textContent = `Sorry, there are no jobs available in "${
           activeIndustry || "All Industries"
         }"`;
