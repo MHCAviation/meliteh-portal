@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Active industry:", activeIndustry);
 
     // Build the new URL by updating existing parameters
-    if (!activeIndustry || !industryLinks.hasOwnProperty(activeIndustry)) {
+    if (!activeIndustry ) {
       activeIndustry = "All Jobs"; // Default to "All Jobs" if no industry is active
     }
 
@@ -37,8 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
     history.pushState({}, "", newUrl); // Update the browser URL with the new query
 
     // Reset the fetch process: ignore previous filters and get fresh data
-    let vacancies = await window.getAllVacancies(); // Always fetch all vacancies
-
+    let vacancies;
+    if (activeIndustry === "All Jobs") {
+      vacancies = await window.getAllVacancies(); // Always fetch all vacancies 
+    } else {
+      vacancies = await window.getVacanciesByIndustry(activeIndustry);
+    }
+    
     console.log("Fetched vacancies for industry:", activeIndustry, vacancies);
 
     // Now filter based on the search query

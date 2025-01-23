@@ -71,7 +71,7 @@
             <form
               id="job-search-form"
               class="search-bar-wrapper"
-              onsubmit="handleSearch(event); return false;"
+              onsubmit="handleSearch(event);"
             >
               <div class="input-wrapper">
                 <img
@@ -402,7 +402,7 @@
 
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
-    <script type="text/javascript">
+    <script>
       // Fetch the content of popup-hire-staff.html using fetch API
       fetch("popup-hire-staff.html")
         .then((response) => response.text())

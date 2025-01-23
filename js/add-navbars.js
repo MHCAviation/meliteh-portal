@@ -88,31 +88,7 @@ async function initializePage() {
       hireStaffButton.addEventListener("click", openPopupOverlay);
       console.log("Hire Staff button initialized."); // Debug log
     }
-
-    // Trigger the search functionality when the page initializes
-    if (typeof handleSearch === "function") {
-      console.log("Attempting to initialize job search..."); // Debug log
-
-      const urlParams = new URLSearchParams(window.location.search);
-      const query = urlParams.get("query") || "";
-      const industry = urlParams.get("industry") || "";
-
-      console.log("Query:", query, "Industry:", industry); // Debug log
-
-      const searchInput = document.getElementById("job-search-input");
-      if (searchInput) {
-        searchInput.value = query; // Pre-fill search input
-        console.log("Search input pre-filled with:", query); // Debug log
-      } else {
-        console.error("Search input not found in DOM."); // Debug error
-      }
-
-      console.log("Calling handleSearch to update job listings..."); // Debug log
-      handleSearch(new Event("input"));
-    } else {
-      console.warn("handleSearch function is not defined."); // Debug warning
-    }
-
+    
     // Initialize contact form logic
     initializeContactForm();
     console.log("Contact form initialized."); // Debug log

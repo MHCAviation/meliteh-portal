@@ -311,20 +311,26 @@ window.Trengo.key = 'HM1TBzHiwbKzSBt6ruC5';
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
     <script>
-      document.addEventListener('DOMContentLoaded', async function() {
-        try {
-          const response = await fetch('popup-hire-staff.html');
-          if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
+     document.addEventListener("DOMContentLoaded", () => {
+      // Fetch the content of popup-hire-staff.html using fetch API
+      fetch("popup-hire-staff.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Create a temporary container for the HTML content
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = html;
+
+          // Append the content to the body
+          while (tempDiv.firstChild) {
+            document.body.appendChild(tempDiv.firstChild);
           }
-          const htmlContent = await response.text();
-          const newDiv = document.createElement('div');
-          newDiv.innerHTML = htmlContent;
-          document.body.appendChild(newDiv);
-        } catch (error) {
-          console.error('Failed to load popup-hire-staff.html:', error);
-        }
-      });
+
+          console.log("popup-hire-staff.html loaded and appended."); // Debug log
+        })
+        .catch((error) =>
+          console.error("Error fetching popup-hire-staff.html:", error)
+        );
+    });
     </script>
     <script type="module" src="js/add-navbars.js"></script>
     <script type="module" src="js/jobs-search.js"></script>
