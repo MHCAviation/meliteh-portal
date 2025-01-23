@@ -137,7 +137,7 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 }
 
 
-@media (max-width: 769px) {
+@media (max-width: 960px) {
     .top-menu {
         gap: 1em;
     }

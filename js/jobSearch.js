@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Active industry:", activeIndustry);
 
     // Build the new URL by updating existing parameters
-    if (!activeIndustry ) {
+    if (!activeIndustry) {
       activeIndustry = "All Jobs"; // Default to "All Jobs" if no industry is active
     }
 
@@ -39,11 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reset the fetch process: ignore previous filters and get fresh data
     let vacancies;
     if (activeIndustry === "All Jobs") {
-      vacancies = await window.getAllVacancies(); // Always fetch all vacancies 
+      vacancies = await window.getAllVacancies(); // Always fetch all vacancies
     } else {
       vacancies = await window.getVacanciesByIndustry(activeIndustry);
     }
-    
+
     console.log("Fetched vacancies for industry:", activeIndustry, vacancies);
 
     // Now filter based on the search query
@@ -59,13 +59,24 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     if (filteredData.length > 0) {
-      window.displayVacancies(filteredData); // Display filtered vacancies using loadJobs.js function
+      // Show job cards in grid layout
+      jobCardsContainer.classList.remove("flex-layout");
+      jobCardsContainer.classList.add("grid-layout");
+
+      jobCardsContainer.innerHTML = ""; // Clear previous results
+      window.displayVacancies(filteredData); // Populate job cards dynamically
+
       totalVacanciesCounter.textContent = filteredData.length.toString();
     } else {
+      // Show "No Matching Jobs" in flex layout
+      jobCardsContainer.classList.remove("grid-layout");
+      jobCardsContainer.classList.add("flex-layout");
+
       jobCardsContainer.innerHTML = `
-                <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
-                <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png">
-            `;
+        <div class="no-matching-jobs">
+          <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
+          <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png" />
+        </div>`;
       totalVacanciesCounter.textContent = "0";
     }
   };
