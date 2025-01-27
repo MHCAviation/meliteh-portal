@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterVacancies(vacancies, query) {
+    console.log("Filtering vacancies with query:", query);
     return vacancies.filter((job) =>
       job.JobTitle.toLowerCase().includes(query.toLowerCase())
     );
@@ -89,6 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
           activeIndustry || "All Industries"
         }"`;
       } else {
+        jobCardsContainer.classList.remove("grid-layout");
+        jobCardsContainer.classList.add("flex-layout");
+        
         noJobsMessage.textContent = `Sorry, there are no jobs available in "${
           activeIndustry || "All Industries"
         }"`;
@@ -159,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
         titleCompanyWrapper.appendChild(jobTitle);
 
         jobWrapper.appendChild(companyLogo);
-
         jobWrapper.appendChild(titleCompanyWrapper);
 
         jobCard.appendChild(jobWrapper);
@@ -182,9 +185,11 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadVacancies() {
     try {
       let vacancies = await getVacancies();
+      console.log("Vacancies before filtering:", vacancies);
 
       if (query) {
         vacancies = filterVacancies(vacancies, query);
+        console.log("Vacancies after filtering:", vacancies);
       }
 
       displayVacancies(vacancies);

@@ -1,4 +1,3 @@
-// EmailJS public and private keys
 const EMAILJS_PUBLIC_KEY = "rVo2Vl1YSL1wp0yWe"; // Replace with your EmailJS public key
 const EMAILJS_PRIVATE_KEY = "2EeUhv9bhnPGViMpyvWOF"; // Replace with your EmailJS private key
 const EMAILJS_SERVICE_ID = "service_8wru0ec"; // Replace with your EmailJS service ID
@@ -34,6 +33,7 @@ function highlightActivePage() {
 
 async function initializePage() {
   try {
+    console.log("Initializing page..."); // Debug log
     const basePath = "/components/";
 
     const [headerHtml, footerHtml] = await Promise.all([
@@ -41,27 +41,37 @@ async function initializePage() {
       loadPageContent(basePath + "footer.html"),
     ]);
 
-    document.querySelectorAll("header").forEach(header => {
+    console.log("Header and footer loaded successfully."); // Debug log
+
+    document.querySelectorAll("header").forEach((header) => {
       header.innerHTML = headerHtml;
     });
 
-    document.querySelectorAll("footer").forEach(footer => {
+    document.querySelectorAll("footer").forEach((footer) => {
       footer.innerHTML = footerHtml;
     });
 
+    console.log("Header and footer injected into the DOM."); // Debug log
+
+    // Highlight active navigation link
     highlightActivePage();
+
+    console.log("Navigation links highlighted."); // Debug log
 
     const expandButton = document.querySelector("#expand-header-menu-button");
     if (expandButton) {
       expandButton.addEventListener("click", () => {
         document.querySelector("header").classList.toggle("menu-expanded");
+        console.log("Menu expanded/collapsed."); // Debug log
       });
     }
 
+    // Handle popup overlay for "Hire Staff" button
     const popupOverlay = document.getElementById("popupOverlay");
     if (popupOverlay) {
       popupOverlay.addEventListener("click", function (event) {
         if (event.target === this) {
+          console.log("Popup overlay clicked, closing..."); // Debug log
           closePopupOverlay();
         }
       });
@@ -70,16 +80,20 @@ async function initializePage() {
     const closePopupBtn = document.querySelector("#closePopupBtn");
     if (closePopupBtn) {
       closePopupBtn.addEventListener("click", closePopupOverlay);
+      console.log("Close popup button initialized."); // Debug log
     }
 
     const hireStaffButton = document.querySelector("#openFormBtn");
     if (hireStaffButton) {
       hireStaffButton.addEventListener("click", openPopupOverlay);
+      console.log("Hire Staff button initialized."); // Debug log
     }
-
+    
+    // Initialize contact form logic
     initializeContactForm();
+    console.log("Contact form initialized."); // Debug log
   } catch (error) {
-    console.error("Failed to initialize page navigation:", error);
+    console.error("Error during page initialization:", error); // Debug error
     alert("Failed to initialize page navigation!");
   }
 }
@@ -167,7 +181,8 @@ window.submitMessage = async function (event) {
           form.querySelector(".status-message-content").textContent =
             error?.message ?? String(error);
         }
-      }).catch(error => {
+      })
+      .catch((error) => {
         console.error("reCAPTCHA execution error:", error);
         form.setAttribute("data-status", "ERROR");
         form.querySelector(".status-message-content").textContent =
@@ -179,6 +194,15 @@ window.submitMessage = async function (event) {
 initializePage(); // Initialize the page immediately on script load
 
 window.addEventListener("popstate", initializePage); // Re-initialize page when popstate event occurs
+
+// Add the Cookiebot script to the head section
+const cookiebotScript = document.createElement("script");
+cookiebotScript.id = "Cookiebot";
+cookiebotScript.src = "https://consent.cookiebot.com/uc.js";
+cookiebotScript.dataset.cbid = "a59dd3af-e684-456a-ac66-13065d599510";
+cookiebotScript.dataset.blockingmode = "auto";
+cookiebotScript.type = "text/javascript";
+document.head.appendChild(cookiebotScript);
 
 // Add the Google reCAPTCHA script to the head section
 const recaptchaScript = document.createElement("script");

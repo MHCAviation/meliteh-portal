@@ -1,98 +1,92 @@
 // Filter function
 function applyFilters() {
-    console.log("Applying filters...");
+  console.log("Applying filters...");
 
-    // Gather selected filter values
-    const locationFilters = Array.from(document.querySelectorAll('input[name="distanceType"]:checked')).map(input => input.value);
-    const dateFilter = document.querySelector('input[name="maxPostedForDays"]:checked').value;
-    const employmentTypeFilters = Array.from(document.querySelectorAll('input[name="employmentType"]:checked')).map(input => input.value);
+  // Gather selected filter values
+  const locationFilters = Array.from(document.querySelectorAll('input[name="distanceType"]:checked')).map(input => input.value);
+  const dateFilter = document.querySelector('input[name="maxPostedForDays"]:checked')?.value || null;
+  const employmentTypeFilters = Array.from(document.querySelectorAll('input[name="employmentType"]:checked')).map(input => input.value);
 
-    // Log selected filter values for clarity
-    console.log("Selected Location Filters:", locationFilters);
-    console.log("Selected Date Filter:", dateFilter);
-    console.log("Selected Employment Type Filters:", employmentTypeFilters);
+  // Log selected filter values for clarity
+  console.log("Selected Location Filters:", locationFilters);
+  console.log("Selected Date Filter:", dateFilter);
+  console.log("Selected Employment Type Filters:", employmentTypeFilters);
 
-    // Fetch all job cards
-    const jobCards = document.querySelectorAll(".job-card");
+  // Fetch all job cards
+  const jobCards = document.querySelectorAll(".job-card");
 
-    // Filter and display job cards based on selected filters
-    jobCards.forEach(jobCard => {
-        const jobLocation = jobCard.getAttribute("data-location");
-        const jobDate = jobCard.getAttribute("data-date");
-        const jobType = jobCard.getAttribute("data-type");
+  // Filter and display job cards based on selected filters
+  jobCards.forEach(jobCard => {
+    const jobLocation = jobCard.getAttribute("data-location");
+    const jobDate = jobCard.getAttribute("data-date");
+    const jobType = jobCard.getAttribute("data-type");
 
-        // Location filter logic
-        let matchesLocation = false;
+    console.log(`Job Card Data: Location=${jobLocation}, Date=${jobDate}, Type=${jobType}`);
 
-        // Check if "Exact" is checked and jobLocation contains "Malta"
-        if (locationFilters.includes("Exact")) {
-            matchesLocation = jobLocation.toLowerCase().includes("malta");
-        }
+    // Location filter logic
+    let matchesLocation = false;
 
-        // Check if "Global" is checked and jobLocation is empty or "Global"
-        if (locationFilters.includes("Global")) {
-            matchesLocation = matchesLocation || jobLocation === "" || jobLocation.toLowerCase() === "global";
-        }
+    if (locationFilters.includes("Exact")) {
+      matchesLocation = jobLocation.toLowerCase().includes("malta");
+    }
 
-        // If no location filters are checked, default to true (no location filtering)
-        if (locationFilters.length === 0) {
-            matchesLocation = true;
-        }
+    if (locationFilters.includes("Global")) {
+      matchesLocation = matchesLocation || jobLocation === "" || jobLocation.toLowerCase() === "global";
+    }
 
-        // Date filter logic
-        let matchesDate = true;
-        if (dateFilter) {
-            const today = new Date();
-            let filterDate = new Date();
+    if (locationFilters.length === 0) {
+      matchesLocation = true;
+    }
 
-            if (dateFilter === "7") {
-                filterDate.setDate(today.getDate() - 7);
-            } else if (dateFilter === "14") {
-                filterDate.setDate(today.getDate() - 14);
-            } else if (dateFilter === "28") {
-                filterDate.setDate(today.getDate() - 28);
-            }
+    // Date filter logic
+    let matchesDate = true;
+    if (dateFilter) {
+      const today = new Date();
+      let filterDate = new Date();
 
-            matchesDate = new Date(jobDate) >= filterDate;
-        }
+      if (dateFilter === "7") {
+        filterDate.setDate(today.getDate() - 7);
+      } else if (dateFilter === "14") {
+        filterDate.setDate(today.getDate() - 14);
+      } else if (dateFilter === "28") {
+        filterDate.setDate(today.getDate() - 28);
+      }
 
-        // Employment type filter logic
-        const matchesEmploymentType = employmentTypeFilters.includes(jobType);
+      matchesDate = new Date(jobDate) >= filterDate;
+    }
 
-        // Determine if the job card matches all selected filters
-        const shouldDisplay = matchesLocation && matchesDate && matchesEmploymentType;
+    // Employment type filter logic
+    const matchesEmploymentType = employmentTypeFilters.length === 0 || employmentTypeFilters.includes(jobType);
 
-        // Update display style based on filters
-        jobCard.style.display = shouldDisplay ? "" : "none";
+    // Determine if the job card matches all selected filters
+    const shouldDisplay = matchesLocation && matchesDate && matchesEmploymentType;
 
-        // Log each job card's filter result for debugging
-        console.log(`Job Card: ${jobCard.querySelector(".job-title").textContent}`);
-        console.log("Location Match:", matchesLocation);
-        console.log("Date Match:", matchesDate);
-        console.log("Employment Type Match:", matchesEmploymentType);
-        console.log("Should Display:", shouldDisplay);
-    });
+    // Update display style based on filters
+    jobCard.style.display = shouldDisplay ? "" : "none";
 
-    // Count visible job cards after filtering
-    const visibleJobCards = document.querySelectorAll(".job-card:not([style*='display: none'])");
-    console.log("Total Visible Job Cards:", visibleJobCards.length);
+    console.log(`Should Display Job Card: ${shouldDisplay}`);
+  });
 
-    // Update the total vacancies counter
-    const totalVacanciesCounter = document.getElementById("total-open-vacancies-counter");
-    totalVacanciesCounter.textContent = visibleJobCards.length;
+  // Count visible job cards after filtering
+  const visibleJobCards = document.querySelectorAll(".job-card:not([style*='display: none'])");
+  console.log("Total Visible Job Cards:", visibleJobCards.length);
 
-    console.log("Filters applied successfully.");
+  // Update the total vacancies counter
+  const totalVacanciesCounter = document.getElementById("total-open-vacancies-counter");
+  totalVacanciesCounter.textContent = visibleJobCards.length;
+
+  console.log("Filters applied successfully.");
 }
 
 // Event listener for the filter form changes
 const filterForm = document.getElementById("side-panel-filters");
 if (filterForm) {
-    filterForm.addEventListener("change", () => {
-        console.log("Filter form changed. Reapplying filters...");
-        applyFilters();
-    });
+  filterForm.addEventListener("change", () => {
+    console.log("Filter form changed. Reapplying filters...");
+    applyFilters();
+  });
 } else {
-    console.error("Filter form element not found.");
+  console.error("Filter form element not found.");
 }
 
 // Initial application of filters on page load
