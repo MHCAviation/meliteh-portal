@@ -210,16 +210,14 @@ recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCH
 recaptchaScript.async = true;
 document.head.appendChild(recaptchaScript);
 
-const gtagScript = document.createElement("script");
-gtagScript.async = true;
-gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-6NM1J03PQF";
-document.head.appendChild(gtagScript);
+const gtmScript = document.createElement("script");
+gtmScript.async = true;
+gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=GTM-K9KM9HF6";
+document.head.appendChild(gtmScript);
 
-gtagScript.onload = () => {
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-6NM1J03PQF");
-};
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", "G-6NM1J03PQF");
