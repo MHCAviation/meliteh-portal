@@ -88,7 +88,7 @@ async function initializePage() {
       hireStaffButton.addEventListener("click", openPopupOverlay);
       console.log("Hire Staff button initialized."); // Debug log
     }
-    
+
     // Initialize contact form logic
     initializeContactForm();
     console.log("Contact form initialized."); // Debug log
@@ -209,3 +209,17 @@ const recaptchaScript = document.createElement("script");
 recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
 recaptchaScript.async = true;
 document.head.appendChild(recaptchaScript);
+
+const gtagScript = document.createElement("script");
+gtagScript.async = true;
+gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-6NM1J03PQF";
+document.head.appendChild(gtagScript);
+
+gtagScript.onload = () => {
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-6NM1J03PQF");
+};

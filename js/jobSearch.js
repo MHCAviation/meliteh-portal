@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     let activeIndustry = urlParams.get("industry");
 
-    console.log("Search initiated with query:", query);
-    console.log("Active industry:", activeIndustry);
-
     // Build the new URL by updating existing parameters
     if (!activeIndustry) {
       activeIndustry = "All Jobs"; // Default to "All Jobs" if no industry is active
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let newUrl = `${window.location.pathname}?${newUrlParams.toString()}`;
 
-    console.log("New URL being pushed to history:", newUrl);
     history.pushState({}, "", newUrl); // Update the browser URL with the new query
 
     // Reset the fetch process: ignore previous filters and get fresh data
@@ -44,14 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
       vacancies = await window.getVacanciesByIndustry(activeIndustry);
     }
 
-    console.log("Fetched vacancies for industry:", activeIndustry, vacancies);
-
     // Now filter based on the search query
-    const filteredData = vacancies.filter((job) =>
-      job.JobTitle.toLowerCase().includes(query)
-    );
-
-    console.log("Filtered vacancies:", filteredData);
+    const filteredData = vacancies.filter((job) => {
+      const cleanTitle = job.JobTitle.toLowerCase().trim();
+      return (
+        cleanTitle &&
+        !cleanTitle.includes("open application") &&
+        cleanTitle.includes(query.toLowerCase().trim())
+      );
+    });
 
     const jobCardsContainer = document.getElementById("job-cards-container");
     const totalVacanciesCounter = document.getElementById(
