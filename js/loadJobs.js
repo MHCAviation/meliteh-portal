@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         jobCardsContainer.classList.remove("grid-layout");
         jobCardsContainer.classList.add("flex-layout");
-        
+
         noJobsMessage.textContent = `Sorry, there are no jobs available in "${
           activeIndustry || "All Industries"
         }"`;
@@ -168,6 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
         jobCard.appendChild(jobWrapper);
         jobCard.appendChild(jobDetailsWrapper);
         jobCard.appendChild(jobDescription);
+
+        jobCard.addEventListener("click", () => {
+          gtag("event", "job_card_click", {
+            job_id: job.JobId,
+            job_title: job.JobTitle,
+            industry: activeIndustry || "All Industries",
+            event_category: "Job Card Clicked",
+            event_label: job.JobTitle,
+            transport_type: "beacon", // Ensures the event is sent even if the page unloads
+          });
+        });
 
         jobCardsContainer.appendChild(jobCard);
       });
