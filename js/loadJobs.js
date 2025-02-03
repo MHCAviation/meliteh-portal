@@ -170,13 +170,12 @@ document.addEventListener("DOMContentLoaded", () => {
         jobCard.appendChild(jobDescription);
 
         jobCard.addEventListener("click", () => {
-          gtag("event", "job_card_click", {
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({
+            event: "job_card_click",
             job_id: job.JobId,
             job_title: job.JobTitle,
             industry: activeIndustry || "All Industries",
-            event_category: "Job Card Clicked",
-            event_label: job.JobTitle,
-            transport_type: "beacon", // Ensures the event is sent even if the page unloads
           });
         });
 
