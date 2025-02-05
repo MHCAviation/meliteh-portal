@@ -142,7 +142,6 @@
 
 .clientTitle {
   color: #141414;
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -190,7 +189,7 @@
 
 .home .news-and-insights-C61RwL {
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 40px;
   font-weight: 500;
   text-align: center;
@@ -216,7 +215,7 @@
 .home .news-title-lorem-ipsum-dolor-sit-amet-CGIxxI {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -256,7 +255,7 @@
 .home .news-title-lorem-ipsum-dolor-sit-amet-weQ8l3 {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -296,7 +295,7 @@
 .home .news-title-lorem-ipsum-dolor-sit-amet-oCI8Gp {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -337,7 +336,7 @@
 .home .news-title-lorem-ipsum-dolor-sit-amet-cZxX2Y {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -447,7 +446,7 @@
   background-image: url(../img/testimonials/CaptainJaime.jpg);
 }
 
-.home .descTestimonials {
+.descTestimonials {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -455,6 +454,7 @@
   letter-spacing: 0px;
   line-height: 20px;
   text-align: left;
+  height: 100%;
 }
 
 .home .group-38217-EpPtXC {
@@ -617,7 +617,6 @@
 
 .home .dont-take-our-word-for-it-C61RwL {
   color: #141414;
-  font-family: "Montserrat", Helvetica;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
@@ -730,7 +729,6 @@
 }
 
 .email-subscription input[type="email"] {
-  font-family: "Montserrat";
   flex-grow: 1;
   padding-left: 1em;
   border: 1px solid #ccc;
@@ -745,7 +743,6 @@
 
 .email-subscription button {
   border: 0;
-  font-family: "Montserrat";
   font-weight: 700;
   background-color: #d20027;
   color: #ffffff;
@@ -825,7 +822,6 @@
 .home .view-all-jobs-zayv2c {
   background-color: transparent;
   color: #d20027;
-  font-family: "Montserrat", Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -892,7 +888,6 @@
   background-clip: text;
   background-color: transparent;
   color: transparent;
-  font-family: "Montserrat", Helvetica;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -911,7 +906,6 @@
 .home .aviation-9wWVRE {
   background-color: transparent;
   color: #ffffff;
-  font-family: "Montserrat", Helvetica;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -936,7 +930,6 @@
   background-clip: text;
   background-color: transparent;
   color: transparent;
-  font-family: "Montserrat", Helvetica;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -1029,7 +1022,6 @@
 .home .a320-captain-xxpKxy {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -1082,7 +1074,6 @@
 .home .apply-now-Mwsoy7 {
   background-color: transparent;
   color: #d20027;
-  font-family: "Montserrat", Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1161,7 +1152,7 @@
 .home .a320-captain-hpQcjC {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -1214,7 +1205,7 @@
 .home .apply-now-sWTOix {
   background-color: transparent;
   color: #d20027;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1293,7 +1284,7 @@
 .home .a320-captain-EdtXDd {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -1346,7 +1337,7 @@
 .home .apply-now-q0yWAj {
   background-color: transparent;
   color: #d20027;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1425,7 +1416,7 @@
 .home .a320-captain-uBuIQz {
   background-color: transparent;
   color: #141414;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -1478,7 +1469,7 @@
 .home .apply-now-xxS2id {
   background-color: transparent;
   color: #d20027;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1538,7 +1529,7 @@
 .home .view-all-aviation-jobs-zXdsaN {
   background-color: transparent;
   color: #ffffff;
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1563,7 +1554,7 @@
 }
 
 .home .get-the-right-job-you-deserve-8dJy9b {
-  font-family: "Montserrat", Helvetica;
+  font-family: "t", Helvetica;
   font-size: 3.2vw;
   font-weight: 700;
   height: auto;

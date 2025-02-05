@@ -265,7 +265,6 @@
   cursor: pointer;
   color: var(--neutral100);
   font-size: 16px;
-  font-family: "Montserrat", Helvetica;
   font-weight: 500;
 }
 
@@ -385,7 +384,8 @@
 .subscribe-form-email-input {
   line-height: 24px;
   white-space: nowrap;
-  font-family: var(--font-family-montserrat);
+  font-family: "Inter", sans-serif;
+  ;
   font-size: var(--font-size-m);
   font-weight: 500;
 }
@@ -414,7 +414,6 @@
 
 .search-bar {
   color: #111111;
-  font-family: "Montserrat";
   width: 100%;
   height: 100%;
   background-color: white;
@@ -432,7 +431,6 @@
 }
 
 .search-button {
-  font-family: "Montserrat";
   font-weight: 700;
   height: 100%;
   color: white;
@@ -465,6 +463,10 @@
 
 .red-text {
   margin-top: 8px;
+}
+
+.job-cards-container {
+  width: 100%;
 }
 
 @media (max-width: 1366px) {

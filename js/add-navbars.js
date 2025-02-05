@@ -30,19 +30,17 @@ function highlightActivePage() {
     }
   });
 }
-
 async function initializePage() {
   try {
-    console.log("Initializing page..."); // Debug log
     const basePath = "/components/";
 
+    // Load header and footer concurrently
     const [headerHtml, footerHtml] = await Promise.all([
       loadPageContent(basePath + "header.html"),
       loadPageContent(basePath + "footer.html"),
     ]);
 
-    console.log("Header and footer loaded successfully."); // Debug log
-
+    // Inject header & footer into the DOM
     document.querySelectorAll("header").forEach((header) => {
       header.innerHTML = headerHtml;
     });
@@ -56,44 +54,46 @@ async function initializePage() {
     // Highlight active navigation link
     highlightActivePage();
 
-    console.log("Navigation links highlighted."); // Debug log
-
+    // Menu toggle functionality
     const expandButton = document.querySelector("#expand-header-menu-button");
     if (expandButton) {
       expandButton.addEventListener("click", () => {
         document.querySelector("header").classList.toggle("menu-expanded");
-        console.log("Menu expanded/collapsed."); // Debug log
       });
     }
 
-    // Handle popup overlay for "Hire Staff" button
-    const popupOverlay = document.getElementById("popupOverlay");
-    if (popupOverlay) {
-      popupOverlay.addEventListener("click", function (event) {
-        if (event.target === this) {
-          console.log("Popup overlay clicked, closing..."); // Debug log
-          closePopupOverlay();
+    // Submit CV dropdown with smooth animation
+    const submitCvBtn = document.getElementById("submitCvBtn");
+    const cvDropdown = document.getElementById("cvDropdown");
+
+    if (submitCvBtn && cvDropdown) {
+      submitCvBtn.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents immediate closing when clicked
+        cvDropdown.classList.toggle("show");
+        this.querySelector("i").classList.toggle("rotate");
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !submitCvBtn.contains(event.target) &&
+          !cvDropdown.contains(event.target)
+        ) {
+          cvDropdown.classList.remove("show");
+          submitCvBtn.querySelector("i").classList.remove("rotate");
         }
       });
     }
 
-    const closePopupBtn = document.querySelector("#closePopupBtn");
-    if (closePopupBtn) {
-      closePopupBtn.addEventListener("click", closePopupOverlay);
-      console.log("Close popup button initialized."); // Debug log
-    }
-
+    // Handle popup overlay for "Hire Staff" button
     const hireStaffButton = document.querySelector("#openFormBtn");
     if (hireStaffButton) {
       hireStaffButton.addEventListener("click", openPopupOverlay);
-      console.log("Hire Staff button initialized."); // Debug log
     }
 
     // Initialize contact form logic
     initializeContactForm();
-    console.log("Contact form initialized."); // Debug log
   } catch (error) {
-    console.error("Error during page initialization:", error); // Debug error
     alert("Failed to initialize page navigation!");
   }
 }
@@ -183,7 +183,6 @@ window.submitMessage = async function (event) {
         }
       })
       .catch((error) => {
-        console.error("reCAPTCHA execution error:", error);
         form.setAttribute("data-status", "ERROR");
         form.querySelector(".status-message-content").textContent =
           "reCAPTCHA failed. Please try again.";
