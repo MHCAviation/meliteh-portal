@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <title>Vacancies</title>
+    <title>Vacancies - Find Your Perfect Job | Meliteh Recruiting</title>
+
+    <!-- Meta Description for SEO -->
     <meta
       name="description"
-      content="Browse available jobs at Meliteh Recruiting ltd. in Hospitality, IT, Construction, Finance, and other industries."
+      content="Browse available jobs at Meliteh Recruiting Ltd. in Hospitality, IT, Construction, Finance, and other industries. Discover your next career opportunity today."
     />
+
+    <!-- Canonical Link -->
+    <link
+      rel="canonical"
+      href="https://www.meliteh.com/find-jobs-landing.html"
+    />
+
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
     <meta name="og:type" content="website" />
     <meta
       property="og:url"
@@ -16,26 +26,45 @@
     />
     <meta property="og:site_name" content="Meliteh Recruiting" />
     <meta
+      property="og:title"
+      content="Vacancies - Find Your Perfect Job | Meliteh Recruiting"
+    />
+    <meta
+      property="og:description"
+      content="Browse available jobs at Meliteh Recruiting Ltd. in Hospitality, IT, Construction, Finance, and other industries. Your next career opportunity is just a click away."
+    />
+    <meta
       property="og:image"
       itemprop="image primaryImageOfPage"
       content="https://meliteh.com/img/favicon.png"
     />
 
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:domain" content="meliteh.com" />
     <meta
       name="twitter:title"
-      property="og:title"
-      itemprop="name"
-      content="Vacancies"
+      content="Vacancies - Find Your Perfect Job | Meliteh Recruiting"
     />
     <meta
       name="twitter:description"
-      property="og:description"
-      itemprop="description"
-      content="Browse available jobs at Meliteh Recruiting ltd. in Hospitality, IT, Construction, Finance, and other industries."
+      content="Browse available jobs at Meliteh Recruiting Ltd. in Hospitality, IT, Construction, Finance, and other industries. Discover your ideal job opportunity now."
+    />
+    <meta name="twitter:image" content="https://meliteh.com/img/favicon.png" />
+
+    <!-- SEO Keywords -->
+    <meta
+      name="keywords"
+      content="vacancies, jobs, recruitment, staffing, careers, hiring, hospitality jobs, IT jobs, construction jobs, finance jobs, job search, career opportunities"
     />
 
+    <!-- Facebook Domain Verification -->
+    <meta
+      name="facebook-domain-verification"
+      content="ofbrs44fzdc9zr2z6hzqyisqkv9b12"
+    />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <link rel="stylesheet" href="css/industry-cards.css" />
@@ -205,12 +234,10 @@
               <div class="place montserrat-normal-licorice-12px">
                 <a class="menu-link" href="index.html">Home</a>
               </div>
-              <div class="v6-icon-free">
-                <div
-                  class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"
+              <div
+                class="icon valign-text-middle fontawesome6free-solid-normal-monza-12px"
+              >
                 >
-                  
-                </div>
               </div>
               <div class="breadcrumbs-industry-name">All Jobs</div>
             </div>
@@ -408,8 +435,6 @@
             document.body.appendChild(tempDiv.firstChild);
           }
 
-          console.log("popup-hire-staff.html loaded and appended."); // Debug log
-
           // Initialize popup overlay and close button after content is loaded
           const popupOverlay = document.getElementById("popupOverlay");
           if (popupOverlay) {
@@ -424,13 +449,11 @@
           const closePopupBtn = document.querySelector("#closePopupBtn");
           if (closePopupBtn) {
             closePopupBtn.addEventListener("click", closePopupOverlay);
-            console.log("Close popup button initialized."); // Debug log
           }
 
           const hireStaffButton = document.querySelector("#openFormBtn");
           if (hireStaffButton) {
             hireStaffButton.addEventListener("click", openPopupOverlay);
-            console.log("Hire Staff button initialized."); // Debug log
           }
         })
         .catch((error) =>

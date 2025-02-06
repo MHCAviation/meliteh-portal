@@ -1,25 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("topnav.css");
 @import url("https://use.fontawesome.com/releases/v6.4.0/css/all.css");
-
-@font-face {
-  font-family: "Font Awesome 6 Free-Solid";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/Font Awesome 6 Free-Solid-900.otf") format("opentype");
-}
 
 body {
   margin: 0;
   background: #ffffff;
   --header-height: 80px;
-  font-family: var(--font-family-montserrat);
+  font-family: "Inter", sans-serif
+}
+
+textarea,
+input {
+  font-family: "Inter", sans-serif
+}
+
+button {
+  font-family: "Inter", sans-serif
 }
 
 .screen {
-  /* since we are using absolute positioning for header, not sticky, all pages must have these 80px in the top reserved so that to not get content covered */
   margin-top: var(--header-height);
-  /* isolate internal z-index manipulations from conflicting with outside components (sticky header) */
   z-index: 0;
 }
 
@@ -162,7 +162,8 @@ body {
 
 .available-vacancies {
   color: #000000b2;
-  font-family: var(--font-family-montserrat);
+  font-family: "Inter", sans-serif;
+  ;
   font-size: var(--font-size-l);
   font-weight: 500;
   letter-spacing: 0;
@@ -398,7 +399,8 @@ body {
 
 .address {
   color: var(--meliteh-black-type);
-  font-family: var(--font-family-montserrat);
+  font-family: "Inter", sans-serif;
+  ;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 0;
@@ -530,7 +532,6 @@ body {
 
 .number-1 {
   color: var(--neutral100);
-  font-family: var(--font-family-dm_sans);
   font-size: var(--font-size-m);
   font-weight: 700;
   letter-spacing: 0;
@@ -654,6 +655,8 @@ body {
   margin-right: 2px;
   min-height: 15px;
   min-width: 154px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .time-posted-field {
@@ -753,6 +756,10 @@ body {
   padding-bottom: 0.5em;
   width: 50px;
   /* adjust this value as needed */
+}
+
+.mobile-icon {
+  cursor: pointer;
 }
 
 .subscribe-button:hover:not(:disabled) {

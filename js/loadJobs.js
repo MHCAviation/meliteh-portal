@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       return await response.json();
     } catch (error) {
-      console.error("Error fetching job data:", error);
       return [];
     }
   }
@@ -55,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return [];
     }
 
-    console.log("Fetching vacancies with params:", params.toString());
     return fetchVacancies(params);
   }
 
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterVacancies(vacancies, query) {
-    console.log("Filtering vacancies with query:", query);
     return vacancies.filter((job) =>
       job.JobTitle.toLowerCase().includes(query.toLowerCase())
     );
@@ -81,9 +78,16 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     jobCardsContainer.innerHTML = "";
 
-    totalVacanciesCounter.textContent = data.length;
+    // Filter out Open Application jobs FIRST
+    const filteredData = data.filter(
+      (job) =>
+        job.JobTitle && !job.JobTitle.toLowerCase().includes("open application")
+    );
 
-    if (data.length === 0) {
+    // Use filteredData for ALL subsequent operations
+    totalVacanciesCounter.textContent = filteredData.length;
+
+    if (filteredData.length === 0) {
       const noJobsMessage = document.createElement("h2");
       if (query) {
         noJobsMessage.textContent = `Sorry, there are no jobs available for "${query}" in "${
@@ -105,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       jobCardsContainer.appendChild(noJobsMessage);
       jobCardsContainer.appendChild(noJobsIllustration);
     } else {
-      data.forEach((job) => {
+      filteredData.forEach((job) => {
         const jobCard = document.createElement("a");
         jobCard.classList.add("job-card", "no-gtm-link-tracking");
         jobCard.href = `https://portal.meliteh.com/Secure/Membership/Registration/JobDetails.aspx?JobId=${job.JobId}`;
@@ -196,16 +200,20 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadVacancies() {
     try {
       let vacancies = await getVacancies();
-      console.log("Vacancies before filtering:", vacancies);
+
+      // Filter to remove jobs with "Open Application" in title
+      vacancies = vacancies.filter(
+        (job) =>
+          job.JobTitle &&
+          !job.JobTitle.toLowerCase().includes("open application")
+      );
 
       if (query) {
         vacancies = filterVacancies(vacancies, query);
-        console.log("Vacancies after filtering:", vacancies);
       }
 
       displayVacancies(vacancies);
     } catch (error) {
-      console.error("Error loading vacancies:", error);
       const jobCardsContainer = document.getElementById("job-cards-container");
       jobCardsContainer.innerHTML =
         "<p>Error loading vacancies. Please try again later.</p>";

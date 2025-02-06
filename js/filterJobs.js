@@ -35,11 +35,15 @@ function applyFilters() {
     const jobLocation = (jobCard.dataset.location || "global").toLowerCase();
     const jobDate = new Date(jobCard.dataset.date);
     const jobType = (jobCard.dataset.type || "").toLowerCase();
+    const jobTitle = (
+      jobCard.querySelector(".job-title")?.textContent || ""
+    ).toLowerCase();
 
     console.log("📄 Job Data:", {
       Location: jobLocation,
       Date: jobDate.toISOString().split("T")[0],
       Type: jobType,
+      Title: jobTitle,
     });
 
     // Location filter logic
@@ -87,8 +91,18 @@ function applyFilters() {
       matchesEmploymentType,
     });
 
+    // Open Application check
+    const isOpenApplication = jobTitle.includes("open application");
+    console.log("🚫 Open Application Check:", {
+      hasOpenApp: isOpenApplication,
+      title: jobTitle,
+    });
+
     const shouldDisplay =
-      matchesLocation && matchesDate && matchesEmploymentType;
+      matchesLocation &&
+      matchesDate &&
+      matchesEmploymentType &&
+      !isOpenApplication;
     console.log("🎯 Final Decision:", shouldDisplay ? "SHOW" : "HIDE");
 
     jobCard.style.display = shouldDisplay ? "" : "none";

@@ -24,7 +24,11 @@ fieldset,
 .select-dropdown option,
 .form-group input,
 .form-group textarea {
-  font-family: "Montserrat";
+  font-family: "Inter", sans-serif;
+}
+
+.hire-menu:hover {
+  color: #d20027;
 }
 
 .img-hiring {
@@ -38,7 +42,8 @@ fieldset,
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  display: none; /* Hide by default */
+  display: none;
+  /* Hide by default */
   align-items: center;
   justify-content: center;
   visibility: hidden;
@@ -46,7 +51,8 @@ fieldset,
 }
 
 .overlay.active {
-  display: flex; /* Show when active */
+  display: flex;
+  /* Show when active */
   visibility: visible;
 }
 

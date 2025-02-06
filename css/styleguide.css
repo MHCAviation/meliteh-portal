@@ -35,15 +35,10 @@
     --font-size-xxl: 24px;
     --font-size-xxl-mobile: 48px;
     --font-size-xxxl: 70px;
-
-    --font-family-dm_sans: "DM Sans", Helvetica;
-    --font-family-font_awesome_6_free-solid: "Font Awesome 6 Free-Solid", Helvetica;
-    --font-family-inter: "Inter", Helvetica;
-    --font-family-montserrat: "Montserrat", Helvetica;
 }
 
 .medium20 {
-    font-family: var(--font-family-inter);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xl);
     font-style: normal;
     font-weight: 500;
@@ -51,7 +46,7 @@
 }
 
 .regular15 {
-    font-family: var(--font-family-inter);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-15px);
     font-style: normal;
     font-weight: 400;
@@ -60,7 +55,7 @@
 
 .montserrat-normal-licorice-16px {
     color: var(--licorice-2);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 400;
@@ -68,7 +63,7 @@
 
 .montserrat-normal-licorice-20px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 400;
@@ -77,7 +72,7 @@
 .montserrat-normal-licorice-16px-2 {
     color: var(--meliteh-black-type);
     line-height: 24px;
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 400;
@@ -85,7 +80,7 @@
 
 .montserrat-normal-licorice-12px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xs);
     font-style: normal;
     font-weight: 400;
@@ -94,7 +89,7 @@
 
 .montserrat-normal-cape-cod-16px {
     color: var(--cape-cod);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 400;
@@ -102,7 +97,7 @@
 
 .montserrat-bold-licorice-16px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 700;
@@ -110,7 +105,7 @@
 
 .montserrat-bold-white-16px {
     color: var(--neutral100);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-weight: 700;
     font-style: normal;
@@ -118,7 +113,7 @@
 
 .montserrat-normal-black-16px {
     color: var(--black-2);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 400;
@@ -126,7 +121,7 @@
 
 .montserrat-normal-licorice-18px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-l);
     font-style: normal;
     font-weight: 400;
@@ -134,7 +129,7 @@
 
 .montserrat-bold-monza-16px {
     color: var(--meliteh-red-semitransparent);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 700;
@@ -142,7 +137,7 @@
 
 .montserrat-medium-licorice-24px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xxl);
     font-style: normal;
     font-weight: 500;
@@ -150,7 +145,7 @@
 
 .montserrat-medium-licorice-16px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 500;
@@ -158,7 +153,7 @@
 
 .montserrat-medium-licorice-18px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-l);
     font-style: normal;
     font-weight: 500;
@@ -174,7 +169,7 @@
 
 .montserrat-bold-white-70px {
     color: var(--neutral100);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xxxl);
     font-style: normal;
     font-weight: 700;
@@ -182,14 +177,14 @@
 
 .montserrat-medium-white-16px {
     color: var(--neutral100);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 500;
 }
 
 .montserrat-bold-white-70px-2 {
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xxxl);
     font-style: normal;
     font-weight: 700;
@@ -197,7 +192,7 @@
 
 .montserrat-bold-monza-70px {
     color: var(--meliteh-red-semitransparent);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xxxl);
     font-style: normal;
     font-weight: 700;
@@ -205,7 +200,7 @@
 
 .montserrat-normal-licorice-16px-3 {
     color: var(--licorice-6);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 400;
@@ -213,7 +208,7 @@
 
 .montserrat-bold-licorice-20px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xl);
     font-style: normal;
     font-weight: 700;
@@ -221,7 +216,7 @@
 
 .montserrat-medium-black-16px {
     color: var(--black-2);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 500;
@@ -237,7 +232,7 @@
 
 .montserrat-medium-licorice-12px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xs);
     font-style: normal;
     font-weight: 500;
@@ -245,7 +240,7 @@
 
 .montserrat-normal-licorice-14px {
     color: var(--licorice-8);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-s);
     font-style: normal;
     font-weight: 400;
@@ -253,7 +248,7 @@
 
 .montserrat-bold-dune-16px {
     color: var(--black);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 700;
@@ -261,14 +256,14 @@
 
 .montserrat-normal-licorice-17px {
     color: var(--meliteh-black-type);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
 }
 
 .montserrat-bold-white-16px-2 {
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 700;
@@ -276,7 +271,7 @@
 
 .montserrat-bold-dune-24px {
     color: var(--black);
-    font-family: var(--font-family-montserrat);
+    font-family:  "Inter", sans-serif;;
     font-size: var(--font-size-xxl);
     font-style: normal;
     font-weight: 700;
