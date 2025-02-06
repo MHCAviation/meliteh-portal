@@ -9,6 +9,11 @@ body {
   font-family: "Inter", sans-serif
 }
 
+textarea,
+input {
+  font-family: "Inter", sans-serif
+}
+
 button {
   font-family: "Inter", sans-serif
 }
