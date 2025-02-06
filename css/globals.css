@@ -2,6 +2,10 @@
 @import url("topnav.css");
 @import url("https://use.fontawesome.com/releases/v6.4.0/css/all.css");
 
+a:-webkit-any-link {
+  all: unset !important;
+}
+
 body {
   margin: 0;
   background: #ffffff;
@@ -10,9 +14,7 @@ body {
 }
 
 .screen {
-  /* since we are using absolute positioning for header, not sticky, all pages must have these 80px in the top reserved so that to not get content covered */
   margin-top: var(--header-height);
-  /* isolate internal z-index manipulations from conflicting with outside components (sticky header) */
   z-index: 0;
 }
 
@@ -649,6 +651,8 @@ body {
   margin-right: 2px;
   min-height: 15px;
   min-width: 154px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .time-posted-field {
@@ -748,6 +752,10 @@ body {
   padding-bottom: 0.5em;
   width: 50px;
   /* adjust this value as needed */
+}
+
+.mobile-icon {
+  cursor: pointer;
 }
 
 .subscribe-button:hover:not(:disabled) {
