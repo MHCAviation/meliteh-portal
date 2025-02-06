@@ -236,7 +236,7 @@ header.menu-expanded #expand-header-menu-button .open-btn {
         width: 100%;
         flex-direction: column;
         top: var(--header-height);
-        align-items: left;
+        align-items: flex-start;
         justify-content: space-between;
         left: 0;
         background-color: #ffff;
@@ -251,8 +251,53 @@ header.menu-expanded #expand-header-menu-button .open-btn {
     }
 
     .header-navbar {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding: 1em;
+        height: auto;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    /* New rules for expanded menu layout */
+    header.menu-expanded .header-navbar {
+        padding-top: 1em;
+    }
+
+    header.menu-expanded .top-menu {
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+        align-items: flex-start;
+        gap: 1em;
+        background-color: #fff;
+    }
+
+    header.menu-expanded .header-links {
+        position: sticky;
+        width: 100%;
+        flex-direction: column;
+        gap: 1.5em;
+        padding-top: 1em;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    header.menu-expanded .button-container {
+        display: flex;
+        gap: 1em;
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    header.menu-expanded .submit-cv-container {
+        width: 100%;
+    }
+
+    header.menu-expanded #expand-header-menu-button {
+        position: absolute;
+        right: 1em;
+        top: 2em;
     }
 
 }

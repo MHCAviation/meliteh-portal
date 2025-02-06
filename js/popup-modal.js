@@ -3,9 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const hasShownPopup = localStorage.getItem("hasShownPopup");
   const hasVisitedLinkedIn = localStorage.getItem("hasVisitedLinkedIn");
 
-  console.log("hasShownPopup:", hasShownPopup);
-  console.log("hasVisitedLinkedIn:", hasVisitedLinkedIn);
-
   // Function to show the popup
   function showPopup() {
     const popup = document.getElementById("popup");
@@ -16,17 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Function to close the popup
-  window.closePopup = function() {
+  window.closePopup = function () {
     const popup = document.getElementById("popup");
     if (popup) {
       popup.classList.remove("active");
       console.log("Popup closed");
       localStorage.setItem("hasShownPopup", "true");
     }
-  }
+  };
 
   // Function to follow LinkedIn
-  window.followLinkedin = function() {
+  window.followLinkedin = function () {
     console.log("LinkedIn button clicked");
     // Open the LinkedIn page in a new tab
     window.open("https://www.linkedin.com/company/meliteh", "_blank");
@@ -37,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Close the popup
     closePopup();
-  }
+  };
 
   // Show the popup if it hasn't been shown before and the user hasn't visited LinkedIn
   if (!hasVisitedLinkedIn && !hasShownPopup) {

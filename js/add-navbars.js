@@ -49,16 +49,27 @@ async function initializePage() {
       footer.innerHTML = footerHtml;
     });
 
-    console.log("Header and footer injected into the DOM."); // Debug log
-
     // Highlight active navigation link
     highlightActivePage();
 
     // Menu toggle functionality
     const expandButton = document.querySelector("#expand-header-menu-button");
-    if (expandButton) {
+    const buttonContainer = document.querySelector(".button-container");
+    const topMenu = document.querySelector(".top-menu");
+
+    if (expandButton && buttonContainer && topMenu) {
       expandButton.addEventListener("click", () => {
         document.querySelector("header").classList.toggle("menu-expanded");
+
+        if (
+          document.querySelector("header").classList.contains("menu-expanded")
+        ) {
+          // When menu is expanded, keep the hamburger and close button in the button container
+          buttonContainer.appendChild(expandButton);
+        } else {
+          // When menu is collapsed, move the hamburger back to its original position in the top menu
+          topMenu.appendChild(expandButton);
+        }
       });
     }
 

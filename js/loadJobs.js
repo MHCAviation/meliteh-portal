@@ -196,7 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadVacancies() {
     try {
       let vacancies = await getVacancies();
-      console.log("Vacancies before filtering:", vacancies);
 
       if (query) {
         vacancies = filterVacancies(vacancies, query);

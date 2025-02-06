@@ -435,8 +435,6 @@
             document.body.appendChild(tempDiv.firstChild);
           }
 
-          console.log("popup-hire-staff.html loaded and appended."); // Debug log
-
           // Initialize popup overlay and close button after content is loaded
           const popupOverlay = document.getElementById("popupOverlay");
           if (popupOverlay) {
@@ -451,13 +449,11 @@
           const closePopupBtn = document.querySelector("#closePopupBtn");
           if (closePopupBtn) {
             closePopupBtn.addEventListener("click", closePopupOverlay);
-            console.log("Close popup button initialized."); // Debug log
           }
 
           const hireStaffButton = document.querySelector("#openFormBtn");
           if (hireStaffButton) {
             hireStaffButton.addEventListener("click", openPopupOverlay);
-            console.log("Hire Staff button initialized."); // Debug log
           }
         })
         .catch((error) =>
