@@ -52,7 +52,7 @@
 .jobs-text-search-borderless-input {
     padding-right: 1em;
     background-color: transparent;
-    font-family: 'Montserrat', Helvetica;
+    font-family:  "Inter", sans-serif;;
     font-size: 16px;
     white-space: nowrap;
     flex: 1;
@@ -86,7 +86,7 @@
 .search-job-button-text {
     background-color: transparent;
     color: #ffffff;
-    font-family: 'Montserrat', Helvetica;
+    font-family:  "Inter", sans-serif;;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;

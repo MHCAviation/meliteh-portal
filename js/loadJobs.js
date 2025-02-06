@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       filteredData.forEach((job) => {
         const jobCard = document.createElement("a");
-        jobCard.classList.add("job-card");
+        jobCard.classList.add("job-card", "no-gtm-link-tracking");
         jobCard.href = `https://portal.meliteh.com/Secure/Membership/Registration/JobDetails.aspx?JobId=${job.JobId}`;
         jobCard.target = "_blank";
 
@@ -174,13 +174,13 @@ document.addEventListener("DOMContentLoaded", () => {
         jobCard.appendChild(jobDescription);
 
         jobCard.addEventListener("click", () => {
-          gtag("event", "job_card_click", {
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({
+            event: "job_card_click",
             job_id: job.JobId,
             job_title: job.JobTitle,
             industry: activeIndustry || "All Industries",
-            event_category: "Job Card Clicked",
-            event_label: job.JobTitle,
-            transport_type: "beacon", // Ensures the event is sent even if the page unloads
+            transport_type: "beacon", // ✅ Critical for tracking outbound clicks
           });
         });
 

@@ -35,7 +35,7 @@
 
 .contact .title {
   color: var(--meliteh-black-type);
-  font-family: var(--font-family-montserrat);
+  font-family:  "Inter", sans-serif;;
   font-size: 100px;
   font-weight: 500;
   height: 116px;
@@ -69,7 +69,7 @@
 
 .contact .contact-info {
   color: var(--meliteh-black-type);
-  font-family: var(--font-family-montserrat);
+  font-family:  "Inter", sans-serif;;
   font-size: var(--font-size-xl);
   font-weight: 500;
   letter-spacing: 0;
@@ -118,7 +118,7 @@
 .form input[type="email"],
 .form input[type="tel"],
 .form textarea {
-  font-family: "Montserrat";
+  font-family: "";
   border: none;
   border-bottom: 1px solid #000;
   padding: 24px 0 4px 0;
@@ -184,7 +184,7 @@ form[data-status="ERROR"] .status-message-content::before {
 }
 
 .contactus-submit {
-  font-family: "Montserrat";
+  font-family: "";
   font-weight: 700;
   background-color: transparent;
   color: #d20027;
@@ -213,7 +213,7 @@ form[data-status="ERROR"] .status-message-content::before {
 }
 
 .contact .office {
-  font-family: "Montserrat";
+  font-family: "";
   color: var(--meliteh-black-type);
   font-weight: 500;
   line-height: 30px;
@@ -236,7 +236,6 @@ form[data-status="ERROR"] .status-message-content::before {
 }
 
 .contact .hours-of-operation {
-  font-family: "Montserrat";
   color: var(--meliteh-black-type);
   font-weight: 500;
   line-height: 30px;
