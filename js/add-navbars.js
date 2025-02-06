@@ -82,6 +82,13 @@ async function initializePage() {
         event.stopPropagation(); // Prevents immediate closing when clicked
         cvDropdown.classList.toggle("show");
         this.querySelector("i").classList.toggle("rotate");
+
+        // GTM tracking for Submit CV button click using dataLayer
+        window.dataLayer.push({
+          event: "submit_cv_button_click",
+          event_category: "Submit CV",
+          event_label: "Clicked Submit CV button",
+        });
       });
 
       // Close dropdown when clicking outside
@@ -95,6 +102,21 @@ async function initializePage() {
         }
       });
     }
+
+    // Track industry selection via GTM using dataLayer
+    const industryLinks = document.querySelectorAll("#cvDropdown a");
+    industryLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        const industry = this.textContent.trim();
+
+        // GTM tracking for industry selection using dataLayer
+        window.dataLayer.push({
+          event: "industry_selected",
+          event_category: "Submit CV",
+          industry_label: industry,
+        });
+      });
+    });
 
     // Handle popup overlay for "Hire Staff" button
     const hireStaffButton = document.querySelector("#openFormBtn");
