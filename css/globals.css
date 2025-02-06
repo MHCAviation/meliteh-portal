@@ -523,7 +523,6 @@ body {
 
 .number-1 {
   color: var(--neutral100);
-  font-family: var(--font-family-dm_sans);
   font-size: var(--font-size-m);
   font-weight: 700;
   letter-spacing: 0;
