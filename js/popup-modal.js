@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("popup");
     if (popup) {
       popup.classList.remove("active");
+      document.querySelector("body").classList.remove("popup-active"); 
       console.log("Popup closed");
       localStorage.setItem("hasShownPopup", "true");
     }

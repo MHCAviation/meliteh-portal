@@ -542,7 +542,6 @@ dialog input[type="checkbox"]#apply-form-privacy-policy-checkbox {
 
 .new-post {
   color: #7d5ae2;
-  font-family:  "Inter", sans-serif;
   font-size: var(--font-size-xs);
   font-weight: 500;
   letter-spacing: 0;
@@ -733,7 +732,6 @@ dialog input[type="checkbox"]#apply-form-privacy-policy-checkbox {
 .subscribe-form-email-input {
   line-height: 24px;
   white-space: nowrap;
-  font-family:  "Inter", sans-serif;
   font-size: var(--font-size-m);
   font-weight: 500;
 }

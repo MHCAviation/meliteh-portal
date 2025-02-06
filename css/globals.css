@@ -9,6 +9,10 @@ body {
   font-family: "Inter", sans-serif
 }
 
+button {
+  font-family: "Inter", sans-serif
+}
+
 .screen {
   margin-top: var(--header-height);
   z-index: 0;
