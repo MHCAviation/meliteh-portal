@@ -465,6 +465,7 @@
 
 .our-services-list {
   display: flex;
+  gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -1578,7 +1579,7 @@
   }
 
   .rectangleTestimonials {
-    max-width: 460px;
+    width: 100%;
   }
 
   .our-services-list {
@@ -1593,9 +1594,14 @@
   .our-services-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .testimonials-list {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 960px) {
   .grey-section {
     padding-bottom: 4em;
   }
@@ -1615,10 +1621,18 @@
     color: black;
   }
 
-  .our-services-list {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  .client-image-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
   }
+
+  .our-services-list {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
 
   .home .get-the-right-job-you-deserve-8dJy9b {
     font-size: 34px;
@@ -1634,24 +1648,37 @@
     text-align: center;
     line-height: 32px;
   }
+
+  .testimonials-list {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .rectangleTestimonials {
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
   .testimonials-list {
     flex-direction: column;
     align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
+  .industry-cards-list,
   .our-services-list {
-    display: flex;
-  }
-
-  .industry-cards-list {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media (max-width: 480px) {
+  .client-image-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
   .homeTitle,
   .homeTitle-red {
@@ -1660,9 +1687,5 @@
 
   .popup-content {
     max-width: 360px;
-  }
-
-  .rectangleTestimonials {
-    max-width: 300px;
   }
 }

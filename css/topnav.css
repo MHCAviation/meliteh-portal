@@ -208,6 +208,10 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 
 @media (max-width: 1024px) {
 
+    .header-links {
+        gap: 2em;
+    }
+
     .header-navbar {
         padding-left: 40px;
         padding-right: 40px;
