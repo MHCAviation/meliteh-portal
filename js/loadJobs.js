@@ -174,14 +174,24 @@ document.addEventListener("DOMContentLoaded", () => {
         jobCard.appendChild(jobDescription);
 
         jobCard.addEventListener("click", () => {
-          window.dataLayer = window.dataLayer || [];
-          dataLayer.push({
-            event: "job_card_click",
-            job_id: job.JobId,
-            job_title: job.JobTitle,
-            industry: activeIndustry || "All Industries",
-            transport_type: "beacon", // ✅ Critical for tracking outbound clicks
-          });
+          if (!job.JobId || job.JobId === "") {
+            // Redirect to fallback page when JobId is invalid or missing
+            window.location.href =
+              "https://www.meliteh.com/find-jobs-landing.html";
+          } else {
+            // Track the job click if JobId is valid
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+              event: "job_card_click",
+              job_id: job.JobId,
+              job_title: job.JobTitle,
+              industry: activeIndustry || "All Industries",
+              transport_type: "beacon",
+            });
+
+            // Proceed with the usual job card link behavior
+            window.open(jobCard.href, "_blank");
+          }
         });
 
         jobCardsContainer.appendChild(jobCard);
