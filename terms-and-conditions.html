@@ -35,17 +35,17 @@
         const PROJECT_ID = "2nea3kf8";
         const DATASET_NAME = "production";
         const QUERY = encodeURIComponent(`*[_type == "article"] {
-            title,
-            shortDesc,
-            bannerImage{
-              asset->{
-                _id,
-                url
-              },
-              alt
-            },
-            content
-          }`);
+      title,
+      shortDesc,
+      bannerImage{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+      content
+    }`);
 
         const URL = `https://${PROJECT_ID}.api.sanity.io/v2025-02-12/data/query/${DATASET_NAME}?query=${QUERY}`;
 
@@ -54,56 +54,49 @@
           .then(({ result }) => {
             const loading = document.getElementById("loading");
             if (loading) {
-              loading.parentNode.removeChild(loading); // Remove loading text
+              loading.parentNode.removeChild(loading);
             }
 
             const contentDiv = document.getElementById("content");
-            contentDiv.innerHTML = ""; // Clear previous content before appending
+            contentDiv.innerHTML = "";
 
             result.forEach((article) => {
-              // Create main article wrapper with class "content"
               const articleElement = document.createElement("div");
               articleElement.classList.add("article-content");
 
-              // Wrap the banner and title in a div with class "banner-title-wrapper"
+              // Banner wrapper with gradient overlay
               const bannerTitleWrapper = document.createElement("div");
               bannerTitleWrapper.classList.add("banner-title-wrapper");
 
-              // Create article banner image
               if (article.bannerImage && article.bannerImage.asset) {
                 const imageElement = document.createElement("img");
                 imageElement.src = article.bannerImage.asset.url;
                 imageElement.alt =
                   article.bannerImage.alt || "Article Banner Image";
-                imageElement.classList.add("image-banner"); // Assign banner class
+                imageElement.classList.add("image-banner");
                 bannerTitleWrapper.appendChild(imageElement);
               }
 
-              // Create article title AFTER the banner image
+              // Title overlay
               const titleElement = document.createElement("h1");
               titleElement.textContent = article.title;
-              titleElement.classList.add("title"); // Assign title class
+              titleElement.classList.add("title");
               bannerTitleWrapper.appendChild(titleElement);
 
-              // Append the banner-title-wrapper to the article element
               articleElement.appendChild(bannerTitleWrapper);
 
-              let currentList = null; // Track active list
-              let lastListType = null; // Track if it's "bullet" (ul) or "number" (ol)
+              let currentList = null;
+              let lastListType = null;
 
-              // Wrap all text inside a div with class "text"
               const textContainer = document.createElement("div");
               textContainer.classList.add("text");
 
-              // Render content
               article.content.forEach((block) => {
                 if (block._type === "block") {
                   if (block.listItem) {
-                    // Handling list items
                     const listType = block.listItem === "bullet" ? "ul" : "ol";
 
                     if (!currentList || lastListType !== listType) {
-                      // If no list is open or switching from ul to ol, create a new one
                       currentList = document.createElement(listType);
                       textContainer.appendChild(currentList);
                     }
@@ -114,9 +107,8 @@
                       .join("");
                     currentList.appendChild(listItem);
 
-                    lastListType = listType; // Remember last list type
+                    lastListType = listType;
                   } else {
-                    // If it's not a list item, close the list
                     currentList = null;
                     lastListType = null;
 
@@ -124,7 +116,6 @@
                     textContainer.appendChild(textElement);
                   }
                 } else if (block._type === "image") {
-                  // Handle image block inside content
                   const imageBlock = document.createElement("img");
                   imageBlock.src = block.asset.url;
                   imageBlock.alt = block.alt || "Image content";
@@ -133,7 +124,6 @@
                 }
               });
 
-              // Append the text container to the article element
               articleElement.appendChild(textContainer);
               contentDiv.appendChild(articleElement);
             });
@@ -143,7 +133,6 @@
           });
       }
 
-      // Function to create the appropriate text element
       function createTextElement(block) {
         const tag = getHeadingTag(block.style);
         const textElement = document.createElement(tag);
@@ -153,7 +142,6 @@
         return textElement;
       }
 
-      // Function to determine heading levels
       function getHeadingTag(style) {
         switch (style) {
           case "h1":
@@ -169,7 +157,7 @@
           case "h6":
             return "h6";
           default:
-            return "p"; // Default to paragraph
+            return "p";
         }
       }
     </script>
