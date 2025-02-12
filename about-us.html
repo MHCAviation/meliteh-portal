@@ -200,23 +200,17 @@
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
     <script>
+      // Fetch the content of popup-hire-staff.html using fetch API
       fetch("popup-hire-staff.html")
         .then((response) => response.text())
         .then((html) => {
-          // Create a temporary container for the HTML content
-          const tempDiv = document.createElement("div");
-          tempDiv.innerHTML = html;
-
-          // Append the content to the body
-          while (tempDiv.firstChild) {
-            document.body.appendChild(tempDiv.firstChild);
-          }
+          // Append the HTML content to the body
+          document.body.innerHTML += html;
         })
         .catch((error) =>
           console.error("Error fetching popup-hire-staff.html:", error)
         );
     </script>
-    <script type="module" src="js/add-navbars.js"></script>
     <script type="module" src="js/about-us.js"></script>
   </body>
 </html>
