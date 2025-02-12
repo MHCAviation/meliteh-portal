@@ -794,23 +794,32 @@ button {
 }
 
 @media (max-width: 769px) {
+  .footer-logo-and-links-flex {
+    width: 100%;
+  }
+
   .montserrat-normal-licorice-20px {
     font-size: var(--font-size-m);
   }
 
   .footer-links {
-    padding-left: 8em;
-    padding-right: 8em;
     justify-content: center;
-    gap: 4em;
-    flex-direction: column;
+    gap: 2em;
     font-size: 12px;
+    width: 100%;
   }
 }
 
 @media (max-width: 500px) {
   .montserrat-normal-licorice-20px {
     font-size: var(--font-size-m);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 4em;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .card-description {

@@ -1,161 +1,99 @@
-/* screen - terms-and-conditions */
-
-.terms-and-conditions {
-    align-items: stretch;
-    background-color: var(--neutral100);
-    display: flex;
-    flex-direction: column;
-    gap: 81px;
-    overflow: hidden;
-}
-
-.terms-and-conditions .group-336 {
-    gap: 32px;
-    height: 44px;
-    margin-left: 373px;
-    min-width: 245px;
-}
-
-.terms-and-conditions .frame-335 {
-    align-items: center;
-    background-color: var(--meliteh-red-semitransparent);
-    border-radius: 4px;
-    gap: 10px;
-    justify-content: center;
-    padding: 12px 24px;
-}
-
-.terms-and-conditions .overlap-group16 {
-    position: relative;
-}
-
-.terms-and-conditions .blob {
-    align-items: flex-start;
-    display: flex;
-    height: 788px;
-    left: 0;
-    min-width: 788px;
-    position: absolute;
-    top: 47px;
-}
-
-.terms-and-conditions .overlap-group {
-    border-radius: 393.82px;
-    height: 788px;
-    position: relative;
-    width: 788px;
-}
-
-.terms-and-conditions .ellipse-5 {
-    -webkit-backdrop-filter: blur(140.13px) brightness(100%);
-    backdrop-filter: blur(140.13px) brightness(100%);
-    background-color: var(--white-2);
-    border-radius: 393.82px;
-    height: 788px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 788px;
-}
-
-.terms-and-conditions .blob-1 {
-    left: 1527px;
-    top: 1271px;
-    transform: rotate(-180.00deg);
-}
-
-.terms-and-conditions .blob-2 {
-    left: 93px;
-    top: 2595px;
-}
-
-.terms-and-conditions .blob-3 {
-    left: 111px;
-    top: 5869px;
-}
-
-.terms-and-conditions .blob-4 {
-    left: 1558px;
-    top: 4458px;
-    transform: rotate(-180.00deg);
-}
-
-.terms-banner {
-    z-index: 0;
+.banner-title-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    min-height: 400px;
 }
 
-.terms-and-conditions .terms-banner-image {
-    position: absolute;
-    object-fit: cover;
+.image-banner {
     width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    display: flex;
+    position: absolute;
     height: 100%;
-    z-index: -1;
+    font-size: 72px;
+    color: white;
+    align-items: center;
 }
 
-.terms-and-conditions .terms-banner-overlay {
-    background: linear-gradient(180deg, rgb(255, 155.13, 155.13) 0%, rgba(77.76, 77.76, 77.76, 0) 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.terms-and-conditions .title {
-    text-align: center;
-    margin: 60px;
-}
-
-.terms-and-conditions .footer-navbar {
-    background-color: var(--submarine);
-    flex-direction: column;
-    gap: 24px;
-    min-height: 262px;
-    padding: 23px 78px;
-    width: 1440px;
-    z-index: 2;
-}
-
-.terms-and-conditions .footer-links {
-    align-items: flex-start;
-    gap: 100px;
-    margin-right: 1.0px;
-}
-
-.terms-and-conditions .all-rights-reserved-section {
-    align-self: flex-end;
-    flex-direction: column;
-    gap: 15px;
-    min-height: 31px;
-    width: 1282px;
-}
-
-.terms-and-conditions .blob-5 {
-    align-items: flex-start;
-    display: flex;
-    height: 788px;
-    min-width: 788px;
-    position: absolute;
-}
-
-.blob, .blob-5 {
-    z-index: -1;
-}
-
-.terms-and-conditions .frame {
-    display: flex;
-    position: relative;
-    width: fit-content;
-}
-
-.WordSection1 {
-    line-height: 28.8px;
-    margin: auto;
+.text {
+    margin: 0 auto;
     max-width: 1280px;
-    padding: 18px;
+    width: 100%;
+    line-height: 24px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+
+.text p,
+.text ol,
+.text ul {
+    font-size: 16px;
+}
+
+.text li {
+    padding-top: 8px;
+}
+
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+    padding-top: 16px;
+}
+
+@media (max-width: 1024px) {
+    .banner-title-wrapper {
+        min-height: 320px;
+    }
+
+    .text {
+        max-width: 960px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .banner-title-wrapper {
+        min-height: 280px;
+    }
+
+    .text {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 500px) {
+    .title {
+        margin-top: 40px;
+        font-size: 32px;
+    }
+
+    .banner-title-wrapper {
+        min-height: 220px;
+    }
+
+    .text {
+        max-width: 720px;
+    }
+
+    .text h2 {
+        line-height: 32px;
+    }
+
+    .text p,
+    .text ol,
+    .text ul {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
