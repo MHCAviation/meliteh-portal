@@ -35,12 +35,11 @@
     align-items: flex-start;
     background-color: transparent;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     height: auto;
-    left: 312px;
     opacity: 1;
     top: 30px;
-    width: fit-content;
+    padding-right: 40px;
 }
 
 .header-links a,
@@ -102,7 +101,7 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 .top-menu {
     display: flex;
     align-items: center;
-    gap: 3.5em;
+    gap: 1em;
 }
 
 .button-container {
@@ -249,6 +248,12 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 
 @media (max-width: 500px) {
 
+    .top-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .header-logo-image {
         height: 56px;
         width: 120px;
@@ -306,10 +311,19 @@ header.menu-expanded #expand-header-menu-button .open-btn {
 
 }
 
-@media (max-width: 376px) {
+@media (max-width: 400px) {
+    .top-menu {
+        gap: 4px
+    }
 
     .header-navbar {
         padding-left: 1em;
         padding-right: 1em;
+    }
+
+    .header-logo-image {
+        height: 40px;
+        width: 80px;
+        object-fit: contain;
     }
 }

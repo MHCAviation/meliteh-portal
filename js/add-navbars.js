@@ -57,22 +57,21 @@ async function initializePage() {
     const buttonContainer = document.querySelector(".button-container");
     const topMenu = document.querySelector(".top-menu");
 
-    if (expandButton && buttonContainer && topMenu) {
+    if (expandButton && topMenu) {
       expandButton.addEventListener("click", () => {
         document.querySelector("header").classList.toggle("menu-expanded");
 
         if (
           document.querySelector("header").classList.contains("menu-expanded")
         ) {
-          // When menu is expanded, keep the hamburger and close button in the button container
-          buttonContainer.appendChild(expandButton);
+          // When menu is expanded, keep the hamburger and close button in the topMenu
+          topMenu.appendChild(expandButton);
         } else {
-          // When menu is collapsed, move the hamburger back to its original position in the top menu
+          // When menu is collapsed, move the hamburger back to its original position in the topMenu
           topMenu.appendChild(expandButton);
         }
       });
     }
-
     // Submit CV dropdown with smooth animation
     const submitCvBtn = document.getElementById("submitCvBtn");
     const cvDropdown = document.getElementById("cvDropdown");
