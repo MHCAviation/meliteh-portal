@@ -25,9 +25,8 @@
     width: fit-content;
 }
 
-.privacy-policy .overlap-group3 {
+.overlap-group3 {
     position: relative;
-    z-index: 0;
     margin: auto;
     margin-top: 60px;
     max-width: 1280px;
@@ -111,7 +110,7 @@
     margin: 0;
 }
 
-.privacy-policy .frame {
+.frame {
     display: flex;
     background-color: var(--gray);
     flex: 1;
@@ -172,7 +171,8 @@
 
 .privacy-policy .span1 {
     color: var(--black-2);
-    font-family:  "Inter", sans-serif;;
+    font-family: "Inter", sans-serif;
+    ;
     font-size: var(--font-size-m);
     font-weight: 700;
 }
@@ -215,9 +215,32 @@
     font-weight: bold;
 }
 
+@media (max-width: 1024px) {
+    .overlap-group3 {
+        max-width: 960px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlap-group3 {
+        max-width: 720px;
+    }
+
+    .frame {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .privacy-motivation-cards-list {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 500px) {
     .privacy-policy-main-text {
-    font-size: 12px;
-    line-height: 16px;
+        font-size: 12px;
+        line-height: 16px;
     }
 }
