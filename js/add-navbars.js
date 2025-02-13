@@ -54,7 +54,6 @@ async function initializePage() {
 
     // Menu toggle functionality
     const expandButton = document.querySelector("#expand-header-menu-button");
-    const buttonContainer = document.querySelector(".button-container");
     const topMenu = document.querySelector(".top-menu");
 
     if (expandButton && topMenu) {
@@ -72,6 +71,26 @@ async function initializePage() {
         }
       });
     }
+
+    // Check URL hash on page load
+    window.addEventListener("DOMContentLoaded", function () {
+      if (window.location.hash === "#submitCvDropdown") {
+        cvDropdown.classList.add("show");
+        submitCvBtn.querySelector("i").classList.add("rotate");
+      }
+    });
+
+    // Optional: Handle hash changes after page load
+    window.addEventListener("hashchange", function () {
+      if (window.location.hash === "#submitCvDropdown") {
+        cvDropdown.classList.add("show");
+        submitCvBtn.querySelector("i").classList.add("rotate");
+      } else {
+        cvDropdown.classList.remove("show");
+        submitCvBtn.querySelector("i").classList.remove("rotate");
+      }
+    });
+
     // Submit CV dropdown with smooth animation
     const submitCvBtn = document.getElementById("submitCvBtn");
     const cvDropdown = document.getElementById("cvDropdown");
