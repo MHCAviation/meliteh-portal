@@ -4,15 +4,59 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <title>Terms and Conditions</title>
+    <title>Terms and Conditions - Meliteh</title>
+
     <!-- Canonical Link -->
     <link
       rel="canonical"
       href="https://www.meliteh.com/terms-and-conditions.html"
     />
 
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
+    <!-- Open Graph / Twitter SEO -->
+    <meta property="og:title" content="Terms and Conditions - Meliteh" />
+    <meta
+      property="og:description"
+      content="Read our policies and user agreements at Meliteh."
+    />
+    <meta
+      property="og:image"
+      content="https://www.meliteh.com/img/og-image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.meliteh.com/terms-and-conditions.html"
+    />
+    <meta name="twitter:title" content="Terms and Conditions - Meliteh" />
+    <meta
+      name="twitter:description"
+      content="Read our policies and user agreements at Meliteh."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.meliteh.com/img/twitter-image.png"
+    />
+
+    <!-- Structured Data (JSON-LD) for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms and Conditions",
+        "url": "https://www.meliteh.com/terms-and-conditions.html",
+        "description": "Read the terms and conditions of Meliteh to understand our policies and user agreements."
+      }
+    </script>
+
+    <!-- Fallback Content for No-JS Browsers -->
+    <noscript>
+      <h1>Terms and Conditions</h1>
+      <p>
+        Read the terms and conditions of Meliteh to understand our policies and
+        user agreements.
+      </p>
+    </noscript>
+
+    <!-- Styles -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -31,106 +75,86 @@
         fetchSanityData();
       });
 
-      function fetchSanityData() {
+      async function fetchSanityData() {
         const PROJECT_ID = "2nea3kf8";
         const DATASET_NAME = "production";
         const QUERY = encodeURIComponent(`*[_type == "article"] {
-      title,
-      shortDesc,
-      bannerImage{
-        asset->{
-          _id,
-          url
-        },
-        alt
-      },
-      content
-    }`);
+          title,
+          shortDesc,
+          bannerImage {
+            asset->{ url },
+            alt
+          },
+          content
+        }`);
 
         const URL = `https://${PROJECT_ID}.api.sanity.io/v2025-02-12/data/query/${DATASET_NAME}?query=${QUERY}`;
 
-        fetch(URL)
-          .then((response) => response.json())
-          .then(({ result }) => {
-            const loading = document.getElementById("loading");
-            if (loading) {
-              loading.parentNode.removeChild(loading);
+        try {
+          const response = await fetch(URL);
+          const { result } = await response.json();
+
+          // Remove loading text
+          document.getElementById("loading")?.remove();
+
+          const contentDiv = document.getElementById("content");
+          contentDiv.innerHTML = "";
+
+          result.forEach((article) => {
+            const articleElement = document.createElement("article");
+            articleElement.classList.add("article-content");
+
+            // Banner wrapper with gradient overlay
+            const bannerTitleWrapper = document.createElement("div");
+            bannerTitleWrapper.classList.add("banner-title-wrapper");
+
+            if (article.bannerImage?.asset?.url) {
+              const imageElement = document.createElement("img");
+              imageElement.src = article.bannerImage.asset.url;
+              imageElement.alt =
+                article.bannerImage.alt || "Article Banner Image";
+              imageElement.classList.add("image-banner");
+              bannerTitleWrapper.appendChild(imageElement);
             }
 
-            const contentDiv = document.getElementById("content");
-            contentDiv.innerHTML = "";
+            // Title overlay
+            const titleElement = document.createElement("h1");
+            titleElement.textContent = article.title;
+            titleElement.classList.add("title");
+            bannerTitleWrapper.appendChild(titleElement);
 
-            result.forEach((article) => {
-              const articleElement = document.createElement("div");
-              articleElement.classList.add("article-content");
+            articleElement.appendChild(bannerTitleWrapper);
 
-              // Banner wrapper with gradient overlay
-              const bannerTitleWrapper = document.createElement("div");
-              bannerTitleWrapper.classList.add("banner-title-wrapper");
+            const textContainer = document.createElement("div");
+            textContainer.classList.add("text");
 
-              if (article.bannerImage && article.bannerImage.asset) {
-                const imageElement = document.createElement("img");
-                imageElement.src = article.bannerImage.asset.url;
-                imageElement.alt =
-                  article.bannerImage.alt || "Article Banner Image";
-                imageElement.classList.add("image-banner");
-                bannerTitleWrapper.appendChild(imageElement);
+            article.content.forEach((block) => {
+              if (block._type === "block") {
+                const textElement = createTextElement(block);
+                textContainer.appendChild(textElement);
+              } else if (block._type === "image") {
+                const imageBlock = document.createElement("img");
+                imageBlock.src = block.asset.url;
+                imageBlock.alt = block.alt || "Image content";
+                imageBlock.classList.add("article-image");
+                textContainer.appendChild(imageBlock);
               }
-
-              // Title overlay
-              const titleElement = document.createElement("h1");
-              titleElement.textContent = article.title;
-              titleElement.classList.add("title");
-              bannerTitleWrapper.appendChild(titleElement);
-
-              articleElement.appendChild(bannerTitleWrapper);
-
-              let currentList = null;
-              let lastListType = null;
-
-              const textContainer = document.createElement("div");
-              textContainer.classList.add("text");
-
-              article.content.forEach((block) => {
-                if (block._type === "block") {
-                  if (block.listItem) {
-                    const listType = block.listItem === "bullet" ? "ul" : "ol";
-
-                    if (!currentList || lastListType !== listType) {
-                      currentList = document.createElement(listType);
-                      textContainer.appendChild(currentList);
-                    }
-
-                    const listItem = document.createElement("li");
-                    listItem.textContent = block.children
-                      .map((child) => child.text)
-                      .join("");
-                    currentList.appendChild(listItem);
-
-                    lastListType = listType;
-                  } else {
-                    currentList = null;
-                    lastListType = null;
-
-                    const textElement = createTextElement(block);
-                    textContainer.appendChild(textElement);
-                  }
-                } else if (block._type === "image") {
-                  const imageBlock = document.createElement("img");
-                  imageBlock.src = block.asset.url;
-                  imageBlock.alt = block.alt || "Image content";
-                  imageBlock.classList.add("article-image");
-                  textContainer.appendChild(imageBlock);
-                }
-              });
-
-              articleElement.appendChild(textContainer);
-              contentDiv.appendChild(articleElement);
             });
-          })
-          .catch((error) => {
-            console.error("Error fetching data from Sanity:", error);
+
+            articleElement.appendChild(textContainer);
+            contentDiv.appendChild(articleElement);
           });
+
+          // Ensure metadata updates dynamically
+          if (result.length > 0) {
+            document.title = `${result[0].title} - Meliteh`;
+            document
+              .querySelector('meta[name="description"]')
+              .setAttribute("content", result[0].shortDesc);
+          }
+        } catch (error) {
+          console.error("Error fetching data from Sanity:", error);
+        }
       }
 
       function createTextElement(block) {
@@ -143,59 +167,38 @@
       }
 
       function getHeadingTag(style) {
-        switch (style) {
-          case "h1":
-            return "h1";
-          case "h2":
-            return "h2";
-          case "h3":
-            return "h3";
-          case "h4":
-            return "h4";
-          case "h5":
-            return "h5";
-          case "h6":
-            return "h6";
-          default:
-            return "p";
-        }
+        return ["h1", "h2", "h3", "h4", "h5", "h6"].includes(style)
+          ? style
+          : "p";
       }
     </script>
+
+    <!-- Preloading Navbars -->
     <header class="header-navbar"></header>
     <footer class="footer-navbar"></footer>
+    <script defer src="js/add-navbars.js"></script>
+
     <script>
-      // Fetch the content of popup-hire-staff.html using fetch API
+      // Fetch the popup content
       fetch("popup-hire-staff.html?nocache=" + new Date().getTime())
         .then((response) => response.text())
         .then((html) => {
-          // Create a temporary container for the HTML content
           const tempDiv = document.createElement("div");
           tempDiv.innerHTML = html;
+          document.body.appendChild(tempDiv);
 
-          // Append the content to the body
-          while (tempDiv.firstChild) {
-            document.body.appendChild(tempDiv.firstChild);
-          }
-
-          // Initialize popup overlay and close button after content is loaded
+          // Initialize popup overlay
           const popupOverlay = document.getElementById("popupOverlay");
-          if (popupOverlay) {
-            popupOverlay.addEventListener("click", function (event) {
-              if (event.target === this) {
-                closePopupOverlay();
-              }
-            });
-          }
+          popupOverlay?.addEventListener("click", (event) => {
+            if (event.target === popupOverlay) closePopupOverlay();
+          });
 
-          const closePopupBtn = document.querySelector("#closePopupBtn");
-          if (closePopupBtn) {
-            closePopupBtn.addEventListener("click", closePopupOverlay);
-          }
-
-          const hireStaffButton = document.querySelector("#openFormBtn");
-          if (hireStaffButton) {
-            hireStaffButton.addEventListener("click", openPopupOverlay);
-          }
+          document
+            .querySelector("#closePopupBtn")
+            ?.addEventListener("click", closePopupOverlay);
+          document
+            .querySelector("#openFormBtn")
+            ?.addEventListener("click", openPopupOverlay);
         })
         .catch((error) =>
           console.error("Error fetching popup-hire-staff.html:", error)
@@ -204,20 +207,15 @@
       function openPopupOverlay(event) {
         event.preventDefault();
         const popupOverlay = document.getElementById("popupOverlay");
-        if (popupOverlay) {
-          popupOverlay.classList.add("active");
-          document.body.classList.add("no-scroll");
-        }
+        popupOverlay?.classList.add("active");
+        document.body.classList.add("no-scroll");
       }
 
       function closePopupOverlay() {
         const popupOverlay = document.getElementById("popupOverlay");
-        if (popupOverlay) {
-          popupOverlay.classList.remove("active");
-          document.body.classList.remove("no-scroll");
-        }
+        popupOverlay?.classList.remove("active");
+        document.body.classList.remove("no-scroll");
       }
     </script>
-    <script src="js/add-navbars.js"></script>
   </body>
 </html>

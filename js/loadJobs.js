@@ -64,7 +64,38 @@ document.addEventListener("DOMContentLoaded", () => {
       return getAllVacancies();
     }
   }
+  
+// Function to add job schema
+function addJobStructuredData(job) {
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": job.JobTitle,
+    "description": job.PublishedJobDescription,
+    "datePosted": new Date(job.StartDate).toISOString(),
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": job.Company || "Unknown Company",
+      "logo": `https://hiportal.eu/Secure/api/Job/GetClientLogoFromDb?clientId=${job.ClientId}`,
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": job.Location || "Global",
+        "addressCountry": job.Country || "Unknown",
+      },
+    },
+    "employmentType": job.EmploymentType,
+    "validThrough": job.ExpiryDate ? new Date(job.ExpiryDate).toISOString() : null,
+    "jobBenefits": job.Benefits || "Not specified",
+    "directApply": true,
+  });
 
+  document.head.appendChild(script);
+}
   function filterVacancies(vacancies, query) {
     return vacancies.filter((job) =>
       job.JobTitle.toLowerCase().includes(query.toLowerCase())
@@ -195,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         jobCardsContainer.appendChild(jobCard);
+        addJobStructuredData(job);
       });
     }
   };
