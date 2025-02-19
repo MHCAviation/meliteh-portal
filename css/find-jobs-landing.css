@@ -377,7 +377,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 48px;
-  min-width: 72px;
+  width: min-content;
   position: relative;
 }
 
@@ -469,6 +469,12 @@
   width: 100%;
 }
 
+@media (max-width: 1600px) {
+  .job-title-wrapper {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 1366px) {
   .top-title {
     padding-left: 0;
@@ -529,10 +535,6 @@
   .content-find-jobs-wrapper {
     padding-left: 24px;
     padding-right: 24px;
-  }
-
-  .job-title-wrapper {
-    flex-direction: column;
   }
 
   .newsletter {

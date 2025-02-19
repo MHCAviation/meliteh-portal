@@ -130,7 +130,7 @@ async function initializePage() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "industry_selected",
-          industry: selectedIndustry,
+          industry_submit_cv: selectedIndustry,
           transport_type: "beacon",
         });
       });
