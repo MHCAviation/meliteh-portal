@@ -104,7 +104,8 @@ async function initializePage() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "submit_cv_button_click",
-          button_label: "Submit CV Button",
+          submit_cv_button_click: "Submit CV Button",
+          category: "Submit CV",
         });
       });
 
@@ -130,7 +131,8 @@ async function initializePage() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "industry_selected",
-          industry_submit_cv: selectedIndustry,
+          industry_selected: selectedIndustry,
+          category: "Submit CV",
           transport_type: "beacon",
         });
       });
