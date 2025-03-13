@@ -280,6 +280,7 @@ async function getVacancies(industry) {
     apiParams.append("oneOfAttributeIds", 38); // Maintenance
     apiParams.append("oneOfAttributeIds", 39); // Operations
     apiParams.append("oneOfAttributeIds", 40); // Load Master
+    apiParams.append("oneOfAttributeIds", 282); // Aviation
   } else if (industry === "Hospitality") {
     apiParams.append("oneOfAttributeIds", 274);
   } else if (industry === "Construction" || industry === "construction") {
