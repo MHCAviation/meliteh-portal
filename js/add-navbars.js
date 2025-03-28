@@ -168,6 +168,8 @@ function closePopupOverlay() {
   }
 }
 
+window.closePopupOverlay = closePopupOverlay;
+
 async function initializeContactForm() {
   try {
     document.querySelector("textarea[name='message']").focus();
