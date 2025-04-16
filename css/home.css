@@ -375,10 +375,12 @@
 }
 
 .testimonials-list {
-  height: 100%;
-  display: flex;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  grid-gap: 2em;
+  width: min-content;
+  margin: auto
 }
 
 .home .group-38216-EpPtXC {
@@ -1629,6 +1631,7 @@
   .testimonials-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 }
 
@@ -1694,6 +1697,7 @@
 @media (max-width: 720px) {
   .testimonials-list {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding-left: 32px;

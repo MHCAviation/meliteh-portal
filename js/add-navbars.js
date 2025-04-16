@@ -30,121 +30,108 @@ function highlightActivePage() {
     }
   });
 }
+
 async function initializePage() {
   try {
     const basePath = "/components/";
 
-    // Load header and footer concurrently
+    // Load header and footer concurrently.
     const [headerHtml, footerHtml] = await Promise.all([
       loadPageContent(basePath + "header.html"),
       loadPageContent(basePath + "footer.html"),
     ]);
 
-    // Inject header & footer into the DOM
+    // Inject header & footer into the DOM.
     document.querySelectorAll("header").forEach((header) => {
       header.innerHTML = headerHtml;
     });
-
     document.querySelectorAll("footer").forEach((footer) => {
       footer.innerHTML = footerHtml;
     });
 
-    // Highlight active navigation link
-    highlightActivePage();
-
-    // Menu toggle functionality
-    const expandButton = document.querySelector("#expand-header-menu-button");
-    const topMenu = document.querySelector(".top-menu");
-
-    if (expandButton && topMenu) {
-      expandButton.addEventListener("click", () => {
-        document.querySelector("header").classList.toggle("menu-expanded");
-
-        if (
-          document.querySelector("header").classList.contains("menu-expanded")
-        ) {
-          // When menu is expanded, keep the hamburger and close button in the topMenu
-          topMenu.appendChild(expandButton);
-        } else {
-          // When menu is collapsed, move the hamburger back to its original position in the topMenu
-          topMenu.appendChild(expandButton);
-        }
-      });
-    }
-
-    // Check URL hash on page load
-    window.addEventListener("DOMContentLoaded", function () {
-      if (window.location.hash === "#submitCvDropdown") {
-        cvDropdown.classList.add("show");
-        submitCvBtn.querySelector("i").classList.add("rotate");
-      }
-    });
-
-    // Optional: Handle hash changes after page load
-    window.addEventListener("hashchange", function () {
-      if (window.location.hash === "#submitCvDropdown") {
-        cvDropdown.classList.add("show");
-        submitCvBtn.querySelector("i").classList.add("rotate");
-      } else {
-        cvDropdown.classList.remove("show");
-        submitCvBtn.querySelector("i").classList.remove("rotate");
-      }
-    });
-
-    // Submit CV dropdown with smooth animation
+    // Now that the header is loaded, query for elements inside it.
     const submitCvBtn = document.getElementById("submitCvBtn");
     const cvDropdown = document.getElementById("cvDropdown");
 
+    // Attach click event listener for the Submit CV button.
     if (submitCvBtn && cvDropdown) {
       submitCvBtn.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents immediate closing when clicked
+        event.stopPropagation(); // Prevent immediate closing when clicked.
         cvDropdown.classList.toggle("show");
-        this.querySelector("i").classList.toggle("rotate");
-        // Push event to dataLayer for Submit CV button click
+
+        // Toggle the rotate class for the arrow icon.
+        const icon = this.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("rotate");
+        }
+
+        // Push event to dataLayer for Submit CV button click.
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "submit_cv_button_click",
           category: "Submit CV",
         });
       });
+    }
 
-      // Close dropdown when clicking outside
-      document.addEventListener("click", function (event) {
-        if (
-          !submitCvBtn.contains(event.target) &&
-          !cvDropdown.contains(event.target)
-        ) {
-          cvDropdown.classList.remove("show");
-          submitCvBtn.querySelector("i").classList.remove("rotate");
+    // Attach a global click listener to close the dropdown when clicking outside.
+    document.addEventListener("click", function (event) {
+      if (
+        submitCvBtn &&
+        cvDropdown &&
+        !submitCvBtn.contains(event.target) &&
+        !cvDropdown.contains(event.target)
+      ) {
+        cvDropdown.classList.remove("show");
+        const icon = submitCvBtn.querySelector("i");
+        if (icon) {
+          icon.classList.remove("rotate");
         }
+      }
+    });
+
+    // Optionally, support hash-based display for the CV dropdown.
+    if (window.location.hash === "#submitCvDropdown" && submitCvBtn && cvDropdown) {
+      cvDropdown.classList.add("show");
+      const icon = submitCvBtn.querySelector("i");
+      if (icon) {
+        icon.classList.add("rotate");
+      }
+    }
+
+    // Highlight active navigation link.
+    highlightActivePage();
+
+    // Menu toggle functionality.
+    const expandButton = document.querySelector("#expand-header-menu-button");
+    const topMenu = document.querySelector(".top-menu");
+
+    if (expandButton && topMenu) {
+      expandButton.addEventListener("click", () => {
+        document.querySelector("header").classList.toggle("menu-expanded");
+        // When menu is expanded, keep the hamburger button in the topMenu.
+        topMenu.appendChild(expandButton);
       });
     }
 
-    // Track industry selection via GTM using dataLayer
-    const industryLinks = document.querySelectorAll("#cvDropdown a");
-    industryLinks.forEach((link) => {
-      link.addEventListener("click", function () {
-        const selectedIndustry = this.textContent.trim();
-
-        // Push event to dataLayer for Industry selection
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "submit_cv_selection",
-          category: "Submit CV",
-          action: "Industry Selected",
-          label: selectedIndustry,
-          transport_type: "beacon",
-        });
-      });
+    // Handle hash changes after page load.
+    window.addEventListener("hashchange", function () {
+      if (window.location.hash === "#submitCvDropdown" && submitCvBtn && cvDropdown) {
+        cvDropdown.classList.add("show");
+        submitCvBtn.querySelector("i").classList.add("rotate");
+      } else if (submitCvBtn && cvDropdown) {
+        cvDropdown.classList.remove("show");
+        submitCvBtn.querySelector("i").classList.remove("rotate");
+      }
     });
 
-    // Handle popup overlay for "Hire Staff" button
+    // Handle popup overlay for "Hire Staff" button.
     const hireStaffButton = document.querySelector("#openFormBtn");
     if (hireStaffButton) {
       hireStaffButton.addEventListener("click", openPopupOverlay);
     }
 
-    // Initialize contact form logic
+    // Initialize contact form logic.
     initializeContactForm();
   } catch (error) {
     alert("Failed to initialize page navigation!");
@@ -200,7 +187,7 @@ window.submitMessage = async function (event) {
           subject: formData.get("subject"),
           industry: formData.get("industry"),
           message: formData.get("message"),
-          "g-recaptcha-response": formData.get("g-recaptcha-response"), // Add reCAPTCHA token
+          "g-recaptcha-response": formData.get("g-recaptcha-response"),
         };
 
         try {
@@ -222,9 +209,7 @@ window.submitMessage = async function (event) {
           );
 
           if (!response.ok) {
-            throw new Error(
-              "Unsuccessful server response: " + response.statusText
-            );
+            throw new Error("Unsuccessful server response: " + response.statusText);
           }
 
           form.setAttribute("data-status", "SUCCESS");
@@ -234,7 +219,7 @@ window.submitMessage = async function (event) {
           fieldset.removeAttribute("disabled");
           form.setAttribute("data-status", "ERROR");
           form.querySelector(".status-message-content").textContent =
-            error?.message ?? String(error);
+            error?.message || String(error);
         }
       })
       .catch((error) => {
@@ -245,11 +230,10 @@ window.submitMessage = async function (event) {
   });
 };
 
-initializePage(); // Initialize the page immediately on script load
+initializePage();
+window.addEventListener("popstate", initializePage);
 
-window.addEventListener("popstate", initializePage); // Re-initialize page when popstate event occurs
-
-// Add the Cookiebot script to the head section
+// Add the Cookiebot script to the head section.
 const cookiebotScript = document.createElement("script");
 cookiebotScript.id = "Cookiebot";
 cookiebotScript.src = "https://consent.cookiebot.com/uc.js";
@@ -258,12 +242,13 @@ cookiebotScript.dataset.blockingmode = "auto";
 cookiebotScript.type = "text/javascript";
 document.head.appendChild(cookiebotScript);
 
-// Add the Google reCAPTCHA script to the head section
+// Add the Google reCAPTCHA script to the head section.
 const recaptchaScript = document.createElement("script");
 recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
 recaptchaScript.async = true;
 document.head.appendChild(recaptchaScript);
 
+// Add the Google Tag Manager script to the head section.
 const gtmScript = document.createElement("script");
 gtmScript.async = true;
 gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=GTM-K9KM9HF6";

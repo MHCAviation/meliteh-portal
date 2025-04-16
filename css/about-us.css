@@ -5,9 +5,25 @@
     flex: 1;
 }
 
+.view-pdf-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d20027;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-pdf-button:hover {
+    background-color: #6e0317;
+}
+
 .card {
     min-width: 270px;
     max-width: 400px;
+    height: 270px;
 }
 
 .about-us-banner-section {
@@ -42,7 +58,7 @@
     font-style: normal;
 }
 
-.about-us .who-is-meliteh-C61RwL {
+.about-us .titleText {
     color: #141414;
     font-size: 40px;
     font-weight: 500;
@@ -81,7 +97,33 @@
     margin: 24px;
 }
 
-.about-us .at-meliteh-we-are-y-C61RwL {
+.registered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: #eeeeee70;
+    padding: 24px 16px;
+    border-radius: 16px;
+    max-width: 520px;
+    margin: auto auto 40px auto
+}
+
+.textTitle-registered {
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
+.text-registered {
+    text-align: center;
+    color: #141414;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.text {
+    text-align: center;
     color: #141414;
     font-size: 16px;
     font-weight: 400;
@@ -551,6 +593,40 @@
     text-align: left;
 }
 
+
+
+@media (max-width: 1024px) {
+    .text {
+        text-align: left;
+        font-size: 12px;
+        padding: 0 8px 32px 8px;
+    }
+
+    .text-registered {
+        text-align: center;
+        color: #141414;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .textTitle-registered {
+        font-size: 16px;
+    }
+
+    .card {
+        height: 310px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 300px;
+    }
+
+}
+
 @media (max-width: 500px) {
 
     .about-us .about-our-values {
@@ -561,7 +637,7 @@
         width: 320px;
     }
 
-    .about-us .who-is-meliteh-C61RwL {
+    .about-us .titleText {
         font-size: 32px;
         font-weight: 700;
         text-align: center;
@@ -570,9 +646,8 @@
         margin: 0px;
     }
 
-    .about-us .at-meliteh-we-are-y-C61RwL {
-        font-size: 12px;
-        padding: 16px;
+    .registered-container {
+        max-width: 360px;
     }
 
     .about-us .our-values-C61RwL {
@@ -587,11 +662,23 @@
 
 }
 
+@media (max-width: 400px) {
+    .registered-container {
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 378px) {
+    .registered-container {
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 1281px) {
 
     .about-our-values {
-        padding-right: 1.5em;
-        padding-left: 1em;
+        padding-right: 40px;
+        padding-left: 40px;
     }
 
 }
