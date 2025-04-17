@@ -123,34 +123,37 @@
   background-color: var(--submarine);
 }
 
+.client-section {
+  overflow: hidden;
+  padding: 4rem 0;
+  background: white;
+}
+
 .client-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-
-.client-image-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-.client-image {
-  object-fit: contain;
-  object-position: center;
-  width: 160px;
-  height: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .clientTitle {
-  color: #141414;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.client-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.client-image-track {
+  display: flex;
+  will-change: transform;
+}
+
+.client-image {
+  width: 160px;
+  margin: 0 1rem;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .industry-cards-list {
