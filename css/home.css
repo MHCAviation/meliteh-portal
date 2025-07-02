@@ -50,6 +50,11 @@
   text-align: left;
 }
 
+.popup-image {
+  border-radius: 8px;
+  border: 1px solid #c6c6c6;
+}
+
 .popup-content>p {
   font-size: 12px;
 }
@@ -118,34 +123,37 @@
   background-color: var(--submarine);
 }
 
+.client-section {
+  overflow: hidden;
+  padding: 4rem 0;
+  background: white;
+}
+
 .client-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-
-.client-image-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-.client-image {
-  object-fit: contain;
-  object-position: center;
-  width: 160px;
-  height: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .clientTitle {
-  color: #141414;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.client-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.client-image-track {
+  display: flex;
+  will-change: transform;
+}
+
+.client-image {
+  width: 160px;
+  margin: 0 1rem;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .industry-cards-list {
@@ -370,10 +378,12 @@
 }
 
 .testimonials-list {
-  height: 100%;
-  display: flex;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  grid-gap: 2em;
+  width: min-content;
+  margin: auto
 }
 
 .home .group-38216-EpPtXC {
@@ -416,11 +426,17 @@
   border-color: #eff0f6;
   border-radius: 20px;
   box-shadow: 0px 5px 14px #080f340a;
-  left: 0px;
   mix-blend-mode: normal;
   opacity: 1;
-  top: 0px;
-  max-width: 600px;
+  width: 400px;
+}
+
+.textTestimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 8px;
 }
 
 .pictureTestimonialsIvan,
@@ -429,7 +445,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 160px;
+  height: 120px;
+  width: 120px;
+  border-radius: 16px;
+}
+
+.pictureNoPhoto {
+  background-color: #E2E2E2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 120px;
   width: 120px;
   border-radius: 16px;
 }
@@ -442,6 +468,10 @@
   background-image: url(../img/testimonials/CaptainJaime.jpg);
 }
 
+.pictureNoPhoto {
+  background-image: url(../img/testimonials/no-photo.png);
+}
+
 .descTestimonials {
   font-size: 12px;
   font-style: normal;
@@ -450,7 +480,6 @@
   letter-spacing: 0px;
   line-height: 20px;
   text-align: left;
-  height: 100%;
 }
 
 .home .group-38217-EpPtXC {
@@ -1601,6 +1630,14 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .testimonials-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
 @media (max-width: 960px) {
   .grey-section {
     padding-bottom: 4em;
@@ -1662,6 +1699,8 @@
 
 @media (max-width: 720px) {
   .testimonials-list {
+    display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding-left: 32px;

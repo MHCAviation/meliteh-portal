@@ -744,6 +744,7 @@ button {
 }
 
 .card-description {
+  text-align: center;
   font-size: 0.75em;
   margin-top: 0.5em;
   line-height: 20px;

@@ -73,8 +73,8 @@
         </div>
 
         <div class="content-paragraph">
-          <div class="who-is-meliteh-C61RwL">Who is Meliteh ?</div>
-          <div class="at-meliteh-we-are-y-C61RwL">
+          <div class="titleText">Who is Meliteh ?</div>
+          <div class="text">
             At Meliteh, we are your trusted partner for comprehensive solutions
             in recruitment, background check &amp; compliance, HR &amp; payroll,
             and consulting services. Specializing in the Aviation, Maritime, and
@@ -102,6 +102,22 @@
           </div>
         </div>
 
+        <div class="registered-container">
+          <div class="text-registered">
+            <div class="textTitle-registered">Registered with the Department for Industrial & Employment Relations in Malta</div>
+            Registration number: 233409 <br/>
+            VAT number: 995185401
+          </div>
+
+          <a
+            href="file/Licence_750.pdf"
+            target="_blank"
+            class="view-pdf-button"
+          >
+            View Our Company Licence
+          </a>
+        </div>
+
         <div class="our-values-section">
           <div class="our-values-C61RwL">Our Values</div>
           <div class="about-our-values">
@@ -121,8 +137,11 @@
               </p>
             </div>
             <div class="card">
-              <img class="card-icon" src="img/About_us_Icon/Number 2.png"
-              alt="Icon for Card 2">
+              <img
+                class="card-icon"
+                src="img/About_us_Icon/Number 2.png"
+                alt="Icon for Card 2"
+              />
               <h3 class="card-title">Flexibility</h3>
               <p class="card-description">
                 We understand that each client has unique requirements and
@@ -201,16 +220,59 @@
     <footer class="footer-navbar"></footer>
     <script>
       // Fetch the content of popup-hire-staff.html using fetch API
-      fetch("popup-hire-staff.html")
+      fetch("popup-hire-staff.html?nocache=" + new Date().getTime())
         .then((response) => response.text())
         .then((html) => {
-          // Append the HTML content to the body
-          document.body.innerHTML += html;
+          // Create a temporary container for the HTML content
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = html;
+
+          // Append the content to the body
+          while (tempDiv.firstChild) {
+            document.body.appendChild(tempDiv.firstChild);
+          }
+
+          // Initialize popup overlay and close button after content is loaded
+          const popupOverlay = document.getElementById("popupOverlay");
+          if (popupOverlay) {
+            popupOverlay.addEventListener("click", function (event) {
+              if (event.target === this) {
+                closePopupOverlay();
+              }
+            });
+          }
+
+          const closePopupBtn = document.querySelector("#closePopupBtn");
+          if (closePopupBtn) {
+            closePopupBtn.addEventListener("click", closePopupOverlay);
+          }
+
+          const hireStaffButton = document.querySelector("#openFormBtn");
+          if (hireStaffButton) {
+            hireStaffButton.addEventListener("click", openPopupOverlay);
+          }
         })
         .catch((error) =>
           console.error("Error fetching popup-hire-staff.html:", error)
         );
+
+      function openPopupOverlay(event) {
+        event.preventDefault();
+        const popupOverlay = document.getElementById("popupOverlay");
+        if (popupOverlay) {
+          popupOverlay.classList.add("active");
+          document.body.classList.add("no-scroll");
+        }
+      }
+
+      function closePopupOverlay() {
+        const popupOverlay = document.getElementById("popupOverlay");
+        if (popupOverlay) {
+          popupOverlay.classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        }
+      }
     </script>
-    <script type="module" src="js/about-us.js"></script>
+    <script src="js/add-navbars.js"></script>
   </body>
 </html>
