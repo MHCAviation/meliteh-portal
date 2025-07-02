@@ -306,7 +306,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  /* Adjust the gap between cards as needed */
+}
+
+.job-cards-container.single-job.grid-layout {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
+.job-cards-container.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .job-card {
@@ -542,9 +553,26 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .filter-fields-list {
+    flex-direction: row;
+    gap: 24px
+  }
+}
+
 @media (max-width: 480px) {
+  .filter-fields-list {
+    flex-direction: column;
+  }
+
   .job-cards-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-no-jobs {
+    text-align: center;
   }
 
   .jobs-content {

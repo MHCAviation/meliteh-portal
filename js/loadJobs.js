@@ -109,6 +109,10 @@ function addJobStructuredData(job) {
     );
     jobCardsContainer.innerHTML = "";
 
+    // Remove all layout classes first
+    jobCardsContainer.classList.remove("center-content", "single-job", "flex-layout");
+    jobCardsContainer.classList.add("grid-layout");
+
     // Filter out Open Application jobs FIRST
     const filteredData = data.filter(
       (job) =>
@@ -119,15 +123,15 @@ function addJobStructuredData(job) {
     totalVacanciesCounter.textContent = filteredData.length;
 
     if (filteredData.length === 0) {
+      jobCardsContainer.classList.remove("grid-layout");
+      jobCardsContainer.classList.add("center-content");
       const noJobsMessage = document.createElement("h2");
+      noJobsMessage.classList.add("text-no-jobs");
       if (query) {
         noJobsMessage.textContent = `Sorry, there are no jobs available for "${query}" in "${
           activeIndustry || "All Industries"
         }"`;
       } else {
-        jobCardsContainer.classList.remove("grid-layout");
-        jobCardsContainer.classList.add("flex-layout");
-
         noJobsMessage.textContent = `Sorry, there are no jobs available in "${
           activeIndustry || "All Industries"
         }"`;
@@ -140,6 +144,9 @@ function addJobStructuredData(job) {
       jobCardsContainer.appendChild(noJobsMessage);
       jobCardsContainer.appendChild(noJobsIllustration);
     } else {
+      if (filteredData.length === 1) {
+        jobCardsContainer.classList.add("single-job");
+      }
       filteredData.forEach((job) => {
         const jobCard = document.createElement("a");
         jobCard.classList.add("job-card", "no-gtm-link-tracking");

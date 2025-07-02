@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       jobCardsContainer.innerHTML = `
         <div class="no-matching-jobs">
-          <h2>Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
+          <h2 class="text-no-jobs">Sorry, there are no jobs available for "${query}" in "${activeIndustry}"</h2>
           <img class="no-matching-jobs-illustration" src="img/no-matching-jobs.png" />
         </div>`;
       totalVacanciesCounter.textContent = "0";
