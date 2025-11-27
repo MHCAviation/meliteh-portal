@@ -48,6 +48,9 @@ async function initializePage() {
     document.querySelectorAll("footer").forEach((footer) => {
       footer.innerHTML = footerHtml;
     });
+    document.querySelectorAll(".current-year").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
 
     // Now that the header is loaded, query for elements inside it.
     const submitCvBtn = document.getElementById("submitCvBtn");
